@@ -22,9 +22,12 @@
 								{% if request.POST.type_filter == 'small' %}
 									{% if elem.value == request.POST.detal %}
 										<option selected value="{{elem.value}}">{{elem.title}}</option>
+									{% else %}
+										<option value="{{elem.value}}">{{elem.title}}</option>
 									{% endif %}
-								{% endif %}
+								{% else %}
 									<option value="{{elem.value}}">{{elem.title}}</option>
+								{% endif %}
 							{% endfor %}
 						</select>
 					</div>
@@ -33,11 +36,14 @@
 							<option value="all">Все доноры</option>
 							{% for elem in donors_filter %}
 								{% if request.POST.type_filter == 'small' %}
-									{% if selected_donor == elem.pk %}
+									{% if selected_donor.0 == elem.pk %}
 										<option selected value="{{elem.pk}}">{{elem}}</option>
+									{% else %}
+										<option value="{{elem.pk}}">{{elem}}</option>
 									{% endif %}
-								{% endif %}
+								{% else %}
 									<option value="{{elem.pk}}">{{elem}}</option>
+								{% endif %}
 							{% endfor %}
 						</select>
 					</div>
@@ -53,7 +59,15 @@
 						<select onchange="submit_small_filter(this)" class="custom-select custom-select-sm" id="stock">
 							<option value="all">Все склады</option>
 							{% for elem in stocks_filters %}
-								<option value="{{elem.pk}}">{{elem.title}}</option>
+								{% if request.POST.type_filter == 'small' %}
+									{% if selected_stock.0 == elem.pk %}
+										<option selected value="{{elem.pk}}">{{elem}}</option>
+									{% else %}
+										<option value="{{elem.pk}}">{{elem}}</option>
+									{% endif %}
+								{% else %}
+									<option value="{{elem.pk}}">{{elem}}</option>
+								{% endif %}
 							{% endfor %}
 						</select>
 					</div>
@@ -74,7 +88,18 @@
 					</div>
 					<div class="leftFilterBlock">
 						<div class="filterGroup price priceFilter">
-							
+							<div class="input-group input-group-sm ">
+								<div class="input-group-prepend">
+									<span class="input-group-text" id="inputGroup-sizing-sm">Min</span>
+								</div>
+								<input type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="0₽" name="priceFilter" step="50" {% if selected_price.0 != 0 %}value="{{selected_price.0}}"{% endif %}>
+							</div>
+							<div class="input-group input-group-sm">
+								<input type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="999 999₽" name="priceFilter" step="50" {% if selected_price.1 != 999999 %}value="{{selected_price.1}}"{% endif %}>
+								<div class="input-group-prepend">
+									<span class="input-group-text" id="inputGroup-sizing-sm">Max</span>
+								</div>
+							</div>
 						</div>
 						<div class="leftCol">
 							<div class="filterGroup detalFilter left ">
@@ -120,8 +145,12 @@
 						{% for elem in stocks_filters %}
 							<div class="oneFIlterValue">
 								<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input" id="{{elem.pk}}_stock">
-									<label class="custom-control-label" for="{{elem.pk}}_stock">{{elem.title}}</label>
+									{% if elem.pk in selected_stock %}
+										<input type="checkbox" class="custom-control-input" onclick="add_name(this)" id="{{elem.pk}}_stock" checked name="stock" value="{{elem.pk}}">
+									{% else %}
+										<input type="checkbox" class="custom-control-input" onclick="add_name(this)" id="{{elem.pk}}_stock" value="{{elem.pk}}">
+									{% endif %}
+										<label class="custom-control-label" for="{{elem.pk}}_stock">{{elem.title}}</label>
 								</div>
 							</div>
 						{% endfor %}
@@ -170,7 +199,6 @@
 						<img src="{% static "img/image_mini.png" %}" alt="" onclick="view_detal_photo(this)">
 					</a>
 					<a href="#close" class="fulImg" id="img1" onclick="closePhoto(this)">
-						<img src="/detals/{{ detal.detal.photo }}" alt="товар">
 					</a>
 				</td>
 				<td class="detalOther">{{detal.detal.description}}</td>

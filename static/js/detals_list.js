@@ -254,7 +254,7 @@ function show_filter(block) {
         block.getElementsByTagName('i')[0].setAttribute('class', 'fas fa-angle-double-down fa-lg');
     }
 }
-
+// Добавление имени при выделении
 function add_name(input){
     if (input.checked){
         input.setAttribute('name', input.getAttribute('id').split('_')[1])
@@ -262,7 +262,7 @@ function add_name(input){
         input.removeAttribute('name')
     }
 }
-
+// Отправка формы при изменении малого фильтра
 function submit_small_filter(select) {
     var all_select = select.parentElement.parentElement.getElementsByTagName('select')
     for (var i = 0; i < all_select.length; i++) {

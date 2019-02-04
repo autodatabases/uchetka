@@ -106,6 +106,11 @@ class AutoDonor(models.Model):
 	def __str__(self):
 		return self.mark.title + ' ' + self.model.title + ' ' + self.generation.year
 
+class Photo(models.Model):
+	account = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+	photo = models.ImageField(blank=True, null=True)
+	have = models.CharField(max_length=10)
+
 class Stock (models.Model):
 	title = models.CharField(max_length=50)
 	value = models.CharField(max_length=50)
@@ -126,7 +131,7 @@ class UserDetal(models.Model):
 	description = models.TextField(null=True, blank=True)
 	stockroom = models.ForeignKey('Stock', on_delete=models.CASCADE)
 	account = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-	photo = models.ImageField(blank=True, null=True, default='nophoto.png')
+	photo = models.ForeignKey('Photo', on_delete=models.CASCADE)
 	def __str__(self):
 		return self.detail.title
 
