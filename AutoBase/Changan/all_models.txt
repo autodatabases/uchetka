@@ -1,0 +1,12 @@
+{'title': 'Alsvin', 'value': 'alsvin', 'href': '/auto/ttx/chana/alsvin'}
+{'title': 'Benni', 'value': 'benni', 'href': '/auto/ttx/chana/benni'}
+{'title': 'CM8', 'value': 'cm8', 'href': '/auto/ttx/chana/cm8'}
+{'title': 'CS35', 'value': 'cs35', 'href': '/auto/ttx/chana/cs35'}
+{'title': 'CX20', 'value': 'cx20', 'href': '/auto/ttx/chana/cx20'}
+{'title': 'CX30', 'value': 'cx30', 'href': '/auto/ttx/chana/cx30'}
+{'title': 'Eado', 'value': 'eado', 'href': '/auto/ttx/chana/eado'}
+{'title': 'Honor', 'value': 'honor', 'href': '/auto/ttx/chana/honor'}
+{'title': 'Joice', 'value': 'joice', 'href': '/auto/ttx/chana/joice'}
+{'title': 'Raeton', 'value': 'raeton', 'href': '/auto/ttx/chana/raeton'}
+{'title': 'Star', 'value': 'star', 'href': '/auto/ttx/chana/star'}
+{'title': 'Z-shine', 'value': 'z-shine', 'href': '/auto/ttx/chana/z-shine'}

@@ -1,0 +1,10 @@
+{'title': 'Arena', 'value': 'arena', 'href': '/auto/ttx/proton/arena'}
+{'title': 'Chancellor', 'value': 'chancellor', 'href': '/auto/ttx/proton/chancellor'}
+{'title': 'Gen 2', 'value': 'gen_2', 'href': '/auto/ttx/proton/gen_2'}
+{'title': 'Inspira', 'value': 'inspira', 'href': '/auto/ttx/proton/inspira'}
+{'title': 'Perdana', 'value': 'perdana', 'href': '/auto/ttx/proton/perdana'}
+{'title': 'Persona', 'value': 'persona', 'href': '/auto/ttx/proton/persona'}
+{'title': 'Putra', 'value': 'putra', 'href': '/auto/ttx/proton/putra'}
+{'title': 'Satria', 'value': 'satria', 'href': '/auto/ttx/proton/satria'}
+{'title': 'Savvy', 'value': 'savvy', 'href': '/auto/ttx/proton/savvy'}
+{'title': 'Waja', 'value': 'waja', 'href': '/auto/ttx/proton/waja'}

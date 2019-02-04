@@ -1,0 +1,5 @@
+{'title': 'Indica', 'value': 'indica', 'href': '/auto/ttx/tata/indica'}
+{'title': 'Indigo', 'value': 'indigo', 'href': '/auto/ttx/tata/indigo'}
+{'title': 'Nano', 'value': 'nano', 'href': '/auto/ttx/tata/nano'}
+{'title': 'Safari', 'value': 'safari', 'href': '/auto/ttx/tata/safari'}
+{'title': 'Sumo', 'value': 'sumo', 'href': '/auto/ttx/tata/sumo'}

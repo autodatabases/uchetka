@@ -1,0 +1,3 @@
+{'title': '300', 'value': '300', 'href': '/auto/ttx/venturi/300'}
+{'title': '400', 'value': '400', 'href': '/auto/ttx/venturi/400'}
+{'title': 'Fetish', 'value': 'fetish', 'href': '/auto/ttx/venturi/fetish'}

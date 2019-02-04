@@ -1,0 +1,10 @@
+{'title': 'F0', 'value': 'f0', 'href': '/auto/ttx/byd/f0'}
+{'title': 'F3', 'value': 'f3', 'href': '/auto/ttx/byd/f3'}
+{'title': 'F6', 'value': 'f6', 'href': '/auto/ttx/byd/f6'}
+{'title': 'F8', 'value': 'f8', 'href': '/auto/ttx/byd/f8'}
+{'title': 'Flyer', 'value': 'flyer', 'href': '/auto/ttx/byd/flyer'}
+{'title': 'Hybrid-S', 'value': 'hybrid-s', 'href': '/auto/ttx/byd/hybrid-s'}
+{'title': 'L3', 'value': 'l3', 'href': '/auto/ttx/byd/l3'}
+{'title': 'M6', 'value': 'm6', 'href': '/auto/ttx/byd/m6'}
+{'title': 'S6', 'value': 's6', 'href': '/auto/ttx/byd/s6'}
+{'title': 'S8', 'value': 's8', 'href': '/auto/ttx/byd/s8'}

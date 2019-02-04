@@ -1,0 +1,26 @@
+{'title': '111 (Kalina)', 'value': '111_kalina', 'href': '/auto/ttx/lada_vaz/111_kalina'}
+{'title': '1922', 'value': '1922', 'href': '/auto/ttx/lada_vaz/1922'}
+{'title': '2101', 'value': '2101', 'href': '/auto/ttx/lada_vaz/2101'}
+{'title': '2104', 'value': '2104', 'href': '/auto/ttx/lada_vaz/2104'}
+{'title': '2105', 'value': '2105', 'href': '/auto/ttx/lada_vaz/2105'}
+{'title': '2106', 'value': '2106', 'href': '/auto/ttx/lada_vaz/2106'}
+{'title': '2107', 'value': '2107', 'href': '/auto/ttx/lada_vaz/2107'}
+{'title': '2108', 'value': '2108', 'href': '/auto/ttx/lada_vaz/2108'}
+{'title': '2109', 'value': '2109', 'href': '/auto/ttx/lada_vaz/2109'}
+{'title': '2110', 'value': '2110', 'href': '/auto/ttx/lada_vaz/2110'}
+{'title': '2111', 'value': '2111', 'href': '/auto/ttx/lada_vaz/2111'}
+{'title': '2112', 'value': '2112', 'href': '/auto/ttx/lada_vaz/2112'}
+{'title': '2113', 'value': '2113', 'href': '/auto/ttx/lada_vaz/2113'}
+{'title': '2114', 'value': '2114', 'href': '/auto/ttx/lada_vaz/2114'}
+{'title': '2115', 'value': '2115', 'href': '/auto/ttx/lada_vaz/2115'}
+{'title': '2120', 'value': '2120', 'href': '/auto/ttx/lada_vaz/2120'}
+{'title': '2121 (Niva)', 'value': '2121_niva', 'href': '/auto/ttx/lada_vaz/2121_niva'}
+{'title': '2123', 'value': '2123', 'href': '/auto/ttx/lada_vaz/2123'}
+{'title': '2131 (Niva)', 'value': '2131_niva', 'href': '/auto/ttx/lada_vaz/2131_niva'}
+{'title': '2170 (Priora)', 'value': '2170_priora', 'href': '/auto/ttx/lada_vaz/2170_priora'}
+{'title': '2190 (Granta)', 'value': '2190_granta', 'href': '/auto/ttx/lada_vaz/2190_granta'}
+{'title': 'Largus', 'value': 'largus', 'href': '/auto/ttx/lada_vaz/largus'}
+{'title': 'Revolution', 'value': 'revolution', 'href': '/auto/ttx/lada_vaz/revolution'}
+{'title': 'Vesta', 'value': 'vesta', 'href': '/auto/ttx/lada_vaz/vesta'}
+{'title': 'XRAY', 'value': 'xray', 'href': '/auto/ttx/lada_vaz/xray'}
+{'title': 'Ока', 'value': 'oka', 'href': '/auto/ttx/lada_vaz/oka'}

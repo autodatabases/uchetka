@@ -1,0 +1,12 @@
+{'title': 'Aviator', 'value': 'aviator', 'href': '/auto/ttx/lincoln/aviator'}
+{'title': 'Blackwood', 'value': 'blackwood', 'href': '/auto/ttx/lincoln/blackwood'}
+{'title': 'Continental', 'value': 'continental', 'href': '/auto/ttx/lincoln/continental'}
+{'title': 'LS', 'value': 'ls', 'href': '/auto/ttx/lincoln/ls'}
+{'title': 'Mark LT', 'value': 'mark_lt', 'href': '/auto/ttx/lincoln/mark_lt'}
+{'title': 'Mark VIII', 'value': 'mark_viii', 'href': '/auto/ttx/lincoln/mark_viii'}
+{'title': 'MKS', 'value': 'mks', 'href': '/auto/ttx/lincoln/mks'}
+{'title': 'MKT', 'value': 'mkt', 'href': '/auto/ttx/lincoln/mkt'}
+{'title': 'MKX', 'value': 'mkx', 'href': '/auto/ttx/lincoln/mkx'}
+{'title': 'MKZ', 'value': 'mkz', 'href': '/auto/ttx/lincoln/mkz'}
+{'title': 'Navigator', 'value': 'navigator', 'href': '/auto/ttx/lincoln/navigator'}
+{'title': 'Town Car', 'value': 'town_car', 'href': '/auto/ttx/lincoln/town_car'}

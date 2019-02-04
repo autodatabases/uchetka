@@ -1,0 +1,8 @@
+{'title': '3200GT', 'value': '3200gt', 'href': '/auto/ttx/maserati/3200gt'}
+{'title': '4200GT', 'value': '4200gt', 'href': '/auto/ttx/maserati/4200gt'}
+{'title': 'Ghibli', 'value': 'ghibli', 'href': '/auto/ttx/maserati/ghibli'}
+{'title': 'GranSport', 'value': 'gransport', 'href': '/auto/ttx/maserati/gransport'}
+{'title': 'GranTurismo', 'value': 'granturismo', 'href': '/auto/ttx/maserati/granturismo'}
+{'title': 'Levante', 'value': 'levante', 'href': '/auto/ttx/maserati/levante'}
+{'title': 'Quattroporte', 'value': 'quattroporte', 'href': '/auto/ttx/maserati/quattroporte'}
+{'title': 'Spyder', 'value': 'spyder', 'href': '/auto/ttx/maserati/spyder'}

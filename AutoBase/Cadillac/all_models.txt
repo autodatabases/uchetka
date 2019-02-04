@@ -1,0 +1,16 @@
+{'title': 'ATS', 'value': 'ats', 'href': '/auto/ttx/cadillac/ats'}
+{'title': 'BLS', 'value': 'bls', 'href': '/auto/ttx/cadillac/bls'}
+{'title': 'Catera', 'value': 'catera', 'href': '/auto/ttx/cadillac/catera'}
+{'title': 'CT6', 'value': 'ct6', 'href': '/auto/ttx/cadillac/ct6'}
+{'title': 'CTS', 'value': 'cts', 'href': '/auto/ttx/cadillac/cts'}
+{'title': 'De Ville', 'value': 'de_ville', 'href': '/auto/ttx/cadillac/de_ville'}
+{'title': 'DTS', 'value': 'dts', 'href': '/auto/ttx/cadillac/dts'}
+{'title': 'Eldorado', 'value': 'eldorado', 'href': '/auto/ttx/cadillac/eldorado'}
+{'title': 'Escalade', 'value': 'escalade', 'href': '/auto/ttx/cadillac/escalade'}
+{'title': 'Fleetwood', 'value': 'fleetwood', 'href': '/auto/ttx/cadillac/fleetwood'}
+{'title': 'Seville', 'value': 'seville', 'href': '/auto/ttx/cadillac/seville'}
+{'title': 'SRX', 'value': 'srx', 'href': '/auto/ttx/cadillac/srx'}
+{'title': 'STS', 'value': 'sts', 'href': '/auto/ttx/cadillac/sts'}
+{'title': 'XLR', 'value': 'xlr', 'href': '/auto/ttx/cadillac/xlr'}
+{'title': 'XT5', 'value': 'xt5', 'href': '/auto/ttx/cadillac/xt5'}
+{'title': 'XTS', 'value': 'xts', 'href': '/auto/ttx/cadillac/xts'}

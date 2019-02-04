@@ -1,0 +1,4 @@
+{'title': 'City', 'value': 'city', 'href': '/auto/ttx/smart/city'}
+{'title': 'Forfour', 'value': 'forfour', 'href': '/auto/ttx/smart/forfour'}
+{'title': 'Fortwo', 'value': 'fortwo', 'href': '/auto/ttx/smart/fortwo'}
+{'title': 'Roadster', 'value': 'roadster', 'href': '/auto/ttx/smart/roadster'}

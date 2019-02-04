@@ -1,0 +1,34 @@
+{'title': 'Aerio', 'value': 'aerio', 'href': '/auto/ttx/suzuki/aerio'}
+{'title': 'Alto', 'value': 'alto', 'href': '/auto/ttx/suzuki/alto'}
+{'title': 'APV', 'value': 'apv', 'href': '/auto/ttx/suzuki/apv'}
+{'title': 'Baleno', 'value': 'baleno', 'href': '/auto/ttx/suzuki/baleno'}
+{'title': 'Cappuccino', 'value': 'cappuccino', 'href': '/auto/ttx/suzuki/cappuccino'}
+{'title': 'Cervo', 'value': 'cervo', 'href': '/auto/ttx/suzuki/cervo'}
+{'title': 'Cultus', 'value': 'cultus', 'href': '/auto/ttx/suzuki/cultus'}
+{'title': 'Equator', 'value': 'equator', 'href': '/auto/ttx/suzuki/equator'}
+{'title': 'Ertiga', 'value': 'ertiga', 'href': '/auto/ttx/suzuki/ertiga'}
+{'title': 'Escudo', 'value': 'escudo', 'href': '/auto/ttx/suzuki/escudo'}
+{'title': 'Every', 'value': 'every', 'href': '/auto/ttx/suzuki/every'}
+{'title': 'Forenza', 'value': 'forenza', 'href': '/auto/ttx/suzuki/forenza'}
+{'title': 'Grand Vitara', 'value': 'grand_vitara', 'href': '/auto/ttx/suzuki/grand_vitara'}
+{'title': 'Ignis', 'value': 'ignis', 'href': '/auto/ttx/suzuki/ignis'}
+{'title': 'Jimny', 'value': 'jimny', 'href': '/auto/ttx/suzuki/jimny'}
+{'title': 'Kei', 'value': 'kei', 'href': '/auto/ttx/suzuki/kei'}
+{'title': 'Kizashi', 'value': 'kizashi', 'href': '/auto/ttx/suzuki/kizashi'}
+{'title': 'Landy', 'value': 'landy', 'href': '/auto/ttx/suzuki/landy'}
+{'title': 'Lapin', 'value': 'lapin', 'href': '/auto/ttx/suzuki/lapin'}
+{'title': 'Liana', 'value': 'liana', 'href': '/auto/ttx/suzuki/liana'}
+{'title': 'MR Wagon', 'value': 'mr_wagon', 'href': '/auto/ttx/suzuki/mr_wagon'}
+{'title': 'Palette', 'value': 'palette', 'href': '/auto/ttx/suzuki/palette'}
+{'title': 'Reno', 'value': 'reno', 'href': '/auto/ttx/suzuki/reno'}
+{'title': 'Samurai', 'value': 'samurai', 'href': '/auto/ttx/suzuki/samurai'}
+{'title': 'Solio', 'value': 'solio', 'href': '/auto/ttx/suzuki/solio'}
+{'title': 'Splash', 'value': 'splash', 'href': '/auto/ttx/suzuki/splash'}
+{'title': 'Swift', 'value': 'swift', 'href': '/auto/ttx/suzuki/swift'}
+{'title': 'SX4', 'value': 'sx4', 'href': '/auto/ttx/suzuki/sx4'}
+{'title': 'Twin', 'value': 'twin', 'href': '/auto/ttx/suzuki/twin'}
+{'title': 'Verona', 'value': 'verona', 'href': '/auto/ttx/suzuki/verona'}
+{'title': 'Vitara', 'value': 'vitara', 'href': '/auto/ttx/suzuki/vitara'}
+{'title': 'Wagon R', 'value': 'wagon_r', 'href': '/auto/ttx/suzuki/wagon_r'}
+{'title': 'X-90', 'value': 'x-90', 'href': '/auto/ttx/suzuki/x-90'}
+{'title': 'XL-7', 'value': 'xl-7', 'href': '/auto/ttx/suzuki/xl-7'}

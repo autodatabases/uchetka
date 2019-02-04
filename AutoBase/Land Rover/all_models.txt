@@ -1,0 +1,8 @@
+{'title': 'Defender', 'value': 'defender', 'href': '/auto/ttx/land_rover/defender'}
+{'title': 'Discovery', 'value': 'discovery', 'href': '/auto/ttx/land_rover/discovery'}
+{'title': 'Discovery Sport', 'value': 'discovery_sport', 'href': '/auto/ttx/land_rover/discovery_sport'}
+{'title': 'Freelander', 'value': 'freelander', 'href': '/auto/ttx/land_rover/freelander'}
+{'title': 'Range Rover', 'value': 'range_rover', 'href': '/auto/ttx/land_rover/range_rover'}
+{'title': 'Range Rover Evoque', 'value': 'range_rover_evoque', 'href': '/auto/ttx/land_rover/range_rover_evoque'}
+{'title': 'Range Rover Sport', 'value': 'range_rover_sport', 'href': '/auto/ttx/land_rover/range_rover_sport'}
+{'title': 'Range Rover Velar', 'value': 'range_rover_velar', 'href': '/auto/ttx/land_rover/range_rover_velar'}

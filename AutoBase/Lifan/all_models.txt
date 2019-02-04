@@ -1,0 +1,11 @@
+{'title': '320/Smily', 'value': '320_smily', 'href': '/auto/ttx/lifan/320_smily'}
+{'title': '520/Breez', 'value': '520_breez', 'href': '/auto/ttx/lifan/520_breez'}
+{'title': '530/Celliya', 'value': '530_celliya', 'href': '/auto/ttx/lifan/530_celliya'}
+{'title': '620/Solano', 'value': '620_solano', 'href': '/auto/ttx/lifan/620_solano'}
+{'title': '720/Cebrium', 'value': '720_cebrium', 'href': '/auto/ttx/lifan/720_cebrium'}
+{'title': 'Foison', 'value': 'foison', 'href': '/auto/ttx/lifan/foison'}
+{'title': 'Murman', 'value': 'murman', 'href': '/auto/ttx/lifan/murman'}
+{'title': 'Myway', 'value': 'myway', 'href': '/auto/ttx/lifan/myway'}
+{'title': 'X50', 'value': 'x50', 'href': '/auto/ttx/lifan/x50'}
+{'title': 'X60', 'value': 'x60', 'href': '/auto/ttx/lifan/x60'}
+{'title': 'X70', 'value': 'x70', 'href': '/auto/ttx/lifan/x70'}

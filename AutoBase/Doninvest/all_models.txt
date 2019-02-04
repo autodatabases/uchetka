@@ -1,0 +1,3 @@
+{'title': 'Assol', 'value': 'assol', 'href': '/auto/ttx/doninvest/assol'}
+{'title': 'Kondor', 'value': 'kondor', 'href': '/auto/ttx/doninvest/kondor'}
+{'title': 'Orion', 'value': 'orion', 'href': '/auto/ttx/doninvest/orion'}

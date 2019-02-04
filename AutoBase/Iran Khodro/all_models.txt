@@ -1,0 +1,6 @@
+{'title': 'Dena', 'value': 'dena', 'href': '/auto/ttx/iran_khodro/dena'}
+{'title': 'Pars', 'value': 'pars', 'href': '/auto/ttx/iran_khodro/pars'}
+{'title': 'Runna', 'value': 'runna', 'href': '/auto/ttx/iran_khodro/runna'}
+{'title': 'Samand', 'value': 'samand', 'href': '/auto/ttx/iran_khodro/samand'}
+{'title': 'Sarir', 'value': 'sarir', 'href': '/auto/ttx/iran_khodro/sarir'}
+{'title': 'Soren', 'value': 'soren', 'href': '/auto/ttx/iran_khodro/soren'}

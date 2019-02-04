@@ -1,0 +1,20 @@
+{'title': 'Atlas', 'value': 'atlas', 'href': '/auto/ttx/geely/atlas'}
+{'title': 'CD', 'value': 'cd', 'href': '/auto/ttx/geely/cd'}
+{'title': 'Emgrand EC7', 'value': 'emgrand_ec7', 'href': '/auto/ttx/geely/emgrand_ec7'}
+{'title': 'Emgrand EC8', 'value': 'emgrand_ec8', 'href': '/auto/ttx/geely/emgrand_ec8'}
+{'title': 'Emgrand GT', 'value': 'emgrand_gt', 'href': '/auto/ttx/geely/emgrand_gt'}
+{'title': 'Emgrand X7', 'value': 'emgrand_x7', 'href': '/auto/ttx/geely/emgrand_x7'}
+{'title': 'Englon SC3', 'value': 'englon_sc3', 'href': '/auto/ttx/geely/englon_sc3'}
+{'title': 'Englon SC5-RV', 'value': 'englon_sc5-rv', 'href': '/auto/ttx/geely/englon_sc5-rv'}
+{'title': 'Englon SC6', 'value': 'englon_sc6', 'href': '/auto/ttx/geely/englon_sc6'}
+{'title': 'Englon SC7', 'value': 'englon_sc7', 'href': '/auto/ttx/geely/englon_sc7'}
+{'title': 'Englon SX7', 'value': 'englon_sx7', 'href': '/auto/ttx/geely/englon_sx7'}
+{'title': 'Englon TX4', 'value': 'englon_tx4', 'href': '/auto/ttx/geely/englon_tx4'}
+{'title': 'FC/Vision', 'value': 'fc_vision', 'href': '/auto/ttx/geely/fc_vision'}
+{'title': 'GC6', 'value': 'gc6', 'href': '/auto/ttx/geely/gc6'}
+{'title': 'GC7', 'value': 'gc7', 'href': '/auto/ttx/geely/gc7'}
+{'title': 'GX 7', 'value': 'gx_7', 'href': '/auto/ttx/geely/gx_7'}
+{'title': 'LC Cross/GX2', 'value': 'lc_cross_gx2', 'href': '/auto/ttx/geely/lc_cross_gx2'}
+{'title': 'LC/Panda', 'value': 'lc_panda', 'href': '/auto/ttx/geely/lc_panda'}
+{'title': 'MK', 'value': 'mk', 'href': '/auto/ttx/geely/mk'}
+{'title': 'Otaka/CK', 'value': 'otaka_ck', 'href': '/auto/ttx/geely/otaka_ck'}

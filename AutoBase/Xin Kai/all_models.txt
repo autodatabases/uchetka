@@ -1,0 +1,3 @@
+{'title': 'Pickup X3', 'value': 'pickup_x3', 'href': '/auto/ttx/xin_kai/pickup_x3'}
+{'title': 'SR-V X3', 'value': 'sr-v_x3', 'href': '/auto/ttx/xin_kai/sr-v_x3'}
+{'title': 'SUV X3', 'value': 'suv_x3', 'href': '/auto/ttx/xin_kai/suv_x3'}

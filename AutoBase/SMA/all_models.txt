@@ -1,0 +1,5 @@
+{'title': 'C32', 'value': 'c32', 'href': '/auto/ttx/sma/c32'}
+{'title': 'C51', 'value': 'c51', 'href': '/auto/ttx/sma/c51'}
+{'title': 'C52', 'value': 'c52', 'href': '/auto/ttx/sma/c52'}
+{'title': 'C61', 'value': 'c61', 'href': '/auto/ttx/sma/c61'}
+{'title': 'C81', 'value': 'c81', 'href': '/auto/ttx/sma/c81'}

@@ -1,0 +1,1 @@
+{'title': 'Toyota Carina (ST195;ST190;CT190;CT195;AT192;AT190;AT191) 1993 - 1996 гг.', 'year': '1993 - 1996 гг.'}

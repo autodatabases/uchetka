@@ -1,0 +1,8 @@
+{'title': 'Alter', 'value': 'alter', 'href': '/auto/ttx/gonow/alter'}
+{'title': 'Aoosed G5', 'value': 'aoosed_g5', 'href': '/auto/ttx/gonow/aoosed_g5'}
+{'title': 'GX6', 'value': 'gx6', 'href': '/auto/ttx/gonow/gx6'}
+{'title': 'Jetstar/GS50', 'value': 'jetstar_gs50', 'href': '/auto/ttx/gonow/jetstar_gs50'}
+{'title': 'Troy', 'value': 'troy', 'href': '/auto/ttx/gonow/troy'}
+{'title': 'WAY M1', 'value': 'way_m1', 'href': '/auto/ttx/gonow/way_m1'}
+{'title': 'WAY M2', 'value': 'way_m2', 'href': '/auto/ttx/gonow/way_m2'}
+{'title': 'WAY V1/Сargo', 'value': 'way_v1_sargo', 'href': '/auto/ttx/gonow/way_v1_sargo'}

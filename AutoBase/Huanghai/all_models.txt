@@ -1,0 +1,6 @@
+{'title': 'Antelope', 'value': 'antelope', 'href': '/auto/ttx/huanghai/antelope'}
+{'title': 'Aurora', 'value': 'aurora', 'href': '/auto/ttx/huanghai/aurora'}
+{'title': 'Challenger', 'value': 'challenger', 'href': '/auto/ttx/huanghai/challenger'}
+{'title': 'Landscape', 'value': 'landscape', 'href': '/auto/ttx/huanghai/landscape'}
+{'title': 'Major', 'value': 'major', 'href': '/auto/ttx/huanghai/major'}
+{'title': 'Plutus', 'value': 'plutus', 'href': '/auto/ttx/huanghai/plutus'}

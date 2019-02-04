@@ -1,0 +1,7 @@
+{'title': 'Chance', 'value': 'chance', 'href': '/auto/ttx/zaz/chance'}
+{'title': 'Forza', 'value': 'forza', 'href': '/auto/ttx/zaz/forza'}
+{'title': 'Вида', 'value': 'vida', 'href': '/auto/ttx/zaz/vida'}
+{'title': 'Ланос', 'value': 'lanos', 'href': '/auto/ttx/zaz/lanos'}
+{'title': 'Сенс', 'value': 'sens', 'href': '/auto/ttx/zaz/sens'}
+{'title': 'Славута', 'value': 'slavuta', 'href': '/auto/ttx/zaz/slavuta'}
+{'title': 'Таврия Нова', 'value': 'tavria_nova', 'href': '/auto/ttx/zaz/tavria_nova'}

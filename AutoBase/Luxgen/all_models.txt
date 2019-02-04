@@ -1,0 +1,5 @@
+{'title': '5 Sedan', 'value': '5_sedan', 'href': '/auto/ttx/luxgen/5_sedan'}
+{'title': '7 CEO', 'value': '7_ceo', 'href': '/auto/ttx/luxgen/7_ceo'}
+{'title': '7 MPV', 'value': '7_mpv', 'href': '/auto/ttx/luxgen/7_mpv'}
+{'title': '7 SUV', 'value': '7_suv', 'href': '/auto/ttx/luxgen/7_suv'}
+{'title': 'U6', 'value': 'u6', 'href': '/auto/ttx/luxgen/u6'}

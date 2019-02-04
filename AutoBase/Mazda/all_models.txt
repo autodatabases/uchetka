@@ -1,0 +1,40 @@
+{'title': '121', 'value': '121', 'href': '/auto/ttx/mazda/121'}
+{'title': '2', 'value': '2', 'href': '/auto/ttx/mazda/2'}
+{'title': '3', 'value': '3', 'href': '/auto/ttx/mazda/3'}
+{'title': '323', 'value': '323', 'href': '/auto/ttx/mazda/323'}
+{'title': '5', 'value': '5', 'href': '/auto/ttx/mazda/5'}
+{'title': '6', 'value': '6', 'href': '/auto/ttx/mazda/6'}
+{'title': '626', 'value': '626', 'href': '/auto/ttx/mazda/626'}
+{'title': '929', 'value': '929', 'href': '/auto/ttx/mazda/929'}
+{'title': 'Allegro', 'value': 'allegro', 'href': '/auto/ttx/mazda/allegro'}
+{'title': 'Atenza', 'value': 'atenza', 'href': '/auto/ttx/mazda/atenza'}
+{'title': 'Axela', 'value': 'axela', 'href': '/auto/ttx/mazda/axela'}
+{'title': 'AZ', 'value': 'az', 'href': '/auto/ttx/mazda/az'}
+{'title': 'Biante', 'value': 'biante', 'href': '/auto/ttx/mazda/biante'}
+{'title': 'Bongo', 'value': 'bongo', 'href': '/auto/ttx/mazda/bongo'}
+{'title': 'Bongo Friendee', 'value': 'bongo_friendee', 'href': '/auto/ttx/mazda/bongo_friendee'}
+{'title': 'B-series', 'value': 'b-series', 'href': '/auto/ttx/mazda/b-series'}
+{'title': 'BT-50', 'value': 'bt-50', 'href': '/auto/ttx/mazda/bt-50'}
+{'title': 'Capella', 'value': 'capella', 'href': '/auto/ttx/mazda/capella'}
+{'title': 'Carol', 'value': 'carol', 'href': '/auto/ttx/mazda/carol'}
+{'title': 'CX-5', 'value': 'cx-5', 'href': '/auto/ttx/mazda/cx-5'}
+{'title': 'CX-7', 'value': 'cx-7', 'href': '/auto/ttx/mazda/cx-7'}
+{'title': 'CX-9', 'value': 'cx-9', 'href': '/auto/ttx/mazda/cx-9'}
+{'title': 'Demio', 'value': 'demio', 'href': '/auto/ttx/mazda/demio'}
+{'title': 'Familia', 'value': 'familia', 'href': '/auto/ttx/mazda/familia'}
+{'title': 'Levante', 'value': 'levante', 'href': '/auto/ttx/mazda/levante'}
+{'title': 'Millenia', 'value': 'millenia', 'href': '/auto/ttx/mazda/millenia'}
+{'title': 'MPV', 'value': 'mpv', 'href': '/auto/ttx/mazda/mpv'}
+{'title': 'MX-3', 'value': 'mx-3', 'href': '/auto/ttx/mazda/mx-3'}
+{'title': 'MX-5', 'value': 'mx-5', 'href': '/auto/ttx/mazda/mx-5'}
+{'title': 'MX-6', 'value': 'mx-6', 'href': '/auto/ttx/mazda/mx-6'}
+{'title': 'Premacy', 'value': 'premacy', 'href': '/auto/ttx/mazda/premacy'}
+{'title': 'Proceed Marvie', 'value': 'proceed_marvie', 'href': '/auto/ttx/mazda/proceed_marvie'}
+{'title': 'Protege', 'value': 'protege', 'href': '/auto/ttx/mazda/protege'}
+{'title': 'RX-7', 'value': 'rx-7', 'href': '/auto/ttx/mazda/rx-7'}
+{'title': 'RX-8', 'value': 'rx-8', 'href': '/auto/ttx/mazda/rx-8'}
+{'title': 'Scrum', 'value': 'scrum', 'href': '/auto/ttx/mazda/scrum'}
+{'title': 'Tribute', 'value': 'tribute', 'href': '/auto/ttx/mazda/tribute'}
+{'title': 'Verisa', 'value': 'verisa', 'href': '/auto/ttx/mazda/verisa'}
+{'title': 'Xedos 6', 'value': 'xedos_6', 'href': '/auto/ttx/mazda/xedos_6'}
+{'title': 'Xedos 9', 'value': 'xedos_9', 'href': '/auto/ttx/mazda/xedos_9'}

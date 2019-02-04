@@ -1,0 +1,8 @@
+{'title': 'Bliss', 'value': 'bliss', 'href': '/auto/ttx/groz/bliss'}
+{'title': 'Dacota', 'value': 'dacota', 'href': '/auto/ttx/groz/dacota'}
+{'title': 'Fox', 'value': 'fox', 'href': '/auto/ttx/groz/fox'}
+{'title': 'Polarsun', 'value': 'polarsun', 'href': '/auto/ttx/groz/polarsun'}
+{'title': 'Rocky', 'value': 'rocky', 'href': '/auto/ttx/groz/rocky'}
+{'title': 'Shuttle', 'value': 'shuttle', 'href': '/auto/ttx/groz/shuttle'}
+{'title': 'Target', 'value': 'target', 'href': '/auto/ttx/groz/target'}
+{'title': 'Vertus', 'value': 'vertus', 'href': '/auto/ttx/groz/vertus'}

@@ -1,0 +1,12 @@
+{'title': 'Cygnet', 'value': 'cygnet', 'href': '/auto/ttx/aston_martin/cygnet'}
+{'title': 'DB7', 'value': 'db7', 'href': '/auto/ttx/aston_martin/db7'}
+{'title': 'DB9', 'value': 'db9', 'href': '/auto/ttx/aston_martin/db9'}
+{'title': 'DBS', 'value': 'dbs', 'href': '/auto/ttx/aston_martin/dbs'}
+{'title': 'One-77', 'value': 'one-77', 'href': '/auto/ttx/aston_martin/one-77'}
+{'title': 'Rapide', 'value': 'rapide', 'href': '/auto/ttx/aston_martin/rapide'}
+{'title': 'V12 Vantage', 'value': 'v12_vantage', 'href': '/auto/ttx/aston_martin/v12_vantage'}
+{'title': 'V8', 'value': 'v8', 'href': '/auto/ttx/aston_martin/v8'}
+{'title': 'V8 Vantage', 'value': 'v8_vantage', 'href': '/auto/ttx/aston_martin/v8_vantage'}
+{'title': 'V8 Volante', 'value': 'v8_volante', 'href': '/auto/ttx/aston_martin/v8_volante'}
+{'title': 'Vanquish', 'value': 'vanquish', 'href': '/auto/ttx/aston_martin/vanquish'}
+{'title': 'Virage', 'value': 'virage', 'href': '/auto/ttx/aston_martin/virage'}

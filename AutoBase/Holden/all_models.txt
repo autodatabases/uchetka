@@ -1,0 +1,13 @@
+{'title': 'Astra', 'value': 'astra', 'href': '/auto/ttx/holden/astra'}
+{'title': 'Barina', 'value': 'barina', 'href': '/auto/ttx/holden/barina'}
+{'title': 'Barina Spark', 'value': 'barina_spark', 'href': '/auto/ttx/holden/barina_spark'}
+{'title': 'Caprice', 'value': 'caprice', 'href': '/auto/ttx/holden/caprice'}
+{'title': 'Captiva', 'value': 'captiva', 'href': '/auto/ttx/holden/captiva'}
+{'title': 'Colorado', 'value': 'colorado', 'href': '/auto/ttx/holden/colorado'}
+{'title': 'Combo', 'value': 'combo', 'href': '/auto/ttx/holden/combo'}
+{'title': 'Commodore', 'value': 'commodore', 'href': '/auto/ttx/holden/commodore'}
+{'title': 'Cruze', 'value': 'cruze', 'href': '/auto/ttx/holden/cruze'}
+{'title': 'Epica', 'value': 'epica', 'href': '/auto/ttx/holden/epica'}
+{'title': 'Statesman', 'value': 'statesman', 'href': '/auto/ttx/holden/statesman'}
+{'title': 'Ute', 'value': 'ute', 'href': '/auto/ttx/holden/ute'}
+{'title': 'Viva', 'value': 'viva', 'href': '/auto/ttx/holden/viva'}

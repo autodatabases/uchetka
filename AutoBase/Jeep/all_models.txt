@@ -1,0 +1,8 @@
+{'title': 'Cherokee', 'value': 'cherokee', 'href': '/auto/ttx/jeep/cherokee'}
+{'title': 'Commander', 'value': 'commander', 'href': '/auto/ttx/jeep/commander'}
+{'title': 'Compass', 'value': 'compass', 'href': '/auto/ttx/jeep/compass'}
+{'title': 'Grand Cherokee', 'value': 'grand_cherokee', 'href': '/auto/ttx/jeep/grand_cherokee'}
+{'title': 'Liberty', 'value': 'liberty', 'href': '/auto/ttx/jeep/liberty'}
+{'title': 'Patriot', 'value': 'patriot', 'href': '/auto/ttx/jeep/patriot'}
+{'title': 'Renegade', 'value': 'renegade', 'href': '/auto/ttx/jeep/renegade'}
+{'title': 'Wrangler', 'value': 'wrangler', 'href': '/auto/ttx/jeep/wrangler'}

@@ -1,0 +1,7 @@
+{'title': 'Cerbera', 'value': 'cerbera', 'href': '/auto/ttx/tvr/cerbera'}
+{'title': 'Chimaera', 'value': 'chimaera', 'href': '/auto/ttx/tvr/chimaera'}
+{'title': 'Griffith', 'value': 'griffith', 'href': '/auto/ttx/tvr/griffith'}
+{'title': 'Sagaris', 'value': 'sagaris', 'href': '/auto/ttx/tvr/sagaris'}
+{'title': 'T350', 'value': 't350', 'href': '/auto/ttx/tvr/t350'}
+{'title': 'Tamora', 'value': 'tamora', 'href': '/auto/ttx/tvr/tamora'}
+{'title': 'Tuscan', 'value': 'tuscan', 'href': '/auto/ttx/tvr/tuscan'}

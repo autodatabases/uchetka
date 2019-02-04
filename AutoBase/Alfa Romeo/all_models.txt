@@ -1,0 +1,15 @@
+{'title': '145', 'value': '145', 'href': '/auto/ttx/alfa_romeo/145'}
+{'title': '146', 'value': '146', 'href': '/auto/ttx/alfa_romeo/146'}
+{'title': '147', 'value': '147', 'href': '/auto/ttx/alfa_romeo/147'}
+{'title': '155', 'value': '155', 'href': '/auto/ttx/alfa_romeo/155'}
+{'title': '156', 'value': '156', 'href': '/auto/ttx/alfa_romeo/156'}
+{'title': '159', 'value': '159', 'href': '/auto/ttx/alfa_romeo/159'}
+{'title': '164', 'value': '164', 'href': '/auto/ttx/alfa_romeo/164'}
+{'title': '166', 'value': '166', 'href': '/auto/ttx/alfa_romeo/166'}
+{'title': '8C', 'value': '8c', 'href': '/auto/ttx/alfa_romeo/8c'}
+{'title': 'Brera', 'value': 'brera', 'href': '/auto/ttx/alfa_romeo/brera'}
+{'title': 'Giulietta', 'value': 'giulietta', 'href': '/auto/ttx/alfa_romeo/giulietta'}
+{'title': 'GT', 'value': 'gt', 'href': '/auto/ttx/alfa_romeo/gt'}
+{'title': 'GTV', 'value': 'gtv', 'href': '/auto/ttx/alfa_romeo/gtv'}
+{'title': 'Mi.to', 'value': 'mi.to', 'href': '/auto/ttx/alfa_romeo/mi.to'}
+{'title': 'Spider', 'value': 'spider', 'href': '/auto/ttx/alfa_romeo/spider'}

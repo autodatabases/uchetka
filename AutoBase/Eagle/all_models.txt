@@ -1,0 +1,3 @@
+{'title': 'Summit', 'value': 'summit', 'href': '/auto/ttx/eagle/summit'}
+{'title': 'Talon', 'value': 'talon', 'href': '/auto/ttx/eagle/talon'}
+{'title': 'Vision', 'value': 'vision', 'href': '/auto/ttx/eagle/vision'}

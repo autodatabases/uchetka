@@ -1,0 +1,54 @@
+{'title': '3000 GT', 'value': '3000_gt', 'href': '/auto/ttx/mitsubishi/3000_gt'}
+{'title': '380', 'value': '380', 'href': '/auto/ttx/mitsubishi/380'}
+{'title': 'Airtrek', 'value': 'airtrek', 'href': '/auto/ttx/mitsubishi/airtrek'}
+{'title': 'Aspire', 'value': 'aspire', 'href': '/auto/ttx/mitsubishi/aspire'}
+{'title': 'ASX', 'value': 'asx', 'href': '/auto/ttx/mitsubishi/asx'}
+{'title': 'Bravo', 'value': 'bravo', 'href': '/auto/ttx/mitsubishi/bravo'}
+{'title': 'Carisma', 'value': 'carisma', 'href': '/auto/ttx/mitsubishi/carisma'}
+{'title': 'Challenger', 'value': 'challenger', 'href': '/auto/ttx/mitsubishi/challenger'}
+{'title': 'Chariot', 'value': 'chariot', 'href': '/auto/ttx/mitsubishi/chariot'}
+{'title': 'Colt', 'value': 'colt', 'href': '/auto/ttx/mitsubishi/colt'}
+{'title': 'Debonair', 'value': 'debonair', 'href': '/auto/ttx/mitsubishi/debonair'}
+{'title': 'Delica', 'value': 'delica', 'href': '/auto/ttx/mitsubishi/delica'}
+{'title': 'Diamante', 'value': 'diamante', 'href': '/auto/ttx/mitsubishi/diamante'}
+{'title': 'Dingo', 'value': 'dingo', 'href': '/auto/ttx/mitsubishi/dingo'}
+{'title': 'Dion', 'value': 'dion', 'href': '/auto/ttx/mitsubishi/dion'}
+{'title': 'Eclipse', 'value': 'eclipse', 'href': '/auto/ttx/mitsubishi/eclipse'}
+{'title': 'Eclipse Cross', 'value': 'eclipse_cross', 'href': '/auto/ttx/mitsubishi/eclipse_cross'}
+{'title': 'eK', 'value': 'ek', 'href': '/auto/ttx/mitsubishi/ek'}
+{'title': 'Emeraude', 'value': 'emeraude', 'href': '/auto/ttx/mitsubishi/emeraude'}
+{'title': 'Endeavor', 'value': 'endeavor', 'href': '/auto/ttx/mitsubishi/endeavor'}
+{'title': 'FTO', 'value': 'fto', 'href': '/auto/ttx/mitsubishi/fto'}
+{'title': 'Galant', 'value': 'galant', 'href': '/auto/ttx/mitsubishi/galant'}
+{'title': 'Grandis', 'value': 'grandis', 'href': '/auto/ttx/mitsubishi/grandis'}
+{'title': 'I', 'value': 'i', 'href': '/auto/ttx/mitsubishi/i'}
+{'title': 'i-MiEV', 'value': 'i-miev', 'href': '/auto/ttx/mitsubishi/i-miev'}
+{'title': 'L200', 'value': 'l200', 'href': '/auto/ttx/mitsubishi/l200'}
+{'title': 'L300', 'value': 'l300', 'href': '/auto/ttx/mitsubishi/l300'}
+{'title': 'L400', 'value': 'l400', 'href': '/auto/ttx/mitsubishi/l400'}
+{'title': 'Lancer', 'value': 'lancer', 'href': '/auto/ttx/mitsubishi/lancer'}
+{'title': 'Legnum', 'value': 'legnum', 'href': '/auto/ttx/mitsubishi/legnum'}
+{'title': 'Libero', 'value': 'libero', 'href': '/auto/ttx/mitsubishi/libero'}
+{'title': 'Magna', 'value': 'magna', 'href': '/auto/ttx/mitsubishi/magna'}
+{'title': 'Minica', 'value': 'minica', 'href': '/auto/ttx/mitsubishi/minica'}
+{'title': 'Mirage', 'value': 'mirage', 'href': '/auto/ttx/mitsubishi/mirage'}
+{'title': 'Montero', 'value': 'montero', 'href': '/auto/ttx/mitsubishi/montero'}
+{'title': 'Montero Sport', 'value': 'montero_sport', 'href': '/auto/ttx/mitsubishi/montero_sport'}
+{'title': 'Outlander', 'value': 'outlander', 'href': '/auto/ttx/mitsubishi/outlander'}
+{'title': 'Pajero', 'value': 'pajero', 'href': '/auto/ttx/mitsubishi/pajero'}
+{'title': 'Pajero iO', 'value': 'pajero_io', 'href': '/auto/ttx/mitsubishi/pajero_io'}
+{'title': 'Pajero Junior', 'value': 'pajero_junior', 'href': '/auto/ttx/mitsubishi/pajero_junior'}
+{'title': 'Pajero Mini', 'value': 'pajero_mini', 'href': '/auto/ttx/mitsubishi/pajero_mini'}
+{'title': 'Pajero Pinin', 'value': 'pajero_pinin', 'href': '/auto/ttx/mitsubishi/pajero_pinin'}
+{'title': 'Pajero Sport', 'value': 'pajero_sport', 'href': '/auto/ttx/mitsubishi/pajero_sport'}
+{'title': 'Raider', 'value': 'raider', 'href': '/auto/ttx/mitsubishi/raider'}
+{'title': 'RVR', 'value': 'rvr', 'href': '/auto/ttx/mitsubishi/rvr'}
+{'title': 'Shogun', 'value': 'shogun', 'href': '/auto/ttx/mitsubishi/shogun'}
+{'title': 'Shogun Mini', 'value': 'shogun_mini', 'href': '/auto/ttx/mitsubishi/shogun_mini'}
+{'title': 'Shogun Sport', 'value': 'shogun_sport', 'href': '/auto/ttx/mitsubishi/shogun_sport'}
+{'title': 'Space Gear', 'value': 'space_gear', 'href': '/auto/ttx/mitsubishi/space_gear'}
+{'title': 'Space Runner', 'value': 'space_runner', 'href': '/auto/ttx/mitsubishi/space_runner'}
+{'title': 'Space Star', 'value': 'space_star', 'href': '/auto/ttx/mitsubishi/space_star'}
+{'title': 'Space Wagon', 'value': 'space_wagon', 'href': '/auto/ttx/mitsubishi/space_wagon'}
+{'title': 'Town Box', 'value': 'town_box', 'href': '/auto/ttx/mitsubishi/town_box'}
+{'title': 'Triton', 'value': 'triton', 'href': '/auto/ttx/mitsubishi/triton'}

@@ -1,0 +1,20 @@
+{'title': '200', 'value': '200', 'href': '/auto/ttx/chrysler/200'}
+{'title': '300C', 'value': '300c', 'href': '/auto/ttx/chrysler/300c'}
+{'title': '300M', 'value': '300m', 'href': '/auto/ttx/chrysler/300m'}
+{'title': 'Aspen', 'value': 'aspen', 'href': '/auto/ttx/chrysler/aspen'}
+{'title': 'Cirrus', 'value': 'cirrus', 'href': '/auto/ttx/chrysler/cirrus'}
+{'title': 'Concorde', 'value': 'concorde', 'href': '/auto/ttx/chrysler/concorde'}
+{'title': 'Crossfire', 'value': 'crossfire', 'href': '/auto/ttx/chrysler/crossfire'}
+{'title': 'Intrepid', 'value': 'intrepid', 'href': '/auto/ttx/chrysler/intrepid'}
+{'title': 'LHS', 'value': 'lhs', 'href': '/auto/ttx/chrysler/lhs'}
+{'title': 'Neon', 'value': 'neon', 'href': '/auto/ttx/chrysler/neon'}
+{'title': 'New Yorker', 'value': 'new_yorker', 'href': '/auto/ttx/chrysler/new_yorker'}
+{'title': 'Pacifica', 'value': 'pacifica', 'href': '/auto/ttx/chrysler/pacifica'}
+{'title': 'Prowler', 'value': 'prowler', 'href': '/auto/ttx/chrysler/prowler'}
+{'title': 'PT Cruiser', 'value': 'pt_cruiser', 'href': '/auto/ttx/chrysler/pt_cruiser'}
+{'title': 'Sebring', 'value': 'sebring', 'href': '/auto/ttx/chrysler/sebring'}
+{'title': 'Stratus', 'value': 'stratus', 'href': '/auto/ttx/chrysler/stratus'}
+{'title': 'Town & Country', 'value': 'town_country', 'href': '/auto/ttx/chrysler/town_country'}
+{'title': 'Viper', 'value': 'viper', 'href': '/auto/ttx/chrysler/viper'}
+{'title': 'Vision', 'value': 'vision', 'href': '/auto/ttx/chrysler/vision'}
+{'title': 'Voyager', 'value': 'voyager', 'href': '/auto/ttx/chrysler/voyager'}

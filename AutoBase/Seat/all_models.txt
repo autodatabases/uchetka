@@ -1,0 +1,10 @@
+{'title': 'Alhambra', 'value': 'alhambra', 'href': '/auto/ttx/seat/alhambra'}
+{'title': 'Altea', 'value': 'altea', 'href': '/auto/ttx/seat/altea'}
+{'title': 'Arosa', 'value': 'arosa', 'href': '/auto/ttx/seat/arosa'}
+{'title': 'Cordoba', 'value': 'cordoba', 'href': '/auto/ttx/seat/cordoba'}
+{'title': 'Exeo', 'value': 'exeo', 'href': '/auto/ttx/seat/exeo'}
+{'title': 'Ibiza', 'value': 'ibiza', 'href': '/auto/ttx/seat/ibiza'}
+{'title': 'Leon', 'value': 'leon', 'href': '/auto/ttx/seat/leon'}
+{'title': 'Marbella', 'value': 'marbella', 'href': '/auto/ttx/seat/marbella'}
+{'title': 'Mii', 'value': 'mii', 'href': '/auto/ttx/seat/mii'}
+{'title': 'Toledo', 'value': 'toledo', 'href': '/auto/ttx/seat/toledo'}

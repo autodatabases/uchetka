@@ -1,0 +1,24 @@
+{'title': '1 Series', 'value': '1_series', 'href': '/auto/ttx/bmw/1_series'}
+{'title': '2 Series', 'value': '2_series', 'href': '/auto/ttx/bmw/2_series'}
+{'title': '3 Series', 'value': '3_series', 'href': '/auto/ttx/bmw/3_series'}
+{'title': '4 Series', 'value': '4_series', 'href': '/auto/ttx/bmw/4_series'}
+{'title': '5 Series', 'value': '5_series', 'href': '/auto/ttx/bmw/5_series'}
+{'title': '6 Series', 'value': '6_series', 'href': '/auto/ttx/bmw/6_series'}
+{'title': '7 Series', 'value': '7_series', 'href': '/auto/ttx/bmw/7_series'}
+{'title': '8 Series', 'value': '8_series', 'href': '/auto/ttx/bmw/8_series'}
+{'title': 'i3', 'value': 'i3', 'href': '/auto/ttx/bmw/i3'}
+{'title': 'i8', 'value': 'i8', 'href': '/auto/ttx/bmw/i8'}
+{'title': 'M3', 'value': 'm3', 'href': '/auto/ttx/bmw/m3'}
+{'title': 'M4', 'value': 'm4', 'href': '/auto/ttx/bmw/m4'}
+{'title': 'M5', 'value': 'm5', 'href': '/auto/ttx/bmw/m5'}
+{'title': 'M6', 'value': 'm6', 'href': '/auto/ttx/bmw/m6'}
+{'title': 'X1', 'value': 'x1', 'href': '/auto/ttx/bmw/x1'}
+{'title': 'X3', 'value': 'x3', 'href': '/auto/ttx/bmw/x3'}
+{'title': 'X4', 'value': 'x4', 'href': '/auto/ttx/bmw/x4'}
+{'title': 'X5', 'value': 'x5', 'href': '/auto/ttx/bmw/x5'}
+{'title': 'X5 M', 'value': 'x5_m', 'href': '/auto/ttx/bmw/x5_m'}
+{'title': 'X6', 'value': 'x6', 'href': '/auto/ttx/bmw/x6'}
+{'title': 'X6 M', 'value': 'x6_m', 'href': '/auto/ttx/bmw/x6_m'}
+{'title': 'Z3', 'value': 'z3', 'href': '/auto/ttx/bmw/z3'}
+{'title': 'Z4', 'value': 'z4', 'href': '/auto/ttx/bmw/z4'}
+{'title': 'Z8', 'value': 'z8', 'href': '/auto/ttx/bmw/z8'}

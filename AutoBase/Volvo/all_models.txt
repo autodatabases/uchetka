@@ -1,0 +1,24 @@
+{'title': '740', 'value': '740', 'href': '/auto/ttx/volvo/740'}
+{'title': '850', 'value': '850', 'href': '/auto/ttx/volvo/850'}
+{'title': '940', 'value': '940', 'href': '/auto/ttx/volvo/940'}
+{'title': '960', 'value': '960', 'href': '/auto/ttx/volvo/960'}
+{'title': 'C30', 'value': 'c30', 'href': '/auto/ttx/volvo/c30'}
+{'title': 'C70', 'value': 'c70', 'href': '/auto/ttx/volvo/c70'}
+{'title': 'S40', 'value': 's40', 'href': '/auto/ttx/volvo/s40'}
+{'title': 'S60', 'value': 's60', 'href': '/auto/ttx/volvo/s60'}
+{'title': 'S60 Cross Country', 'value': 's60_cross_country', 'href': '/auto/ttx/volvo/s60_cross_country'}
+{'title': 'S70', 'value': 's70', 'href': '/auto/ttx/volvo/s70'}
+{'title': 'S80', 'value': 's80', 'href': '/auto/ttx/volvo/s80'}
+{'title': 'S90', 'value': 's90', 'href': '/auto/ttx/volvo/s90'}
+{'title': 'V40', 'value': 'v40', 'href': '/auto/ttx/volvo/v40'}
+{'title': 'V40 Cross Country', 'value': 'v40_cross_country', 'href': '/auto/ttx/volvo/v40_cross_country'}
+{'title': 'V50', 'value': 'v50', 'href': '/auto/ttx/volvo/v50'}
+{'title': 'V60', 'value': 'v60', 'href': '/auto/ttx/volvo/v60'}
+{'title': 'V60 Cross Country', 'value': 'v60_cross_country', 'href': '/auto/ttx/volvo/v60_cross_country'}
+{'title': 'V70', 'value': 'v70', 'href': '/auto/ttx/volvo/v70'}
+{'title': 'V90', 'value': 'v90', 'href': '/auto/ttx/volvo/v90'}
+{'title': 'V90 Cross Country', 'value': 'v90_cross_country', 'href': '/auto/ttx/volvo/v90_cross_country'}
+{'title': 'XC40', 'value': 'xc40', 'href': '/auto/ttx/volvo/xc40'}
+{'title': 'XC60', 'value': 'xc60', 'href': '/auto/ttx/volvo/xc60'}
+{'title': 'XC70', 'value': 'xc70', 'href': '/auto/ttx/volvo/xc70'}
+{'title': 'XC90', 'value': 'xc90', 'href': '/auto/ttx/volvo/xc90'}

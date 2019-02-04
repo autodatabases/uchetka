@@ -1,0 +1,208 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block head %}
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Coiny|Merriweather|Roboto+Slab|Roboto+Mono" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+		<link rel="stylesheet" href="{% static "css/bootstrap/css/bootstrap.min.css" %}">
+		<link rel="stylesheet" href="{% static "css/styles.css" %}">
+		<link rel="stylesheet" href="{% static "css/components.css" %}">
+		<link rel="stylesheet" href="{% static "css/menu.css" %}">
+		<script src="{% static "js/jquery-3.3.1.min.js" %}"></script>	
+		<script src="{% static "js/base.js" %}"></script>
+	{% endblock head %}	
+<title>
+	{% block title %}
+		Document
+	{% endblock title %}
+</title>
+</head>
+<body>
+	<div class="content">
+		<div class="menu">
+			{% block menu %}
+			<div class="info">
+				<h1>Вы вошли как: {{request.user}}</h1>
+				<h2>Деталей на складе: <span id="totalDetalsPrice">{{detals_count}}</span></h2>
+				<h3>Какая то инфа: <span id="totalDetalsPrice">Пусто</span></h3>
+				</div>
+				<!-- Contenedor -->
+				<ul id="accordion" class="accordion">
+					<li class="noMenu">
+						<div class="link_button"></div>
+					</li>
+					<li>
+						<a href="/lk/detals_list/"><div class="link_button"><i class="fas fa-list-ul"></i>Мои детали</div></a>
+					</li>
+					<li>
+						<form action="/lk/add_auto/" method="POST">
+							<div class="link"><i class="fa fa-plus"></i>Добавить детали<i class="fa fa-chevron-down"></i></div>
+							<ul class="submenu">
+								<li id="one" class="button">{% csrf_token %}
+									<a href="#">Автомобиль-донор
+									</a>
+									<div class="iconSubmenu">
+										<img src="{% static "img/faq.png" %}" alt="">
+									</div>
+								</li>
+								<li>
+									<a href="">
+										Импорт из файла
+									</a>
+									<div class="iconSubmenu">
+										<img src="{% static "img/faq.png" %}" alt="">
+									</div>
+								</li>
+
+
+							</ul>
+						</form>
+					</li>
+					<li>
+						<a href=""><div class="link_button"><i class="fas fa-chart-bar"></i>Статистика</div></a>
+					</li>
+					<li>
+						<a href=""><div class="link_button"><i class="fas fa-users"></i>Сотруднки</div></a>
+					</li>
+					<li>
+						<a href=""><div class="link_button"><i class="fas fa-warehouse"></i>Склады</div></a>
+					</li>
+					<li>
+						<a href=""><div class="link_button"><i class="fas fa-cog"></i>Настройки</div></a>
+					</li>
+					<li>
+						<a href=""><div class="link_button"><i class="fa fa-power-off"></i>Выход</div></a>
+					</li>
+					<li class="noMenu">
+						<div class="link_button"></div>
+					</li>
+				</ul>
+				
+			{% endblock menu %}
+		</div>
+		<div class="mainpanel">
+			{% block mainpanel %}
+				
+			{% endblock mainpanel %}
+		</div>
+	</div>
+	<div id="modal-container">
+		<div class="modal-background">
+			<div class="modal">
+				<div class="modalcontent" id="modalcontent">
+					<div class="selectAutoDonor">
+						<form action="/lk/add_auto/" method="POST">
+						{% csrf_token %}
+						<div class="titleModal">
+							<h1>Выберите автомобиль-донор</h1>
+						</div>
+						<div class="selectAuto">
+							<div class="input-group-prepend">
+								<span class="input-group-text">Марка:</span>
+								<select {% if stockroom_count == 0 %} disabled {% endif %} name="selectMark" id="selectMark" class="custom-select custom-select-lg mb-3" onchange="load_models()">
+									<option selected>Не выбрано</option>
+									{% for mark in all_marks %}
+										<option value="{{mark.value}}">{{mark.title}}</option>
+									{% endfor %}
+								</select>
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text">Модель:</span>
+								<select {% if stockroom_count == 0 %} disabled {% endif %} name="selectModel" id="selectModel" class="custom-select custom-select-lg mb-3" onchange="load_generations()">
+									<option selected>Не выбрано</option>
+								</select>
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text">Поколение:</span>
+								<select {% if stockroom_count == 0 %} disabled {% endif %} name="selectGeneration" id="selectGeneration" class="custom-select custom-select-lg mb-3">
+									<option selected>Не выбрано</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="bottompanel">
+							<div class="buttonsAuto">
+								<button id="close" type="button" class="btn btn-danger">Отмена</button>
+								<button {% if stockroom_count == 0 %} disabled {% endif %} id="nextpageadd" type="submit" class="btn btn-success">Продолжить</button>
+							</div>
+							<div class="warningpanel">
+								{% if stockroom_count == 0 %}
+									<div class="alert alert-warning" role="alert">
+										Вам необходимо добавить хотя-бы один склад. Перейдите на <a id="open_add_stock_panel" href="#" class="alert-link" onclick="change_modal_content(this)">страницу добавления</a>.
+									</div>
+								{% else %}
+									<div class="alert alert-info" role="alert">
+										Выберите автомобиль-донор и нажмите продолжить.
+									</div>
+								{% endif %}
+							</div>
+						</div>
+						</form>
+					</div>
+					<div class="createStockRoom" id="createStockRoom">
+						<div class="titleModal">
+							<h1>Добавить новый склад</h1>
+						</div>
+						<div class="titleInput">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<div class="input-group-text">Название склада</div>
+								</div>
+								<input id="titleStockRoom" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="По умолчанию: Склад № ... ">
+							</div>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<label class="input-group-text" for="inputGroupSelect01">Страна</label>
+								</div>
+								<select id="countryStockRoom" class="custom-select custom-select-sm" id="inputGroupSelect01">
+									<option selected>Россия</option>
+								</select>
+							</div>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<label class="input-group-text" for="inputGroupSelect01">Регион</label>
+								</div>
+								<select class="custom-select custom-select-sm" id="inputGroupSelect01">
+									<option selected>Не выбран</option>
+									<option value="1">Удмуртия</option>
+								</select>
+							</div>	
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<label class="input-group-text" for="inputGroupSelect01">Город</label>
+								</div>
+								<select class="custom-select custom-select-sm" id="inputGroupSelect01">
+									<option selected>Не выбран</option>
+									<option value="1">Ижевск</option>
+									<option value="2">Сарапул</option>
+									<option value="3">Можга</option>
+								</select>
+							</div>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<div class="input-group-text">Улица</div>
+								</div>
+								<input id="streetStockRoom" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Название улицы">
+							</div>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<div class="input-group-text">Дом/строение</div>
+								</div>
+								<input id="houseStockRoom" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
+							</div>
+							<div class="buttonsAuto">
+								<button id="close_add_stock" type="button" class="btn btn-danger" onclick="change_modal_content(this)">Отмена</button>
+								<button id="nextpageadd" type="button" class="btn btn-success" onclick="add_StockRoom(createStockRoom)">Добавить</button>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="{% static "js/modal.js" %}"></script>
+</body>
+</html>

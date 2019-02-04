@@ -1,0 +1,96 @@
+{'title': '4Runner', 'value': '4runner', 'href': '/auto/ttx/toyota/4runner'}
+{'title': 'Allion', 'value': 'allion', 'href': '/auto/ttx/toyota/allion'}
+{'title': 'Alphard', 'value': 'alphard', 'href': '/auto/ttx/toyota/alphard'}
+{'title': 'Altezza', 'value': 'altezza', 'href': '/auto/ttx/toyota/altezza'}
+{'title': 'Aristo', 'value': 'aristo', 'href': '/auto/ttx/toyota/aristo'}
+{'title': 'Aurion', 'value': 'aurion', 'href': '/auto/ttx/toyota/aurion'}
+{'title': 'Auris', 'value': 'auris', 'href': '/auto/ttx/toyota/auris'}
+{'title': 'Avalon', 'value': 'avalon', 'href': '/auto/ttx/toyota/avalon'}
+{'title': 'Avensis', 'value': 'avensis', 'href': '/auto/ttx/toyota/avensis'}
+{'title': 'Aygo', 'value': 'aygo', 'href': '/auto/ttx/toyota/aygo'}
+{'title': 'bB', 'value': 'bb', 'href': '/auto/ttx/toyota/bb'}
+{'title': 'Belta', 'value': 'belta', 'href': '/auto/ttx/toyota/belta'}
+{'title': 'Blade', 'value': 'blade', 'href': '/auto/ttx/toyota/blade'}
+{'title': 'Brevis', 'value': 'brevis', 'href': '/auto/ttx/toyota/brevis'}
+{'title': 'Caldina', 'value': 'caldina', 'href': '/auto/ttx/toyota/caldina'}
+{'title': 'Cami', 'value': 'cami', 'href': '/auto/ttx/toyota/cami'}
+{'title': 'Camry', 'value': 'camry', 'href': '/auto/ttx/toyota/camry'}
+{'title': 'Carina', 'value': 'carina', 'href': '/auto/ttx/toyota/carina'}
+{'title': 'Cavalier', 'value': 'cavalier', 'href': '/auto/ttx/toyota/cavalier'}
+{'title': 'Celica', 'value': 'celica', 'href': '/auto/ttx/toyota/celica'}
+{'title': 'Century', 'value': 'century', 'href': '/auto/ttx/toyota/century'}
+{'title': 'Chaser', 'value': 'chaser', 'href': '/auto/ttx/toyota/chaser'}
+{'title': 'Corolla', 'value': 'corolla', 'href': '/auto/ttx/toyota/corolla'}
+{'title': 'Corona', 'value': 'corona', 'href': '/auto/ttx/toyota/corona'}
+{'title': 'Corsa', 'value': 'corsa', 'href': '/auto/ttx/toyota/corsa'}
+{'title': 'Cresta', 'value': 'cresta', 'href': '/auto/ttx/toyota/cresta'}
+{'title': 'Crown', 'value': 'crown', 'href': '/auto/ttx/toyota/crown'}
+{'title': 'Cynos', 'value': 'cynos', 'href': '/auto/ttx/toyota/cynos'}
+{'title': 'Duet', 'value': 'duet', 'href': '/auto/ttx/toyota/duet'}
+{'title': 'Echo/Platz', 'value': 'echo_platz', 'href': '/auto/ttx/toyota/echo_platz'}
+{'title': 'Estima', 'value': 'estima', 'href': '/auto/ttx/toyota/estima'}
+{'title': 'FJ Cruiser', 'value': 'fj_cruiser', 'href': '/auto/ttx/toyota/fj_cruiser'}
+{'title': 'Fortuner', 'value': 'fortuner', 'href': '/auto/ttx/toyota/fortuner'}
+{'title': 'FunCargo', 'value': 'funcargo', 'href': '/auto/ttx/toyota/funcargo'}
+{'title': 'Gaia', 'value': 'gaia', 'href': '/auto/ttx/toyota/gaia'}
+{'title': 'GT 86', 'value': 'gt_86', 'href': '/auto/ttx/toyota/gt_86'}
+{'title': 'Harrier', 'value': 'harrier', 'href': '/auto/ttx/toyota/harrier'}
+{'title': 'HiAce', 'value': 'hiace', 'href': '/auto/ttx/toyota/hiace'}
+{'title': 'Highlander', 'value': 'highlander', 'href': '/auto/ttx/toyota/highlander'}
+{'title': 'Hilux', 'value': 'hilux', 'href': '/auto/ttx/toyota/hilux'}
+{'title': 'Ipsum', 'value': 'ipsum', 'href': '/auto/ttx/toyota/ipsum'}
+{'title': 'IQ', 'value': 'iq', 'href': '/auto/ttx/toyota/iq'}
+{'title': 'Isis', 'value': 'isis', 'href': '/auto/ttx/toyota/isis'}
+{'title': 'Ist', 'value': 'ist', 'href': '/auto/ttx/toyota/ist'}
+{'title': 'Kluger', 'value': 'kluger', 'href': '/auto/ttx/toyota/kluger'}
+{'title': 'Land Cruiser', 'value': 'land_cruiser', 'href': '/auto/ttx/toyota/land_cruiser'}
+{'title': 'Land Cruiser Prado', 'value': 'land_cruiser_prado', 'href': '/auto/ttx/toyota/land_cruiser_prado'}
+{'title': 'LiteAce', 'value': 'liteace', 'href': '/auto/ttx/toyota/liteace'}
+{'title': 'Mark', 'value': 'mark', 'href': '/auto/ttx/toyota/mark'}
+{'title': 'Matrix', 'value': 'matrix', 'href': '/auto/ttx/toyota/matrix'}
+{'title': 'MR2', 'value': 'mr2', 'href': '/auto/ttx/toyota/mr2'}
+{'title': 'Nadia', 'value': 'nadia', 'href': '/auto/ttx/toyota/nadia'}
+{'title': 'Noah', 'value': 'noah', 'href': '/auto/ttx/toyota/noah'}
+{'title': 'Opa', 'value': 'opa', 'href': '/auto/ttx/toyota/opa'}
+{'title': 'Paseo', 'value': 'paseo', 'href': '/auto/ttx/toyota/paseo'}
+{'title': 'Passo', 'value': 'passo', 'href': '/auto/ttx/toyota/passo'}
+{'title': 'Picnic', 'value': 'picnic', 'href': '/auto/ttx/toyota/picnic'}
+{'title': 'Porte', 'value': 'porte', 'href': '/auto/ttx/toyota/porte'}
+{'title': 'Premio', 'value': 'premio', 'href': '/auto/ttx/toyota/premio'}
+{'title': 'Previa', 'value': 'previa', 'href': '/auto/ttx/toyota/previa'}
+{'title': 'Prius', 'value': 'prius', 'href': '/auto/ttx/toyota/prius'}
+{'title': 'Probox', 'value': 'probox', 'href': '/auto/ttx/toyota/probox'}
+{'title': 'Progres', 'value': 'progres', 'href': '/auto/ttx/toyota/progres'}
+{'title': 'Ractis', 'value': 'ractis', 'href': '/auto/ttx/toyota/ractis'}
+{'title': 'Raum', 'value': 'raum', 'href': '/auto/ttx/toyota/raum'}
+{'title': 'RAV4', 'value': 'rav4', 'href': '/auto/ttx/toyota/rav4'}
+{'title': 'Regius', 'value': 'regius', 'href': '/auto/ttx/toyota/regius'}
+{'title': 'Rush', 'value': 'rush', 'href': '/auto/ttx/toyota/rush'}
+{'title': 'Scepter', 'value': 'scepter', 'href': '/auto/ttx/toyota/scepter'}
+{'title': 'Sequoia', 'value': 'sequoia', 'href': '/auto/ttx/toyota/sequoia'}
+{'title': 'Sienna', 'value': 'sienna', 'href': '/auto/ttx/toyota/sienna'}
+{'title': 'Sienta', 'value': 'sienta', 'href': '/auto/ttx/toyota/sienta'}
+{'title': 'Sprinter', 'value': 'sprinter', 'href': '/auto/ttx/toyota/sprinter'}
+{'title': 'Starlet', 'value': 'starlet', 'href': '/auto/ttx/toyota/starlet'}
+{'title': 'Succeed', 'value': 'succeed', 'href': '/auto/ttx/toyota/succeed'}
+{'title': 'Supra', 'value': 'supra', 'href': '/auto/ttx/toyota/supra'}
+{'title': 'Tacoma', 'value': 'tacoma', 'href': '/auto/ttx/toyota/tacoma'}
+{'title': 'Town Ace', 'value': 'town_ace', 'href': '/auto/ttx/toyota/town_ace'}
+{'title': 'Tundra', 'value': 'tundra', 'href': '/auto/ttx/toyota/tundra'}
+{'title': 'Urban Cruiser', 'value': 'urban_cruiser', 'href': '/auto/ttx/toyota/urban_cruiser'}
+{'title': 'Vanguard', 'value': 'vanguard', 'href': '/auto/ttx/toyota/vanguard'}
+{'title': 'Vellfire', 'value': 'vellfire', 'href': '/auto/ttx/toyota/vellfire'}
+{'title': 'Venza', 'value': 'venza', 'href': '/auto/ttx/toyota/venza'}
+{'title': 'Verossa', 'value': 'verossa', 'href': '/auto/ttx/toyota/verossa'}
+{'title': 'Verso', 'value': 'verso', 'href': '/auto/ttx/toyota/verso'}
+{'title': 'Verso-S', 'value': 'verso-s', 'href': '/auto/ttx/toyota/verso-s'}
+{'title': 'Vios', 'value': 'vios', 'href': '/auto/ttx/toyota/vios'}
+{'title': 'Vista', 'value': 'vista', 'href': '/auto/ttx/toyota/vista'}
+{'title': 'Vitz', 'value': 'vitz', 'href': '/auto/ttx/toyota/vitz'}
+{'title': 'Voltz', 'value': 'voltz', 'href': '/auto/ttx/toyota/voltz'}
+{'title': 'Voxy', 'value': 'voxy', 'href': '/auto/ttx/toyota/voxy'}
+{'title': 'Will Cypha', 'value': 'will_cypha', 'href': '/auto/ttx/toyota/will_cypha'}
+{'title': 'Will VS', 'value': 'will_vs', 'href': '/auto/ttx/toyota/will_vs'}
+{'title': 'Windom', 'value': 'windom', 'href': '/auto/ttx/toyota/windom'}
+{'title': 'Wish', 'value': 'wish', 'href': '/auto/ttx/toyota/wish'}
+{'title': 'Yaris', 'value': 'yaris', 'href': '/auto/ttx/toyota/yaris'}

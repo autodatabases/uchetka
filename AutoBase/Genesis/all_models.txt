@@ -1,0 +1,3 @@
+{'title': 'G70', 'value': 'g70', 'href': '/auto/ttx/genesis/g70'}
+{'title': 'G80', 'value': 'g80', 'href': '/auto/ttx/genesis/g80'}
+{'title': 'G90', 'value': 'g90', 'href': '/auto/ttx/genesis/g90'}

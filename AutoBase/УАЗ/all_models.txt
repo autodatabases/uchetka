@@ -1,0 +1,16 @@
+{'title': '2206', 'value': '2206', 'href': '/auto/ttx/uaz/2206'}
+{'title': '2360 (Карго)', 'value': '2360_kargo', 'href': '/auto/ttx/uaz/2360_kargo'}
+{'title': '2363 (Пикап)', 'value': '2363_pikap', 'href': '/auto/ttx/uaz/2363_pikap'}
+{'title': '2760', 'value': '2760', 'href': '/auto/ttx/uaz/2760'}
+{'title': '3151 (Хантер)', 'value': '3151_hanter', 'href': '/auto/ttx/uaz/3151_hanter'}
+{'title': '3153', 'value': '3153', 'href': '/auto/ttx/uaz/3153'}
+{'title': '3159', 'value': '3159', 'href': '/auto/ttx/uaz/3159'}
+{'title': '3160', 'value': '3160', 'href': '/auto/ttx/uaz/3160'}
+{'title': '3162 (Симбир)', 'value': '3162_simbir', 'href': '/auto/ttx/uaz/3162_simbir'}
+{'title': '3163 (Патриот)', 'value': '3163_patriot', 'href': '/auto/ttx/uaz/3163_patriot'}
+{'title': '3164 (Патриот Спорт)', 'value': '3164_patriot_sport', 'href': '/auto/ttx/uaz/3164_patriot_sport'}
+{'title': '3165', 'value': '3165', 'href': '/auto/ttx/uaz/3165'}
+{'title': '3303', 'value': '3303', 'href': '/auto/ttx/uaz/3303'}
+{'title': '3741', 'value': '3741', 'href': '/auto/ttx/uaz/3741'}
+{'title': '3909', 'value': '3909', 'href': '/auto/ttx/uaz/3909'}
+{'title': '3962', 'value': '3962', 'href': '/auto/ttx/uaz/3962'}

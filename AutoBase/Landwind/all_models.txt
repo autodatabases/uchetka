@@ -1,0 +1,6 @@
+{'title': 'Fashion', 'value': 'fashion', 'href': '/auto/ttx/landwind/fashion'}
+{'title': 'Forward', 'value': 'forward', 'href': '/auto/ttx/landwind/forward'}
+{'title': 'X5', 'value': 'x5', 'href': '/auto/ttx/landwind/x5'}
+{'title': 'X6', 'value': 'x6', 'href': '/auto/ttx/landwind/x6'}
+{'title': 'X9', 'value': 'x9', 'href': '/auto/ttx/landwind/x9'}
+{'title': 'X-Pedition', 'value': 'x-pedition', 'href': '/auto/ttx/landwind/x-pedition'}

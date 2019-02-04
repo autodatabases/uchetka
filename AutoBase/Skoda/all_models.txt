@@ -1,0 +1,10 @@
+{'title': 'Citigo', 'value': 'citigo', 'href': '/auto/ttx/skoda/citigo'}
+{'title': 'Fabia', 'value': 'fabia', 'href': '/auto/ttx/skoda/fabia'}
+{'title': 'Felicia', 'value': 'felicia', 'href': '/auto/ttx/skoda/felicia'}
+{'title': 'Kodiaq', 'value': 'kodiaq', 'href': '/auto/ttx/skoda/kodiaq'}
+{'title': 'Octavia', 'value': 'octavia', 'href': '/auto/ttx/skoda/octavia'}
+{'title': 'Praktik', 'value': 'praktik', 'href': '/auto/ttx/skoda/praktik'}
+{'title': 'Rapid', 'value': 'rapid', 'href': '/auto/ttx/skoda/rapid'}
+{'title': 'Roomster', 'value': 'roomster', 'href': '/auto/ttx/skoda/roomster'}
+{'title': 'Superb', 'value': 'superb', 'href': '/auto/ttx/skoda/superb'}
+{'title': 'Yeti', 'value': 'yeti', 'href': '/auto/ttx/skoda/yeti'}

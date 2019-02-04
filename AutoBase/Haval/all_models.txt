@@ -1,0 +1,5 @@
+{'title': 'H2', 'value': 'h2', 'href': '/auto/ttx/haval/h2'}
+{'title': 'H6', 'value': 'h6', 'href': '/auto/ttx/haval/h6'}
+{'title': 'H6 Coupe', 'value': 'h6_coupe', 'href': '/auto/ttx/haval/h6_coupe'}
+{'title': 'H8', 'value': 'h8', 'href': '/auto/ttx/haval/h8'}
+{'title': 'H9', 'value': 'h9', 'href': '/auto/ttx/haval/h9'}

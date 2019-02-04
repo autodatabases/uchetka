@@ -1,0 +1,23 @@
+{'title': 'A1/Kimo', 'value': 'a1_kimo', 'href': '/auto/ttx/chery/a1_kimo'}
+{'title': 'A13/Storm2/Bonus', 'value': 'a13_storm2_bonus', 'href': '/auto/ttx/chery/a13_storm2_bonus'}
+{'title': 'A15/Amulet', 'value': 'a15_amulet', 'href': '/auto/ttx/chery/a15_amulet'}
+{'title': 'A18/Karry', 'value': 'a18_karry', 'href': '/auto/ttx/chery/a18_karry'}
+{'title': 'A3/M11', 'value': 'a3_m11', 'href': '/auto/ttx/chery/a3_m11'}
+{'title': 'A5/Fora', 'value': 'a5_fora', 'href': '/auto/ttx/chery/a5_fora'}
+{'title': 'B11/Eastar', 'value': 'b11_eastar', 'href': '/auto/ttx/chery/b11_eastar'}
+{'title': 'B14/Cross Eastar/V5', 'value': 'b14_cross_eastar_v5', 'href': '/auto/ttx/chery/b14_cross_eastar_v5'}
+{'title': 'G5', 'value': 'g5', 'href': '/auto/ttx/chery/g5'}
+{'title': 'IndiS/X1/S 18D', 'value': 'indis_x1_s_18d', 'href': '/auto/ttx/chery/indis_x1_s_18d'}
+{'title': 'M1', 'value': 'm1', 'href': '/auto/ttx/chery/m1'}
+{'title': 'Oriental Son', 'value': 'oriental_son', 'href': '/auto/ttx/chery/oriental_son'}
+{'title': 'P11', 'value': 'p11', 'href': '/auto/ttx/chery/p11'}
+{'title': 'Riich II', 'value': 'riich_ii', 'href': '/auto/ttx/chery/riich_ii'}
+{'title': 'S11/QQ3/Sweet', 'value': 's11_qq3_sweet', 'href': '/auto/ttx/chery/s11_qq3_sweet'}
+{'title': 'S16/QQme', 'value': 's16_qqme', 'href': '/auto/ttx/chery/s16_qqme'}
+{'title': 'S21/QQ6/Jaggi', 'value': 's21_qq6_jaggi', 'href': '/auto/ttx/chery/s21_qq6_jaggi'}
+{'title': 'Tiggo', 'value': 'tiggo', 'href': '/auto/ttx/chery/tiggo'}
+{'title': 'Tiggo 2', 'value': 'tiggo_2', 'href': '/auto/ttx/chery/tiggo_2'}
+{'title': 'Tiggo 3', 'value': 'tiggo_3', 'href': '/auto/ttx/chery/tiggo_3'}
+{'title': 'Tiggo 5', 'value': 'tiggo_5', 'href': '/auto/ttx/chery/tiggo_5'}
+{'title': 'Very', 'value': 'very', 'href': '/auto/ttx/chery/very'}
+{'title': 'Windcloud', 'value': 'windcloud', 'href': '/auto/ttx/chery/windcloud'}

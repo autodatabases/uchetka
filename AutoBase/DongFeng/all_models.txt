@@ -1,0 +1,5 @@
+{'title': 'DFM AX7', 'value': 'dfm_ax7', 'href': '/auto/ttx/dongfeng/dfm_ax7'}
+{'title': 'Fengshen A60', 'value': 'fengshen_a60', 'href': '/auto/ttx/dongfeng/fengshen_a60'}
+{'title': 'Fengshen H30', 'value': 'fengshen_h30', 'href': '/auto/ttx/dongfeng/fengshen_h30'}
+{'title': 'Fengshen S30', 'value': 'fengshen_s30', 'href': '/auto/ttx/dongfeng/fengshen_s30'}
+{'title': 'MPV', 'value': 'mpv', 'href': '/auto/ttx/dongfeng/mpv'}

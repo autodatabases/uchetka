@@ -1,0 +1,5 @@
+{'title': 'Nomad', 'value': 'nomad', 'href': '/auto/ttx/zotye/nomad'}
+{'title': 'T600', 'value': 't600', 'href': '/auto/ttx/zotye/t600'}
+{'title': 'V10', 'value': 'v10', 'href': '/auto/ttx/zotye/v10'}
+{'title': 'Z200', 'value': 'z200', 'href': '/auto/ttx/zotye/z200'}
+{'title': 'Z300', 'value': 'z300', 'href': '/auto/ttx/zotye/z300'}

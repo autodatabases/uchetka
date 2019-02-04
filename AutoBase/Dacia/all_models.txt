@@ -1,0 +1,10 @@
+{'title': '1304', 'value': '1304', 'href': '/auto/ttx/dacia/1304'}
+{'title': '1310', 'value': '1310', 'href': '/auto/ttx/dacia/1310'}
+{'title': '1325', 'value': '1325', 'href': '/auto/ttx/dacia/1325'}
+{'title': '1410', 'value': '1410', 'href': '/auto/ttx/dacia/1410'}
+{'title': 'Dokker', 'value': 'dokker', 'href': '/auto/ttx/dacia/dokker'}
+{'title': 'Duster', 'value': 'duster', 'href': '/auto/ttx/dacia/duster'}
+{'title': 'Lodgy', 'value': 'lodgy', 'href': '/auto/ttx/dacia/lodgy'}
+{'title': 'Logan', 'value': 'logan', 'href': '/auto/ttx/dacia/logan'}
+{'title': 'Nova', 'value': 'nova', 'href': '/auto/ttx/dacia/nova'}
+{'title': 'Sandero', 'value': 'sandero', 'href': '/auto/ttx/dacia/sandero'}

@@ -1,0 +1,15 @@
+{'title': 'Besturn B50', 'value': 'besturn_b50', 'href': '/auto/ttx/faw/besturn_b50'}
+{'title': 'Besturn B70', 'value': 'besturn_b70', 'href': '/auto/ttx/faw/besturn_b70'}
+{'title': 'Besturn X80', 'value': 'besturn_x80', 'href': '/auto/ttx/faw/besturn_x80'}
+{'title': 'Hongqi', 'value': 'hongqi', 'href': '/auto/ttx/faw/hongqi'}
+{'title': 'Jiaxing', 'value': 'jiaxing', 'href': '/auto/ttx/faw/jiaxing'}
+{'title': 'Jinn', 'value': 'jinn', 'href': '/auto/ttx/faw/jinn'}
+{'title': 'Oley', 'value': 'oley', 'href': '/auto/ttx/faw/oley'}
+{'title': 'S80', 'value': 's80', 'href': '/auto/ttx/faw/s80'}
+{'title': 'V2', 'value': 'v2', 'href': '/auto/ttx/faw/v2'}
+{'title': 'V5', 'value': 'v5', 'href': '/auto/ttx/faw/v5'}
+{'title': 'Vela', 'value': 'vela', 'href': '/auto/ttx/faw/vela'}
+{'title': 'Vita', 'value': 'vita', 'href': '/auto/ttx/faw/vita'}
+{'title': 'Vita C1', 'value': 'vita_c1', 'href': '/auto/ttx/faw/vita_c1'}
+{'title': 'Vizi', 'value': 'vizi', 'href': '/auto/ttx/faw/vizi'}
+{'title': 'Xiali', 'value': 'xiali', 'href': '/auto/ttx/faw/xiali'}

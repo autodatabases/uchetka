@@ -1,0 +1,8 @@
+{'title': 'Fenix', 'value': 'fenix', 'href': '/auto/ttx/baw/fenix'}
+{'title': 'Hiace Minibus', 'value': 'hiace_minibus', 'href': '/auto/ttx/baw/hiace_minibus'}
+{'title': 'Land King', 'value': 'land_king', 'href': '/auto/ttx/baw/land_king'}
+{'title': 'Luba S100', 'value': 'luba_s100', 'href': '/auto/ttx/baw/luba_s100'}
+{'title': 'Luling Pick-Up', 'value': 'luling_pick-up', 'href': '/auto/ttx/baw/luling_pick-up'}
+{'title': 'Qishi', 'value': 'qishi', 'href': '/auto/ttx/baw/qishi'}
+{'title': 'Reach CUV', 'value': 'reach_cuv', 'href': '/auto/ttx/baw/reach_cuv'}
+{'title': 'Yusheng 007 SUV', 'value': 'yusheng_007_suv', 'href': '/auto/ttx/baw/yusheng_007_suv'}

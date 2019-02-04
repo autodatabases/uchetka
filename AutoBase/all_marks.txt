@@ -1,0 +1,143 @@
+{'mark': 'AC Cars', 'value': 'ac_cars', 'href': '/auto/ttx/ac_cars'}
+{'mark': 'Acura', 'value': 'acura', 'href': '/auto/ttx/acura'}
+{'mark': 'Alfa Romeo', 'value': 'alfa_romeo', 'href': '/auto/ttx/alfa_romeo'}
+{'mark': 'AMG', 'value': 'amg', 'href': '/auto/ttx/amg'}
+{'mark': 'ARO', 'value': 'aro', 'href': '/auto/ttx/aro'}
+{'mark': 'Asia Motors', 'value': 'asia_motors', 'href': '/auto/ttx/asia_motors'}
+{'mark': 'Aston Martin', 'value': 'aston_martin', 'href': '/auto/ttx/aston_martin'}
+{'mark': 'Audi', 'value': 'audi', 'href': '/auto/ttx/audi'}
+{'mark': 'BAW', 'value': 'baw', 'href': '/auto/ttx/baw'}
+{'mark': 'Bentley', 'value': 'bentley', 'href': '/auto/ttx/bentley'}
+{'mark': 'BMW', 'value': 'bmw', 'href': '/auto/ttx/bmw'}
+{'mark': 'BMW ALPINA', 'value': 'bmw_alpina', 'href': '/auto/ttx/bmw_alpina'}
+{'mark': 'Brabus', 'value': 'brabus', 'href': '/auto/ttx/brabus'}
+{'mark': 'Brilliance', 'value': 'brilliance', 'href': '/auto/ttx/brilliance'}
+{'mark': 'Bristol', 'value': 'bristol', 'href': '/auto/ttx/bristol'}
+{'mark': 'Bugatti', 'value': 'bugatti', 'href': '/auto/ttx/bugatti'}
+{'mark': 'Buick', 'value': 'buick', 'href': '/auto/ttx/buick'}
+{'mark': 'BYD', 'value': 'byd', 'href': '/auto/ttx/byd'}
+{'mark': 'Cadillac', 'value': 'cadillac', 'href': '/auto/ttx/cadillac'}
+{'mark': 'Caterham', 'value': 'caterham', 'href': '/auto/ttx/caterham'}
+{'mark': 'Chang Feng', 'value': 'chang_feng', 'href': '/auto/ttx/chang_feng'}
+{'mark': 'Changan', 'value': 'chana', 'href': '/auto/ttx/chana'}
+{'mark': 'Chery', 'value': 'chery', 'href': '/auto/ttx/chery'}
+{'mark': 'Chevrolet', 'value': 'chevrolet', 'href': '/auto/ttx/chevrolet'}
+{'mark': 'Chrysler', 'value': 'chrysler', 'href': '/auto/ttx/chrysler'}
+{'mark': 'Citroen', 'value': 'citroen', 'href': '/auto/ttx/citroen'}
+{'mark': 'Dacia', 'value': 'dacia', 'href': '/auto/ttx/dacia'}
+{'mark': 'Dadi', 'value': 'dadi', 'href': '/auto/ttx/dadi'}
+{'mark': 'Daewoo', 'value': 'daewoo', 'href': '/auto/ttx/daewoo'}
+{'mark': 'Daihatsu', 'value': 'daihatsu', 'href': '/auto/ttx/daihatsu'}
+{'mark': 'Datsun', 'value': 'datsun', 'href': '/auto/ttx/datsun'}
+{'mark': 'De Tomaso', 'value': 'de_tomaso', 'href': '/auto/ttx/de_tomaso'}
+{'mark': 'DeLorean', 'value': 'delorean', 'href': '/auto/ttx/delorean'}
+{'mark': 'Derways', 'value': 'derways', 'href': '/auto/ttx/derways'}
+{'mark': 'Dodge', 'value': 'dodge', 'href': '/auto/ttx/dodge'}
+{'mark': 'DongFeng', 'value': 'dongfeng', 'href': '/auto/ttx/dongfeng'}
+{'mark': 'Doninvest', 'value': 'doninvest', 'href': '/auto/ttx/doninvest'}
+{'mark': 'DS', 'value': 'ds', 'href': '/auto/ttx/ds'}
+{'mark': 'Eagle', 'value': 'eagle', 'href': '/auto/ttx/eagle'}
+{'mark': 'FAW', 'value': 'faw', 'href': '/auto/ttx/faw'}
+{'mark': 'Ferrari', 'value': 'ferrari', 'href': '/auto/ttx/ferrari'}
+{'mark': 'Fiat', 'value': 'fiat', 'href': '/auto/ttx/fiat'}
+{'mark': 'Ford', 'value': 'ford', 'href': '/auto/ttx/ford'}
+{'mark': 'Foton', 'value': 'foton', 'href': '/auto/ttx/foton'}
+{'mark': 'FSO', 'value': 'fso', 'href': '/auto/ttx/fso'}
+{'mark': 'FSR', 'value': 'fsr', 'href': '/auto/ttx/fsr'}
+{'mark': 'Geely', 'value': 'geely', 'href': '/auto/ttx/geely'}
+{'mark': 'Genesis', 'value': 'genesis', 'href': '/auto/ttx/genesis'}
+{'mark': 'GMC', 'value': 'gmc', 'href': '/auto/ttx/gmc'}
+{'mark': 'Gonow', 'value': 'gonow', 'href': '/auto/ttx/gonow'}
+{'mark': 'Great Wall', 'value': 'great_wall', 'href': '/auto/ttx/great_wall'}
+{'mark': 'Groz', 'value': 'groz', 'href': '/auto/ttx/groz'}
+{'mark': 'Hafei', 'value': 'hafei', 'href': '/auto/ttx/hafei'}
+{'mark': 'Haima', 'value': 'haima', 'href': '/auto/ttx/haima'}
+{'mark': 'Haval', 'value': 'haval', 'href': '/auto/ttx/haval'}
+{'mark': 'Holden', 'value': 'holden', 'href': '/auto/ttx/holden'}
+{'mark': 'Honda', 'value': 'honda', 'href': '/auto/ttx/honda'}
+{'mark': 'Huanghai', 'value': 'huanghai', 'href': '/auto/ttx/huanghai'}
+{'mark': 'Hummer', 'value': 'hummer', 'href': '/auto/ttx/hummer'}
+{'mark': 'Hyundai', 'value': 'hyundai', 'href': '/auto/ttx/hyundai'}
+{'mark': 'Infiniti', 'value': 'infiniti', 'href': '/auto/ttx/infiniti'}
+{'mark': 'Intrall', 'value': 'intrall', 'href': '/auto/ttx/intrall'}
+{'mark': 'Iran Khodro', 'value': 'iran_khodro', 'href': '/auto/ttx/iran_khodro'}
+{'mark': 'Isuzu', 'value': 'isuzu', 'href': '/auto/ttx/isuzu'}
+{'mark': 'JAC', 'value': 'jac', 'href': '/auto/ttx/jac'}
+{'mark': 'Jaguar', 'value': 'jaguar', 'href': '/auto/ttx/jaguar'}
+{'mark': 'Jeep', 'value': 'jeep', 'href': '/auto/ttx/jeep'}
+{'mark': 'Jinbei', 'value': 'jinbei', 'href': '/auto/ttx/jinbei'}
+{'mark': 'JMC', 'value': 'jmc', 'href': '/auto/ttx/jmc'}
+{'mark': 'KIA', 'value': 'kia', 'href': '/auto/ttx/kia'}
+{'mark': 'Lada (ВАЗ)', 'value': 'lada_vaz', 'href': '/auto/ttx/lada_vaz'}
+{'mark': 'Lamborghini', 'value': 'lamborghini', 'href': '/auto/ttx/lamborghini'}
+{'mark': 'Lancia', 'value': 'lancia', 'href': '/auto/ttx/lancia'}
+{'mark': 'Land Rover', 'value': 'land_rover', 'href': '/auto/ttx/land_rover'}
+{'mark': 'Landwind', 'value': 'landwind', 'href': '/auto/ttx/landwind'}
+{'mark': 'LDV', 'value': 'ldv', 'href': '/auto/ttx/ldv'}
+{'mark': 'Lexus', 'value': 'lexus', 'href': '/auto/ttx/lexus'}
+{'mark': 'Lifan', 'value': 'lifan', 'href': '/auto/ttx/lifan'}
+{'mark': 'Lincoln', 'value': 'lincoln', 'href': '/auto/ttx/lincoln'}
+{'mark': 'Lotus', 'value': 'lotus', 'href': '/auto/ttx/lotus'}
+{'mark': 'Luxgen', 'value': 'luxgen', 'href': '/auto/ttx/luxgen'}
+{'mark': 'Mahindra', 'value': 'mahindra', 'href': '/auto/ttx/mahindra'}
+{'mark': 'Maserati', 'value': 'maserati', 'href': '/auto/ttx/maserati'}
+{'mark': 'Maybach', 'value': 'maybach', 'href': '/auto/ttx/maybach'}
+{'mark': 'Mazda', 'value': 'mazda', 'href': '/auto/ttx/mazda'}
+{'mark': 'McLaren', 'value': 'mclaren', 'href': '/auto/ttx/mclaren'}
+{'mark': 'Mercedes-Benz', 'value': 'mercedes-benz', 'href': '/auto/ttx/mercedes-benz'}
+{'mark': 'Mercury', 'value': 'mercury', 'href': '/auto/ttx/mercury'}
+{'mark': 'MG', 'value': 'mg', 'href': '/auto/ttx/mg'}
+{'mark': 'MINI', 'value': 'mini', 'href': '/auto/ttx/mini'}
+{'mark': 'Mitsubishi', 'value': 'mitsubishi', 'href': '/auto/ttx/mitsubishi'}
+{'mark': 'Morgan', 'value': 'morgan', 'href': '/auto/ttx/morgan'}
+{'mark': 'Nissan', 'value': 'nissan', 'href': '/auto/ttx/nissan'}
+{'mark': 'Oldsmobile', 'value': 'oldsmobile', 'href': '/auto/ttx/oldsmobile'}
+{'mark': 'Opel', 'value': 'opel', 'href': '/auto/ttx/opel'}
+{'mark': 'Osca', 'value': 'osca', 'href': '/auto/ttx/osca'}
+{'mark': 'Peugeot', 'value': 'peugeot', 'href': '/auto/ttx/peugeot'}
+{'mark': 'Plymouth', 'value': 'plymouth', 'href': '/auto/ttx/plymouth'}
+{'mark': 'Pontiac', 'value': 'pontiac', 'href': '/auto/ttx/pontiac'}
+{'mark': 'Porsche', 'value': 'porsche', 'href': '/auto/ttx/porsche'}
+{'mark': 'Proton', 'value': 'proton', 'href': '/auto/ttx/proton'}
+{'mark': 'Ravon', 'value': 'ravon', 'href': '/auto/ttx/ravon'}
+{'mark': 'Renault', 'value': 'renault', 'href': '/auto/ttx/renault'}
+{'mark': 'Roewe', 'value': 'roewe', 'href': '/auto/ttx/roewe'}
+{'mark': 'Rolls-Royce', 'value': 'rolls-royce', 'href': '/auto/ttx/rolls-royce'}
+{'mark': 'Rover', 'value': 'rover', 'href': '/auto/ttx/rover'}
+{'mark': 'Saab', 'value': 'saab', 'href': '/auto/ttx/saab'}
+{'mark': 'Saturn', 'value': 'saturn', 'href': '/auto/ttx/saturn'}
+{'mark': 'Scion', 'value': 'scion', 'href': '/auto/ttx/scion'}
+{'mark': 'Seat', 'value': 'seat', 'href': '/auto/ttx/seat'}
+{'mark': 'Shuang Huan', 'value': 'shuang_huan', 'href': '/auto/ttx/shuang_huan'}
+{'mark': 'Skoda', 'value': 'skoda', 'href': '/auto/ttx/skoda'}
+{'mark': 'SMA', 'value': 'sma', 'href': '/auto/ttx/sma'}
+{'mark': 'Smart', 'value': 'smart', 'href': '/auto/ttx/smart'}
+{'mark': 'SsangYong', 'value': 'ssangyong', 'href': '/auto/ttx/ssangyong'}
+{'mark': 'Subaru', 'value': 'subaru', 'href': '/auto/ttx/subaru'}
+{'mark': 'Suzuki', 'value': 'suzuki', 'href': '/auto/ttx/suzuki'}
+{'mark': 'Tata', 'value': 'tata', 'href': '/auto/ttx/tata'}
+{'mark': 'Tatra', 'value': 'tatra', 'href': '/auto/ttx/tatra'}
+{'mark': 'Tianma', 'value': 'tianma', 'href': '/auto/ttx/tianma'}
+{'mark': 'Tianye', 'value': 'tianye', 'href': '/auto/ttx/tianye'}
+{'mark': 'Tofas', 'value': 'tofas', 'href': '/auto/ttx/tofas'}
+{'mark': 'Toyota', 'value': 'toyota', 'href': '/auto/ttx/toyota'}
+{'mark': 'TVR', 'value': 'tvr', 'href': '/auto/ttx/tvr'}
+{'mark': 'Venturi', 'value': 'venturi', 'href': '/auto/ttx/venturi'}
+{'mark': 'Volkswagen', 'value': 'volkswagen', 'href': '/auto/ttx/volkswagen'}
+{'mark': 'Volvo', 'value': 'volvo', 'href': '/auto/ttx/volvo'}
+{'mark': 'Vortex', 'value': 'vortex', 'href': '/auto/ttx/vortex'}
+{'mark': 'Xin Kai', 'value': 'xin_kai', 'href': '/auto/ttx/xin_kai'}
+{'mark': 'YZK', 'value': 'yzk', 'href': '/auto/ttx/yzk'}
+{'mark': 'Zotye', 'value': 'zotye', 'href': '/auto/ttx/zotye'}
+{'mark': 'ZX', 'value': 'zx', 'href': '/auto/ttx/zx'}
+{'mark': 'АЗЛК', 'value': 'azlk', 'href': '/auto/ttx/azlk'}
+{'mark': 'Богдан', 'value': 'bogdan', 'href': '/auto/ttx/bogdan'}
+{'mark': 'Бронто', 'value': 'bronto', 'href': '/auto/ttx/bronto'}
+{'mark': 'ВИС', 'value': 'vis', 'href': '/auto/ttx/vis'}
+{'mark': 'ГАЗ', 'value': 'gaz', 'href': '/auto/ttx/gaz'}
+{'mark': 'ЗАЗ', 'value': 'zaz', 'href': '/auto/ttx/zaz'}
+{'mark': 'ЗИЛ', 'value': 'zil', 'href': '/auto/ttx/zil'}
+{'mark': 'Иж', 'value': 'izh', 'href': '/auto/ttx/izh'}
+{'mark': 'СеАЗ', 'value': 'seaz', 'href': '/auto/ttx/seaz'}
+{'mark': 'ТагАЗ', 'value': 'tagaz', 'href': '/auto/ttx/tagaz'}
+{'mark': 'УАЗ', 'value': 'uaz', 'href': '/auto/ttx/uaz'}

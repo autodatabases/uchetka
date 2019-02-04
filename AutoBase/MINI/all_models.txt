@@ -1,0 +1,8 @@
+{'title': 'Cabrio', 'value': 'cabrio', 'href': '/auto/ttx/mini/cabrio'}
+{'title': 'Clubman', 'value': 'clubman', 'href': '/auto/ttx/mini/clubman'}
+{'title': 'Clubvan', 'value': 'clubvan', 'href': '/auto/ttx/mini/clubvan'}
+{'title': 'Countryman', 'value': 'countryman', 'href': '/auto/ttx/mini/countryman'}
+{'title': 'Coupe', 'value': 'coupe', 'href': '/auto/ttx/mini/coupe'}
+{'title': 'Hatch', 'value': 'hatch', 'href': '/auto/ttx/mini/hatch'}
+{'title': 'Paceman', 'value': 'paceman', 'href': '/auto/ttx/mini/paceman'}
+{'title': 'Roadster', 'value': 'roadster', 'href': '/auto/ttx/mini/roadster'}

@@ -1,0 +1,10 @@
+{'title': 'Achieva', 'value': 'achieva', 'href': '/auto/ttx/oldsmobile/achieva'}
+{'title': 'Alero', 'value': 'alero', 'href': '/auto/ttx/oldsmobile/alero'}
+{'title': 'Aurora', 'value': 'aurora', 'href': '/auto/ttx/oldsmobile/aurora'}
+{'title': 'Bravada', 'value': 'bravada', 'href': '/auto/ttx/oldsmobile/bravada'}
+{'title': 'Cutlass', 'value': 'cutlass', 'href': '/auto/ttx/oldsmobile/cutlass'}
+{'title': 'Delta 88 Royale', 'value': 'delta_88_royale', 'href': '/auto/ttx/oldsmobile/delta_88_royale'}
+{'title': 'Eighty-Eight', 'value': 'eighty-eight', 'href': '/auto/ttx/oldsmobile/eighty-eight'}
+{'title': 'Intrigue', 'value': 'intrigue', 'href': '/auto/ttx/oldsmobile/intrigue'}
+{'title': 'Ninety-Eight', 'value': 'ninety-eight', 'href': '/auto/ttx/oldsmobile/ninety-eight'}
+{'title': 'Silhouette', 'value': 'silhouette', 'href': '/auto/ttx/oldsmobile/silhouette'}

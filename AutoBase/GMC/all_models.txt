@@ -1,0 +1,8 @@
+{'title': 'Acadia', 'value': 'acadia', 'href': '/auto/ttx/gmc/acadia'}
+{'title': 'Canyon', 'value': 'canyon', 'href': '/auto/ttx/gmc/canyon'}
+{'title': 'Envoy', 'value': 'envoy', 'href': '/auto/ttx/gmc/envoy'}
+{'title': 'Jimmy', 'value': 'jimmy', 'href': '/auto/ttx/gmc/jimmy'}
+{'title': 'Savana', 'value': 'savana', 'href': '/auto/ttx/gmc/savana'}
+{'title': 'Sierra', 'value': 'sierra', 'href': '/auto/ttx/gmc/sierra'}
+{'title': 'Terrain', 'value': 'terrain', 'href': '/auto/ttx/gmc/terrain'}
+{'title': 'Yukon', 'value': 'yukon', 'href': '/auto/ttx/gmc/yukon'}

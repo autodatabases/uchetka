@@ -1,0 +1,5 @@
+{'title': 'Aventador', 'value': 'aventador', 'href': '/auto/ttx/lamborghini/aventador'}
+{'title': 'Diablo', 'value': 'diablo', 'href': '/auto/ttx/lamborghini/diablo'}
+{'title': 'Gallardo', 'value': 'gallardo', 'href': '/auto/ttx/lamborghini/gallardo'}
+{'title': 'Murcielago', 'value': 'murcielago', 'href': '/auto/ttx/lamborghini/murcielago'}
+{'title': 'Reventon', 'value': 'reventon', 'href': '/auto/ttx/lamborghini/reventon'}

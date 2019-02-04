@@ -1,0 +1,13 @@
+{'title': '420', 'value': '420', 'href': '/auto/ttx/jaguar/420'}
+{'title': 'E-Pace', 'value': 'e-pace', 'href': '/auto/ttx/jaguar/e-pace'}
+{'title': 'F-Pace', 'value': 'f-pace', 'href': '/auto/ttx/jaguar/f-pace'}
+{'title': 'F-Type', 'value': 'f-type', 'href': '/auto/ttx/jaguar/f-type'}
+{'title': 'Sovereign', 'value': 'sovereign', 'href': '/auto/ttx/jaguar/sovereign'}
+{'title': 'S-Type', 'value': 's-type', 'href': '/auto/ttx/jaguar/s-type'}
+{'title': 'XE', 'value': 'xe', 'href': '/auto/ttx/jaguar/xe'}
+{'title': 'XF', 'value': 'xf', 'href': '/auto/ttx/jaguar/xf'}
+{'title': 'XJ', 'value': 'xj', 'href': '/auto/ttx/jaguar/xj'}
+{'title': 'XJ220', 'value': 'xj220', 'href': '/auto/ttx/jaguar/xj220'}
+{'title': 'XJ-S', 'value': 'xj-s', 'href': '/auto/ttx/jaguar/xj-s'}
+{'title': 'XK', 'value': 'xk', 'href': '/auto/ttx/jaguar/xk'}
+{'title': 'X-Type', 'value': 'x-type', 'href': '/auto/ttx/jaguar/x-type'}

@@ -1,0 +1,10 @@
+{'title': '718', 'value': '718', 'href': '/auto/ttx/porsche/718'}
+{'title': '911', 'value': '911', 'href': '/auto/ttx/porsche/911'}
+{'title': '918', 'value': '918', 'href': '/auto/ttx/porsche/918'}
+{'title': '944', 'value': '944', 'href': '/auto/ttx/porsche/944'}
+{'title': 'Boxster', 'value': 'boxster', 'href': '/auto/ttx/porsche/boxster'}
+{'title': 'Carrera GT', 'value': 'carrera_gt', 'href': '/auto/ttx/porsche/carrera_gt'}
+{'title': 'Cayenne', 'value': 'cayenne', 'href': '/auto/ttx/porsche/cayenne'}
+{'title': 'Cayman', 'value': 'cayman', 'href': '/auto/ttx/porsche/cayman'}
+{'title': 'Macan', 'value': 'macan', 'href': '/auto/ttx/porsche/macan'}
+{'title': 'Panamera', 'value': 'panamera', 'href': '/auto/ttx/porsche/panamera'}

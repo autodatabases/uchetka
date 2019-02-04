@@ -1,0 +1,37 @@
+{'title': 'Amarok', 'value': 'amarok', 'href': '/auto/ttx/volkswagen/amarok'}
+{'title': 'Bora', 'value': 'bora', 'href': '/auto/ttx/volkswagen/bora'}
+{'title': 'Caddy', 'value': 'caddy', 'href': '/auto/ttx/volkswagen/caddy'}
+{'title': 'California', 'value': 'california', 'href': '/auto/ttx/volkswagen/california'}
+{'title': 'Caravelle', 'value': 'caravelle', 'href': '/auto/ttx/volkswagen/caravelle'}
+{'title': 'Crafter', 'value': 'crafter', 'href': '/auto/ttx/volkswagen/crafter'}
+{'title': 'Eos', 'value': 'eos', 'href': '/auto/ttx/volkswagen/eos'}
+{'title': 'Fox', 'value': 'fox', 'href': '/auto/ttx/volkswagen/fox'}
+{'title': 'Gol', 'value': 'gol', 'href': '/auto/ttx/volkswagen/gol'}
+{'title': 'Golf', 'value': 'golf', 'href': '/auto/ttx/volkswagen/golf'}
+{'title': 'Jetta', 'value': 'jetta', 'href': '/auto/ttx/volkswagen/jetta'}
+{'title': 'Kaefer', 'value': 'kaefer', 'href': '/auto/ttx/volkswagen/kaefer'}
+{'title': 'Lavida', 'value': 'lavida', 'href': '/auto/ttx/volkswagen/lavida'}
+{'title': 'LT', 'value': 'lt', 'href': '/auto/ttx/volkswagen/lt'}
+{'title': 'Lupo', 'value': 'lupo', 'href': '/auto/ttx/volkswagen/lupo'}
+{'title': 'Multivan', 'value': 'multivan', 'href': '/auto/ttx/volkswagen/multivan'}
+{'title': 'New Beetle', 'value': 'new_beetle', 'href': '/auto/ttx/volkswagen/new_beetle'}
+{'title': 'Parati', 'value': 'parati', 'href': '/auto/ttx/volkswagen/parati'}
+{'title': 'Passat', 'value': 'passat', 'href': '/auto/ttx/volkswagen/passat'}
+{'title': 'Passat CC', 'value': 'passat_cc', 'href': '/auto/ttx/volkswagen/passat_cc'}
+{'title': 'Phaeton', 'value': 'phaeton', 'href': '/auto/ttx/volkswagen/phaeton'}
+{'title': 'Pointer', 'value': 'pointer', 'href': '/auto/ttx/volkswagen/pointer'}
+{'title': 'Polo', 'value': 'polo', 'href': '/auto/ttx/volkswagen/polo'}
+{'title': 'Quantum', 'value': 'quantum', 'href': '/auto/ttx/volkswagen/quantum'}
+{'title': 'Routan', 'value': 'routan', 'href': '/auto/ttx/volkswagen/routan'}
+{'title': 'Santana', 'value': 'santana', 'href': '/auto/ttx/volkswagen/santana'}
+{'title': 'Saveiro', 'value': 'saveiro', 'href': '/auto/ttx/volkswagen/saveiro'}
+{'title': 'Scirocco', 'value': 'scirocco', 'href': '/auto/ttx/volkswagen/scirocco'}
+{'title': 'Sharan', 'value': 'sharan', 'href': '/auto/ttx/volkswagen/sharan'}
+{'title': 'Teramont', 'value': 'teramont', 'href': '/auto/ttx/volkswagen/teramont'}
+{'title': 'Tiguan', 'value': 'tiguan', 'href': '/auto/ttx/volkswagen/tiguan'}
+{'title': 'Touareg', 'value': 'touareg', 'href': '/auto/ttx/volkswagen/touareg'}
+{'title': 'Touran', 'value': 'touran', 'href': '/auto/ttx/volkswagen/touran'}
+{'title': 'Transporter', 'value': 'transporter', 'href': '/auto/ttx/volkswagen/transporter'}
+{'title': 'UP!', 'value': 'up', 'href': '/auto/ttx/volkswagen/up'}
+{'title': 'Vento', 'value': 'vento', 'href': '/auto/ttx/volkswagen/vento'}
+{'title': 'Voyage', 'value': 'voyage', 'href': '/auto/ttx/volkswagen/voyage'}

@@ -1,0 +1,14 @@
+{'title': '3', 'value': '3', 'href': '/auto/ttx/mg/3'}
+{'title': '350', 'value': '350', 'href': '/auto/ttx/mg/350'}
+{'title': '5', 'value': '5', 'href': '/auto/ttx/mg/5'}
+{'title': '550', 'value': '550', 'href': '/auto/ttx/mg/550'}
+{'title': '6', 'value': '6', 'href': '/auto/ttx/mg/6'}
+{'title': '7', 'value': '7', 'href': '/auto/ttx/mg/7'}
+{'title': '750', 'value': '750', 'href': '/auto/ttx/mg/750'}
+{'title': 'Express', 'value': 'express', 'href': '/auto/ttx/mg/express'}
+{'title': 'F', 'value': 'f', 'href': '/auto/ttx/mg/f'}
+{'title': 'TF', 'value': 'tf', 'href': '/auto/ttx/mg/tf'}
+{'title': 'Xpower SV', 'value': 'xpower_sv', 'href': '/auto/ttx/mg/xpower_sv'}
+{'title': 'ZR', 'value': 'zr', 'href': '/auto/ttx/mg/zr'}
+{'title': 'ZS', 'value': 'zs', 'href': '/auto/ttx/mg/zs'}
+{'title': 'ZT', 'value': 'zt', 'href': '/auto/ttx/mg/zt'}

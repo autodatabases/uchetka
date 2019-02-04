@@ -1,0 +1,7 @@
+{'title': 'Bliss', 'value': 'bliss', 'href': '/auto/ttx/dadi/bliss'}
+{'title': 'CITY Leading', 'value': 'city_leading', 'href': '/auto/ttx/dadi/city_leading'}
+{'title': 'City Steed', 'value': 'city_steed', 'href': '/auto/ttx/dadi/city_steed'}
+{'title': 'Courtly', 'value': 'courtly', 'href': '/auto/ttx/dadi/courtly'}
+{'title': 'Shuttle', 'value': 'shuttle', 'href': '/auto/ttx/dadi/shuttle'}
+{'title': 'Smoothing', 'value': 'smoothing', 'href': '/auto/ttx/dadi/smoothing'}
+{'title': 'Unisonous', 'value': 'unisonous', 'href': '/auto/ttx/dadi/unisonous'}

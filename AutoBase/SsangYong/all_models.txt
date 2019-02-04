@@ -1,0 +1,12 @@
+{'title': 'Actyon', 'value': 'actyon', 'href': '/auto/ttx/ssangyong/actyon'}
+{'title': 'Chairman', 'value': 'chairman', 'href': '/auto/ttx/ssangyong/chairman'}
+{'title': 'Istana', 'value': 'istana', 'href': '/auto/ttx/ssangyong/istana'}
+{'title': 'Korando', 'value': 'korando', 'href': '/auto/ttx/ssangyong/korando'}
+{'title': 'Korando Family', 'value': 'korando_family', 'href': '/auto/ttx/ssangyong/korando_family'}
+{'title': 'Kyron', 'value': 'kyron', 'href': '/auto/ttx/ssangyong/kyron'}
+{'title': 'Musso', 'value': 'musso', 'href': '/auto/ttx/ssangyong/musso'}
+{'title': 'Rexton', 'value': 'rexton', 'href': '/auto/ttx/ssangyong/rexton'}
+{'title': 'Rodius', 'value': 'rodius', 'href': '/auto/ttx/ssangyong/rodius'}
+{'title': 'Stavic', 'value': 'stavic', 'href': '/auto/ttx/ssangyong/stavic'}
+{'title': 'Tivoli', 'value': 'tivoli', 'href': '/auto/ttx/ssangyong/tivoli'}
+{'title': 'XLV', 'value': 'xlv', 'href': '/auto/ttx/ssangyong/xlv'}

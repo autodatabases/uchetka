@@ -1,0 +1,2 @@
+{'title': 'Guara', 'value': 'guara', 'href': '/auto/ttx/de_tomaso/guara'}
+{'title': 'Pantera', 'value': 'pantera', 'href': '/auto/ttx/de_tomaso/pantera'}

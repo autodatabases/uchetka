@@ -1,0 +1,28 @@
+{'title': '17310', 'value': '17310', 'href': '/auto/ttx/gaz/17310'}
+{'title': '2217 (Соболь Баргузин)', 'value': "2217_sobol'_barguzin", 'href': "/auto/ttx/gaz/2217_sobol'_barguzin"}
+{'title': '22171', 'value': '22171', 'href': '/auto/ttx/gaz/22171'}
+{'title': '2308', 'value': '2308', 'href': '/auto/ttx/gaz/2308'}
+{'title': '2310 (Соболь)', 'value': "2310_sobol'", 'href': "/auto/ttx/gaz/2310_sobol'"}
+{'title': '2330', 'value': '2330', 'href': '/auto/ttx/gaz/2330'}
+{'title': '2705', 'value': '2705', 'href': '/auto/ttx/gaz/2705'}
+{'title': '2747', 'value': '2747', 'href': '/auto/ttx/gaz/2747'}
+{'title': '2752 (Соболь)', 'value': "2752_sobol'", 'href': "/auto/ttx/gaz/2752_sobol'"}
+{'title': '2757', 'value': '2757', 'href': '/auto/ttx/gaz/2757'}
+{'title': '2834', 'value': '2834', 'href': '/auto/ttx/gaz/2834'}
+{'title': '3102', 'value': '3102', 'href': '/auto/ttx/gaz/3102'}
+{'title': '3103', 'value': '3103', 'href': '/auto/ttx/gaz/3103'}
+{'title': '3104', 'value': '3104', 'href': '/auto/ttx/gaz/3104'}
+{'title': '3105', 'value': '3105', 'href': '/auto/ttx/gaz/3105'}
+{'title': '3106', 'value': '3106', 'href': '/auto/ttx/gaz/3106'}
+{'title': '3110', 'value': '3110', 'href': '/auto/ttx/gaz/3110'}
+{'title': '3111', 'value': '3111', 'href': '/auto/ttx/gaz/3111'}
+{'title': '3120', 'value': '3120', 'href': '/auto/ttx/gaz/3120'}
+{'title': '3221', 'value': '3221', 'href': '/auto/ttx/gaz/3221'}
+{'title': '3234', 'value': '3234', 'href': '/auto/ttx/gaz/3234'}
+{'title': '3302', 'value': '3302', 'href': '/auto/ttx/gaz/3302'}
+{'title': '3310', 'value': '3310', 'href': '/auto/ttx/gaz/3310'}
+{'title': '33104', 'value': '33104', 'href': '/auto/ttx/gaz/33104'}
+{'title': 'Maxus', 'value': 'maxus', 'href': '/auto/ttx/gaz/maxus'}
+{'title': 'Volga Siber', 'value': 'volga_siber', 'href': '/auto/ttx/gaz/volga_siber'}
+{'title': 'ель Next', 'value': "gazel'_next", 'href': "/auto/ttx/gaz/gazel'_next"}
+{'title': 'он Next', 'value': 'gazon_next', 'href': '/auto/ttx/gaz/gazon_next'}

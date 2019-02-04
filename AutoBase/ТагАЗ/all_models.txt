@@ -1,0 +1,9 @@
+{'title': 'Aquila', 'value': 'aquila', 'href': '/auto/ttx/tagaz/aquila'}
+{'title': 'C10', 'value': 'c10', 'href': '/auto/ttx/tagaz/c10'}
+{'title': 'C190', 'value': 'c190', 'href': '/auto/ttx/tagaz/c190'}
+{'title': 'C30', 'value': 'c30', 'href': '/auto/ttx/tagaz/c30'}
+{'title': 'Hardy', 'value': 'hardy', 'href': '/auto/ttx/tagaz/hardy'}
+{'title': 'Master', 'value': 'master', 'href': '/auto/ttx/tagaz/master'}
+{'title': 'Road Partner', 'value': 'road_partner', 'href': '/auto/ttx/tagaz/road_partner'}
+{'title': 'Tager', 'value': 'tager', 'href': '/auto/ttx/tagaz/tager'}
+{'title': 'Vega', 'value': 'vega', 'href': '/auto/ttx/tagaz/vega'}

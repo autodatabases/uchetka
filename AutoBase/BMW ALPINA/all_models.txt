@@ -1,0 +1,13 @@
+{'title': 'B10', 'value': 'b10', 'href': '/auto/ttx/bmw_alpina/b10'}
+{'title': 'B12', 'value': 'b12', 'href': '/auto/ttx/bmw_alpina/b12'}
+{'title': 'B3', 'value': 'b3', 'href': '/auto/ttx/bmw_alpina/b3'}
+{'title': 'B4', 'value': 'b4', 'href': '/auto/ttx/bmw_alpina/b4'}
+{'title': 'B5', 'value': 'b5', 'href': '/auto/ttx/bmw_alpina/b5'}
+{'title': 'B6', 'value': 'b6', 'href': '/auto/ttx/bmw_alpina/b6'}
+{'title': 'B7', 'value': 'b7', 'href': '/auto/ttx/bmw_alpina/b7'}
+{'title': 'B8', 'value': 'b8', 'href': '/auto/ttx/bmw_alpina/b8'}
+{'title': 'D10', 'value': 'd10', 'href': '/auto/ttx/bmw_alpina/d10'}
+{'title': 'D3', 'value': 'd3', 'href': '/auto/ttx/bmw_alpina/d3'}
+{'title': 'D5', 'value': 'd5', 'href': '/auto/ttx/bmw_alpina/d5'}
+{'title': 'Roadster', 'value': 'roadster', 'href': '/auto/ttx/bmw_alpina/roadster'}
+{'title': 'XD3', 'value': 'xd3', 'href': '/auto/ttx/bmw_alpina/xd3'}

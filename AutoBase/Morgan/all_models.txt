@@ -1,0 +1,9 @@
+{'title': '4 Seater', 'value': '4_seater', 'href': '/auto/ttx/morgan/4_seater'}
+{'title': '4/4 Sport', 'value': '4_4_sport', 'href': '/auto/ttx/morgan/4_4_sport'}
+{'title': 'Aero 8', 'value': 'aero_8', 'href': '/auto/ttx/morgan/aero_8'}
+{'title': 'Aero SuperSports', 'value': 'aero_supersports', 'href': '/auto/ttx/morgan/aero_supersports'}
+{'title': 'Aeromax', 'value': 'aeromax', 'href': '/auto/ttx/morgan/aeromax'}
+{'title': 'Eva GT', 'value': 'eva_gt', 'href': '/auto/ttx/morgan/eva_gt'}
+{'title': 'Plus 4', 'value': 'plus_4', 'href': '/auto/ttx/morgan/plus_4'}
+{'title': 'Plus 8', 'value': 'plus_8', 'href': '/auto/ttx/morgan/plus_8'}
+{'title': 'Roadster V6', 'value': 'roadster_v6', 'href': '/auto/ttx/morgan/roadster_v6'}

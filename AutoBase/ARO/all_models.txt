@@ -1,0 +1,3 @@
+{'title': '10', 'value': '10', 'href': '/auto/ttx/aro/10'}
+{'title': '24', 'value': '24', 'href': '/auto/ttx/aro/24'}
+{'title': 'Spartana', 'value': 'spartana', 'href': '/auto/ttx/aro/spartana'}

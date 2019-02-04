@@ -1,0 +1,6 @@
+{'title': 'A0', 'value': 'a0', 'href': '/auto/ttx/jac/a0'}
+{'title': 'J5', 'value': 'j5', 'href': '/auto/ttx/jac/j5'}
+{'title': 'Refine', 'value': 'refine', 'href': '/auto/ttx/jac/refine'}
+{'title': 'Rein', 'value': 'rein', 'href': '/auto/ttx/jac/rein'}
+{'title': 'S5', 'value': 's5', 'href': '/auto/ttx/jac/s5'}
+{'title': 'Tojoy', 'value': 'tojoy', 'href': '/auto/ttx/jac/tojoy'}

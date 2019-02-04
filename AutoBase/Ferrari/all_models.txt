@@ -1,0 +1,18 @@
+{'title': '360', 'value': '360', 'href': '/auto/ttx/ferrari/360'}
+{'title': '430', 'value': '430', 'href': '/auto/ttx/ferrari/430'}
+{'title': '456M', 'value': '456m', 'href': '/auto/ttx/ferrari/456m'}
+{'title': '458', 'value': '458', 'href': '/auto/ttx/ferrari/458'}
+{'title': '550', 'value': '550', 'href': '/auto/ttx/ferrari/550'}
+{'title': '575 GTC', 'value': '575_gtc', 'href': '/auto/ttx/ferrari/575_gtc'}
+{'title': '575M', 'value': '575m', 'href': '/auto/ttx/ferrari/575m'}
+{'title': '599', 'value': '599', 'href': '/auto/ttx/ferrari/599'}
+{'title': '612 Scaglietti', 'value': '612_scaglietti', 'href': '/auto/ttx/ferrari/612_scaglietti'}
+{'title': 'California', 'value': 'california', 'href': '/auto/ttx/ferrari/california'}
+{'title': 'Enzo', 'value': 'enzo', 'href': '/auto/ttx/ferrari/enzo'}
+{'title': 'F12berlinetta', 'value': 'f12berlinetta', 'href': '/auto/ttx/ferrari/f12berlinetta'}
+{'title': 'F355', 'value': 'f355', 'href': '/auto/ttx/ferrari/f355'}
+{'title': 'F430', 'value': 'f430', 'href': '/auto/ttx/ferrari/f430'}
+{'title': 'F50', 'value': 'f50', 'href': '/auto/ttx/ferrari/f50'}
+{'title': 'FF', 'value': 'ff', 'href': '/auto/ttx/ferrari/ff'}
+{'title': 'La', 'value': 'laferrari', 'href': '/auto/ttx/ferrari/laferrari'}
+{'title': 'Scuderia', 'value': 'scuderia', 'href': '/auto/ttx/ferrari/scuderia'}

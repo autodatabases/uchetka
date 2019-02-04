@@ -1,0 +1,5 @@
+{'title': 'Gentra', 'value': 'gentra', 'href': '/auto/ttx/ravon/gentra'}
+{'title': 'Matiz', 'value': 'matiz', 'href': '/auto/ttx/ravon/matiz'}
+{'title': 'Nexia R3', 'value': 'nexia_r3', 'href': '/auto/ttx/ravon/nexia_r3'}
+{'title': 'R2', 'value': 'r2', 'href': '/auto/ttx/ravon/r2'}
+{'title': 'R4', 'value': 'r4', 'href': '/auto/ttx/ravon/r4'}

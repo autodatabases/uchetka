@@ -1,0 +1,22 @@
+{'title': 'Coolbear', 'value': 'coolbear', 'href': '/auto/ttx/great_wall/coolbear'}
+{'title': 'Cowry', 'value': 'cowry', 'href': '/auto/ttx/great_wall/cowry'}
+{'title': 'Deer', 'value': 'deer', 'href': '/auto/ttx/great_wall/deer'}
+{'title': 'Florid', 'value': 'florid', 'href': '/auto/ttx/great_wall/florid'}
+{'title': 'Hover', 'value': 'hover', 'href': '/auto/ttx/great_wall/hover'}
+{'title': 'Hover H3', 'value': 'hover_h3', 'href': '/auto/ttx/great_wall/hover_h3'}
+{'title': 'Hover H5', 'value': 'hover_h5', 'href': '/auto/ttx/great_wall/hover_h5'}
+{'title': 'Hover H6', 'value': 'hover_h6', 'href': '/auto/ttx/great_wall/hover_h6'}
+{'title': 'Hover M2', 'value': 'hover_m2', 'href': '/auto/ttx/great_wall/hover_m2'}
+{'title': 'Hover M4', 'value': 'hover_m4', 'href': '/auto/ttx/great_wall/hover_m4'}
+{'title': 'Pegasus', 'value': 'pegasus', 'href': '/auto/ttx/great_wall/pegasus'}
+{'title': 'Peri', 'value': 'peri', 'href': '/auto/ttx/great_wall/peri'}
+{'title': 'Phenom', 'value': 'phenom', 'href': '/auto/ttx/great_wall/phenom'}
+{'title': 'Safe', 'value': 'safe', 'href': '/auto/ttx/great_wall/safe'}
+{'title': 'Sailor', 'value': 'sailor', 'href': '/auto/ttx/great_wall/sailor'}
+{'title': 'Sing', 'value': 'sing', 'href': '/auto/ttx/great_wall/sing'}
+{'title': 'Socool', 'value': 'socool', 'href': '/auto/ttx/great_wall/socool'}
+{'title': 'Voleex C10', 'value': 'voleex_c10', 'href': '/auto/ttx/great_wall/voleex_c10'}
+{'title': 'Voleex C20R', 'value': 'voleex_c20r', 'href': '/auto/ttx/great_wall/voleex_c20r'}
+{'title': 'Voleex C30', 'value': 'voleex_c30', 'href': '/auto/ttx/great_wall/voleex_c30'}
+{'title': 'Voleex C50', 'value': 'voleex_c50', 'href': '/auto/ttx/great_wall/voleex_c50'}
+{'title': 'Wingle', 'value': 'wingle', 'href': '/auto/ttx/great_wall/wingle'}

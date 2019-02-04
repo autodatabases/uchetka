@@ -1,0 +1,17 @@
+{'title': 'Aztek', 'value': 'aztek', 'href': '/auto/ttx/pontiac/aztek'}
+{'title': 'Bonneville', 'value': 'bonneville', 'href': '/auto/ttx/pontiac/bonneville'}
+{'title': 'Firebird', 'value': 'firebird', 'href': '/auto/ttx/pontiac/firebird'}
+{'title': 'G5', 'value': 'g5', 'href': '/auto/ttx/pontiac/g5'}
+{'title': 'G6', 'value': 'g6', 'href': '/auto/ttx/pontiac/g6'}
+{'title': 'G8', 'value': 'g8', 'href': '/auto/ttx/pontiac/g8'}
+{'title': 'Grand Am', 'value': 'grand_am', 'href': '/auto/ttx/pontiac/grand_am'}
+{'title': 'Grand Prix', 'value': 'grand_prix', 'href': '/auto/ttx/pontiac/grand_prix'}
+{'title': 'GTO', 'value': 'gto', 'href': '/auto/ttx/pontiac/gto'}
+{'title': 'Montana', 'value': 'montana', 'href': '/auto/ttx/pontiac/montana'}
+{'title': 'Solstice', 'value': 'solstice', 'href': '/auto/ttx/pontiac/solstice'}
+{'title': 'Sunfire', 'value': 'sunfire', 'href': '/auto/ttx/pontiac/sunfire'}
+{'title': 'Torrent', 'value': 'torrent', 'href': '/auto/ttx/pontiac/torrent'}
+{'title': 'Trans Am', 'value': 'trans_am', 'href': '/auto/ttx/pontiac/trans_am'}
+{'title': 'Trans Sport', 'value': 'trans_sport', 'href': '/auto/ttx/pontiac/trans_sport'}
+{'title': 'Vibe', 'value': 'vibe', 'href': '/auto/ttx/pontiac/vibe'}
+{'title': 'Wave', 'value': 'wave', 'href': '/auto/ttx/pontiac/wave'}

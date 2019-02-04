@@ -1,0 +1,3 @@
+{'title': 'EB 110', 'value': 'eb_110', 'href': '/auto/ttx/bugatti/eb_110'}
+{'title': 'EB 112', 'value': 'eb_112', 'href': '/auto/ttx/bugatti/eb_112'}
+{'title': 'EB 16.4 Veyron', 'value': 'eb_16.4_veyron', 'href': '/auto/ttx/bugatti/eb_16.4_veyron'}

@@ -1,0 +1,11 @@
+{'title': 'Cougar', 'value': 'cougar', 'href': '/auto/ttx/mercury/cougar'}
+{'title': 'Grand Marquis', 'value': 'grand_marquis', 'href': '/auto/ttx/mercury/grand_marquis'}
+{'title': 'Mariner', 'value': 'mariner', 'href': '/auto/ttx/mercury/mariner'}
+{'title': 'Milan', 'value': 'milan', 'href': '/auto/ttx/mercury/milan'}
+{'title': 'Montego', 'value': 'montego', 'href': '/auto/ttx/mercury/montego'}
+{'title': 'Monterey', 'value': 'monterey', 'href': '/auto/ttx/mercury/monterey'}
+{'title': 'Mountaineer', 'value': 'mountaineer', 'href': '/auto/ttx/mercury/mountaineer'}
+{'title': 'Mystique', 'value': 'mystique', 'href': '/auto/ttx/mercury/mystique'}
+{'title': 'Sable', 'value': 'sable', 'href': '/auto/ttx/mercury/sable'}
+{'title': 'Tracer', 'value': 'tracer', 'href': '/auto/ttx/mercury/tracer'}
+{'title': 'Villager', 'value': 'villager', 'href': '/auto/ttx/mercury/villager'}

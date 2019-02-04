@@ -1,0 +1,1 @@
+{'title': 'Mitsubishi Galant (E52A;E53A;E54A;E57A;E64A;E72A;E74A;E77A;E84A) 1994 - 1996 гг.', 'year': '1994 - 1996 гг.'}

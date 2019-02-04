@@ -1,0 +1,46 @@
+{'title': 'Aerostar', 'value': 'aerostar', 'href': '/auto/ttx/ford/aerostar'}
+{'title': 'Aspire', 'value': 'aspire', 'href': '/auto/ttx/ford/aspire'}
+{'title': 'B-Max', 'value': 'b-max', 'href': '/auto/ttx/ford/b-max'}
+{'title': 'Bronco', 'value': 'bronco', 'href': '/auto/ttx/ford/bronco'}
+{'title': 'C-Max', 'value': 'c-max', 'href': '/auto/ttx/ford/c-max'}
+{'title': 'Contour', 'value': 'contour', 'href': '/auto/ttx/ford/contour'}
+{'title': 'Cougar', 'value': 'cougar', 'href': '/auto/ttx/ford/cougar'}
+{'title': 'Crown Victoria', 'value': 'crown_victoria', 'href': '/auto/ttx/ford/crown_victoria'}
+{'title': 'Econoline', 'value': 'econoline', 'href': '/auto/ttx/ford/econoline'}
+{'title': 'EcoSport', 'value': 'ecosport', 'href': '/auto/ttx/ford/ecosport'}
+{'title': 'Edge', 'value': 'edge', 'href': '/auto/ttx/ford/edge'}
+{'title': 'Escape', 'value': 'escape', 'href': '/auto/ttx/ford/escape'}
+{'title': 'Escort', 'value': 'escort', 'href': '/auto/ttx/ford/escort'}
+{'title': 'Everest', 'value': 'everest', 'href': '/auto/ttx/ford/everest'}
+{'title': 'Excursion', 'value': 'excursion', 'href': '/auto/ttx/ford/excursion'}
+{'title': 'Expedition', 'value': 'expedition', 'href': '/auto/ttx/ford/expedition'}
+{'title': 'Explorer', 'value': 'explorer', 'href': '/auto/ttx/ford/explorer'}
+{'title': 'F-150', 'value': 'f-150', 'href': '/auto/ttx/ford/f-150'}
+{'title': 'F-250', 'value': 'f-250', 'href': '/auto/ttx/ford/f-250'}
+{'title': 'F-350', 'value': 'f-350', 'href': '/auto/ttx/ford/f-350'}
+{'title': 'Fairlane', 'value': 'fairlane', 'href': '/auto/ttx/ford/fairlane'}
+{'title': 'Fiesta', 'value': 'fiesta', 'href': '/auto/ttx/ford/fiesta'}
+{'title': 'Five Hundred', 'value': 'five_hundred', 'href': '/auto/ttx/ford/five_hundred'}
+{'title': 'Flex', 'value': 'flex', 'href': '/auto/ttx/ford/flex'}
+{'title': 'Focus', 'value': 'focus', 'href': '/auto/ttx/ford/focus'}
+{'title': 'Freestar', 'value': 'freestar', 'href': '/auto/ttx/ford/freestar'}
+{'title': 'Freestyle', 'value': 'freestyle', 'href': '/auto/ttx/ford/freestyle'}
+{'title': 'Fusion', 'value': 'fusion', 'href': '/auto/ttx/ford/fusion'}
+{'title': 'Galaxy', 'value': 'galaxy', 'href': '/auto/ttx/ford/galaxy'}
+{'title': 'Ikon', 'value': 'ikon', 'href': '/auto/ttx/ford/ikon'}
+{'title': 'Ka', 'value': 'ka', 'href': '/auto/ttx/ford/ka'}
+{'title': 'Kuga', 'value': 'kuga', 'href': '/auto/ttx/ford/kuga'}
+{'title': 'Maverick', 'value': 'maverick', 'href': '/auto/ttx/ford/maverick'}
+{'title': 'Mondeo', 'value': 'mondeo', 'href': '/auto/ttx/ford/mondeo'}
+{'title': 'Mustang', 'value': 'mustang', 'href': '/auto/ttx/ford/mustang'}
+{'title': 'Probe', 'value': 'probe', 'href': '/auto/ttx/ford/probe'}
+{'title': 'Puma', 'value': 'puma', 'href': '/auto/ttx/ford/puma'}
+{'title': 'Ranger', 'value': 'ranger', 'href': '/auto/ttx/ford/ranger'}
+{'title': 'Scorpio', 'value': 'scorpio', 'href': '/auto/ttx/ford/scorpio'}
+{'title': 'S-Max', 'value': 's-max', 'href': '/auto/ttx/ford/s-max'}
+{'title': 'Taurus', 'value': 'taurus', 'href': '/auto/ttx/ford/taurus'}
+{'title': 'Territory', 'value': 'territory', 'href': '/auto/ttx/ford/territory'}
+{'title': 'Thunderbird', 'value': 'thunderbird', 'href': '/auto/ttx/ford/thunderbird'}
+{'title': 'Tourneo Connect', 'value': 'tourneo_connect', 'href': '/auto/ttx/ford/tourneo_connect'}
+{'title': 'Transit', 'value': 'transit', 'href': '/auto/ttx/ford/transit'}
+{'title': 'Windstar', 'value': 'windstar', 'href': '/auto/ttx/ford/windstar'}

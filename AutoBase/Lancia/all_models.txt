@@ -1,0 +1,12 @@
+{'title': 'Dedra', 'value': 'dedra', 'href': '/auto/ttx/lancia/dedra'}
+{'title': 'Delta', 'value': 'delta', 'href': '/auto/ttx/lancia/delta'}
+{'title': 'Flavia', 'value': 'flavia', 'href': '/auto/ttx/lancia/flavia'}
+{'title': 'Kappa', 'value': 'kappa', 'href': '/auto/ttx/lancia/kappa'}
+{'title': 'Lybra', 'value': 'lybra', 'href': '/auto/ttx/lancia/lybra'}
+{'title': 'Musa', 'value': 'musa', 'href': '/auto/ttx/lancia/musa'}
+{'title': 'Phedra', 'value': 'phedra', 'href': '/auto/ttx/lancia/phedra'}
+{'title': 'Thema', 'value': 'thema', 'href': '/auto/ttx/lancia/thema'}
+{'title': 'Thesis', 'value': 'thesis', 'href': '/auto/ttx/lancia/thesis'}
+{'title': 'Voyager', 'value': 'voyager', 'href': '/auto/ttx/lancia/voyager'}
+{'title': 'Ypsilon', 'value': 'ypsilon', 'href': '/auto/ttx/lancia/ypsilon'}
+{'title': 'Zeta', 'value': 'zeta', 'href': '/auto/ttx/lancia/zeta'}

@@ -1,0 +1,17 @@
+{'title': 'EX', 'value': 'ex', 'href': '/auto/ttx/infiniti/ex'}
+{'title': 'FX', 'value': 'fx', 'href': '/auto/ttx/infiniti/fx'}
+{'title': 'G', 'value': 'g', 'href': '/auto/ttx/infiniti/g'}
+{'title': 'I', 'value': 'i', 'href': '/auto/ttx/infiniti/i'}
+{'title': 'JX', 'value': 'jx', 'href': '/auto/ttx/infiniti/jx'}
+{'title': 'M', 'value': 'm', 'href': '/auto/ttx/infiniti/m'}
+{'title': 'Q30', 'value': 'q30', 'href': '/auto/ttx/infiniti/q30'}
+{'title': 'Q45', 'value': 'q45', 'href': '/auto/ttx/infiniti/q45'}
+{'title': 'Q50', 'value': 'q50', 'href': '/auto/ttx/infiniti/q50'}
+{'title': 'Q60', 'value': 'q60', 'href': '/auto/ttx/infiniti/q60'}
+{'title': 'Q70', 'value': 'q70', 'href': '/auto/ttx/infiniti/q70'}
+{'title': 'QX', 'value': 'qx', 'href': '/auto/ttx/infiniti/qx'}
+{'title': 'QX30', 'value': 'qx30', 'href': '/auto/ttx/infiniti/qx30'}
+{'title': 'QX50', 'value': 'qx50', 'href': '/auto/ttx/infiniti/qx50'}
+{'title': 'QX60', 'value': 'qx60', 'href': '/auto/ttx/infiniti/qx60'}
+{'title': 'QX70', 'value': 'qx70', 'href': '/auto/ttx/infiniti/qx70'}
+{'title': 'QX80', 'value': 'qx80', 'href': '/auto/ttx/infiniti/qx80'}

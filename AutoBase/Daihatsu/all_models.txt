@@ -1,0 +1,32 @@
+{'title': 'Altis', 'value': 'altis', 'href': '/auto/ttx/daihatsu/altis'}
+{'title': 'Applause', 'value': 'applause', 'href': '/auto/ttx/daihatsu/applause'}
+{'title': 'Atrai', 'value': 'atrai', 'href': '/auto/ttx/daihatsu/atrai'}
+{'title': 'Be-go', 'value': 'be-go', 'href': '/auto/ttx/daihatsu/be-go'}
+{'title': 'Boon', 'value': 'boon', 'href': '/auto/ttx/daihatsu/boon'}
+{'title': 'Charade', 'value': 'charade', 'href': '/auto/ttx/daihatsu/charade'}
+{'title': 'Coo', 'value': 'coo', 'href': '/auto/ttx/daihatsu/coo'}
+{'title': 'Copen', 'value': 'copen', 'href': '/auto/ttx/daihatsu/copen'}
+{'title': 'Cuore', 'value': 'cuore', 'href': '/auto/ttx/daihatsu/cuore'}
+{'title': 'Esse', 'value': 'esse', 'href': '/auto/ttx/daihatsu/esse'}
+{'title': 'Feroza', 'value': 'feroza', 'href': '/auto/ttx/daihatsu/feroza'}
+{'title': 'Gran Max', 'value': 'gran_max', 'href': '/auto/ttx/daihatsu/gran_max'}
+{'title': 'Materia', 'value': 'materia', 'href': '/auto/ttx/daihatsu/materia'}
+{'title': 'Max', 'value': 'max', 'href': '/auto/ttx/daihatsu/max'}
+{'title': 'Mira', 'value': 'mira', 'href': '/auto/ttx/daihatsu/mira'}
+{'title': 'Mira Cocoa', 'value': 'mira_cocoa', 'href': '/auto/ttx/daihatsu/mira_cocoa'}
+{'title': 'Move', 'value': 'move', 'href': '/auto/ttx/daihatsu/move'}
+{'title': 'Move Conte', 'value': 'move_conte', 'href': '/auto/ttx/daihatsu/move_conte'}
+{'title': 'Opti', 'value': 'opti', 'href': '/auto/ttx/daihatsu/opti'}
+{'title': 'Perodua Viva', 'value': 'perodua_viva', 'href': '/auto/ttx/daihatsu/perodua_viva'}
+{'title': 'Rocky', 'value': 'rocky', 'href': '/auto/ttx/daihatsu/rocky'}
+{'title': 'Sirion', 'value': 'sirion', 'href': '/auto/ttx/daihatsu/sirion'}
+{'title': 'Sonica', 'value': 'sonica', 'href': '/auto/ttx/daihatsu/sonica'}
+{'title': 'Storia', 'value': 'storia', 'href': '/auto/ttx/daihatsu/storia'}
+{'title': 'Tanto', 'value': 'tanto', 'href': '/auto/ttx/daihatsu/tanto'}
+{'title': 'Tanto Exe', 'value': 'tanto_exe', 'href': '/auto/ttx/daihatsu/tanto_exe'}
+{'title': 'Taruna', 'value': 'taruna', 'href': '/auto/ttx/daihatsu/taruna'}
+{'title': 'Terios', 'value': 'terios', 'href': '/auto/ttx/daihatsu/terios'}
+{'title': 'Trevis', 'value': 'trevis', 'href': '/auto/ttx/daihatsu/trevis'}
+{'title': 'Xenia', 'value': 'xenia', 'href': '/auto/ttx/daihatsu/xenia'}
+{'title': 'YRV', 'value': 'yrv', 'href': '/auto/ttx/daihatsu/yrv'}
+{'title': 'Zebra', 'value': 'zebra', 'href': '/auto/ttx/daihatsu/zebra'}

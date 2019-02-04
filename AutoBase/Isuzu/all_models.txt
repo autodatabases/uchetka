@@ -1,0 +1,17 @@
+{'title': 'Ascender', 'value': 'ascender', 'href': '/auto/ttx/isuzu/ascender'}
+{'title': 'Aska', 'value': 'aska', 'href': '/auto/ttx/isuzu/aska'}
+{'title': 'Axiom', 'value': 'axiom', 'href': '/auto/ttx/isuzu/axiom'}
+{'title': 'Bighorn', 'value': 'bighorn', 'href': '/auto/ttx/isuzu/bighorn'}
+{'title': 'Crosswind', 'value': 'crosswind', 'href': '/auto/ttx/isuzu/crosswind'}
+{'title': 'D-Max', 'value': 'd-max', 'href': '/auto/ttx/isuzu/d-max'}
+{'title': 'Fargo Filly', 'value': 'fargo_filly', 'href': '/auto/ttx/isuzu/fargo_filly'}
+{'title': 'Filly', 'value': 'filly', 'href': '/auto/ttx/isuzu/filly'}
+{'title': 'Gemini', 'value': 'gemini', 'href': '/auto/ttx/isuzu/gemini'}
+{'title': 'i', 'value': 'i', 'href': '/auto/ttx/isuzu/i'}
+{'title': 'MU', 'value': 'mu', 'href': '/auto/ttx/isuzu/mu'}
+{'title': 'MU-7', 'value': 'mu-7', 'href': '/auto/ttx/isuzu/mu-7'}
+{'title': 'N-Series', 'value': 'n-series', 'href': '/auto/ttx/isuzu/n-series'}
+{'title': 'Rodeo/Amigo', 'value': 'rodeo_amigo', 'href': '/auto/ttx/isuzu/rodeo_amigo'}
+{'title': 'Trooper', 'value': 'trooper', 'href': '/auto/ttx/isuzu/trooper'}
+{'title': 'VehiCross', 'value': 'vehicross', 'href': '/auto/ttx/isuzu/vehicross'}
+{'title': 'Wizard', 'value': 'wizard', 'href': '/auto/ttx/isuzu/wizard'}

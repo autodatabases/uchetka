@@ -1,0 +1,31 @@
+{'title': '19', 'value': '19', 'href': '/auto/ttx/renault/19'}
+{'title': 'Avantime', 'value': 'avantime', 'href': '/auto/ttx/renault/avantime'}
+{'title': 'Captur', 'value': 'captur', 'href': '/auto/ttx/renault/captur'}
+{'title': 'Clio', 'value': 'clio', 'href': '/auto/ttx/renault/clio'}
+{'title': 'Dokker', 'value': 'dokker', 'href': '/auto/ttx/renault/dokker'}
+{'title': 'Duster', 'value': 'duster', 'href': '/auto/ttx/renault/duster'}
+{'title': 'Espace', 'value': 'espace', 'href': '/auto/ttx/renault/espace'}
+{'title': 'Fluence', 'value': 'fluence', 'href': '/auto/ttx/renault/fluence'}
+{'title': 'Kangoo', 'value': 'kangoo', 'href': '/auto/ttx/renault/kangoo'}
+{'title': 'Kaptur', 'value': 'kaptur', 'href': '/auto/ttx/renault/kaptur'}
+{'title': 'Koleos', 'value': 'koleos', 'href': '/auto/ttx/renault/koleos'}
+{'title': 'Laguna', 'value': 'laguna', 'href': '/auto/ttx/renault/laguna'}
+{'title': 'Latitude', 'value': 'latitude', 'href': '/auto/ttx/renault/latitude'}
+{'title': 'Logan', 'value': 'logan', 'href': '/auto/ttx/renault/logan'}
+{'title': 'Master', 'value': 'master', 'href': '/auto/ttx/renault/master'}
+{'title': 'Megane', 'value': 'megane', 'href': '/auto/ttx/renault/megane'}
+{'title': 'Modus', 'value': 'modus', 'href': '/auto/ttx/renault/modus'}
+{'title': 'Pulse', 'value': 'pulse', 'href': '/auto/ttx/renault/pulse'}
+{'title': 'Safrane', 'value': 'safrane', 'href': '/auto/ttx/renault/safrane'}
+{'title': 'Sandero', 'value': 'sandero', 'href': '/auto/ttx/renault/sandero'}
+{'title': 'Scala', 'value': 'scala', 'href': '/auto/ttx/renault/scala'}
+{'title': 'Scenic', 'value': 'scenic', 'href': '/auto/ttx/renault/scenic'}
+{'title': 'Sport Spider', 'value': 'sport_spider', 'href': '/auto/ttx/renault/sport_spider'}
+{'title': 'Symbol', 'value': 'symbol', 'href': '/auto/ttx/renault/symbol'}
+{'title': 'Talisman', 'value': 'talisman', 'href': '/auto/ttx/renault/talisman'}
+{'title': 'Trafic', 'value': 'trafic', 'href': '/auto/ttx/renault/trafic'}
+{'title': 'Twingo', 'value': 'twingo', 'href': '/auto/ttx/renault/twingo'}
+{'title': 'Twizy', 'value': 'twizy', 'href': '/auto/ttx/renault/twizy'}
+{'title': 'Vel Satis', 'value': 'vel_satis', 'href': '/auto/ttx/renault/vel_satis'}
+{'title': 'Wind', 'value': 'wind', 'href': '/auto/ttx/renault/wind'}
+{'title': 'Zoe', 'value': 'zoe', 'href': '/auto/ttx/renault/zoe'}

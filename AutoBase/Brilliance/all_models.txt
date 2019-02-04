@@ -1,0 +1,6 @@
+{'title': 'A1', 'value': 'a1', 'href': '/auto/ttx/brilliance/a1'}
+{'title': 'H530', 'value': 'h530', 'href': '/auto/ttx/brilliance/h530'}
+{'title': 'M1', 'value': 'm1', 'href': '/auto/ttx/brilliance/m1'}
+{'title': 'M2', 'value': 'm2', 'href': '/auto/ttx/brilliance/m2'}
+{'title': 'M3 Coupe', 'value': 'm3_coupe', 'href': '/auto/ttx/brilliance/m3_coupe'}
+{'title': 'V5', 'value': 'v5', 'href': '/auto/ttx/brilliance/v5'}

@@ -1,0 +1,16 @@
+{'title': 'Century', 'value': 'century', 'href': '/auto/ttx/buick/century'}
+{'title': 'Enclave', 'value': 'enclave', 'href': '/auto/ttx/buick/enclave'}
+{'title': 'Encore', 'value': 'encore', 'href': '/auto/ttx/buick/encore'}
+{'title': 'Excelle', 'value': 'excelle', 'href': '/auto/ttx/buick/excelle'}
+{'title': 'GL8', 'value': 'gl8', 'href': '/auto/ttx/buick/gl8'}
+{'title': 'LaCrosse', 'value': 'lacrosse', 'href': '/auto/ttx/buick/lacrosse'}
+{'title': 'LeSabre', 'value': 'lesabre', 'href': '/auto/ttx/buick/lesabre'}
+{'title': 'Lucerne', 'value': 'lucerne', 'href': '/auto/ttx/buick/lucerne'}
+{'title': 'Park Avenue', 'value': 'park_avenue', 'href': '/auto/ttx/buick/park_avenue'}
+{'title': 'Rainier', 'value': 'rainier', 'href': '/auto/ttx/buick/rainier'}
+{'title': 'Regal', 'value': 'regal', 'href': '/auto/ttx/buick/regal'}
+{'title': 'Rendezvous', 'value': 'rendezvous', 'href': '/auto/ttx/buick/rendezvous'}
+{'title': 'Riviera', 'value': 'riviera', 'href': '/auto/ttx/buick/riviera'}
+{'title': 'Skylark', 'value': 'skylark', 'href': '/auto/ttx/buick/skylark'}
+{'title': 'Terraza', 'value': 'terraza', 'href': '/auto/ttx/buick/terraza'}
+{'title': 'Verano', 'value': 'verano', 'href': '/auto/ttx/buick/verano'}
