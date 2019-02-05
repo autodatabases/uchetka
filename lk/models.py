@@ -131,7 +131,7 @@ class UserDetal(models.Model):
 	description = models.TextField(null=True, blank=True)
 	stockroom = models.ForeignKey('Stock', on_delete=models.CASCADE)
 	account = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-	photo = models.ForeignKey('Photo', on_delete=models.CASCADE)
+	photo = models.ForeignKey('Photo', on_delete=models.CASCADE, default=1)
 	def __str__(self):
 		return self.detail.title
 

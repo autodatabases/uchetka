@@ -4,5 +4,5 @@ from .models import *
 # Register your models here.
 myModels = [AutoMark, AutoModel, AutoGeneration, AutoDetailTest, AutoKuzov, AutoYearProduction,
 		    AutoEngineType, AutoEngineSize, AutoTransmission, AutoColor, AutoDonor, UserDetal,
-		    AutoHelm, AutoPrivod, Stock]
+		    AutoHelm, AutoPrivod, Stock, Photo]
 admin.site.register(myModels)
