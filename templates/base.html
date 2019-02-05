@@ -126,7 +126,7 @@
 						<div class="bottompanel">
 							<div class="buttonsAuto">
 								<button id="close" type="button" class="btn btn-danger">Отмена</button>
-								<button {% if stockroom_count == 0 %} disabled {% endif %} id="nextpageadd" type="submit" class="btn btn-success">Продолжить</button>
+								<button {% if stockroom_count == 0 %} disabled {% endif %} id="nextpageadd" type="button" class="btn btn-success" onclick="hideMenu(this)">Продолжить</button>
 							</div>
 							<div class="warningpanel">
 								{% if stockroom_count == 0 %}

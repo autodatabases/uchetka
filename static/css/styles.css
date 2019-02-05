@@ -376,7 +376,7 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
     width: 100%;
     height: 100%;
     left: 0;
-    top: 13px;
+    top: 0;
     z-index: 5;
 }
 
@@ -445,37 +445,43 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
 	border-top: none;
 }
 .donorPanel {
-	position: absolute;
-	height: 40px;
-	width: 100px;
-	top: 9px;
-	right: 25px;
-	padding: 0 30px 0 30px;
-	background-color: #FFFFFF;
-	text-align: center;
-	border: 1px solid #B3B3B3;
-	border-top: none;
-	border-bottom-left-radius: 10px; 
-	border-bottom-right-radius: 10px; 
-	box-shadow: -2px 6px 5px 0 #7F7F7F;
-	overflow: hidden;
-	z-index: 6;
+    position: absolute;
+    height: 529px;
+    width: 500px;
+    top: -539px;
+    right: 25px;
+    padding: 0 30px 0 30px;
+    background-color: #ffffff;
+    text-align: center;
+    border: 1px solid #B3B3B3;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    z-index: 5;
+    transition: all 1s ease-out;
+    box-shadow: 0 -7px 30px 0px rgba(103, 103, 103, 0.42), inset 0 0 490px 50px rgba(0, 164, 253, 0.25);
 }
 
-.donorPanel label {
-	padding: 10px 0 0 0 ;
-	font-family: 'Merriweather', serif;
-	font-size: 12pt;
-	color: #4D4D4D;
+.tabDonor{
+    position: absolute;
+    width: 230px;
+    height: 55px;
+    background: white;
+    right: 280px;
+    z-index: 6;
+    top: -70px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all 1s ease;
 }
 
-.animationPage1 { 
-	width: 500px;
-	transition: all 0.5s ease-in-out;
-}
+.animationPage1 { top: 0; }
 .animationPage2 { 
-	height: 520px;
-	transition: all 1s ease-in-out;
+	top: 505px; 
+	border: 1px solid rgba(89, 138, 187, 0.4);
+    border-top: none;
+    box-shadow: inset 0 0 200px 30px rgb(224, 244, 255);
 }
 
 /*************************/
@@ -659,9 +665,8 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
 .mainInfo {
 	margin-left: -20px;
 	display: grid;
-	grid-template-rows: auto 50px auto;
+	grid-template-rows: 50px auto auto;
 	font-family: 'Merriweather', serif;
-	background: #fff;
 }
 
 .titleMainInfo { 
@@ -689,7 +694,8 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	border-bottom: none;
-	box-shadow: -2px -4px 4px 0 #7F7F7F;
+    box-shadow: -2px -4px 4px 0 #7F7F7F, 
+			    inset 0 0 200px 30px rgba(0, 164, 253, 0.13);
 	transition: all 0.5s ease-in-out;
 }
 
@@ -698,12 +704,13 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
 	transition: all 0.5s ease-in-out;
 }
 
-.tabInfo:hover, .tabPhoto:hover { cursor: pointer; box-shadow: -2px -4px 4px 0 #9DB3FF;}
+.tabInfo:hover, .tabPhoto:hover { cursor: pointer; box-shadow: -2px -4px 4px 0 #7F7F7F, inset 0 0 200px 30px rgba(0, 164, 253, 0.13);}
 
 .tabInfo.active, .tabPhoto.active { 
 	width: 320px;
 	height: 45px; 
-	box-shadow: -2px -4px 4px 0 #9DB3FF;
+    box-shadow: -2px -4px 4px 0 rgba(58, 58, 58, 0.6), 
+    			inset 0 0 200px 30px rgba(0, 164, 253, 0.13);
 	padding: 15px 0 0 0;
 	font-size: 10pt;
 	transition: all 0.5s ease-in-out;
@@ -795,8 +802,8 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
 	grid-template-columns: auto auto;
 	grid-column-gap: 10px;
 	justify-content: end;
-	margin-top: -10px;
-	margin-right: 10px;
+	margin-top: 25px;
+    margin-right: 25px;
 }
 
 .buttonBlock button {
@@ -810,11 +817,11 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
 .donorPhoto {
 	background: #FFFFFF;
 	position: absolute;
-	height: 325px;
+	height: 360px;
 	width: 100%;
 	padding: 20px;
-	top: 120px;
-	right: -490px;
+	top: 80px;
+	right: -500px;
 	transition: all 0.5s ease-in-out;
 	text-align: center;
 }
@@ -833,7 +840,7 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
 
 /*** Стили для анимации переключения ***/
 
-.donorPhoto.show {right: 35px; }
+.donorPhoto.show {right: 20px; }
 
 
 /***************************************/
@@ -841,33 +848,45 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
 /***************************************/
 
 .bottomParams {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 170px;
-	padding: 0 0 0 346px;
-	z-index: 1;
+    background: white;
+    position: fixed;
+    bottom: -200px;
+    right: 25px;
+    width: 1265px;
+    height: 170px;
+    padding: 0 0 0 65px;
+    z-index: 4;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: grid;
+    grid-template-columns: 330px 330px auto;
+    grid-column-gap: 60px;
     box-shadow: 0 -7px 30px 0px rgba(103, 103, 103, 0.42), inset 0 0 200px 30px rgba(0, 164, 253, 0.25);
+	transition: all 1s ease;
 }
 
 .bottomParams::before {
     content: 'Параметры добавления';
     position: absolute;
-    width: 250px;
+    width: 220px;
     height: 50px;
-    left: 320px;
-    bottom: 145px;
+    right: 20px;
+    top: 0;
     background: #ffffff;
     color: #495057;
     font-family: 'Roboto Slab', serif;
+    font-size: 11pt;
     border: 1px solid rgba(89, 138, 187, 0.4);
     border-bottom: none;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    box-shadow: inset 0 0 200px 30px rgba(0, 164, 253, 0.12);
-    padding: 16px 0 0 22px;
+    box-shadow: inset 0 0 200px 30px rgba(0, 164, 253, 0.16);
+    padding: 16px 0 0 18px;
+    transition: all 0.5s ease;
 }
+
+.bottomParams.animation { bottom: 0; }
+.bottomParams.animationpage2::before { top: -30px; }
 
 .bottomTitle {
 	position: relative;
@@ -880,7 +899,7 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
     font-size: 11pt;
     width: 300px;
     height: 120px;
-    margin: 30px 0 0 290px;
+    margin: 30px 0 0 10px;
     padding: 25px 0 0 20px;
     border: 1px solid #898989;
     border-radius: 10px;
@@ -891,10 +910,10 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
 .bottomInfo .key { text-align: right; padding-right: 10px; }
 
 .bottomAddBackButtons {
-	margin-left: 610px;
-	margin-top: -125px;
-	display: grid;
-	grid-template-rows: auto auto;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-column-gap: 30px;
 }
 
 .bottomAddBackButtons button { 
@@ -905,12 +924,12 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
 }
 
 .bottomSettingButtons {
-	width: 300px;
-	height: 100px;
-	margin: -86px 0 0 -20px;
-	border: 1px solid #898989;
-	border-radius: 10px;
-	padding: 20px 0 0 15px;
+    width: 300px;
+    height: 120px;
+    margin: 30px 0 0 0px;
+    border: 1px solid #898989;
+    border-radius: 10px;
+    padding: 20px 0 0 15px;
 }
 
 .bottomSettingButtons::before, .bottomInfo::before {

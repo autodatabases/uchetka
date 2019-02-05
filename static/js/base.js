@@ -53,6 +53,13 @@ $(function() {
 
 	var accordion = new Accordion($('#accordion'), false);
 });
+// Скрыть меню
+function hideMenu(button){
+	document.querySelector('#modal-container').classList.add('out');
+	setTimeout(function() {
+		button.form.submit();	
+	}, 1500);// Заддержка выполения
+}
 
 function change_params_donor() {
     $.ajax({

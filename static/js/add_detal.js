@@ -1,5 +1,8 @@
 // анимация панели донора после загрузки страницы
-window.onload = donorPanelAnimation();
+window.onload = function(){
+	document.querySelector('.menu').classList.add('hideMenu')
+	donorPanelAnimation();
+} 
 // Очистка класса danger 
 document.querySelector('.vin').querySelector('#donorVin').onfocus = function() {
 	document.querySelector('.vin').querySelector('#donorVin').classList.remove('danger');
@@ -108,12 +111,12 @@ function checkboxDetal(checkbox) {
 }
 // Функиция Анимации панели донора при загрузке страницы
 function donorPanelAnimation() {
-	setTimeout(function() { 
-		document.querySelector('.donorPanel').classList.add('animationPage1');
-		setTimeout(function() { 
-			document.querySelector('.donorPanel').classList.add('animationPage2');
-		}, 500);
-	}, 500);
+		// document.querySelector('.donorPanel').classList.add('animationPage1');
+		// document.querySelector('.tabDonor').classList.add('animationPage2');
+		// document.querySelector('.bottomParams').classList.add('animation');
+		// setTimeout(function() {
+		// 	document.querySelector('.bottomParams').classList.add('animationpage2');
+		// }, 1000);// Заддержка выполения
 }
 // Функиця изменения параметров донора
 function editDonor(block) {
