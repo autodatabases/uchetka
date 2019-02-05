@@ -219,3 +219,6 @@ function sub(){
   var price_all = document.querySelectorAll("price_available");
   document.getElementById("price_all").innerHTML -= document.getElementById("price_available").innerHTML;
 }
+
+function qsd(){
+}
