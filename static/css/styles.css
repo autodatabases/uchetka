@@ -627,6 +627,14 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
 
 .photoAdd { text-align: center; margin: 100px 70px 0 0;}
 
+/* .photoAdd::before {
+	content: "";
+	position: absolute;
+	background: red;
+	width: 100px;
+	height: 100px;
+}
+ */
 .addPhotoButton {
 	display: none;
 }

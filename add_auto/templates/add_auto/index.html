@@ -242,7 +242,7 @@
 									<div class="input-group-prepend">
 										<span class="input-group-text">Цена:</span>
 									</div>
-									<input disabled type="text" class="form-control" placeholder="0" onchange="change_totalPrice(this)" onkeyup="test()">
+									<input disabled type="text" class="form-control" placeholder="0">
 									<div class="input-group-prepend">
 										<span class="input-group-text">руб.</span>
 									</div>
@@ -265,7 +265,7 @@
 							</div>
 						</div>
 						<div class="photoAdd">
-							<input type="file" class="addPhotoButton" id="photo">
+							<input type="file" class="addPhotoButton" id="photo" onchange="load_photo(this)">
 							<label for="photo"><img src="{% static "img/addPhoto.png" %}" alt=""></label>
 						</div>
 					</div>

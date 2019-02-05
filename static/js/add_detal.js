@@ -1,6 +1,13 @@
 // анимация панели донора после загрузки страницы
 window.onload = donorPanelAnimation();
-
+// Очистка класса danger 
+document.querySelector('.vin').querySelector('#donorVin').onfocus = function() {
+	document.querySelector('.vin').querySelector('#donorVin').classList.remove('danger');
+}
+document.querySelector('.contentBlock').querySelector('.active').querySelector('#price').querySelector('.form-control').onfocus = function() {
+	var input_price = document.querySelector('.contentBlock').querySelector('.active').querySelector('#price').querySelector('.form-control');
+	input_price.classList.remove('danger');
+}
 // Функция при прокрутке списка деталей
 document.querySelector('.addDetalsPanel').onscroll = function() {
   	var blockTabs = document.querySelector('.tabsDetalsName');
@@ -19,22 +26,18 @@ document.querySelector('.addDetalsPanel').onscroll = function() {
   		blockTabs.classList.remove('fixedTab');
   		all_tab[activeTabCount].classList.remove('nextTab');
   	}
-
 }
-
+// Функция смены вкладок групп деталей
 function change_group_detal(tab) {
 	document.querySelector('.activeTab').classList.remove('activeTab');
 	tab.classList.add('activeTab');
 }
-
+// Фуенкция смены деталей группы
 function change_detal(tab) {
-
 	function change_tab() {
 		activeTab.classList.remove('activeTab');
 		activeTab.classList.remove('topfixed');
-
 		tab.classList.add('activeTab');
-
 		if (tab.getAttribute('data-content') == 1) {
 			tab.parentElement.classList.add('firstTabActive');
 			tab.classList.add('topfixed');
@@ -42,19 +45,16 @@ function change_detal(tab) {
 			tab.parentElement.classList.remove('firstTabActive');
 			all_tab[pk_active_tab].classList.remove('nextTab');
 		}
-
 			// содержимое вкладок
 			var oldParams = document.querySelector('.contentBlock').querySelector('.active');
 			var newParams = document.querySelector('.contentBlock').querySelector('div[data-content="'+pk_new_content+'"]');
 			contentBlock.classList.add('hide'); // Свернуть блок содержимго
-
 			setTimeout(function() {
 				oldParams.classList.remove('active');
 				newParams.classList.add('active');
 				contentBlock.classList.remove('hide');	
 			}, 350);// Заддержка выполения
 	}
-
 	var tabClass = tab.getAttribute('class');
 	if (tabClass.indexOf('active') == -1) { // если нажали на неактивную вкладку
 		var contentBlock = document.querySelector('.contentBlock');
@@ -64,7 +64,6 @@ function change_detal(tab) {
 		var activeTab = block_detals_name.querySelector('.activeTab');
 		var pk_active_tab = activeTab.getAttribute('data-content');
 		var pk_new_content = tab.getAttribute('data-content');
-
 		if (activeContent.querySelector('#nal').checked) { // Если есть отметка о наличи детали у текущей выбраной
 			console.log('on');
 			// Проверяем заполненно ли поле цены
@@ -81,7 +80,7 @@ function change_detal(tab) {
 		}
 	}
 }
-
+// Функция "Деталь в наличии"
 function checkboxDetal(checkbox) {
 	var activeBlockParams = document.querySelector('.contentBlock').querySelector('.active');
 	var activeDetal = activeBlockParams.querySelector('#nal').getAttribute('name').split('_')[0];
@@ -107,22 +106,16 @@ function checkboxDetal(checkbox) {
 		document.querySelector('.contentDetailGroup').querySelector('.activeTab').getElementsByTagName('img')[0].setAttribute('src', '/static/img/no.png');
 	}
 }
-
-function change_totalPrice(input) {
-	console.log(input.value);
-}
-
+// Функиция Анимации панели донора при загрузке страницы
 function donorPanelAnimation() {
-	
 	setTimeout(function() { 
 		document.querySelector('.donorPanel').classList.add('animationPage1');
 		setTimeout(function() { 
 			document.querySelector('.donorPanel').classList.add('animationPage2');
 		}, 500);
 	}, 500);
-		
 }
-
+// Функиця изменения параметров донора
 function editDonor(block) {
 	var all_select = block.getElementsByTagName('select');
 	for (var i_param = 0; i_param < all_select.length; i_param++) {
@@ -136,31 +129,17 @@ function editDonor(block) {
 	block.querySelector('#save').removeAttribute('disabled');
 	block.querySelector('#edit').setAttribute('disabled', '');
 }
-
+// Функция сохранения параметров донора
 function saveDonor(block) {
 	// Проверяем заполненно ли поле цены
 	if (block.querySelector('#donorVin').value == 0) {
 		block.querySelector('#donorVin').classList.add('danger');
-		console.log('bad');
 	} else {
-		console.log('good');
-
 		document.querySelector('.backBlack').style.display = 'none';
-
-		var csrftoken = getCookie('csrftoken');
 		var all_select = block.getElementsByTagName('select');
 		var probeg = block.querySelector('#donorProbeg');
 		var vin = block.querySelector('#donorVin');
 		var idDonor = document.querySelector('#idDonor').value;
-
-		$.ajaxSetup({
-			beforeSend: function(xhr, settings) {
-				if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-					xhr.setRequestHeader("X-CSRFToken", csrftoken);
-				}
-			}
-		});
-
 		$.ajax({
 			url: '/lk/detals_list/save_donor/',
 			type: 'post',
@@ -182,13 +161,10 @@ function saveDonor(block) {
 				'idDonor' : idDonor
 			},
 			success: function (data) {
-				console.log(data)
 			}
 		});
-
 		for (var i_param = 0; i_param < all_select.length; i_param++) {
 			all_select[i_param].setAttribute('disabled', '');
-			console.log(all_select[i_param].options[all_select[i_param].selectedIndex].value);
 		};
 		probeg.setAttribute('disabled', '');
 		vin.setAttribute('disabled', '');
@@ -196,18 +172,6 @@ function saveDonor(block) {
 		block.querySelector('#edit').removeAttribute('disabled');
 	}
 }
-
-// Очистка класса danger 
-document.querySelector('.vin').querySelector('#donorVin').onfocus = function() {
-	document.querySelector('.vin').querySelector('#donorVin').classList.remove('danger');
-}
-
-document.querySelector('.contentBlock').querySelector('.active').querySelector('#price').querySelector('.form-control').onfocus = function() {
-	var input_price = document.querySelector('.contentBlock').querySelector('.active').querySelector('#price').querySelector('.form-control');
-	input_price.classList.remove('danger');
-}
-
-
 /// Парметры размещения детали
 function paramsSklad(radiobutton) {
 	var all_inputSklad = document.querySelector('.contentBlock').querySelectorAll('#all_years');
@@ -225,4 +189,33 @@ function paramsSklad(radiobutton) {
 		selectStockRoom.setAttribute('name', 'selectStock');
 		selectStockRoom.removeAttribute('disabled');
 	}
+}
+// функция загрузки фотографии с последующим отображением
+function load_photo(inputFile){
+	$.ajax({
+			url: '/lk/detals_list/save_donor/',
+			type: 'post',
+			data: {
+				'csrfmiddlewaretoken': csrftoken,
+			},
+			success: function (data) {
+			}
+		});
+}
+// Счетчик
+function price_all(){
+  var price = document.querySelectorAll("price_available");
+  var i = 0;
+  while (i < price.length){
+    document.getElementById("price_all").innerHTML += price[i].value;
+  }
+  document.getElementById("price_all").innerHTML = parseInt(document.getElementById("price_all").innerHTML) + parseInt(document.querySelector('.contentBlock').querySelector('.active').querySelector('#price_available').value);
+
+  //if (document.getElementById("nala").disabled == true){
+  //  document.getElementById("price_all").innerHTML = 0;
+  //}
+}
+function sub(){
+  var price_all = document.querySelectorAll("price_available");
+  document.getElementById("price_all").innerHTML -= document.getElementById("price_available").innerHTML;
 }
