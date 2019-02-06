@@ -81,8 +81,8 @@ def save_new_donor_params(request):
 		donor_obj.probeg = probeg
 		donor_obj.vin_number = request.POST['vin']
 		donor_obj.save()
-		data = 'Good'
-		return HttpResponse(data, content_type="application/json")
+		data = {'Good': 'good'}
+		return HttpResponse(json.dumps(data), content_type="application/json")
 
 def small_filter(request):
 	if request.is_ajax():

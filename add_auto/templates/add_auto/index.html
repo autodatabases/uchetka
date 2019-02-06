@@ -4,22 +4,94 @@
 	Добавление деталей
 {% endblock title %}
 {% block mainpanel %}
-<div class="backBlack">
-</div>
-<form action="/lk/add_auto/add/" method="POST">
-{% csrf_token %}
+	<link rel="stylesheet" href="{% static "css/add_auto.css" %}">
+	<div class="list-detals">
+		<div class="topBar">
+			<p>Полный список деталей</p>
+		</div>
+		<div class="search-block">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			<i class="fas fa-search"></i>
+		</div>
+		<hr>
+	</div>
 	<div class="addDetalsPanel">
-		
-		<div class="backTabsDetalGroup">
-			<div class="tabsDetalGroup" >
-				<div data-content="kuzov" class="titleGroup activeTab" onclick="change_group_detal(this)">Кузов <span>0/40</span></div>
-				<div data-content="salon" class="titleGroup" onclick="change_group_detal(this)">Салон <span>0/64</span></div>
-				<div data-content="hodovaya" class="titleGroup" onclick="change_group_detal(this)">Ходовая <span>0/59</span></div>
+		<div class="topBar">
+			<ul>
+				<li><a href="">Audi A4 2013</a> <i class="fas fa-angle-right"></i></li>
+				<li><a href="">Двигатель</a> <i class="fas fa-angle-right"></i></li>
+				<li><a href="">Блок цилиндров</a> <i class="fas fa-angle-right"></i></li>
+			</ul>
+		</div>
+		<div class="rowDetals">
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Кузов</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Кузов</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Кузов</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Кузов</div>
 			</div>
 		</div>
-		<div class="tabDonor animationPage2"></div>
-		<div class="donorPanel animationPage1">
-
+		<div class="rowDetals">
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Кузов</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Кузов</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Кузов</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Кузов</div>
+			</div>
+		</div>
+		<div class="rowDetals">
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Кузов</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Кузов</div>
+			</div>
+		</div>
+	</div>
+	<div class="donor">
+		<div class="donorContent">
 			<input name="idDonor" id="idDonor" type="hidden" value="{{new_donor.pk}}">
 			<div class="mainInfo" id="mainInfo">
 				
@@ -31,8 +103,8 @@
 						<span>Фотография</span>							
 					</div>
 				</div>
-
-				<div class="donorContent">
+		
+				<div class="donorFields">
 					<div class="donorParmas">
 						<div class="vin">
 							<div class="input-group-prepend">
@@ -197,84 +269,19 @@
 						<img src="{% static "img/addPhoto.png" %}" alt="">
 					</div>
 				</div>
-
+		
 				<div class="buttonBlock">
 					<div>
 						<button id="edit" onclick="editDonor(mainInfo)" type="button" class="btn btn-primary" disabled>Изменить</button>
 					</div>
 					<div>
-						<button id="save" onclick="saveDonor(mainInfo)" type="button" class="btn btn-success">Сохранить</button>
+						<button id="save" onclick="saveDonor()" type="button" class="btn btn-success">Сохранить</button>
 					</div>
 				</div>
-
-
-			</div>
-		</div>
-		<div class="contentDetailGroup ">
-
-			<div class="tabsDetalsName firstTabActive">
-				{% for detal in all_detals %}
-					{% if detal.pk == 1 %}
-						<div data-content="{{detal.pk}}" class="titleDetal activeTab topfixed" onclick="change_detal(this)">
-					{% else %}
-						<div data-content="{{detal.pk}}" class="titleDetal" onclick="change_detal(this)">
-					{% endif %}
-							<div>{{detal.title}}</div>
-							<div class="detalIcon">
-								<img src="{% static "img/no.png" %}" alt="">
-							</div>
-						</div>
-				{% endfor %}
-			</div>
-			<div class="contentBlock" >
-				{% for detal in all_detals %}
-				{% if detal.pk == 1 %}
-					<div class="detalParams active" data-content="{{detal.pk}}">
-				{% else %}
-					<div class="detalParams" data-content="{{detal.pk}}">
-				{% endif %}
-						<div class="topBlock">
-							<div class="exsistDetal">
-								<label class="slide detalslabel">
-									<input id="nal" name="{{detal.value}}_checkbox" type="checkbox" value="true" onchange="checkboxDetal(this)">
-									<span>В наличии</span>
-								</label>
-								<div id="price" class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text">Цена:</span>
-									</div>
-									<input disabled type="text" class="form-control" placeholder="0">
-									<div class="input-group-prepend">
-										<span class="input-group-text">руб.</span>
-									</div>
-								</div>
-								<div class="sklad">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Склад:</span>
-									</div>
-									<div class="paramContent">
-										<select disabled id="all_years" class="custom-select">
-											{% for elem in all_stockrooms %}
-												<option>{{elem.title}}</option>
-											{% endfor %}
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="textDetals">
-								<textarea disabled placeholder="Если есть какие-либо дефекты, опишите их в этом поле" class="form-control" rows="7"></textarea>
-							</div>
-						</div>
-						<div class="photoAdd">
-							<input type="file" class="addPhotoButton" id="photo" onchange="load_photo(this)">
-							<label for="photo"><img src="{% static "img/addPhoto.png" %}" alt=""></label>
-						</div>
-					</div>
-				{% endfor %}
 			</div>
 		</div>
 	</div>
-	<div class="bottomParams animation animationpage2">
+	<div class="bottomParams">
 		
 		<div class="bottomInfo">
 			<table>
@@ -309,13 +316,12 @@
 				<input onchange="paramsSklad(this)" type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
 				<label class="custom-control-label" for="customRadio1" >Выборочно</label>
 			</div>
-
+	
 		</div>
 		<div class="bottomAddBackButtons">
 			<button type="submit" class="btn btn-success">Добавить детали</button>
 			<button type="button" class="btn btn-danger">Отменить</button>
 		</div>
 	</div>
-</form>
-<script src="{% static "js/add_detal.js" %}?1"></script>
+	<script src="{% static "js/add_detal.js" %}?1"></script>
 {% endblock mainpanel %}

@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	{% block head %}
 		<meta charset="UTF-8">
@@ -8,9 +8,7 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 		<link rel="stylesheet" href="{% static "css/bootstrap/css/bootstrap.min.css" %}">
-		<link rel="stylesheet" href="{% static "css/styles.css" %}">
-		<link rel="stylesheet" href="{% static "css/components.css" %}">
-		<link rel="stylesheet" href="{% static "css/menu.css" %}">
+		<link rel="stylesheet" href="{% static "css/base.css" %}">
 		<script src="{% static "js/jquery-3.3.1.min.js" %}"></script>	
 		<script src="{% static "js/base.js" %}"></script>
 	{% endblock head %}	
@@ -21,7 +19,14 @@
 </title>
 </head>
 <body>
-	<div class="content">
+	<div class="contentpage">
+		<div class="topPanel">
+			<div class="profile">
+				<a href=""><i class="fas fa-cog"></i></a>
+				<a href=""><i class="fas fa-cog"></i></a>
+				<a href=""><i class="fas fa-cog"></i></a>
+			</div>
+		</div>
 		<div class="menu">
 			{% block menu %}
 			<div class="info">
@@ -83,7 +88,7 @@
 				
 			{% endblock menu %}
 		</div>
-		<div class="mainpanel">
+		<div class="content">
 			{% block mainpanel %}
 				
 			{% endblock mainpanel %}

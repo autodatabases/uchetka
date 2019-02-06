@@ -5,410 +5,412 @@
 {% endblock title %}
 
 {% block mainpanel %}
+<link rel="stylesheet" href="{% static "css/detals_list.css" %}">
 {% csrf_token %}
-
-<div class="list">
-
-	<div class="filterBack">
-		<div class="filtePanel">
-			<div class="smallFilter">
-				<form action="/lk/detals_list/" method="POST">
-					{% csrf_token %}
-					<input type="hidden" name="type_filter" value="small">
-					<div class="smallFilterParam">
-						<select onchange="submit_small_filter(this)"class="custom-select custom-select-sm" id="detal">
-							<option value="all">Все детали</option>
-							{% for elem in detals_filter %}
-								{% if request.POST.type_filter == 'small' %}
-									{% if elem.value == request.POST.detal %}
-										<option selected value="{{elem.value}}">{{elem.title}}</option>
+<div class="mainpanel detals_list">
+	
+	<div class="list">
+	
+		<div class="filterBack">
+			<div class="filtePanel">
+				<div class="smallFilter">
+					<form action="/lk/detals_list/" method="POST">
+						{% csrf_token %}
+						<input type="hidden" name="type_filter" value="small">
+						<div class="smallFilterParam">
+							<select onchange="submit_small_filter(this)"class="custom-select custom-select-sm" id="detal">
+								<option value="all">Все детали</option>
+								{% for elem in detals_filter %}
+									{% if request.POST.type_filter == 'small' %}
+										{% if elem.value == request.POST.detal %}
+											<option selected value="{{elem.value}}">{{elem.title}}</option>
+										{% else %}
+											<option value="{{elem.value}}">{{elem.title}}</option>
+										{% endif %}
 									{% else %}
 										<option value="{{elem.value}}">{{elem.title}}</option>
 									{% endif %}
-								{% else %}
-									<option value="{{elem.value}}">{{elem.title}}</option>
-								{% endif %}
-							{% endfor %}
-						</select>
-					</div>
-					<div class="smallFilterParam">
-						<select onchange="submit_small_filter(this)" class="custom-select custom-select-sm" id="donor">
-							<option value="all">Все доноры</option>
+								{% endfor %}
+							</select>
+						</div>
+						<div class="smallFilterParam">
+							<select onchange="submit_small_filter(this)" class="custom-select custom-select-sm" id="donor">
+								<option value="all">Все доноры</option>
+								{% for elem in donors_filter %}
+									{% if request.POST.type_filter == 'small' %}
+										{% if selected_donor.0 == elem.pk %}
+											<option selected value="{{elem.pk}}">{{elem}}</option>
+										{% else %}
+											<option value="{{elem.pk}}">{{elem}}</option>
+										{% endif %}
+									{% else %}
+										<option value="{{elem.pk}}">{{elem}}</option>
+									{% endif %}
+								{% endfor %}
+							</select>
+						</div>
+						<div class="smallFilterParam">
+							<select onchange="submit_small_filter(this)" class="custom-select custom-select-sm" id="vin">
+								<option value="all">Все VIN</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+						<div class="smallFilterParam">
+							<select onchange="submit_small_filter(this)" class="custom-select custom-select-sm" id="stock">
+								<option value="all">Все склады</option>
+								{% for elem in stocks_filters %}
+									{% if request.POST.type_filter == 'small' %}
+										{% if selected_stock.0 == elem.pk %}
+											<option selected value="{{elem.pk}}">{{elem}}</option>
+										{% else %}
+											<option value="{{elem.pk}}">{{elem}}</option>
+										{% endif %}
+									{% else %}
+										<option value="{{elem.pk}}">{{elem}}</option>
+									{% endif %}
+								{% endfor %}
+							</select>
+						</div>
+					</form>
+				</div>
+				<hr>
+				<div class="fullFilter">
+					<form action="/lk/detals_list/" method="POST">
+						{% csrf_token %}
+						<input type="hidden" name="type_filter" value="full">
+						<div class="fullFilterButtonBlock">
+							<div class="resetFilterButton">
+								<input type="image" src="{% static "img/reset.png" %}">
+							</div>
+							<div class="applyFilterButton" >
+								<input type="image" src="{% static "img/apply.png" %}">
+							</div>
+						</div>
+						<div class="leftFilterBlock">
+							<div class="filterGroup price priceFilter">
+								<div class="input-group input-group-sm ">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-sm">Min</span>
+									</div>
+									<input type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="0₽" name="priceFilter" step="50" {% if selected_price.0 != 0 %}value="{{selected_price.0}}"{% endif %}>
+								</div>
+								<div class="input-group input-group-sm">
+									<input type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="999 999₽" name="priceFilter" step="50" {% if selected_price.1 != 999999 %}value="{{selected_price.1}}"{% endif %}>
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-sm">Max</span>
+									</div>
+								</div>
+							</div>
+							<div class="leftCol">
+								<div class="filterGroup detalFilter left ">
+									{% for elem in detals_filter %}
+										<div class="oneFIlterValue">
+											<div class="custom-control custom-checkbox">
+												{% if elem.value in selected_checkbox_detal %}
+													<input type="checkbox" class="custom-control-input" id="{{elem.pk}}_detal" onclick="add_name(this)" value="{{elem.value}}" checked name="detal">
+												{% else %}
+													<input type="checkbox" class="custom-control-input" id="{{elem.pk}}_detal" onclick="add_name(this)" value="{{elem.value}}">
+												{% endif %}
+												<label class="custom-control-label" for="{{elem.pk}}_detal">{{elem.title}}</label>
+											</div>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+						
+						<div class="filterGroup donorFilter">
 							{% for elem in donors_filter %}
-								{% if request.POST.type_filter == 'small' %}
-									{% if selected_donor.0 == elem.pk %}
-										<option selected value="{{elem.pk}}">{{elem}}</option>
-									{% else %}
-										<option value="{{elem.pk}}">{{elem}}</option>
-									{% endif %}
-								{% else %}
-									<option value="{{elem.pk}}">{{elem}}</option>
-								{% endif %}
+								<div class="oneFIlterValue">
+									<div class="custom-control custom-checkbox">
+										{% if elem.pk in selected_checkbox_donor %}
+											<input type="checkbox" class="custom-control-input" id="{{elem.pk}}_donor" onclick="add_name(this)" value="{{elem.pk}}" checked name="donor">
+										{% else %}
+											<input type="checkbox" class="custom-control-input" id="{{elem.pk}}_donor" onclick="add_name(this)" value="{{elem.pk}}">
+										{% endif %}
+											<label class="custom-control-label" for="{{elem.pk}}_donor">{{elem}}</label>
+									</div>
+								</div>
 							{% endfor %}
-						</select>
-					</div>
-					<div class="smallFilterParam">
-						<select onchange="submit_small_filter(this)" class="custom-select custom-select-sm" id="vin">
-							<option value="all">Все VIN</option>
-							<option value="1">One</option>
-							<option value="2">Two</option>
-							<option value="3">Three</option>
-						</select>
-					</div>
-					<div class="smallFilterParam">
-						<select onchange="submit_small_filter(this)" class="custom-select custom-select-sm" id="stock">
-							<option value="all">Все склады</option>
+						</div>
+						<div class="filterGroup vinFilter">
+							<div class="oneFIlterValue">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="customCheck1">
+									<label class="custom-control-label" for="customCheck1">06V288B2</label>
+								</div>
+							</div>
+						</div>
+						<div class="filterGroup skladFilter">
 							{% for elem in stocks_filters %}
-								{% if request.POST.type_filter == 'small' %}
-									{% if selected_stock.0 == elem.pk %}
-										<option selected value="{{elem.pk}}">{{elem}}</option>
-									{% else %}
-										<option value="{{elem.pk}}">{{elem}}</option>
-									{% endif %}
-								{% else %}
-									<option value="{{elem.pk}}">{{elem}}</option>
-								{% endif %}
+								<div class="oneFIlterValue">
+									<div class="custom-control custom-checkbox">
+										{% if elem.pk in selected_stock %}
+											<input type="checkbox" class="custom-control-input" onclick="add_name(this)" id="{{elem.pk}}_stock" checked name="stock" value="{{elem.pk}}">
+										{% else %}
+											<input type="checkbox" class="custom-control-input" onclick="add_name(this)" id="{{elem.pk}}_stock" value="{{elem.pk}}">
+										{% endif %}
+											<label class="custom-control-label" for="{{elem.pk}}_stock">{{elem.title}}</label>
+									</div>
+								</div>
 							{% endfor %}
-						</select>
-					</div>
-				</form>
+						</div>
+					</form>
+				</div>
 			</div>
-			<hr>
-			<div class="fullFilter">
-				<form action="/lk/detals_list/" method="POST">
-					{% csrf_token %}
-					<input type="hidden" name="type_filter" value="full">
-					<div class="fullFilterButtonBlock">
-						<div class="resetFilterButton">
-							<input type="image" src="{% static "img/reset.png" %}">
-						</div>
-						<div class="applyFilterButton" >
-							<input type="image" src="{% static "img/apply.png" %}">
-						</div>
-					</div>
-					<div class="leftFilterBlock">
-						<div class="filterGroup price priceFilter">
-							<div class="input-group input-group-sm ">
-								<div class="input-group-prepend">
-									<span class="input-group-text" id="inputGroup-sizing-sm">Min</span>
-								</div>
-								<input type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="0₽" name="priceFilter" step="50" {% if selected_price.0 != 0 %}value="{{selected_price.0}}"{% endif %}>
+			
+		</div>
+		<div class="showFilterButton" onclick="show_filter(this)">
+				<label>Все фильтры</label><i class="fas fa-angle-double-down fa-lg"></i>
+			</div>
+		<table class="tableDetals ">
+			<thead class="thead-dark">
+				<tr>
+					<th class="detalCheckBox">
+						<input id="select_all" class="selectAll" type="checkbox" onchange="select_all()">
+					</th>
+					
+					<th class="detalNumber">№</th>
+					<th class="detalTitle">Деталь</th>
+					<th class="detalDonor">Автомобиль-донор</th>
+					<th class="detalPrice">Цена</th>
+					<th class="detalVIN">VIN</th>
+					<th class="detalSklad">Склад</th>
+					<th class="detalPhotoMin">Фотография</th>
+					<th class="detalOther">Описание</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for detal in all_detals %}
+				<tr data-content="{{detal.detal.pk}}">
+					<td class="detalCheckBox">
+						<input id="checkbox" type="checkbox" onchange="selected(this)">
+					</td>
+					<td class="detalNumber">{{detal.count}}</td>
+					<td class="detalTitle">{{detal.detal}}</td>
+					<td class="detalDonor" onclick="move_panel(this)">
+						<a href="#" id="{{detal.detal.donor_info.pk}}">{{detal.detal.donor_info}}</a>
+					</td>
+					<td class="detalPrice" ondblclick="edit_price(this)"><span>{{detal.detal.price}}</span> ₽</td>
+					<td class="detalVIN">06V288B2</td>
+					<td class="detalSklad">{{detal.detal.stockroom}}</td>
+					<td class="detalPhotoImg">
+						<a href="#img1">
+							<img src="{% static "img/image_mini.png" %}" alt="" onclick="view_detal_photo(this)">
+						</a>
+						<a href="#close" class="fulImg" id="img1" onclick="closePhoto(this)">
+						</a>
+					</td>
+					<td class="detalOther">{{detal.detal.description}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<div class="controlPanel">
+			<div class="titleSelect">
+				<label>Выбранно деталей:</label><span>0</span>
+				<br>
+				<label>На общую сумму:</label><span>0</span> руб.
+			</div>
+			<div class="transfer">
+				<button class="btn btn-info">Переместить</button>
+			</div>
+			<div class="remove">
+				<button class="btn btn-success">Что-то сделать</button>
+			</div>
+			<div class="remove">
+				<button class="btn btn-danger">Списать</button>
+			</div>
+		</div>
+		<div data-content="" class="right-panel border" id="RightPanel">
+			<div class="closePanel"><i onclick="close_panel()" class="fas fa-times fa-2x"></i></div>
+			<div class="donorInfo">
+				<input name="idDonor" id="idDonor" type="hidden" value="">
+				<div class="mainInfo" id="mainInfo">
+						<label class="titleMainInfo">Автомобиль-донор</label>
+						<div class="donorTabs">
+							<div class="tabInfo active" onclick="donorTabs(this)">
+								<span>Общая информация</span>
 							</div>
-							<div class="input-group input-group-sm">
-								<input type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="999 999₽" name="priceFilter" step="50" {% if selected_price.1 != 999999 %}value="{{selected_price.1}}"{% endif %}>
-								<div class="input-group-prepend">
-									<span class="input-group-text" id="inputGroup-sizing-sm">Max</span>
-								</div>
+							<div class="tabPhoto" onclick="donorTabs(this)">
+								<span>Фотография</span>							
 							</div>
 						</div>
-						<div class="leftCol">
-							<div class="filterGroup detalFilter left ">
-								{% for elem in detals_filter %}
-									<div class="oneFIlterValue">
-										<div class="custom-control custom-checkbox">
-											{% if elem.value in selected_checkbox_detal %}
-												<input type="checkbox" class="custom-control-input" id="{{elem.pk}}_detal" onclick="add_name(this)" value="{{elem.value}}" checked name="detal">
-											{% else %}
-												<input type="checkbox" class="custom-control-input" id="{{elem.pk}}_detal" onclick="add_name(this)" value="{{elem.value}}">
-											{% endif %}
-											<label class="custom-control-label" for="{{elem.pk}}_detal">{{elem.title}}</label>
+						
+						<div class="donorParmas">
+							<div class="vin">
+								<div class="input-group-prepend">
+									<div class="paramTitle">
+										<span class="nameParam">VIN или номер кузова:</span>
+									</div>
+									<div class="paramContent">
+										<input disabled id="donorVin" type="text" class="form-control">
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="leftParam" >
+									<div class="oneParamBlock">
+										<div class="paramTitle">
+											<span class="nameParam" id="">Марка:</span>
+										</div>
+										<div class="paramContent">
+											<select id="all_marks" disabled="" class="custom-select">
+												<option id="donorMarkOption" value="{{new_donor.mark.value}}" selected>{{new_donor.mark.title}}</option>
+											</select>
 										</div>
 									</div>
-								{% endfor %}
-							</div>
-						</div>
-					</div>
-					
-					<div class="filterGroup donorFilter">
-						{% for elem in donors_filter %}
-							<div class="oneFIlterValue">
-								<div class="custom-control custom-checkbox">
-									{% if elem.pk in selected_checkbox_donor %}
-										<input type="checkbox" class="custom-control-input" id="{{elem.pk}}_donor" onclick="add_name(this)" value="{{elem.pk}}" checked name="donor">
-									{% else %}
-										<input type="checkbox" class="custom-control-input" id="{{elem.pk}}_donor" onclick="add_name(this)" value="{{elem.pk}}">
-									{% endif %}
-										<label class="custom-control-label" for="{{elem.pk}}_donor">{{elem}}</label>
-								</div>
-							</div>
-						{% endfor %}
-					</div>
-					<div class="filterGroup vinFilter">
-						<div class="oneFIlterValue">
-							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="customCheck1">
-								<label class="custom-control-label" for="customCheck1">06V288B2</label>
-							</div>
-						</div>
-					</div>
-					<div class="filterGroup skladFilter">
-						{% for elem in stocks_filters %}
-							<div class="oneFIlterValue">
-								<div class="custom-control custom-checkbox">
-									{% if elem.pk in selected_stock %}
-										<input type="checkbox" class="custom-control-input" onclick="add_name(this)" id="{{elem.pk}}_stock" checked name="stock" value="{{elem.pk}}">
-									{% else %}
-										<input type="checkbox" class="custom-control-input" onclick="add_name(this)" id="{{elem.pk}}_stock" value="{{elem.pk}}">
-									{% endif %}
-										<label class="custom-control-label" for="{{elem.pk}}_stock">{{elem.title}}</label>
-								</div>
-							</div>
-						{% endfor %}
-					</div>
-				</form>
-			</div>
-		</div>
-		
-	</div>
-	<div class="showFilterButton" onclick="show_filter(this)">
-			<label>Все фильтры</label><i class="fas fa-angle-double-down fa-lg"></i>
-		</div>
-	<table class="tableDetals ">
-		<thead class="thead-dark">
-			<tr>
-				<th class="detalCheckBox">
-					<input id="select_all" class="selectAll" type="checkbox" onchange="select_all()">
-				</th>
-				
-				<th class="detalNumber">№</th>
-				<th class="detalTitle">Деталь</th>
-				<th class="detalDonor">Автомобиль-донор</th>
-				<th class="detalPrice">Цена</th>
-				<th class="detalVIN">VIN</th>
-				<th class="detalSklad">Склад</th>
-				<th class="detalPhotoMin">Фотография</th>
-				<th class="detalOther">Описание</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for detal in all_detals %}
-			<tr data-content="{{detal.detal.pk}}">
-				<td class="detalCheckBox">
-					<input id="checkbox" type="checkbox" onchange="selected(this)">
-				</td>
-				<td class="detalNumber">{{detal.count}}</td>
-				<td class="detalTitle">{{detal.detal}}</td>
-				<td class="detalDonor" onclick="move_panel(this)">
-					<a href="#" id="{{detal.detal.donor_info.pk}}">{{detal.detal.donor_info}}</a>
-				</td>
-				<td class="detalPrice" ondblclick="edit_price(this)"><span>{{detal.detal.price}}</span> ₽</td>
-				<td class="detalVIN">06V288B2</td>
-				<td class="detalSklad">{{detal.detal.stockroom}}</td>
-				<td class="detalPhotoImg">
-					<a href="#img1">
-						<img src="{% static "img/image_mini.png" %}" alt="" onclick="view_detal_photo(this)">
-					</a>
-					<a href="#close" class="fulImg" id="img1" onclick="closePhoto(this)">
-					</a>
-				</td>
-				<td class="detalOther">{{detal.detal.description}}</td>
-			</tr>
-			{% endfor %}
-		</tbody>
-	</table>
-	<div class="controlPanel">
-		<div class="titleSelect">
-			<label>Выбранно деталей:</label><span>0</span>
-			<br>
-			<label>На общую сумму:</label><span>0</span> руб.
-		</div>
-		<div class="transfer">
-			<button class="btn btn-info">Переместить</button>
-		</div>
-		<div class="remove">
-			<button class="btn btn-success">Что-то сделать</button>
-		</div>
-		<div class="remove">
-			<button class="btn btn-danger">Списать</button>
-		</div>
-	</div>
-	<div data-content="" class="right-panel border" id="RightPanel">
-		<div class="closePanel"><i onclick="close_panel()" class="fas fa-times fa-2x"></i></div>
-		<div class="donorInfo">
-			<input name="idDonor" id="idDonor" type="hidden" value="">
-			<div class="mainInfo" id="mainInfo">
-					<label class="titleMainInfo">Автомобиль-донор</label>
-					<div class="donorTabs">
-						<div class="tabInfo active" onclick="donorTabs(this)">
-							<span>Общая информация</span>
-						</div>
-						<div class="tabPhoto" onclick="donorTabs(this)">
-							<span>Фотография</span>							
-						</div>
-					</div>
-					
-					<div class="donorParmas">
-						<div class="vin">
-							<div class="input-group-prepend">
-								<div class="paramTitle">
-									<span class="nameParam">VIN или номер кузова:</span>
-								</div>
-								<div class="paramContent">
-									<input disabled id="donorVin" type="text" class="form-control">
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="leftParam" >
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Марка:</span>
+									<div class="oneParamBlock">
+										<div class="paramTitle">
+											<span class="nameParam" id="">Модель:</span>
+										</div>
+										<div class="paramContent">
+											<select id="all_models" disabled class="custom-select">
+												<option id="donorModelOption" value="{{new_donor.model.value}}" selected>{{new_donor.model.title}}</option>
+											</select>
+										</div>
 									</div>
-									<div class="paramContent">
-										<select id="all_marks" disabled="" class="custom-select">
-											<option id="donorMarkOption" value="{{new_donor.mark.value}}" selected>{{new_donor.mark.title}}</option>
-										</select>
+									<div class="oneParamBlock">
+										<div class="paramTitle">
+											<span class="nameParam" id="">Поколение:</span>
+										</div>
+										<div class="paramContent">
+											<select id="all_generations" disabled class="custom-select">
+												<option id="donorGenOption" value="{{new_donor.generation.value}}" selected>{{new_donor.generation.year}}</option>
+											</select>
+										</div>
 									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Модель:</span>
-									</div>
-									<div class="paramContent">
-										<select id="all_models" disabled class="custom-select">
-											<option id="donorModelOption" value="{{new_donor.model.value}}" selected>{{new_donor.model.title}}</option>
-										</select>
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Поколение:</span>
-									</div>
-									<div class="paramContent">
-										<select id="all_generations" disabled class="custom-select">
-											<option id="donorGenOption" value="{{new_donor.generation.value}}" selected>{{new_donor.generation.year}}</option>
-										</select>
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Год выпуска:</span>
-									</div>
-									<div class="paramContent">
-										<select disabled id="all_years" class="custom-select">
-											<option id="donorYearOption" value="{{new_donor.year.value}}" selected>{{new_donor.year.title}}</option>	
-											{% for elem in all_years %}
-												<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Тип кузова:</span>
-									</div>
-									<div class="paramContent">
-										<select disabled id="all_kuzovs" class="custom-select">
-											<option id="donorKuzovOption" value="{{new_donor.kuzov.value}}" selected>{{new_donor.kuzov.title}}</option>
-											{% for elem in all_kuzovs %}
+									<div class="oneParamBlock">
+										<div class="paramTitle">
+											<span class="nameParam" id="">Год выпуска:</span>
+										</div>
+										<div class="paramContent">
+											<select disabled id="all_years" class="custom-select">
+												<option id="donorYearOption" value="{{new_donor.year.value}}" selected>{{new_donor.year.title}}</option>	
+												{% for elem in all_years %}
 													<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
+												{% endfor %}
+											</select>
+										</div>
+									</div>
+									<div class="oneParamBlock">
+										<div class="paramTitle">
+											<span class="nameParam" id="">Тип кузова:</span>
+										</div>
+										<div class="paramContent">
+											<select disabled id="all_kuzovs" class="custom-select">
+												<option id="donorKuzovOption" value="{{new_donor.kuzov.value}}" selected>{{new_donor.kuzov.title}}</option>
+												{% for elem in all_kuzovs %}
+														<option value="{{elem.value}}">{{elem.title}}</option>	
+												{% endfor %}
+											</select>
+										</div>
+									</div>
+									<div class="oneParamBlock">
+										<div class="paramTitle">
+											<span class="nameParam">Пробег:</span>
+										</div>
+										<div class="paramContent">
+											<input disabled id="donorProbeg" type="text" class="form-control" placeholder="0">
+										</div>
 									</div>
 								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam">Пробег:</span>
+								<div class="rightParam">
+									<div class="oneParamBlock">
+										<div class="paramTitle">
+											<span class="nameParam" id="">Тип двигателя:</span>
+										</div>
+										<div class="paramContent">
+											<select disabled id="all_engine_type" class="custom-select">
+												<option id="donorEngineType" value="{{new_donor.engine_type.value}}" selected>{{new_donor.engine_type.title}}</option>
+												{% for elem in all_engine_type %}
+													<option value="{{elem.value}}">{{elem.title}}</option>	
+												{% endfor %}
+											</select>
+										</div>
 									</div>
-									<div class="paramContent">
-										<input disabled id="donorProbeg" type="text" class="form-control" placeholder="0">
+									<div class="oneParamBlock">
+										<div class="paramTitle">
+											<span class="nameParam" id="">Объем:</span>
+										</div>
+										<div class="paramContent">
+											<select disabled id="all_engine_size" class="custom-select">
+												<option id="donorEngineSize" value="{{new_donor.engine_size.value}}" selected>{{new_donor.engine_size.title}}</option>
+												{% for elem in all_engine_size %}
+													<option value="{{elem.value}}">{{elem.title}}</option>	
+												{% endfor %}
+											</select>
+										</div>
+									</div>
+									<div class="oneParamBlock">
+										<div class="paramTitle">
+											<span class="nameParam" id="">КПП:</span>
+										</div>
+										<div class="paramContent">
+											<select disabled id="all_kpp" class="custom-select">
+												<option id="donorTransmision" value="{{new_donor.transmission.value}}" selected>{{new_donor.transmission.title}}</option>
+												{% for elem in all_kpp %}
+													<option value="{{elem.value}}">{{elem.title}}</option>	
+												{% endfor %}
+											</select>
+										</div>
+									</div>
+									<div class="oneParamBlock">
+										<div class="paramTitle">
+											<span class="nameParam" id="">Цвет:</span>
+										</div>
+										<div class="paramContent">
+											<select disabled id="all_color" class="custom-select">
+												<option id="donorColor" value="{{new_donor.color.value}}" selected>{{new_donor.color.title}}</option>
+												{% for elem in all_color %}
+													<option value="{{elem.value}}">{{elem.title}}</option>	
+												{% endfor %}
+											</select>
+										</div>
+									</div>
+									<div class="oneParamBlock">
+										<div class="paramTitle">
+											<span class="nameParam" id="">Руль:</span>
+										</div>
+										<div class="paramContent">
+											<select disabled id="all_helm" class="custom-select">
+												<option id="donorHelm" value="{{new_donor.helm.value}}" selected>{{new_donor.helm.title}}</option>
+												{% for elem in all_helm %}
+													<option value="{{elem.value}}">{{elem.title}}</option>	
+												{% endfor %}
+											</select>
+										</div>
+									</div>
+									<div class="oneParamBlock">
+										<div class="paramTitle">
+											<span class="nameParam" id="">Привод:</span>
+										</div>
+										<div class="paramContent">
+											<select disabled id="all_privod" class="custom-select">
+												<option id="donorPrivod" value="{{new_donor.privod.value}}" selected>{{new_donor.privod.title}}</option>
+												{% for elem in all_privod %}
+													<option value="{{elem.value}}">{{elem.title}}</option>	
+												{% endfor %}
+											</select>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="rightParam">
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Тип двигателя:</span>
-									</div>
-									<div class="paramContent">
-										<select disabled id="all_engine_type" class="custom-select">
-											<option id="donorEngineType" value="{{new_donor.engine_type.value}}" selected>{{new_donor.engine_type.title}}</option>
-											{% for elem in all_engine_type %}
-												<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Объем:</span>
-									</div>
-									<div class="paramContent">
-										<select disabled id="all_engine_size" class="custom-select">
-											<option id="donorEngineSize" value="{{new_donor.engine_size.value}}" selected>{{new_donor.engine_size.title}}</option>
-											{% for elem in all_engine_size %}
-												<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">КПП:</span>
-									</div>
-									<div class="paramContent">
-										<select disabled id="all_kpp" class="custom-select">
-											<option id="donorTransmision" value="{{new_donor.transmission.value}}" selected>{{new_donor.transmission.title}}</option>
-											{% for elem in all_kpp %}
-												<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Цвет:</span>
-									</div>
-									<div class="paramContent">
-										<select disabled id="all_color" class="custom-select">
-											<option id="donorColor" value="{{new_donor.color.value}}" selected>{{new_donor.color.title}}</option>
-											{% for elem in all_color %}
-												<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Руль:</span>
-									</div>
-									<div class="paramContent">
-										<select disabled id="all_helm" class="custom-select">
-											<option id="donorHelm" value="{{new_donor.helm.value}}" selected>{{new_donor.helm.title}}</option>
-											{% for elem in all_helm %}
-												<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Привод:</span>
-									</div>
-									<div class="paramContent">
-										<select disabled id="all_privod" class="custom-select">
-											<option id="donorPrivod" value="{{new_donor.privod.value}}" selected>{{new_donor.privod.title}}</option>
-											{% for elem in all_privod %}
-												<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
-									</div>
-								</div>
+						</div>
+						<div class="buttonBlock">
+							<div>
+								<button id="edit" onclick="editDonor(mainInfo)" type="button" class="btn btn-primary">Изменить</button>
+							</div>
+							<div>
+								<button id="save" onclick="saveDonor(mainInfo)" type="button" class="btn btn-success" disabled>Сохранить</button>
 							</div>
 						</div>
 					</div>
-					<div class="buttonBlock">
-						<div>
-							<button id="edit" onclick="editDonor(mainInfo)" type="button" class="btn btn-primary">Изменить</button>
-						</div>
-						<div>
-							<button id="save" onclick="saveDonor(mainInfo)" type="button" class="btn btn-success" disabled>Сохранить</button>
-						</div>
-					</div>
-				</div>
+			</div>
+	<script src="{% static "js/detals_list.js" %}"></script>
+	
 		</div>
-<script src="{% static "js/detals_list.js" %}"></script>
-
-	</div>
-
+</div>
 {% endblock mainpanel %}

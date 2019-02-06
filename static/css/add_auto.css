@@ -1,0 +1,411 @@
+
+/************************************************/
+/***********   Добавление деталей    ************/
+/************************************************/
+
+/*** Левая панель ***/
+
+.list-detals {
+    position: absolute;
+    left: 25px;
+    width: 260px;
+    height: 675px;
+    box-shadow: 0 0px 30px 0px rgba(103, 103, 103, 0.42), 
+    			inset 0 0 300px 180px rgba(138, 118, 47, 0.25);
+	border: 1px solid rgba(138, 118, 47, 0.25);   
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.list-detals .topBar { 
+    height: 50px;
+    font-size: 11pt;
+    padding: 15px 0 0 0;
+    color: #5a5a5a;
+    text-align: center;
+}
+.search-block { text-align: center; padding: 15px 0 0 0; }
+.search-block i {     
+    position: absolute;
+    right: 45px;
+    margin-top: 9px;
+    font-size: 10pt;
+    color: darkgrey; 
+}
+.search-block input {
+    height: 30px;
+    width: 200px;
+    font-size: 8pt;
+    display: inline;
+    padding-right: 25px;
+}
+.search-block input:focus {
+    box-shadow: 0 0 10px 1px rgba(142, 39, 39, 0.6);
+    border-color: #ffe9ca;
+}
+
+/*** Центральная панель ***/
+
+.addDetalsPanel {
+    margin: 50px 0 0 310px;
+    overflow: auto;
+    height: 490px;
+    width: 730px;
+    box-shadow: 0 0px 30px 0px rgba(103, 103, 103, 0.42), 
+    			inset 0 0 300px 180px rgba(138, 118, 47, 0.25);
+	border: 1px solid rgba(138, 118, 47, 0.25);   
+    border-radius: 10px;
+    display: grid;
+    grid-auto-rows: max-content;
+}
+
+.topBar {
+    height: 30px;
+    border-bottom: 1px solid rgba(82, 75, 4, 0.15);
+    box-shadow: inset 0 0 300px 180px rgba(0, 0, 0, 0.06);
+    padding: 3px 0 0 25px;
+}
+
+.topBar li { display: inline; font-size: 8pt;}
+.topBar a { color: #5a5a5a; }
+.topBar i { margin: 0 5px 0 5px; font-size: 7pt;}
+
+.rowDetals {
+	display: grid;
+	grid-template-columns: 160px 160px 160px 160px;
+    grid-column-gap: 18px;
+	margin: 10px 0 10px 18px;
+}
+
+.card:hover { box-shadow: 0 0 15px 2px rgba(142, 39, 39, 0.6); cursor: pointer; }
+.card-header {
+	padding: 7px 0 7px 0;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    text-align: center;
+    font-size: 8pt;
+}
+.card-body { height: 100px; }
+
+/*** Правая панель ***/
+
+.donor {
+    position: fixed;
+    height: 510px;
+    width: 500px;
+    top: 0;
+    right: 25px;
+    padding: 0 30px 0 30px;
+    background-color: #ffffff;
+    border: 1px solid rgba(89, 138, 187, 0.4);
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+    box-shadow: 0 7px 30px 0px rgba(103, 103, 103, 0.42), 
+                inset 0 0 490px 50px rgba(0, 164, 253, 0.25);
+}
+
+.donor::before{
+    content: 'Автомобиль-донор';
+    position: absolute;
+    width: 220px;
+    height: 50px;
+    right: 260px;
+    top: 495px;
+    background: #ffffff;
+    color: #495057;
+    font-family: 'Roboto Slab', serif;
+    font-size: 11pt;
+    border: 1px solid rgba(89, 138, 187, 0.4);
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: inset 0 0 200px 30px rgba(0, 164, 253, 0.12);
+    padding: 16px 0 0 35px;
+}
+
+.donorContent { text-align: center; }
+
+.mainInfo {
+	margin-left: -20px;
+	display: grid;
+	grid-template-rows: 50px auto auto;
+	font-family: 'Merriweather', serif;
+}
+
+.titleMainInfo { 
+	font-size: 12pt;
+	text-align: center;
+	color: black;
+}
+
+/*** Вкладки панели донора ***/
+
+.donorTabs {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 180px 180px;
+	align-items: end;
+}
+
+.tabInfo, .tabPhoto {
+	background: #FFF;
+	width: 180px;
+	height: 30px;
+	font-family: 'Merriweather', serif;
+	font-size: 8pt;
+	color: #494949;
+	padding: 10px 0 0 0;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom: none;
+    box-shadow: -2px -4px 4px 0 #7F7F7F, 
+			    inset 0 0 200px 30px rgba(0, 164, 253, 0.13);
+	transition: all 0.5s ease-in-out;
+}
+
+.tabPhoto {
+	margin-left: 115px;
+	transition: all 0.5s ease-in-out;
+}
+
+.tabInfo:hover, .tabPhoto:hover { cursor: pointer; box-shadow: -2px -4px 4px 0 #7F7F7F, inset 0 0 200px 30px rgba(0, 164, 253, 0.13);}
+
+.tabInfo.active, .tabPhoto.active { 
+	width: 320px;
+	height: 45px; 
+    box-shadow: -2px -4px 4px 0 rgba(58, 58, 58, 0.6), 
+    			inset 0 0 200px 30px rgba(0, 164, 253, 0.13);
+	padding: 15px 0 0 0;
+	font-size: 10pt;
+	transition: all 0.5s ease-in-out;
+}
+
+.tabPhoto.active {
+	margin-left: -25px;
+	transition: all 0.5s ease-in-out;
+}
+
+/*** Панель параметров ***/
+
+.donorParmas {
+	margin-top: 40px;
+	display: grid;
+	grid-template-rows: 50px auto;
+	grid-column-gap: 15px;
+	justify-content: center;
+	transition: all 0.5s ease-in-out;
+}
+
+.col {
+	display: grid;
+	grid-template-columns: 215px 215px;
+	grid-column-gap: 15px;
+	justify-content: center;
+}
+
+.vin {	
+	display: grid;
+	justify-content: center;
+	margin: 0 0 20px 0; 
+}
+
+.vin .paramTitle {	
+	min-width: 150px; 
+	padding-left: 10px;
+}
+
+.vin .paramContent {	
+	min-width: 200px; 
+}
+
+
+.oneParamBlock {
+	margin-bottom: 20px;
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: start;
+}
+
+.paramTitle {
+	width: 90px;
+	height: 27px;
+	padding: 6px 0 0 10px;
+	background-color: #e9ecef;
+	border: 1px solid #ced4da;
+	text-align: left;
+	font-size: 7pt;
+	font-family: sans-serif;
+	color: #495057;
+	border right: none;
+	border-radius: 0.25rem;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.paramContent {
+	width: 120px;
+	font-size: 8pt;
+}
+
+.paramContent select,
+.paramContent input {
+	font-family: 'Roboto Slab', serif; 
+	font-size: 7pt; 
+	height: 27px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-left: none;
+}
+
+.buttonBlock {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-column-gap: 10px;
+	justify-content: end;
+	margin-top: -15px;
+    margin-right: 25px;
+}
+
+.buttonBlock button {
+	font-size: 7pt;
+	height: 30px;
+}
+
+/*** Панель фотографии ***/
+
+.donorPhoto {
+	background: #FFFFFF;
+	position: absolute;
+	height: 360px;
+	width: 100%;
+	padding: 20px;
+	top: 80px;
+	right: -500px;
+	transition: all 0.5s ease-in-out;
+	text-align: center;
+}
+
+.donorPhoto img {
+	margin: 100px 0 0 50px;
+	height: 160px; 
+	width: 200px;
+	opacity: 0.5;
+}
+
+.donorPhoto img:hover { 
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+/*** Стили для анимации переключения ***/
+
+.donorPhoto.show {right: 20px; }
+
+
+/***************************************/
+/******** Нижняя панель иформации ******/
+/***************************************/
+
+.bottomParams {
+    background: white;
+    position: fixed;
+    bottom: 10px;
+    right: 25px;
+    width: 1265px;
+    height: 170px;
+    padding: 0 0 0 65px;
+    z-index: 4;
+    border: 1px solid rgba(89, 138, 187, 0.4);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 330px 330px auto;
+    grid-column-gap: 60px;
+    box-shadow: 0 -3px 15px 0px rgba(103, 103, 103, 0.42), 
+                inset 0 0 200px 30px rgba(0, 164, 253, 0.25);
+}
+
+.bottomParams::before {
+    content: 'Параметры добавления';
+    position: absolute;
+    width: 220px;
+    height: 50px;
+    right: 20px;
+    top: -35px;
+    background: #ffffff;
+    color: #495057;
+    font-family: 'Roboto Slab', serif;
+    font-size: 11pt;
+    border: 1px solid rgba(89, 138, 187, 0.4);
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: inset 0 0 200px 30px rgba(0, 164, 253, 0.16);
+    padding: 16px 0 0 18px;
+}
+
+.bottomParams.animation { bottom: 0; }
+.bottomParams.animationpage2::before { top: -30px; }
+
+.bottomTitle {
+	position: relative;
+	z-index: 1;
+	margin: -5px 0 0 0;
+}
+
+.bottomInfo {
+    font-family: 'Roboto Mono', serif;
+    font-size: 11pt;
+    width: 300px;
+    height: 120px;
+    margin: 30px 0 0 10px;
+    padding: 25px 0 0 20px;
+    border: 1px solid #898989;
+    border-radius: 10px;
+}
+
+.bottomInfo .value { padding-left: 10px; }
+
+.bottomInfo .key { text-align: right; padding-right: 10px; }
+
+.bottomAddBackButtons {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-column-gap: 30px;
+}
+
+.bottomAddBackButtons button { 
+	width: 150px;
+	height: 40px;
+	font-size: 9pt;
+	box-shadow: inset 0 0 5px 2px rgba(255, 255, 255, 0.4);
+}
+
+.bottomSettingButtons {
+    width: 300px;
+    height: 120px;
+    margin: 30px 0 0 0px;
+    border: 1px solid #898989;
+    border-radius: 10px;
+    padding: 20px 0 0 15px;
+}
+
+.bottomSettingButtons::before, .bottomInfo::before {
+	content: 'Размещение деталей';
+    position: absolute;
+    background: rgba(230, 245, 255, 1);
+    width: 140px;
+    height: 30px;
+    text-align: center;
+    margin: -29px 0 0 0;
+    font-size: 9pt;	
+} 
+
+.bottomInfo::before { margin: -34px 0 0 0; }
+
+.bottomSettingButtons label { font-size: 9pt; padding: 4px 0 0 0;}
+.bottomSettingButtons select { margin: 0 0 0 10px; width: 150px; }
+/************************************************/
