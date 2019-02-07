@@ -36,6 +36,8 @@
     margin-left: 98px;
     padding: 9px 0 0 18px;
     background: #FFFFFF;
+    color: #2d587d;
+    font-family: 'Merriweather', serif;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     box-shadow: 0 4px 2px 0 #7AA1D5;
@@ -48,11 +50,11 @@
 }
 
 .showFilterButton label:hover, 
-.showFilterButton i:hover { cursor: pointer; opacity: 1;}
+.showFilterButton i:hover { cursor: pointer; opacity: 1; }
 
 .showFilterButton label {font-size: 8pt;}
 .showFilterButton i { 
-	color: #808080;
+	color: #2d587d;
 	margin: 0 0 0 10px;
 }
 

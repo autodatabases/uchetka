@@ -21,6 +21,13 @@
 <body>
 	<div class="contentpage">
 		<div class="topPanel">
+			<div class="company-info">
+				<i class="fas fa-building"></i>
+				<label>Компания</label>
+			</div>
+			<div class="page-title">
+				
+			</div>
 			<div class="profile">
 				<a href=""><i class="fas fa-cog"></i></a>
 				<a href=""><i class="fas fa-th"></i></a>
@@ -31,42 +38,29 @@
 		</div>
 		<div class="menu">
 			{% block menu %}
-			<div class="info">
-				<h1>Вы вошли как: {{request.user}}</h1>
-				<h2>Деталей на складе: <span id="totalDetalsPrice">{{detals_count}}</span></h2>
-				<h3>Какая то инфа: <span id="totalDetalsPrice">Пусто</span></h3>
-				</div>
-				<!-- Contenedor -->
 				<ul id="accordion" class="accordion">
-					<li class="noMenu">
-						<div class="link_button"></div>
-					</li>
 					<li>
 						<a href="/lk/detals_list/"><div class="link_button"><i class="fas fa-list-ul"></i>Мои детали</div></a>
 					</li>
 					<li>
-						<form action="/lk/add_auto/" method="POST">
-							<div class="link"><i class="fa fa-plus"></i>Добавить детали<i class="fa fa-chevron-down"></i></div>
-							<ul class="submenu">
-								<li id="one" class="button">{% csrf_token %}
-									<a href="#">Автомобиль-донор
-									</a>
-									<div class="iconSubmenu">
-										<img src="{% static "img/faq.png" %}" alt="">
-									</div>
-								</li>
-								<li>
-									<a href="">
-										Импорт из файла
-									</a>
-									<div class="iconSubmenu">
-										<img src="{% static "img/faq.png" %}" alt="">
-									</div>
-								</li>
-
-
-							</ul>
-						</form>
+						<div class="link" ><i class="fa fa-plus" style="left: 14px;"></i>Добавить детали</div>
+						<ul class="submenu">
+							<li id="one" class="button">{% csrf_token %}
+								<a href="#">Автомобиль-донор
+								</a>
+								<div class="iconSubmenu">
+									<img src="{% static "img/faq.png" %}" alt="">
+								</div>
+							</li>
+							<li>
+								<a href="">
+									Импорт из файла
+								</a>
+								<div class="iconSubmenu">
+									<img src="{% static "img/faq.png" %}" alt="">
+								</div>
+							</li>
+						</ul>
 					</li>
 					<li>
 						<a href=""><div class="link_button"><i class="fas fa-chart-bar"></i>Статистика</div></a>
@@ -82,9 +76,6 @@
 					</li>
 					<li>
 						<a href=""><div class="link_button"><i class="fa fa-power-off"></i>Выход</div></a>
-					</li>
-					<li class="noMenu">
-						<div class="link_button"></div>
 					</li>
 				</ul>
 				

@@ -1,7 +1,6 @@
-document.querySelector('.topPanel').setAttribute('style', 'width: 66.5%');
+document.querySelector('.menu').classList.add('hideMenu')
 // анимация панели донора после загрузки страницы
 window.onload = function(){
-	document.querySelector('.menu').classList.add('hideMenu')
 	
 } 
 // Функиця изменения параметров донора
@@ -110,3 +109,13 @@ function sub(){
 
 function qsd(){
 }
+
+$(document).on('click','#group', function(){
+	if (this.parentElement.querySelector('ul').getAttribute('class') == 'subgroup hide') {
+		this.parentElement.querySelector('ul').classList.remove('hide');
+		this.parentElement.querySelectorAll('i')[0].setAttribute('class', 'fas fa-caret-down');
+	} else {
+		this.parentElement.querySelector('ul').classList.add('hide');
+		this.parentElement.querySelectorAll('i')[0].setAttribute('class', 'fas fa-caret-right');
+	}
+});
