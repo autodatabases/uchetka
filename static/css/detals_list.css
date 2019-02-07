@@ -16,7 +16,7 @@
 	height: 80px;
 	width: 100%;
 	padding: 50px 0 0 5px;
-	margin-top: -155px;
+	margin-top: -125px;
 	margin-left: -15px;
 	z-index:3;
 	overflow: hidden;
@@ -32,7 +32,7 @@
     z-index: 4;
     width: 120px;
     height: 30px;
-    margin-top: -82px;
+    margin-top: -55px;
     margin-left: 98px;
     padding: 9px 0 0 18px;
     background: #FFFFFF;
@@ -170,18 +170,18 @@
 /***********************/
 /*** Таблица деталей ***/
 /***********************/
-.tableDetals { margin-top: 121px; transition: all 0.5s ease-in-out;}
+.tableDetals { margin-top: 140px; transition: all 0.5s ease-in-out;}
 
 
 .tableDetals thead {
-  	position: fixed;
-	color: #fff;
-  	background-color: #212529;
-  	border-color: #32383e;
-  	width: 100%;
-  	margin-left: -1px;
-  	margin-top: -73px;
-  	z-index:1;
+    position: fixed;
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+    width: 100%;
+    margin-left: -1px;
+    margin-top: -47px;
+    z-index: 1;
 }
 
 .tableDetals th { height: 45px; border: 1px solid #484848; }

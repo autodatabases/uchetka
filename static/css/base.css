@@ -45,12 +45,13 @@ img, embed, object, video, svg {max-width: 100%;}
 .topPanel {
     position: fixed;
     display: inline;
+    background: white;
     top: 0;
     left: 0;
     height: 40px;
-    width: 100%;
+    width: 99%;
     padding: 2px;
-    transition: all 1s ease-out;
+    z-index: 4;
     border-bottom-right-radius: 10px;
     box-shadow: 0 0px 15px 0px rgba(103, 103, 103, 0.7), 
                 inset 0 0 65px 1px rgba(208, 208, 208, 0.45);
@@ -58,10 +59,51 @@ img, embed, object, video, svg {max-width: 100%;}
 
 .profile {
     position: absolute;
-    width: 270px;
+    width: 300px;
     height: 35px;
     right: 0;
     border-left: 1px solid #c5c5c5;
+}
+
+.profile a {
+    color: #8a8a8a;
+    font-size: 16pt;
+    padding: 4px 0 0 0;
+    display: inline-block;
+    margin: 0 0 0 13px;
+}
+
+.profile div {
+    position: absolute;
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    right: 0;
+    text-align: center;
+    padding: 7px 0 0 0;
+    margin: 0px 20px 0 0;
+    color: rgba(0, 78, 150, 0.6);
+    background: #ececec;
+    box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.profile label {
+    margin: 6px 0 0 32px;
+    padding: 3px 0px 0 13px;
+    color: #5c8cb7;
+    display: inline-block;
+    font-size: 10pt;
+    font-family: 'Abril Fatface', cursive;
+    box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    height: 25px;
+    width: 120px;
+    position: absolute;
+    background: #ececec;
+    z-index: 1;
 }
 
 /************************************************/
@@ -80,7 +122,7 @@ img, embed, object, video, svg {max-width: 100%;}
     background: #2d2c41;
     font-family: 'Merriweather', serif;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     transition: all 1s ease;
 }
 
@@ -252,10 +294,12 @@ img, embed, object, video, svg {max-width: 100%;}
 /************************************************/
 
 .mainpanel { 
-  margin-left: 310px;
-  margin-top: 10px;
-  padding: 15px 0 0 15px;
-  border-radius: 5px;
+    margin-left: 310px;
+    margin-top: 10px;
+    padding: 15px 0 0 15px;
+    border-radius: 5px;
+    box-shadow: inset 3px 3px 3px #7F7F7F;
+    width: 1259px;
 }
 
 .mainpanel.detals_page {box-shadow: inset 3px 3px 3px #7F7F7F, inset 0 -1px 3px #7F7F7F;}

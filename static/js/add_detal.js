@@ -1,7 +1,8 @@
+document.querySelector('.topPanel').setAttribute('style', 'width: 66.5%');
 // анимация панели донора после загрузки страницы
 window.onload = function(){
 	document.querySelector('.menu').classList.add('hideMenu')
-	document.querySelector('.topPanel').setAttribute('style', 'width: 66.5%');
+	
 } 
 // Функиця изменения параметров донора
 function editDonor(block) {
