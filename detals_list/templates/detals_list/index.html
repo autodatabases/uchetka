@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-Список деталей
+	Список деталей
 {% endblock title %}
-
+{% block page_title %}
+	Список деталей			
+{% endblock page_title %}
 {% block mainpanel %}
 <link rel="stylesheet" href="{% static "css/detals_list.css" %}">
 {% csrf_token %}

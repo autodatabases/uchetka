@@ -1,5 +1,4 @@
-document.querySelector('.menu').classList.add('hideMenu')
-// анимация панели донора после загрузки страницы
+//после загрузки страницы
 window.onload = function(){
 	
 } 

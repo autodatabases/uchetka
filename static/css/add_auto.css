@@ -258,12 +258,14 @@
 }
 
 .buttonBlock {
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-column-gap: 10px;
-	justify-content: end;
-	margin-top: -15px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    justify-content: end;
+    margin-top: 10px;
     margin-right: 25px;
+    position: relative;
+    z-index: -1;
 }
 
 .buttonBlock button {
@@ -274,15 +276,15 @@
 /*** Панель фотографии ***/
 
 .donorPhoto {
-	background: #FFFFFF;
-	position: absolute;
-	height: 360px;
-	width: 100%;
-	padding: 20px;
-	top: 80px;
-	right: -500px;
-	transition: all 0.5s ease-in-out;
-	text-align: center;
+    background: #FFFFFF;
+    position: absolute;
+    height: 340px;
+    width: 0%;
+    top: 80px;
+    right: 33px;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    overflow: hidden;
 }
 
 .donorPhoto img {
@@ -299,7 +301,7 @@
 
 /*** Стили для анимации переключения ***/
 
-.donorPhoto.show {right: 20px; }
+.donorPhoto.show {width: 95%; }
 
 
 /***************************************/
@@ -329,7 +331,7 @@
     position: absolute;
     width: 220px;
     height: 50px;
-    right: 20px;
+    right: 230px;
     top: -35px;
     background: #ffffff;
     color: #495057;

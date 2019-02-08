@@ -19,66 +19,121 @@
 </title>
 </head>
 <body>
+<div class='cssload-loader'>
+  <div class='cssload-inner cssload-one'></div>
+  <div class='cssload-inner cssload-two'></div>
+  <div class='cssload-inner cssload-three'></div>
+</div>
 	<div class="contentpage">
-		<div class="topPanel">
-			<div class="company-info">
+		<div class="topPanel" id="topPanel">
+			<div class="company-info" >
 				<i class="fas fa-building"></i>
-				<label>Компания</label>
+				<label>COMPANY.COM</label>
 			</div>
 			<div class="page-title">
-				
+				{% block page_title %}
+					
+				{% endblock page_title %}
 			</div>
 			<div class="profile">
 				<a href=""><i class="fas fa-cog"></i></a>
 				<a href=""><i class="fas fa-th"></i></a>
 				<a href=""><i class="fas fa-bell"></i></a>
 				<label for="user-icon">demo-profile</label>
-				<div id="user-icon"><i class="fas fa-user-tie fa-2x"></i></div>
+				<div class="user-icon" id="user-icon"><i class="fas fa-user-tie fa-2x"></i></div>
+				<div class="green-online"></div>
 			</div>
 		</div>
 		<div class="menu">
 			{% block menu %}
 				<ul id="accordion" class="accordion">
 					<li>
-						<a href="/lk/detals_list/"><div class="link_button"><i class="fas fa-list-ul"></i>Мои детали</div></a>
+						<a href="/lk/detals_list/">
+							<div class="button-icon">
+								<i class="fas fa-list-ul"></i>
+							</div>
+							<div class="button-text">
+								Мои детали
+							</div>
+						</a>
 					</li>
 					<li>
-						<div class="link" ><i class="fa fa-plus" style="left: 14px;"></i>Добавить детали</div>
+						<a id="group-menu" href="#">
+							<div class="button-icon">
+								<i class="fa fa-plus"></i>
+							</div>
+							<div class="button-text">Добавить детали</div>
+						</a>
 						<ul class="submenu">
-							<li id="one" class="button">{% csrf_token %}
-								<a href="#">Автомобиль-донор
+							<li class="sublink button" id="one">
+								<a href="#">
+									<div class="button-icon">
+										<i class="fas fa-car"></i>
+									</div>
+									<div class="button-text">Автомобиль донор</div>
 								</a>
-								<div class="iconSubmenu">
-									<img src="{% static "img/faq.png" %}" alt="">
-								</div>
 							</li>
-							<li>
-								<a href="">
-									Импорт из файла
+							<li class="sublink">
+								<a href="#">
+									<div class="button-icon">
+										<i class="fas fa-file-csv"></i>
+									</div>
+									<div class="button-text">Импорт из файла</div>
 								</a>
-								<div class="iconSubmenu">
-									<img src="{% static "img/faq.png" %}" alt="">
-								</div>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<a href=""><div class="link_button"><i class="fas fa-chart-bar"></i>Статистика</div></a>
+						<a href="">
+							<div class="button-icon">
+								<i class="fas fa-chart-bar"></i>
+							</div>
+							<div class="button-text">
+								Статистика
+							</div>
+						</a>
 					</li>
 					<li>
-						<a href=""><div class="link_button"><i class="fas fa-users"></i>Сотруднки</div></a>
+						<a href="">
+							<div class="button-icon">
+								<i class="fas fa-users"></i>
+							</div>
+							<div class="button-text">
+								Сотруднки
+							</div>
+						</a>
 					</li>
 					<li>
-						<a href=""><div class="link_button"><i class="fas fa-warehouse"></i>Склады</div></a>
+						<a href="">
+							<div class="button-icon">
+								<i class="fas fa-warehouse"></i>
+							</div>
+							<div class="button-text">
+								Склады
+							</div>
+						</a>
 					</li>
 					<li>
-						<a href=""><div class="link_button"><i class="fas fa-cog"></i>Настройки</div></a>
+						<a href="">
+							<div class="button-icon">
+								<i class="fas fa-cog"></i>
+							</div>
+							<div class="button-text">
+								Настройки
+							</div>
+						</a>
 					</li>
 					<li>
-						<a href=""><div class="link_button"><i class="fa fa-power-off"></i>Выход</div></a>
+						<a href="">
+							<div class="button-icon">
+								<i class="fa fa-power-off"></i>
+							</div>
+							<div class="button-text">
+								Выход
+							</div>
+						</a>
 					</li>
 				</ul>
-				
 			{% endblock menu %}
 		</div>
 		<div class="content">
@@ -124,7 +179,7 @@
 						<div class="bottompanel">
 							<div class="buttonsAuto">
 								<button id="close" type="button" class="btn btn-danger">Отмена</button>
-								<button {% if stockroom_count == 0 %} disabled {% endif %} id="nextpageadd" type="button" class="btn btn-success" onclick="hideMenu(this)">Продолжить</button>
+								<button {% if stockroom_count == 0 %} disabled {% endif %} id="nextpageadd" type="submit" class="btn btn-success" onclick="show_loader(this)">Продолжить</button>
 							</div>
 							<div class="warningpanel">
 								{% if stockroom_count == 0 %}

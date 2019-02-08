@@ -25,7 +25,7 @@
 }
 
 .filterBack.showfilter { height: 360px; box-shadow: 5px 4px 2px 0 #79CB90;}
-.showFilterButton.showfilter { margin-top: 198px; box-shadow: 0 4px 2px 0 #79CB90;}
+.showFilterButton.showfilter { margin-top: 225px; box-shadow: 0 4px 2px 0 #79CB90;}
 
 .showFilterButton {
     position: fixed;
@@ -192,8 +192,9 @@
 	font-size: 10pt;
 	height: 50px;
 	padding: 0.35rem;
-	border-bottom: 1px solid #dee2e6;
 }
+
+.tableDetals td { border-bottom: 1px solid #dee2e6; }
 
 .tableDetals tr:hover {	background: rgba(0, 0, 0, 0.05);}
 
@@ -207,7 +208,7 @@
 .detalSklad	   {min-width: 105px;}
 .detalPrice    {min-width: 100px;}
 .detalPhotoMin {min-width: 100px; text-align: center;}
-.detalOther {width: 400px;}
+.detalOther {width: 645px;}
 
 .tableDetals td {padding-left: 10px;}
 td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
@@ -254,7 +255,7 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
 .controlPanel {
 	position: fixed;
 	bottom: 0px;
-	left: 300px;
+	left: 0;
 	width: 100%;
 	height: 80px;
 	background: rgba(0, 0, 0, 0.85);

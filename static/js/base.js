@@ -25,41 +25,22 @@ $.ajaxSetup({
     }
 });
 // end
+// Loader
+function show_loader(){
+	document.querySelector('.cssload-loader').setAttribute('style', 'display: block;');
+	document.querySelector('.modal').setAttribute('style', 'display: none');
+}
 
 // Меню
-$(function() {
-	var Accordion = function(el, multiple) {
-		this.el = el || {};
-		this.multiple = multiple || false;
-
-		// Variables privadas
-		var links = this.el.find('.link');
-		// Evento
-		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+// Подпункты
+$(document).on('click','#group-menu', function(){
+	if (this.parentElement.querySelector('.submenu').getAttribute('style') == null){
+		this.parentElement.querySelector('.submenu').setAttribute('style', 'height: 90px');
+	} else {
+		this.parentElement.querySelector('.submenu').removeAttribute('style');
 	}
-
-	Accordion.prototype.dropdown = function(e) {
-		var $el = e.data.el;
-			$this = $(this),
-			$next = $this.next();
-
-		$next.slideToggle();
-		$this.parent().toggleClass('open');
-
-		if (!e.data.multiple) {
-			$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
-		};
-	}	
-
-	var accordion = new Accordion($('#accordion'), false);
 });
-// Скрыть меню
-function hideMenu(button){
-	document.querySelector('#modal-container').classList.add('out');
-	setTimeout(function() {
-		button.form.submit();	
-	}, 1500);// Заддержка выполения
-}
+
 
 function change_params_donor() {
     $.ajax({
@@ -69,9 +50,7 @@ function change_params_donor() {
             'csrfmiddlewaretoken': csrftoken
         },
         success: function (data) {
-            console.log(data)
             var right_panel = document.querySelector('.right-panel');
-
             for (var i_param = 0; i_param < data.params.length; i_param++) {
                 var name = Object.keys(data.params[i_param])[0];
                 var select_param = right_panel.querySelector('#'+name);
