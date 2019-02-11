@@ -109,8 +109,10 @@ function donorTabs(newActiveTab) {
 		 var photoBlock = document.querySelector('.donorPhoto');
 		 if (newActiveTab.getAttribute('data-content') == 'photo') {
 		 	photoBlock.classList.add('show');
+		 	paramsBlock.classList.remove('show');
 		 } else	{
 		 	photoBlock.classList.remove('show');
+		 	paramsBlock.classList.add('show');
 		 }
 	}
 	var oldActiveTab = newActiveTab.parentElement.querySelector('.active');

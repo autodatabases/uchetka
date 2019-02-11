@@ -194,7 +194,11 @@
 	grid-column-gap: 15px;
 	justify-content: center;
 	transition: all 0.5s ease-in-out;
+    width: 0%;
+    overflow: hidden;
 }
+
+.donorParmas.show { width: 100%; }
 
 .col {
 	display: grid;
@@ -203,18 +207,18 @@
 	justify-content: center;
 }
 
-.vin {	
+.vin-field {	
 	display: grid;
 	justify-content: center;
 	margin: 0 0 20px 0; 
 }
 
-.vin .paramTitle {	
+.vin-field .paramTitle {	
 	min-width: 150px; 
 	padding-left: 10px;
 }
 
-.vin .paramContent {	
+.vin-field .paramContent {	
 	min-width: 200px; 
 }
 
@@ -276,7 +280,6 @@
 /*** Панель фотографии ***/
 
 .donorPhoto {
-    background: #FFFFFF;
     position: absolute;
     height: 340px;
     width: 0%;

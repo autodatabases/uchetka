@@ -148,54 +148,77 @@
 				<div class="modalcontent" id="modalcontent">
 					<div class="selectAutoDonor">
 						<form action="/lk/add_auto/" method="POST">
-						{% csrf_token %}
-						<div class="titleModal">
-							<h1>Выберите автомобиль-донор</h1>
-						</div>
-						<div class="selectAuto">
-							<div class="input-group-prepend">
-								<span class="input-group-text">Марка:</span>
-								<select {% if stockroom_count == 0 %} disabled {% endif %} name="selectMark" id="selectMark" class="custom-select custom-select-lg mb-3" onchange="load_models()">
-									<option selected>Не выбрано</option>
-									{% for mark in all_marks %}
-										<option value="{{mark.value}}">{{mark.title}}</option>
-									{% endfor %}
-								</select>
-							</div>
-							<div class="input-group-prepend">
-								<span class="input-group-text">Модель:</span>
-								<select {% if stockroom_count == 0 %} disabled {% endif %} name="selectModel" id="selectModel" class="custom-select custom-select-lg mb-3" onchange="load_generations()">
-									<option selected>Не выбрано</option>
-								</select>
-							</div>
-							<div class="input-group-prepend">
-								<span class="input-group-text">Поколение:</span>
-								<select {% if stockroom_count == 0 %} disabled {% endif %} name="selectGeneration" id="selectGeneration" class="custom-select custom-select-lg mb-3">
-									<option selected>Не выбрано</option>
-								</select>
-							</div>
-						</div>
-						
-						<div class="bottompanel">
-							<div class="buttonsAuto">
-								<button id="close" type="button" class="btn btn-danger">Отмена</button>
-								<button {% if stockroom_count == 0 %} disabled {% endif %} id="nextpageadd" type="submit" class="btn btn-success" onclick="show_loader(this)">Продолжить</button>
-							</div>
-							<div class="warningpanel">
-								{% if stockroom_count == 0 %}
-									<div class="alert alert-warning" role="alert">
-										Вам необходимо добавить хотя-бы один склад. Перейдите на <a id="open_add_stock_panel" href="#" class="alert-link" onclick="change_modal_content(this)">страницу добавления</a>.
+							{% csrf_token %}
+							<div class="left-col">
+								<hr class="vin">
+								<div class="titleModal">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<div class="input-group-text">VIN или номер кузова:</div>
+										</div>
+										<input disabled id="titleStockRoom" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Например: XZU423-0001026" style="width: 220px;flex: none;">
 									</div>
-								{% else %}
-									<div class="alert alert-info" role="alert">
-										Выберите автомобиль-донор и нажмите продолжить.
+								</div>
+								<hr class="auto">
+								<div class="selectAuto">
+									<div class="input-group-prepend">
+										<span class="input-group-text">Марка:</span>
+										<select {% if stockroom_count == 0 %} disabled {% endif %} name="selectMark" id="selectMark" class="custom-select custom-select-lg mb-3" onchange="load_models()">
+											<option selected>Не выбрано</option>
+											{% for mark in all_marks %}
+												<option value="{{mark.value}}">{{mark.title}}</option>
+											{% endfor %}
+										</select>
 									</div>
-								{% endif %}
+									<div class="input-group-prepend">
+										<span class="input-group-text">Модель:</span>
+										<select {% if stockroom_count == 0 %} disabled {% endif %} name="selectModel" id="selectModel" class="custom-select custom-select-lg mb-3" onchange="load_generations()">
+											<option selected>Не выбрано</option>
+										</select>
+									</div>
+									<div class="input-group-prepend">
+										<span class="input-group-text">Поколение:</span>
+										<select {% if stockroom_count == 0 %} disabled {% endif %} name="selectGeneration" id="selectGeneration" class="custom-select custom-select-lg mb-3">
+											<option selected>Не выбрано</option>
+										</select>
+									</div>
+								</div>
+								
+								<!-- <div class="bottompanel">
+									<div class="buttonsAuto">
+										<button id="close" type="button" class="btn btn-danger">Отмена</button>
+										<button {% if stockroom_count == 0 %} disabled {% endif %} id="nextpageadd" type="submit" class="btn btn-success" onclick="show_loader(this)">Продолжить</button>
+									</div>
+									<div class="warningpanel">
+										{% if stockroom_count == 0 %}
+											<div class="alert alert-warning" role="alert">
+												Вам необходимо добавить хотя-бы один склад. Перейдите на <a id="open_add_stock_panel" href="#" class="alert-link" onclick="change_modal_content(this)">страницу добавления</a>.
+											</div>
+										{% else %}
+											<div class="alert alert-info" role="alert">
+												Выберите автомобиль-донор и нажмите продолжить.
+											</div>
+										{% endif %}
+									</div>
+								</div> -->
 							</div>
-						</div>
+							<div class="right-col">
+								<div class="auto-icon">
+									<img src="{% static "img/auto.png" %}" alt="">
+								</div>
+								<div class="alert-block">
+									<div class="alert alert-primary" role="alert">
+										Выбранный автомобиль: Audi A4 2017г
+									</div>
+								</div>
+								<div class="button-block">
+									<button id="close" type="button" class="btn btn-danger">Отмена</button>	
+									<button {% if stockroom_count == 0 %} disabled {% endif %} id="nextpageadd" type="submit" class="btn btn-success">Продолжить</button>
+								</div>
+							</div>
 						</form>
 					</div>
-					<div class="createStockRoom" id="createStockRoom">
+					<!-- <div class="createStockRoom" id="createStockRoom">
 						<div class="titleModal">
 							<h1>Добавить новый склад</h1>
 						</div>
@@ -251,7 +274,7 @@
 								<button id="nextpageadd" type="button" class="btn btn-success" onclick="add_StockRoom(createStockRoom)">Добавить</button>
 							</div>	
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

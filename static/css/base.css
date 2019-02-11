@@ -272,6 +272,30 @@ html.modal-active, body.modal-active {
   overflow: hidden;
 }
 
+.vin::before {
+    content: "Поиск автомобиля по VIN"; 
+    background: white;
+    color: #585858;
+    height: 15px;
+    width: 184px;
+    position: absolute;
+    left: 50%;
+    font-size: 10pt;
+    margin: 26px 0 0 -92px;
+}
+
+.auto::before { 
+    content: "Поиск по каталогу";
+    background: white;
+    color: #585858;
+    height: 15px;
+    width: 134px;
+    position: fixed;
+    font-size: 10pt;
+    margin: -11px 0 0 -67px;
+}
+
+
 #modal-container {
   position: fixed;
   display: table;
@@ -308,14 +332,14 @@ html.modal-active, body.modal-active {
   vertical-align: middle;
 }
 #modal-container .modal-background .modal {
-  background: white;
-  padding: 50px;
-  display: inline-block;
-  border-radius: 3px;
-  font-weight: 300;
-  position: relative;
-  height: 410px;
-  width: 490px;
+    background: white;
+    padding: 25px 40px 25px 50px;
+    display: inline-block;
+    border-radius: 3px;
+    font-weight: 300;
+    position: relative;
+    height: 420px;
+    width: 900px;
 }
 #modal-container .modal-background .modal h2 {
   font-size: 25px;
@@ -381,40 +405,64 @@ html.modal-active, body.modal-active {
 }
 
 .modalcontent {
-    display: grid;
-    grid-template-columns: 390px 390px;
-    grid-column-gap: 10px;
-    height: 410px;
-    width: 390px;
+    margin-top: 25px;
     overflow: hidden;
 }
 
 
 /*** Панель выбора авто ***/
-.selectAutoDonor {
+
+.selectAutoDonor form { 
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.left-col {
     position: relative;
     display: grid;
     grid-template-rows: auto auto auto;
     transition: all 1s ease;
     right: 0;
+    padding: 20px 40px 20px 20px;
+    border-right: 1px solid #c5c5c5bf;
 }
 
-.titleModal h1 {
-    padding: 0px 20px 0px 20px;
-    margin-bottom: 20px;
-    font-size: 15pt;
+.right-col {
+    display: grid;
+    grid-template-rows: 170px auto;
 }
 
-.selectAuto { 
-  display: grid;
-  justify-content: center; 
+.auto-icon { overflow: hidden; }
+.auto-icon img { height: 100% }
+
+.alert-block { padding: 20px 15px 0 40px; font-size: 10pt;}
+.button-block { padding-left: 40px; }
+.button-block button { 
+    width: 130px; 
+    height: 35px;
+    font-size: 10pt;
 }
+
+.titleModal {
+    padding: 15px 0 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.titleModal input {
+    height: 30px;
+    width: 97px;
+    font-size: 9pt;
+}
+
+.selectAuto { padding: 15px 0 15px 0; }
 
 .selectAuto span, .selectAuto select  {
-    min-width: 100px;
+    min-width: 122px;
     height: 30px;
     font-size: 8pt;
 }
+
+.titleModal input, .selectAuto select  { flex: none; width: 220px; }
 
 .selectAuto span { 
     border-top-right-radius: 0px; 
