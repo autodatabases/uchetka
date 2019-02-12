@@ -1,0 +1,758 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+ul { list-style-type: none; }
+
+img, embed, object, video, svg {max-width: 100%;}
+
+/*********************     Bootstrap      *******************************/
+.input-group-prepend {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.input-group-text {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 0;
+  font-size: 7pt;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+/*********************     Разметка страницы    ********************************/
+
+.contentpage {
+
+}
+
+.topPanel {
+    position: fixed;
+    display: inline;
+    background: white;
+    top: 0;
+    left: 0;
+    height: 45px;
+    width: 100%;
+    padding: 5px;
+    z-index: 6;
+    box-shadow: 0 0px 15px 0px rgba(103, 103, 103, 0.7), 
+                inset 0 0 65px 1px rgba(208, 208, 208, 0.45);
+}
+
+/*** Компания ***/
+
+.company-info {
+    position: absolute;
+    width: 300px;
+    height: 35px;
+    left: 0;
+    top: 5px;
+    padding: 0px 0 0 12px;
+    color: #5f8eb8;
+    font-size: 20pt;
+    border-right: 1px solid #c5c5c5;
+}
+
+.company-info label {
+    display: inline-block;
+    font-size: 19pt;
+    margin: -2px 0 0px 25px;
+    font-family: 'Abril Fatface', cursive;
+}
+
+/*** Заголовок страницы ***/
+
+.page-title {
+    position: absolute;
+    color: rgba(58, 110, 156, 0.73);
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    left: 50%;
+    margin: 7px 0 0 -150px;
+    width: 300px;
+}
+
+/*** Профиль ***/
+.profile {
+    position: absolute;
+    width: 300px;
+    height: 35px;
+    right: 0;
+    border-left: 1px solid #c5c5c5;
+}
+
+.profile a {
+    color: #8a8a8a;
+    font-size: 13pt;
+    padding: 7px 0 0 0;
+    display: inline-block;
+    margin: 0 0 0 13px;
+}
+
+.profile label {
+    margin: 6px 0 0 32px;
+    padding: 3px 0px 0 13px;
+    color: #5c8cb7;
+    display: inline-block;
+    font-size: 10pt;
+    font-family: 'Abril Fatface', cursive;
+    box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    height: 25px;
+    width: 120px;
+    position: absolute;
+    background: #ececec;
+    z-index: 1;
+}
+
+.user-icon {
+    position: absolute;
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    right: 0;
+    text-align: center;
+    padding: 7px 0 0 0;
+    margin: 0px 20px 0 0;
+    color: rgba(0, 78, 150, 0.6);
+    background: #ececec;
+    box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.green-online {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    margin: -2px 25px 0px 0;
+    background: #14ea00;
+    border-radius: 50%;
+    box-shadow: inset 0 0 5px 0px #8dff80;
+    right: 0;
+    z-index: 1;
+}
+/************************************************/
+
+
+/************************************************/
+/*************        Меню         **************/
+/************************************************/
+
+.menu {
+    top: 60px;
+    left: 0;
+    width: 45px;
+    overflow: hidden;
+    min-height: 90%;
+    padding: 2px 0px 2px 2px;
+    background: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0px 15px 0px rgba(103, 103, 103, 0.7), inset 0 0 100px 40px rgba(208, 208, 208, 0.45);
+    font-family: 'Merriweather', serif;
+    position: fixed;
+    z-index: 5;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.menu:hover { width: 225px; }
+
+.accordion {
+    max-width: 100%;
+    margin: 35px 0px 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #5f8eb8;
+}
+
+.accordion li {
+    cursor: pointer;
+    display: block;
+    color: #4e779c;
+    font-size: 12px;
+    font-weight: 700;
+    border-bottom: 1px solid #CCC;
+    position: relative;
+    overflow: hidden;
+}
+
+.accordion li:hover {background: #F0F0F0;}
+
+.accordion li a {
+    display: grid;
+    grid-template-columns: 40px auto;
+    text-decoration: none;
+    padding: 16px 10px 15px 0;
+    height: 55px;
+}
+
+.button-icon {
+    text-align: center;
+    font-size: 14pt;
+    color: #406f9a;
+}
+
+.button-text {
+    text-align: left;
+    padding: 5px 0 0 10px;
+    font-size: 9pt;
+    color: #406f9a;
+}
+
+/**************************/
+/****** Подпункт меню *****/
+/**************************/
+
+.submenu {
+    height: 0px;
+    display: block;
+    background: #dedede;
+    font-size: 12px;
+    color: #d9d9d9;
+    transition: all 0.3s ease-out; 
+}
+
+.sublink { 
+    height: 45px;
+    color: #49749a;
+    display: grid;
+    grid-template-columns: 50px auto;
+    box-shadow: inset 0 0 100px 40px rgba(208, 208, 208, 0.45);
+}
+
+.sublink .button-icon { font-size: 9pt; }
+
+.sublink .button-text { font-size: 8pt; padding: 3px 0 0px 10px; }
+
+/************************************************/
+
+
+/************************************************/
+/*************  Основная панель    **************/
+/************************************************/
+
+.mainpanel { 
+    margin: 10px 0 0 55px;
+    padding: 15px 0 0 15px;
+    border-radius: 5px;
+    box-shadow: inset 3px 3px 3px #7F7F7F;
+    width: 96%;
+}
+
+.mainpanel.detals_page {box-shadow: inset 3px 3px 3px #7F7F7F, inset 0 -1px 3px #7F7F7F;}
+
+/************************/
+/*** Всплывающее окно ***/
+/************************/
+
+html.modal-active, body.modal-active {
+  overflow: hidden;
+}
+
+.vin::before {
+    content: "Поиск автомобиля по VIN"; 
+    background: white;
+    color: #585858;
+    height: 15px;
+    width: 184px;
+    position: absolute;
+    left: 50%;
+    font-size: 10pt;
+    margin: 26px 0 0 -92px;
+}
+
+.auto::before { 
+    content: "Поиск по каталогу";
+    background: white;
+    color: #585858;
+    height: 15px;
+    width: 134px;
+    position: fixed;
+    font-size: 10pt;
+    margin: -11px 0 0 -67px;
+}
+
+
+#modal-container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 5;
+}
+#modal-container.one {
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.one .modal-background .modal {
+  transform: scale(0);
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.one.out {
+  transform: scale(1);
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.one.out .modal-background .modal {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.seven.out .modal-background .modal h2, #modal-container.seven.out .modal-background .modal p {
+  animation: modalContentFadeOut 0.5s 0.5 cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container .modal-background {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+}
+#modal-container .modal-background .modal {
+    background: white;
+    padding: 25px 40px 25px 50px;
+    display: inline-block;
+    border-radius: 3px;
+    font-weight: 300;
+    position: relative;
+    height: 420px;
+    width: 900px;
+}
+#modal-container .modal-background .modal h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#modal-container .modal-background .modal p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#modal-container .modal-background .modal .modal-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+#modal-container .modal-background .modal .modal-svg rect {
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 778;
+  stroke-dashoffset: 778;
+}
+
+@keyframes unfoldIn {
+    0% {
+        transform: scaleY(0.005) scaleX(0);
+    }
+    50% {
+        transform: scaleY(0.005) scaleX(1);
+    }
+    100% {
+        transform: scaleY(1) scaleX(1);
+    }
+}
+@keyframes unfoldOut {
+    0% {
+        transform: scaleY(1) scaleX(1);
+    }
+    50% {
+        transform: scaleY(0.005) scaleX(1);
+    }
+    100% {
+        transform: scaleY(0.005) scaleX(0);
+    }
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes zoomOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.modalcontent {
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+
+/*** Панель выбора авто ***/
+
+.selectAutoDonor form { 
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.left-col {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    transition: all 1s ease;
+    right: 0;
+    padding: 20px 40px 20px 20px;
+    border-right: 1px solid #c5c5c5bf;
+}
+
+.right-col {
+    display: grid;
+    grid-template-rows: 170px auto;
+}
+
+.auto-icon { overflow: hidden; }
+.auto-icon img { height: 100% }
+
+.alert-block { padding: 20px 15px 0 40px; font-size: 10pt;}
+.button-block { padding-left: 40px; }
+.button-block button { 
+    width: 130px; 
+    height: 35px;
+    font-size: 10pt;
+}
+
+.titleModal {
+    padding: 15px 0 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.titleModal input {
+    height: 30px;
+    width: 97px;
+    font-size: 9pt;
+}
+
+.selectAuto { padding: 15px 0 15px 0; }
+
+.selectAuto span, .selectAuto select  {
+    min-width: 122px;
+    height: 30px;
+    font-size: 8pt;
+}
+
+.titleModal input, .selectAuto select  { flex: none; width: 220px; }
+
+.selectAuto span { 
+    border-top-right-radius: 0px; 
+    border-bottom-right-radius: 0px; 
+    border-right: none; 
+}
+
+.selectAuto select { 
+    border-top-left-radius: 0px; 
+    border-bottom-left-radius: 0px; 
+}
+
+.bottompanel {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.buttonsAuto button {
+    height: 30px;
+    font-size: 8pt;
+}
+
+.buttonsAuto img {
+    width: 25px;
+    height: 25px;
+}
+
+.warningpanel {
+    margin-top: 15px;
+    font-size: 10pt;
+}
+
+/*** Панель добавления склада ***/
+.createStockRoom {
+    position: relative;
+    display: grid;
+    grid-template-rows: 45px 200px;
+    transition: all 1s ease;
+    left: 0;
+    background: #FFF;
+}
+
+.titleInput input, .titleInput label {
+    height: 30px;
+    font-size: 8pt;
+}
+.titleInput select { height: 30px; }
+.titleInput label, .createStockRoom .input-group-text { width: 100px; }
+.titleInput .input-group { margin-bottom: 10px; }
+
+/*** Анимация переключения панелей ***/
+
+.selectAutoDonor.hide { right: 390px; }
+.createStockRoom.show { left: -420px; }
+
+
+
+
+/****************************/
+/*** Всплывающая фото ***/
+/****************************/
+
+.fulImg {
+/** определяем базовый стиль lightbox */
+  position: fixed;
+  overflow: hidden;
+  z-index: 9999;
+  width: 0;
+  height: 0;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+}
+.fulImg img {
+/** базовый стиль изображений lightbox*/
+  width: 95%;
+  max-width: 800px;
+  height: auto;
+  margin: 5% auto;
+/** полная прозрачность изначально */
+  opacity: 0;
+/* трансформация прозрачности при открытии  */
+  -webkit-transition: opacity 500ms ease-in;
+  -moz-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;  
+}
+.fulImg.show {
+/** активируем lightbox при нажатии */
+  width: 100%;
+  height: 100%;
+  margin-left: -20px;
+/** удаляем контур по умолчанию */
+  outline: none;
+}
+.fulImg.show img {
+    /** делаем элемент непрозрачным  */
+    opacity: 1;
+    width: 500px;
+}
+
+
+/********************************/
+/*** Выдвижная боковая панель ***/
+/********************************/
+.right-panel {
+    font-family: 'Merriweather', serif;
+    background: #FFFFFF;
+    position: fixed;
+    width: 500px;
+    height: 550px;
+    top: 105px;
+    right: 0;
+    padding: 15px 15px 15px 30px;
+    transform: translate(500px,0);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.375) !important;
+    border: 1px solid #CDCDCD !important;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    z-index: 2;
+}
+
+.show {	transform: translate(20px,0); }
+.closePanel { margin-left: -10px; }
+
+.closePanel i { opacity: 0.5; }
+
+.closePanel i:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+/*** Вкладки донора ***/
+.right-panel .donorTabs {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 150px 150px;
+    align-items: end;
+}
+
+.right-panel .tabInfo, .right-panel .tabPhoto {
+    text-align: center;
+    background: #FFF;
+    width: 180px;
+    height: 30px;
+    font-family: 'Merriweather', serif;
+    font-size: 8pt;
+    color: #494949;
+    padding: 8px 0 0 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: none;
+    box-shadow: -2px -4px 4px 0 #7F7F7F;
+    transition: all 0.5s ease-in-out;
+}
+
+.right-panel .tabPhoto {
+    margin-left: 130px;
+    transition: all 0.5s ease-in-out;
+}
+
+.right-panel .tabInfo:hover, .right-panel .tabPhoto:hover { cursor: pointer; box-shadow: -2px -4px 4px 0 #9DB3FF;}
+
+.right-panel .tabInfo.active, .right-panel .tabPhoto.active { 
+    width: 290px;
+    height: 45px; 
+    box-shadow: -2px -4px 4px 0 #9DB3FF;
+    padding: 15px 0 0 0;
+    font-size: 10pt;
+    transition: all 0.5s ease-in-out;
+}
+
+.right-panel .tabPhoto.active {
+    margin-left: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+/**********************/
+
+.cssload-loader {
+    display: none;
+    position: absolute;
+    left: calc(50% - 31px);
+    width: 100px;
+    height: 100px;
+    margin: 300px 0;
+    -webkit-perspective: 780px;
+    perspective: 780px;
+    z-index: 6;
+}
+
+.cssload-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+.cssload-inner.cssload-one {
+  left: 0%;
+  top: 0%;
+  animation: cssload-rotate-one 1.15s linear infinite;
+  -o-animation: cssload-rotate-one 1.15s linear infinite;
+  -ms-animation: cssload-rotate-one 1.15s linear infinite;
+  -webkit-animation: cssload-rotate-one 1.15s linear infinite;
+  -moz-animation: cssload-rotate-one 1.15s linear infinite;
+  border-bottom: 3px solid #5C5EDC;
+}
+.cssload-inner.cssload-two {
+  right: 0%;
+  top: 0%;
+  animation: cssload-rotate-two 1.15s linear infinite;
+  -o-animation: cssload-rotate-two 1.15s linear infinite;
+  -ms-animation: cssload-rotate-two 1.15s linear infinite;
+  -webkit-animation: cssload-rotate-two 1.15s linear infinite;
+  -moz-animation: cssload-rotate-two 1.15s linear infinite;
+  border-right: 3px solid rgba(76, 70, 101, 0.99);
+}
+.cssload-inner.cssload-three {
+  right: 0%;
+  bottom: 0%;
+  animation: cssload-rotate-three 1.15s linear infinite;
+  -o-animation: cssload-rotate-three 1.15s linear infinite;
+  -ms-animation: cssload-rotate-three 1.15s linear infinite;
+  -webkit-animation: cssload-rotate-three 1.15s linear infinite;
+  -moz-animation: cssload-rotate-three 1.15s linear infinite;
+  border-top: 3px solid #e9908a;
+}
+
+@keyframes cssload-rotate-one {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+            transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+            transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+@-webkit-keyframes cssload-rotate-one {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+@keyframes cssload-rotate-two {
+  0% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+            transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+            transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+@-webkit-keyframes cssload-rotate-two {
+  0% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+@keyframes cssload-rotate-three {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+            transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+            transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+@-webkit-keyframes cssload-rotate-three {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+/*************************************/

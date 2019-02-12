@@ -3,25 +3,300 @@
 {% block title %}
 	Добавление деталей
 {% endblock title %}
+{% block page_title %}
+	Добавление деталей				
+{% endblock page_title %}
 {% block mainpanel %}
-<div class="backBlack">
-</div>
-<form action="/lk/add_auto/add/" method="POST">
-{% csrf_token %}
+	<link rel="stylesheet" href="{% static "css/add_auto.css" %}">
+	<link rel="stylesheet" href="{% static "css/donor_panel.css" %}">
+	<div class="list-detals">
+		<div class="topBar">
+			<p>Полный список деталей</p>
+		</div>
+		<div class="search-block">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			<i class="fas fa-search"></i>
+		</div>
+		<hr>
+		<div class="list-block">
+			<ul>
+				<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Двигатель и система зажигания</a>
+					<ul class="subgroup hide">
+						<li><a href="#"><i class="fas fa-caret-right"></i>Подгруппа</a></li>
+						<li><a href="#"><i class="fas fa-caret-right"></i>Подгруппа</a></li>
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#"><i class="fas fa-caret-right"></i>Деталь</a></li>
+								<li><a href="#"><i class="fas fa-caret-right"></i>Деталь</a></li>
+								<li><a href="#"><i class="fas fa-caret-right"></i>Деталь</a></li>
+								<li><a href="#"><i class="fas fa-caret-right"></i>Деталь</a></li>
+								<li><a href="#"><i class="fas fa-caret-right"></i>Деталь</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><i class="fas fa-caret-right"></i>Подгруппа</a></li>
+						<li><a href="#"><i class="fas fa-caret-right"></i>Подгруппа</a></li>
+					</ul>
+				</li>
+				<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Интерьер</a>
+					<ul class="subgroup hide">
+						<li><a href="#"><i class="fas fa-caret-right"></i>Подгруппа</a></li>
+						<li><a href="#"><i class="fas fa-caret-right"></i>Подгруппа</a></li>
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#"><i class="fas fa-caret-right"></i>Деталь</a></li>
+								<li><a href="#"><i class="fas fa-caret-right"></i>Деталь</a></li>
+								<li><a href="#"><i class="fas fa-caret-right"></i>Деталь</a></li>
+								<li><a href="#"><i class="fas fa-caret-right"></i>Деталь</a></li>
+								<li><a href="#"><i class="fas fa-caret-right"></i>Деталь</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><i class="fas fa-caret-right"></i>Подгруппа</a></li>
+						<li><a href="#"><i class="fas fa-caret-right"></i>Подгруппа</a></li>
+					</ul>
+				</li>
+				<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Кондиционер и отопитель</a>
+					<ul class="subgroup hide">
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Кузовные запчасти</a>
+					<ul class="subgroup hide">
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подвеска</a>
+					<ul class="subgroup hide">
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Рулевое управлени</a>
+					<ul class="subgroup hide">
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Система пассивной безопасности</a>
+					<ul class="subgroup hide">
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Топливная система</a>
+					<ul class="subgroup hide">
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Тормозная система</a>
+					<ul class="subgroup hide">
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Электрика и свет</a>
+					<ul class="subgroup hide">
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+						<li><a id="group" href="#"><i class="fas fa-caret-right"></i>Подгруппа</a>
+							<ul class="subgroup hide">
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+								<li><a href="#">Деталь</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
 	<div class="addDetalsPanel">
-		
-		<div class="backTabsDetalGroup">
-			<div class="tabsDetalGroup" >
-				<div data-content="kuzov" class="titleGroup activeTab" onclick="change_group_detal(this)">Кузов <span>0/40</span></div>
-				<div data-content="salon" class="titleGroup" onclick="change_group_detal(this)">Салон <span>0/64</span></div>
-				<div data-content="hodovaya" class="titleGroup" onclick="change_group_detal(this)">Ходовая <span>0/59</span></div>
+		<div class="topBar">
+			<ul>
+				<li><a href="">Audi A4 2013</a> <i class="fas fa-angle-right"></i></li>
+				<li><a href="">Двигатель</a> <i class="fas fa-angle-right"></i></li>
+				<li><a href="">Блок цилиндров</a> <i class="fas fa-angle-right"></i></li>
+			</ul>
+		</div>
+		<div class="rowDetals">
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Двигатель</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Интерьер</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Кондиционер и отопитель</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Подвеска</div>
 			</div>
 		</div>
-		<div class="donorPanel">
-
+		<div class="rowDetals">
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Рулевое управление</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Безопасность</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Топливная система</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Тормозная система</div>
+			</div>
+		</div>
+		<div class="rowDetals">
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Трансмиссия</div>
+			</div>
+			<div class="card bg-light" style="max-width: 10rem;">
+				<div class="card-body">
+					<img src="{% static "img/kuzov.png" %}" alt="">
+				</div>
+				<div class="card-header">Электрика и свет</div>
+			</div>
+		</div>
+	</div>
+	<div class="donor in-add-page">
+		<div class="donorContent">
 			<input name="idDonor" id="idDonor" type="hidden" value="{{new_donor.pk}}">
 			<div class="mainInfo" id="mainInfo">
-				<label class="titleMainInfo">Автомобиль-донор</label>
+				
 				<div class="donorTabs">
 					<div class="tabInfo active" onclick="donorTabs(this)" data-content="params">
 						<span>Общая информация</span>
@@ -30,10 +305,10 @@
 						<span>Фотография</span>							
 					</div>
 				</div>
-
-				<div class="donorContent">
-					<div class="donorParmas">
-						<div class="vin">
+		
+				<div class="donorFields">
+					<div class="donorParmas show">
+						<div class="vin-field">
 							<div class="input-group-prepend">
 								<div class="paramTitle">
 									<span class="nameParam">VIN или номер кузова:</span>
@@ -196,80 +471,15 @@
 						<img src="{% static "img/addPhoto.png" %}" alt="">
 					</div>
 				</div>
-
+		
 				<div class="buttonBlock">
 					<div>
 						<button id="edit" onclick="editDonor(mainInfo)" type="button" class="btn btn-primary" disabled>Изменить</button>
 					</div>
 					<div>
-						<button id="save" onclick="saveDonor(mainInfo)" type="button" class="btn btn-success">Сохранить</button>
+						<button id="save" onclick="saveDonor()" type="button" class="btn btn-success">Сохранить</button>
 					</div>
 				</div>
-
-
-			</div>
-		</div>
-		<div class="contentDetailGroup ">
-
-			<div class="tabsDetalsName firstTabActive">
-				{% for detal in all_detals %}
-					{% if detal.pk == 1 %}
-						<div data-content="{{detal.pk}}" class="titleDetal activeTab topfixed" onclick="change_detal(this)">
-					{% else %}
-						<div data-content="{{detal.pk}}" class="titleDetal" onclick="change_detal(this)">
-					{% endif %}
-							<div>{{detal.title}}</div>
-							<div class="detalIcon">
-								<img src="{% static "img/no.png" %}" alt="">
-							</div>
-						</div>
-				{% endfor %}
-			</div>
-			<div class="contentBlock" >
-				{% for detal in all_detals %}
-				{% if detal.pk == 1 %}
-					<div class="detalParams active" data-content="{{detal.pk}}">
-				{% else %}
-					<div class="detalParams" data-content="{{detal.pk}}">
-				{% endif %}
-						<div class="topBlock">
-							<div class="exsistDetal">
-								<label class="slide detalslabel">
-									<input id="nal" name="{{detal.value}}_checkbox" type="checkbox" value="true" onchange="checkboxDetal(this)">
-									<span>В наличии</span>
-								</label>
-								<div id="price" class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text">Цена:</span>
-									</div>
-									<input disabled type="text" class="form-control" placeholder="0">
-									<div class="input-group-prepend">
-										<span class="input-group-text">руб.</span>
-									</div>
-								</div>
-								<div class="sklad">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Склад:</span>
-									</div>
-									<div class="paramContent">
-										<select disabled id="all_years" class="custom-select">
-											{% for elem in all_stockrooms %}
-												<option>{{elem.title}}</option>
-											{% endfor %}
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="textDetals">
-								<textarea disabled placeholder="Если есть какие-либо дефекты, опишите их в этом поле" class="form-control" rows="7"></textarea>
-							</div>
-						</div>
-						<div class="photoAdd">
-							<input type="file" class="addPhotoButton" id="photo" onchange="load_photo(this)">
-							<label for="photo"><img src="{% static "img/addPhoto.png" %}" alt=""></label>
-						</div>
-					</div>
-				{% endfor %}
 			</div>
 		</div>
 	</div>
@@ -294,10 +504,6 @@
 				</tr>
 			</table>
 		</div>
-		<div class="bottomAddBackButtons">
-			<button type="submit" class="btn btn-success">Добавить детали</button>
-			<button type="button" class="btn btn-danger">Отменить</button>
-		</div>
 		<div class="bottomSettingButtons">
 			<div class="custom-control custom-radio">
 				<input onchange="paramsSklad(this)" checked type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
@@ -312,9 +518,12 @@
 				<input onchange="paramsSklad(this)" type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
 				<label class="custom-control-label" for="customRadio1" >Выборочно</label>
 			</div>
-
+	
+		</div>
+		<div class="bottomAddBackButtons">
+			<button type="submit" class="btn btn-success">Добавить детали</button>
+			<button type="button" class="btn btn-danger">Отменить</button>
 		</div>
 	</div>
-</form>
-<script src="{% static "js/add_detal.js" %}?1"></script>
+	<script src="{% static "js/add_detal.js" %}?1"></script>
 {% endblock mainpanel %}

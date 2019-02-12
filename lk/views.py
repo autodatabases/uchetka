@@ -1,6 +1,6 @@
 import json
 from django.contrib.auth.models import User
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 from .models import *
@@ -12,8 +12,8 @@ def get_lk_page(request):
 													 'detals_count': len(UserDetal.objects.all()),
 													 'stockroom_count': len(Stock.objects.all()) })
 	
-def get_detals_list_page(request):
-	return render(request, 'template')
+def rediredct_detal_list(request):
+	return redirect('/lk/detals_list/')
 
 def add_StockRoom(request):
 	print(dir(request.user))
