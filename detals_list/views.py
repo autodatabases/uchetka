@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.views.generic import View
 from collections import OrderedDict
 
+from lk.forms import *
 from lk.models import *
 
 def get_detals_list_page(request):
@@ -49,14 +50,14 @@ def get_detals_list_page(request):
 			   'detals_filter': detals, 'donors_filter': donors, 'stocks_filters': stocks,
 			   'stockroom_count': len(Stock.objects.filter(account=request.user)), 'selected_stock': selected_stock,
 			   'selected_donor': selected_donor, 'selected_checkbox_detal': selected_detal, 'selected_checkbox_donor': selected_donor,
-			   'selected_price': query_price, 
+			   'selected_price': query_price, 'form_donor': DonorPanel
 			   }
 	return render(request, 'detals_list/index.html', context=context)
 
 def get_donor_page(request):
 	if request.is_ajax():
 		donor = AutoDonor.objects.get(pk=request.POST['new_pk_donor'])
-		data = {'mark': donor.mark.title, 'model': donor.model.title, 'generation': donor.generation.year,
+		data = {'mark': donor.mark.value, 'model': donor.model.value, 'generation': donor.generation.year,
 				'kuzov': donor.kuzov.value, 'year': donor.year.value, 'engine_type': donor.engine_type.value,
 				'engine_size': donor.engine_size.value, 'transmission': donor.transmission.value,
 				'color': donor.color.value, 'helm': donor.helm.value, 'privod': donor.privod.value,

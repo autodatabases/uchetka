@@ -40,9 +40,9 @@ function move_panel(elem_td) {
             success: function (data) {
                 var donor_panel = document.querySelector('.donor');
                 donor_panel.querySelector('#donorVin').value = data.vin_number;
-                donor_panel.querySelector('#donorMarkOption').innerHTML = data.mark;
-                donor_panel.querySelector('#donorModelOption').innerHTML = data.model;
-                donor_panel.querySelector('#donorGenOption').innerHTML = data.generation;
+                document.getElementById('all_marks').value = data.mark;
+                document.getElementById('all_models').value = data.model;
+                document.getElementById('all_generations').value = data.generation;
                 document.getElementById('all_years').value = data.year;
                 document.getElementById('all_kuzovs').value = data.kuzov;
                 donor_panel.querySelector('#donorProbeg').value = data.probeg;

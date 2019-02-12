@@ -246,7 +246,7 @@
 									<span class="nameParam">VIN или номер кузова:</span>
 								</div>
 								<div class="paramContent">
-									<input required id="donorVin" type="text" class="form-control" placeholder="Обязательное поле">
+									{{form_donor.vin}}
 								</div>
 							</div>
 						</div>
@@ -257,9 +257,7 @@
 										<span class="nameParam" id="">Марка:</span>
 									</div>
 									<div class="paramContent">
-										<select id="all_marks" disabled="" class="custom-select">
-											<option id="donorMarkOption" value="{{new_donor.mark.value}}" selected>{{new_donor.mark.title}}</option>
-										</select>
+										{{form_donor.mark}}
 									</div>
 								</div>
 								<div class="oneParamBlock">
@@ -311,7 +309,7 @@
 										<span class="nameParam">Пробег:</span>
 									</div>
 									<div class="paramContent">
-										<input id="donorProbeg" type="text" class="form-control" placeholder="0">
+										{{form_donor.probeg}}
 									</div>
 								</div>
 							</div>
