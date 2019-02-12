@@ -1,0 +1,58 @@
+/*** Разметка ***/
+.stockpage-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-column-gap: 25px;
+    height: 100%;
+    padding: 70px 10px 25px 75px;
+}
+
+.stockpage-container .left .top-container, 
+.stockpage-container .left .bottom-container{
+    border: 1px solid rgba(158, 158, 158, 0.45);
+    border-radius: 25px;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4), 
+    			inset 0 0 300px 10px rgba(0, 0, 0, 0.1)
+}
+/*** Левая колонка ***/
+.stockpage-container .left {
+	display: grid;
+	grid-template-rows: 1fr 2fr;
+	grid-row-gap: 25px; 
+}
+
+/*** Общая информация ***/
+
+.top-container {
+
+}
+
+.top-container .title-block, .bottom-container .title-block {
+    width: 39%;
+    text-align: right;
+    margin: 15px 0 0 0;
+    border-bottom: 1px solid #6e94b6;
+    font-size: 15pt;
+    color: #708ca7;
+    font-style: italic;
+}
+
+.top-container .title-block::before, .bottom-container .title-block::before {
+	content: "";
+    border-bottom: 1px solid #6e94b6;
+    width: 12%;
+    margin: 33px 0 0 -41px;
+    position: absolute;
+}
+.bottom-container .title-block::before { margin: 33px 0 0 -38px; }
+
+/*** Правая колонка ***/
+
+/*** Контейнер с картой ***/
+#map {
+    overflow: hidden;
+    border: 1px solid rgba(158, 158, 158, 0.45);
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+}

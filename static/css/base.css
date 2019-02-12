@@ -3,6 +3,8 @@
   padding: 0;
 }
 
+html { height: 100%; }
+
 body {
   height: 100%;
   width: 100%;
@@ -38,9 +40,7 @@ img, embed, object, video, svg {max-width: 100%;}
 
 /*********************     Разметка страницы    ********************************/
 
-.contentpage {
-
-}
+.contentpage { height: 100%}
 
 .topPanel {
     position: fixed;
@@ -154,6 +154,8 @@ img, embed, object, video, svg {max-width: 100%;}
 }
 /************************************************/
 
+
+.content { height: 100% }
 
 /************************************************/
 /*************        Меню         **************/
