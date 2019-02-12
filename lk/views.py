@@ -12,7 +12,7 @@ def get_lk_page(request):
 													 'detals_count': len(UserDetal.objects.all()),
 													 'stockroom_count': len(Stock.objects.all()) })
 	
-def rediredct_detal_list(request):
+def rediredct_detal_list_page(request):
 	return redirect('/lk/detals_list/')
 
 def add_StockRoom(request):

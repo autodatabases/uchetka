@@ -2,21 +2,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	{% block head %}
-		<meta charset="UTF-8">
-		<link href="https://fonts.googleapis.com/css?family=Coiny|Merriweather|Roboto+Slab|Roboto+Mono|Abril+Fatface" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-		<link rel="stylesheet" href="{% static "css/bootstrap/css/bootstrap.min.css" %}">
-		<link rel="stylesheet" href="{% static "css/base.css" %}">
-		<script src="{% static "js/jquery-3.3.1.min.js" %}"></script>	
-		<script src="{% static "js/base.js" %}"></script>
-	{% endblock head %}	
-<title>
-	{% block title %}
-		Document
-	{% endblock title %}
-</title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Coiny|Merriweather|Roboto+Slab|Roboto+Mono|Abril+Fatface" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="{% static "css/bootstrap/css/bootstrap.min.css" %}">
+	<link rel="stylesheet" href="{% static "css/base.css" %}">
+	<script src="{% static "js/jquery-3.3.1.min.js" %}"></script>	
+	<script src="{% static "js/base.js" %}"></script>
+	{% block link-and-script %}{% endblock link-and-script %}	
+	<title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
 <div class='cssload-loader'>
@@ -45,7 +40,6 @@
 			</div>
 		</div>
 		<div class="menu">
-			{% block menu %}
 				<ul id="accordion" class="accordion">
 					<li>
 						<a href="/lk/detals_list/">
@@ -104,7 +98,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a href="{% url 'stocks:get_page' %}">
 							<div class="button-icon">
 								<i class="fas fa-warehouse"></i>
 							</div>
@@ -134,7 +128,6 @@
 						</a>
 					</li>
 				</ul>
-			{% endblock menu %}
 		</div>
 		<div class="content">
 			{% block mainpanel %}
