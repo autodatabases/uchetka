@@ -57,9 +57,9 @@ def get_donor_page(request):
 	if request.is_ajax():
 		donor = AutoDonor.objects.get(pk=request.POST['new_pk_donor'])
 		data = {'mark': donor.mark.title, 'model': donor.model.title, 'generation': donor.generation.year,
-				'kuzov': donor.kuzov.title, 'year': donor.year.title, 'engine_type': donor.engine_type.title,
-				'engine_size': donor.engine_size.title, 'transmission': donor.transmission.title,
-				'color': donor.color.title, 'helm': donor.helm.title, 'privod': donor.privod.title,
+				'kuzov': donor.kuzov.value, 'year': donor.year.value, 'engine_type': donor.engine_type.value,
+				'engine_size': donor.engine_size.value, 'transmission': donor.transmission.value,
+				'color': donor.color.value, 'helm': donor.helm.value, 'privod': donor.privod.value,
 				'probeg': donor.probeg, 'vin_number': donor.vin_number }
 		return HttpResponse(json.dumps(data), content_type="application/json")
 
@@ -81,8 +81,8 @@ def save_new_donor_params(request):
 		donor_obj.probeg = probeg
 		donor_obj.vin_number = request.POST['vin']
 		donor_obj.save()
-		data = 'Good'
-		return HttpResponse(data, content_type="application/json")
+		data = {'Good': 'good'}
+		return HttpResponse(json.dumps(data), content_type="application/json")
 
 def small_filter(request):
 	if request.is_ajax():

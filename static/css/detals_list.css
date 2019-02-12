@@ -1,0 +1,298 @@
+
+/************************************************/
+/*************   Список деталей    **************/
+/************************************************/
+
+.list {
+	font-size: 8pt;
+}
+/***********************/
+/*** Панель фильтров ***/
+/***********************/
+
+.filterBack {
+	background: #FFFFFF;
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	padding: 50px 0 0 5px;
+	margin-top: -125px;
+	margin-left: -15px;
+	z-index:3;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+	box-shadow: 5px 4px 3px 0 #7AA1D5;
+}
+
+.filterBack.showfilter { height: 360px; box-shadow: 5px 4px 2px 0 #79CB90;}
+.showFilterButton.showfilter { margin-top: 225px; box-shadow: 0 4px 2px 0 #79CB90;}
+
+.showFilterButton {
+    position: fixed;
+    z-index: 4;
+    width: 120px;
+    height: 30px;
+    margin-top: -55px;
+    margin-left: 98px;
+    padding: 9px 0 0 18px;
+    background: #FFFFFF;
+    color: #2d587d;
+    font-family: 'Merriweather', serif;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 4px 2px 0 #7AA1D5;
+    transition: all 0.5s ease-in-out;
+}
+
+.showFilterButton:hover {
+	cursor: pointer;
+	box-shadow: 0 4px 2px 0 #6FD48D;
+}
+
+.showFilterButton label:hover, 
+.showFilterButton i:hover { cursor: pointer; opacity: 1; }
+
+.showFilterButton label {font-size: 8pt;}
+.showFilterButton i { 
+	color: #2d587d;
+	margin: 0 0 0 10px;
+}
+
+.filtePanel {
+	display: grid;
+	grid-template-rows: 35px auto;
+	background-color: #FFFFFF;
+	width: 100%;
+	height: 340px;
+	margin-top: -30px;
+	margin-left: -5px;
+	padding-top: 20px;
+	box-shadow: inset 3px 3px 3px #7F7F7F;
+	border-top-left-radius: 5px;
+}
+
+.smallFilter form {
+	display: grid;
+	grid-template-columns: 187px 300px 138px 128px;
+	grid-column-gap: 10px;	
+	padding-left: 25px;
+}
+
+.smallFilter select { height: 27px; font-size: 8pt; }
+
+.fullFilter form {
+    display: grid;
+    grid-template-columns: 50px 230px 450px 200px 200px;
+    grid-column-gap: 25px;
+    margin-top: -50px;
+    padding-top: 34px;
+}
+
+.fullFilterButtonBlock {
+	display: grid;
+	grid-template-rows: 134px 134px;
+    align-content: center;
+    border-right: 1px solid #e8e8e8;
+    margin: 0 0 0 5px;
+}
+.fullFilterButtonBlock div { 
+	display: grid;
+    align-content: center;
+    justify-content: center;
+    box-shadow: inset 0 0 30px 5px #0000000d;
+}
+.fullFilterButtonBlock div:hover { opacity: 1; cursor: pointer; box-shadow: inset 0 0 30px 5px rgba(0, 0, 0, 0.08)}
+.fullFilterButtonBlock button { background: #000000 }
+.fullFilterButtonBlock input { width: 30px; height: 30px;}
+
+.resetFilterButton { border-bottom: 1px solid #e5e5e5; }
+
+
+.leftFilterBlock {
+	display: grid;
+	grid-template-rows: 50px auto;
+	grid-row-gap: 10px;
+    margin-left: -30px;
+}
+
+.leftCol { 
+}
+
+.filterGroup.price {
+    height: 45px;
+    padding: 9px;
+	border: 1px solid rgba(208, 208, 208, 0.7);
+    border-radius: 5px;
+    overflow-y: hidden;
+}
+
+.filterGroup.left {	height: 135px; }
+
+
+.oneFIlterValue label {
+	position: static;
+	margin: 5px 0 0 0;
+}
+
+.oneFIlterValue label:hover { cursor: pointer; }
+.oneFIlterValue label::before, .oneFIlterValue label::after { left: 0; }
+
+
+.filterGroup {
+    width: 100%;
+    height: 195px;
+    margin: 25px 0 0 25px;
+    padding: 10px 5px 5px 15px;
+    overflow-y: scroll;
+    border: 1px solid rgba(208, 208, 208, 0.7);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+}
+
+.filterGroup::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    background: white;
+    margin: -21px 0 0 0;
+    padding: 0px 10px 0 10px;
+    font-size: 10pt;
+    z-index: 1;
+}
+
+.filterGroup.price input, .filterGroup.price.priceFilter span { height: 25px; font-size: 8pt; } 
+.filterGroup.price {display: grid; grid-template-columns: auto auto; grid-column-gap: 5px;} 
+
+.filterGroup.detalFilter::before { content: 'Деталь [ 0 ]'; }
+.filterGroup.priceFilter::before { content: 'Диапазон цен'; }
+.filterGroup.donorFilter::before { content: 'Автомобиль донор [ 0 ]'; }
+.filterGroup.skladFilter::before { content: 'Склад [ 0 ]'; }
+.filterGroup.vinFilter::before { content: 'VIN [ 0 ]'; }
+/***********************/
+/*** Таблица деталей ***/
+/***********************/
+.tableDetals { margin-top: 140px; transition: all 0.5s ease-in-out;}
+
+
+.tableDetals thead {
+    position: fixed;
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+    width: 100%;
+    margin-left: -1px;
+    margin-top: -47px;
+    z-index: 1;
+}
+
+.tableDetals th { height: 45px; border: 1px solid #484848; }
+
+.tableDetals th, .tableDetals td {
+	font-size: 10pt;
+	height: 50px;
+	padding: 0.35rem;
+}
+
+.tableDetals td { border-bottom: 1px solid #dee2e6; }
+
+.tableDetals tr:hover {	background: rgba(0, 0, 0, 0.05);}
+
+.tableDetals tr.selectedDetal {	background: rgba(0, 67, 234, 0.1)}
+
+.detalCheckBox {width: 10px;}
+.detalNumber   {width: 20px;}
+.detalTitle    {width: 150px;}
+.detalDonor    {width: 250px;}
+.detalVIN 	   {min-width: 105px;}
+.detalSklad	   {min-width: 105px;}
+.detalPrice    {min-width: 100px;}
+.detalPhotoMin {min-width: 100px; text-align: center;}
+.detalOther {width: 645px;}
+
+.tableDetals td {padding-left: 10px;}
+td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
+
+.detalCheckBox input, .detalCheckBox  {
+	margin-top: 5px;
+	cursor: pointer;
+	text-align: center;
+}
+.detalDonor:hover {
+	cursor: pointer;
+	text-decoration: underline}
+
+.detalDonor a {	color: black;}
+
+.detalVIN input {
+	height: 20px; 
+	width: 90px;
+}
+
+.detalPhotoImg {
+	text-align: center; 
+	width: 100px;
+}
+
+.detalPhotoImg img {
+	height: 19px;
+	opacity: 0.5;
+}
+
+.detalPhotoImg img:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.edit {
+	width: 80px;
+}
+
+
+/*************************/
+/*** Панель упарвления ***/
+/*************************/
+.controlPanel {
+	position: fixed;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	background: rgba(0, 0, 0, 0.85);
+	display: none;
+	grid-template-columns: 350px 100px 100px 100px;
+	grid-column-gap: 20px;
+}
+
+.titleSelect {color: #FFE8C0;
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.7)x;
+	background-clip: text;
+	font-family: 'Merriweather', serif;
+	margin: 0 0 0 105px;
+	padding: 15px 8px 8px 20px;
+	height: 50px;
+	width: 240px;
+	border-radius: 6px;
+}
+
+.controlPanel label {
+	font-size: 9pt;
+}
+
+.controlPanel span {
+	font-family: 'Roboto Slab', serif; 
+	font-size: 10pt; 
+	margin: 0 0 0 10px;
+}
+.controlPanel button {
+	margin-top: 25px;
+	margin-left: 50px;
+	height: 30px;
+	font-size: 8pt;
+	box-shadow: 0 0 4px 1px #6A6A6A;
+}
+
+.showPanel {
+	display: grid;
+}
+
