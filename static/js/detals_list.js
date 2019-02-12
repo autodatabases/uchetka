@@ -1,61 +1,57 @@
 
 // Боковая панель
 function move_panel(elem_td) {
-    var right_panel = document.querySelector('.right-panel');
-    var showed = right_panel.getAttribute('class');
-    var pk_content = elem_td.getElementsByTagName('a')[0].getAttribute('id');
-    var pk_content_active = right_panel.getAttribute('data-content');
-
+    var donor_panel = document.querySelector('.donor');
+    var showed = donor_panel.getAttribute('class');
+    var id_donor_new = elem_td.getElementsByTagName('a')[0].getAttribute('id')
     var detalLine = elem_td.parentElement;
     var detalLine_old = document.querySelector('.selectedDetal');
-    
-    if (showed == 'right-panel border show') {
-        if (detalLine == detalLine_old)  {
-            detalLine.classList.remove("selectedDetal");
-            right_panel.classList.remove("show");
+    if (showed == 'donor in-detal-list show') {
+        if (id_donor_new == document.getElementById('idDonor').value)  {
+            if (detalLine == detalLine_old) {
+                donor_panel.classList.remove("show");
+                detalLine.classList.remove("selectedDetal");
+            } else {
+                detalLine_old.classList.remove("selectedDetal");
+                detalLine.classList.add("selectedDetal");
+            }
         } else { 
             detalLine_old.classList.remove("selectedDetal");
-            right_panel.classList.remove("show");
-            right_panel.setAttribute('data-content', pk_content);
-            setTimeout(function(){change_content(pk_content)}, 700);
-            
-            setTimeout(function(){right_panel.classList.add("show")}, 700);
+            donor_panel.classList.remove("show");
+            setTimeout(function(){change_content(id_donor_new)}, 100);
+            setTimeout(function(){donor_panel.classList.add("show")}, 700);
             detalLine.classList.add("selectedDetal");
         } 
     } else {
-        right_panel.classList.add("show");
-        right_panel.setAttribute('data-content', pk_content);
-        setTimeout(function(){change_content(pk_content)}, 100);
+        donor_panel.classList.add('show');
+        setTimeout(function(){change_content(id_donor_new)}, 100);
         detalLine.classList.add("selectedDetal");
     }
 
-    function change_content(new_pk_donor){
-        document.querySelector('#idDonor').value = new_pk_donor;
-
+    function change_content(id_donor_new){
+        document.querySelector('#idDonor').value = id_donor_new;
         $.ajax({
             url: '/lk/detals_list/load_donor/',
             type: 'post',
             data: {
-                'new_pk_donor': new_pk_donor,
+                'new_pk_donor': id_donor_new,
                 'csrfmiddlewaretoken': csrftoken
             },
             success: function (data) {
-                var right_panel = document.getElementById('RightPanel');
-                console.log(data);
-
-                right_panel.querySelector('#donorMarkOption').innerHTML = data.mark;
-                right_panel.querySelector('#donorModelOption').innerHTML = data.model;
-                right_panel.querySelector('#donorGenOption').innerHTML = data.generation;
-                right_panel.querySelector('#donorKuzovOption').innerHTML = data.kuzov;
-                right_panel.querySelector('#donorYearOption').innerHTML = data.year;
-                right_panel.querySelector('#donorProbeg').value = data.probeg;
-                right_panel.querySelector('#donorVin').value = data.vin_number;
-                right_panel.querySelector('#donorEngineType').innerHTML = data.engine_type;
-                right_panel.querySelector('#donorEngineSize').innerHTML = data.engine_size;
-                right_panel.querySelector('#donorTransmision').innerHTML = data.transmission;
-                right_panel.querySelector('#donorColor').innerHTML = data.color;
-                right_panel.querySelector('#donorHelm').innerHTML = data.helm;
-                right_panel.querySelector('#donorPrivod').innerHTML = data.privod;
+                var donor_panel = document.querySelector('.donor');
+                donor_panel.querySelector('#donorVin').value = data.vin_number;
+                donor_panel.querySelector('#donorMarkOption').innerHTML = data.mark;
+                donor_panel.querySelector('#donorModelOption').innerHTML = data.model;
+                donor_panel.querySelector('#donorGenOption').innerHTML = data.generation;
+                document.getElementById('all_years').value = data.year;
+                document.getElementById('all_kuzovs').value = data.kuzov;
+                donor_panel.querySelector('#donorProbeg').value = data.probeg;
+                document.getElementById('all_engine_type').value = data.engine_type;
+                document.getElementById('all_engine_size').value = data.engine_size;
+                document.getElementById('all_kpp').value = data.transmission;
+                document.getElementById('all_color').value = data.color;
+                document.getElementById('all_helm').value = data.helm;
+                document.getElementById('all_privod').value = data.privod;
             }
         });
 
@@ -181,61 +177,6 @@ function view_detal_photo(img_mini) {
 }
 // Скрыть фото
 function closePhoto(fulImg) { fulImg.classList.remove('show');}
-
-// Быстрые фильтры
-// function small_filter(select) {
-
-//     $.ajax({
-//         url: '/lk/detals_list/small_filter/',
-//         type: 'post',
-//         data: {
-//             'csrfmiddlewaretoken': csrftoken,
-//             'filterType': select.getAttribute('name'),
-//             'filterValue': select.options[select.selectedIndex].value, 
-//         },
-//         success: function (data) {
-//             var new_tbody = document.createElement('tbody');
-            
-//             document.querySelector('.tableDetals').getElementsByTagName('tbody')[0].remove();
-//             document.getElementsByTagName('table')[0].appendChild(new_tbody);
-//             for (var i = 0; i < data.result_detal.length; i++) {
-//                 var new_tr = document.createElement('tr');
-//                 var new_td = [document.createElement('td'), document.createElement('td'), document.createElement('td'), document.createElement('td'), document.createElement('td'), document.createElement('td'), document.createElement('td'), document.createElement('td'), document.createElement('td')];
-//                 // Новая строка
-//                 document.getElementsByTagName('tbody')[0].appendChild(new_tr).setAttribute('data-content', data.result_detal[i].donor_info.id_donor);
-//                 // Чекбокс
-//                 document.getElementsByTagName('tr')[i+1].appendChild(new_td[0]).classList.add('detalCheckBox');
-//                 new_td[0].innerHTML = '<input id="checkbox" type="checkbox" onchange="selected(this)">';
-//                 // Порядковый номер
-//                 document.getElementsByTagName('tr')[i+1].appendChild(new_td[1]).classList.add('detalNumber');
-//                 new_td[1].innerHTML = i+1;
-//                 // Название детали
-//                 document.getElementsByTagName('tr')[i+1].appendChild(new_td[2]).classList.add('detalTitle');
-//                 new_td[2].innerHTML = data.result_detal[i].detal.title;
-//                 // Донор 
-//                 document.getElementsByTagName('tr')[i+1].appendChild(new_td[3]).setAttribute('onclick', 'move_panel(this)');
-//                 new_td[3].classList.add('detalDonor');
-//                 new_td[3].innerHTML = '<a href="#" id="'+data.result_detal[i].donor_info.id_donor+'">'+data.result_detal[i].donor_info.mark+' '+data.result_detal[i].donor_info.model+' '+data.result_detal[i].donor_info.generation+'</a>'
-//                 // Цена
-//                 document.getElementsByTagName('tr')[i+1].appendChild(new_td[4]).classList.add('detalPrice');
-//                 new_td[4].setAttribute('ondblclick', 'edit_price(this)')
-//                 new_td[4].innerHTML = '<span>'+data.result_detal[i].price+'</span> ₽'
-//                 // VIN    
-//                 document.getElementsByTagName('tr')[i+1].appendChild(new_td[5]).classList.add('detalVIN');
-//                 new_td[5].innerHTML = '06V288B2'
-//                 // Склад    
-//                 document.getElementsByTagName('tr')[i+1].appendChild(new_td[6]).classList.add('detalSklad');
-//                 new_td[6].innerHTML = data.result_detal[i].stockroom.title;
-//                 // Фото
-//                 document.getElementsByTagName('tr')[i+1].appendChild(new_td[7]).classList.add('detalPhotoImg');
-//                 new_td[7].innerHTML = '<a href="#img1"><img src="/static/img/image_mini.png" alt="" onclick="view_detal_photo(this)"></a><a href="#close" class="fulImg" id="img1" onclick="closePhoto(this)"><img src="'+data.result_detal[i].photo+'" alt="товар"></a>';
-//                 // Описание
-//                 document.getElementsByTagName('tr')[i+1].appendChild(new_td[8]).classList.add('detalOther');
-//                 new_td[8].innerHTML = data.result_detal[0].description;
-//             }   
-//         }
-//     });
-// }
 // Развернуть фильтры
 function show_filter(block) {
     var status = document.querySelector('.showfilter');

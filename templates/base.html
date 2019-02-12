@@ -183,37 +183,25 @@
 										</select>
 									</div>
 								</div>
-								
-								<!-- <div class="bottompanel">
-									<div class="buttonsAuto">
-										<button id="close" type="button" class="btn btn-danger">Отмена</button>
-										<button {% if stockroom_count == 0 %} disabled {% endif %} id="nextpageadd" type="submit" class="btn btn-success" onclick="show_loader(this)">Продолжить</button>
-									</div>
-									<div class="warningpanel">
-										{% if stockroom_count == 0 %}
-											<div class="alert alert-warning" role="alert">
-												Вам необходимо добавить хотя-бы один склад. Перейдите на <a id="open_add_stock_panel" href="#" class="alert-link" onclick="change_modal_content(this)">страницу добавления</a>.
-											</div>
-										{% else %}
-											<div class="alert alert-info" role="alert">
-												Выберите автомобиль-донор и нажмите продолжить.
-											</div>
-										{% endif %}
-									</div>
-								</div> -->
 							</div>
 							<div class="right-col">
 								<div class="auto-icon">
 									<img src="{% static "img/auto.png" %}" alt="">
 								</div>
 								<div class="alert-block">
-									<div class="alert alert-primary" role="alert">
-										Выбранный автомобиль: Audi A4 2017г
-									</div>
+									{% if stockroom_count == 0 %}
+										<div class="alert alert-warning" role="alert">
+											Вам необходимо добавить хотя-бы один склад. Перейдите на <a id="open_add_stock_panel" href="#" class="alert-link" onclick="change_modal_content(this)">страницу добавления</a>.
+										</div>
+									{% else %}
+										<div class="alert alert-primary" role="alert">
+											Выбранный автомобиль: Audi A4 2017г
+										</div>
+									{% endif %}
 								</div>
 								<div class="button-block">
 									<button id="close" type="button" class="btn btn-danger">Отмена</button>	
-									<button {% if stockroom_count == 0 %} disabled {% endif %} id="nextpageadd" type="submit" class="btn btn-success">Продолжить</button>
+									<button {% if stockroom_count == 0 %} disabled {% endif %} id="nextpageadd" type="submit" class="btn btn-success" onclick="show_loader(this)">Продолжить</button>
 								</div>
 							</div>
 						</form>

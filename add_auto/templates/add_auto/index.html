@@ -8,6 +8,7 @@
 {% endblock page_title %}
 {% block mainpanel %}
 	<link rel="stylesheet" href="{% static "css/add_auto.css" %}">
+	<link rel="stylesheet" href="{% static "css/donor_panel.css" %}">
 	<div class="list-detals">
 		<div class="topBar">
 			<p>Полный список деталей</p>
@@ -291,7 +292,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="donor">
+	<div class="donor in-add-page">
 		<div class="donorContent">
 			<input name="idDonor" id="idDonor" type="hidden" value="{{new_donor.pk}}">
 			<div class="mainInfo" id="mainInfo">
