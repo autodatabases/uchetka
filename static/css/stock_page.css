@@ -25,19 +25,20 @@
 
 /*** Общие элементы слева ***/
 .top-container .title-block, .bottom-container .title-block {
-    width: 39%;
+    width: 43%;
     text-align: right;
     margin: 15px 0 0 0;
     border-bottom: 1px solid #6e94b6;
     font-size: 15pt;
     color: #708ca7;
     font-style: italic;
+    font-family: 'Merriweather', serif;
 }
 .top-container .title-block::before, .bottom-container .title-block::before {
 	content: "";
     border-bottom: 1px solid #6e94b6;
     width: 12%;
-    margin: 33px 0 0 -41px;
+    margin: 33px 0 0 -39px;
     position: absolute;
 }
 
@@ -51,8 +52,29 @@
     width: 15%;
 }
 
+.small-info { padding: 35px 0 0 20px;}
+.small-info td {
+    padding: 5px;
+    font-family: 'Roboto Slab', serif;
+    color: #757575;
+    font-size: 10pt;
+}
+
+td.show-in-map {
+    font-size: 8pt;
+    text-align: right;
+    padding: 3px 0 0 0;
+    width: 175px;
+    color: #4d789e;
+}
+
+td.show-in-map:hover {text-decoration: underline;cursor: pointer;color: #4d789e;}
+.middle-td { width: 10px; }
+
+td.show-in-map i { font-size: 7pt; margin-left: 5px;}
+
 /*** Блок "Полная информация" ***/
-.bottom-container .title-block::before { margin: 33px 0 0 -38px; }
+.bottom-container .title-block::before { margin: 33px 0 0 -29px; }
 
 
 
