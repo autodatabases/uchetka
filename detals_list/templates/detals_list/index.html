@@ -265,9 +265,7 @@
 										<span class="nameParam" id="">Модель:</span>
 									</div>
 									<div class="paramContent">
-										<select id="all_models" disabled class="custom-select">
-											<option id="donorModelOption" value="{{new_donor.model.value}}" selected>{{new_donor.model.title}}</option>
-										</select>
+										{{form_donor.model}}
 									</div>
 								</div>
 								<div class="oneParamBlock">
@@ -275,9 +273,7 @@
 										<span class="nameParam" id="">Поколение:</span>
 									</div>
 									<div class="paramContent">
-										<select id="all_generations" disabled class="custom-select">
-											<option id="donorGenOption" value="{{new_donor.generation.value}}" selected>{{new_donor.generation.year}}</option>
-										</select>
+										{{form_donor.generation}}
 									</div>
 								</div>
 								<div class="oneParamBlock">
@@ -285,11 +281,7 @@
 										<span class="nameParam" id="">Год выпуска:</span>
 									</div>
 									<div class="paramContent">
-										<select id="all_years" class="custom-select">
-											{% for elem in all_years %}
-											<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
+										{{form_donor.year}}
 									</div>
 								</div>
 								<div class="oneParamBlock">
@@ -297,11 +289,7 @@
 										<span class="nameParam" id="">Тип кузова:</span>
 									</div>
 									<div class="paramContent">
-										<select id="all_kuzovs" class="custom-select">
-											{% for elem in all_kuzovs %}
-											<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
+										{{form_donor.kuzov}}
 									</div>
 								</div>
 								<div class="oneParamBlock">
@@ -319,11 +307,7 @@
 										<span class="nameParam" id="">Тип двигателя:</span>
 									</div>
 									<div class="paramContent">
-										<select id="all_engine_type" class="custom-select">
-											{% for elem in all_engine_type %}
-												<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
+										{{form_donor.engine_type}}
 									</div>
 								</div>
 								<div class="oneParamBlock">
@@ -331,11 +315,7 @@
 										<span class="nameParam" id="">Объем:</span>
 									</div>
 									<div class="paramContent">
-										<select id="all_engine_size" class="custom-select">
-											{% for elem in all_engine_size %}
-												<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
+										{{form_donor.engine_size}}
 									</div>
 								</div>
 								<div class="oneParamBlock">
@@ -343,11 +323,7 @@
 										<span class="nameParam" id="">КПП:</span>
 									</div>
 									<div class="paramContent">
-										<select id="all_kpp" class="custom-select">
-											{% for elem in all_kpp %}
-												<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
+										{{form_donor.kpp}}
 									</div>
 								</div>
 								<div class="oneParamBlock">
@@ -355,11 +331,7 @@
 										<span class="nameParam" id="">Цвет:</span>
 									</div>
 									<div class="paramContent">
-										<select id="all_color" class="custom-select">
-											{% for elem in all_color %}
-											<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
+										{{form_donor.color}}
 									</div>
 								</div>
 								<div class="oneParamBlock">
@@ -367,11 +339,7 @@
 										<span class="nameParam" id="">Руль:</span>
 									</div>
 									<div class="paramContent">
-										<select id="all_helm" class="custom-select">
-											{% for elem in all_helm %}
-												<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
+										{{form_donor.helm}}
 									</div>
 								</div>
 								<div class="oneParamBlock">
@@ -379,12 +347,7 @@
 										<span class="nameParam" id="">Привод:</span>
 									</div>
 									<div class="paramContent">
-										<select id="all_privod" class="custom-select">
-											<option value="{{new_donor.privod.value}}" selected>{{new_donor.privod.title}}</option>
-											{% for elem in all_privod %}
-											<option value="{{elem.value}}">{{elem.title}}</option>	
-											{% endfor %}
-										</select>
+										{{form_donor.privod}}
 									</div>
 								</div>
 							</div>
