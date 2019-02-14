@@ -78,7 +78,9 @@
 	padding-left: 25px;
 }
 
-.smallFilter select { height: 27px; font-size: 8pt; }
+.smallFilter input { height: 27px; font-size: 8pt; }
+input::-webkit-calendar-picker-indicator { opacity: 1; }
+datalist { height: 100px; }
 
 .fullFilter form {
     display: grid;

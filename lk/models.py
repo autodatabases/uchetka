@@ -25,19 +25,6 @@ class AutoGeneration(models.Model):
 	def __str__(self):
 		return self.title
 
-class AutoDetalMainGroup(models.Model):
-	title = models.CharField(max_length=80)
-
-	def __str__(self):
-		return self.title
-
-class AutoDetalSubgroupLevel1(models.Model):
-	title = models.CharField(max_length=80)
-	main_group = models.ForeignKey('AutoDetalMainGroup', on_delete=models.CASCADE)
-
-	def __str__(self):
-		return self.title
-
 class AutoDetailTest(models.Model):
 	title = models.CharField(max_length=80)
 	value = models.CharField(max_length=80)
@@ -132,7 +119,7 @@ class Stock (models.Model):
 	city = models.CharField(max_length=50)
 	street = models.CharField(max_length=100)
 	house = models.IntegerField()
-	account = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+	account = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True, null=True)
 
 	def __str__(self):
 		return self.title
