@@ -4,7 +4,8 @@ from lk.models import *
 class Photo(forms.Form):
 	photo = forms.ImageField()
 
-class DonorPanel(forms.Form):
+
+class DonorForm(forms.Form):
 	vin = forms.CharField(max_length=50)
 	vin.widget.attrs.update({'class': 'form-control', 'id': 'donorVin'})
 

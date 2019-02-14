@@ -34,7 +34,7 @@
 				<a href=""><i class="fas fa-cog"></i></a>
 				<a href=""><i class="fas fa-th"></i></a>
 				<a href=""><i class="fas fa-bell"></i></a>
-				<label for="user-icon">demo-profile</label>
+				<label for="user-icon">{{request.user}}</label>
 				<div class="user-icon" id="user-icon"><i class="fas fa-user-tie fa-2x"></i></div>
 				<div class="green-online"></div>
 			</div>
@@ -42,7 +42,7 @@
 		<div class="menu">
 				<ul id="accordion" class="accordion">
 					<li>
-						<a href="/lk/detals_list/">
+						<a href="/lk/detals_list/" onclick="show_loader()">
 							<div class="button-icon">
 								<i class="fas fa-list-ul"></i>
 							</div>
@@ -130,6 +130,7 @@
 				</ul>
 		</div>
 		<div class="content">
+		<div class="backLoad" style="display: none;"></div>
 			{% block mainpanel %}
 				
 			{% endblock mainpanel %}
@@ -199,6 +200,48 @@
 							</div>
 						</form>
 					</div>
+					<form method="POST" action="{% url 'stocks:create' %}">
+						{% csrf_token %}
+						<div class="stock-create">
+							<div class="left-column">
+								<div class="title-field">
+									<div class="input-group-prepend">
+										<div class="input-group-text">Название склада:</div>
+										{{form_stock.title}}
+									</div>
+								</div>
+								<div class="image-stock"><img src="{% static "img/stock.png" %}" alt=""></div>
+							</div>
+							<div class="right-column">
+								<div class="input-group-prepend">
+									<div class="input-group-text">Государство:</div>
+									{{form_stock.country}}
+								</div>
+								<div class="input-group-prepend">
+									<div class="input-group-text">Регион/область:</div>
+									{{form_stock.region}}
+								</div>
+								<div class="input-group-prepend">
+									<div class="input-group-text">Город/село:</div>
+									{{form_stock.city}}
+								</div>
+								<div class="street-house">
+									<div class="input-group-prepend">
+										<div class="input-group-text" style="width: 80px;">Улица:</div>
+										{{form_stock.street}}
+									</div>
+									<div class="input-group-prepend">
+										<div class="input-group-text" style="margin-left: 10px; width: 100px;">Дом:</div>
+										{{form_stock.house}}
+									</div>
+								</div>
+								<div class="bottom-button-block">
+									<button type="button" class="btn btn-danger" onclick="change_modal_content(this)">Отмена</button>
+									<button type="submit" class="btn btn-success" style="margin-left: 20px;">Создать склад</button>
+								</div>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

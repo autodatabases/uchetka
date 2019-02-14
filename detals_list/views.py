@@ -6,14 +6,14 @@ from django.views.generic import View
 from collections import OrderedDict
 
 from lk.forms import *
+from stocks.forms import *
 from lk.models import *
 
-def get_detals_list_page(request):
+def get_page(request):
 	print(request.POST)
 	query_donor = AutoDonor.objects.all()
 	query_detal = AutoDetailTest.objects.all()
 	query_stock = Stock.objects.filter(account=request.user)
-	selected_detal, selected_donor, selected_stock = [], [], []
 	query_price = [0, 999999]
 	if request.POST:
 		if '' in request.POST.getlist('priceFilter'):
@@ -26,35 +26,31 @@ def get_detals_list_page(request):
 					query_price[1] = int(query_price[1].replace('', '999999'))
 		if request.POST.getlist('detal') != []: # Если детали отмечены, то ... 
 			query_detal = [AutoDetailTest.objects.get(value=elem) for elem in request.POST.getlist('detal')]
-			selected_detal = request.POST.getlist('detal')
 		if request.POST.getlist('donor') != []: # Если доноры отмечены, то ... 
 			query_donor = [AutoDonor.objects.get(pk=elem) for elem in request.POST.getlist('donor')]
-			selected_donor = [ int(elem) for elem in request.POST.getlist('donor')]
 		if request.POST.getlist('stock') != []: # Если склады отмечены, то ... 
 			query_stock = [Stock.objects.get(pk=elem) for elem in request.POST.getlist('stock')]
-			selected_stock = [ int(elem) for elem in request.POST.getlist('stock')]
-
-
-	query_result = UserDetal.objects.filter(account=request.user, price__gte=query_price[0], price__lte=query_price[1],
-		detail__in=query_detal, donor_info__in=query_donor, stockroom__in=query_stock)
-	all_detals = [ {'detal': query_result[i], 'count': i+1 } for i in range(len(query_result))]
-	
-	detals = set(list([elem.detail for elem in UserDetal.objects.filter(account=request.user)]))
-	donors = set(list([elem.donor_info for elem in UserDetal.objects.order_by('donor_info__mark').filter(account=request.user) ]))
-	stocks = Stock.objects.filter(account=request.user)
+	# Фильтруем список деталей | Да простит меня PEP 8
+	query_result = UserDetal.objects.filter(account=request.user, price__gte=query_price[0], price__lte=query_price[1],	detail__in=query_detal, donor_info__in=query_donor, stockroom__in=query_stock)[0:100]
+	all_detals = [{'detal': query_result[i], 'count': i+1 } for i in range(len(query_result))]
+	# Для фильтров
+	stocks_filters = Stock.objects.filter(account=request.user)
+	detals_filter = set(list([elem.detail for elem in UserDetal.objects.filter(account=request.user)]))
+	donors_filter = []
+	for elem in UserDetal.objects.order_by('donor_info__mark', 'donor_info__model').filter(account=request.user):
+		auto = elem.donor_info.mark.title, elem.donor_info.model.title, elem.donor_info.generation.year
+		if {'full_name': auto} in donors_filter:
+			continue
+		else:
+			donors_filter.append({'full_name': auto})
 	context = {'all_marks': AutoMark.objects.all(), 'all_detals' : all_detals,
-			   'detals_count': len(UserDetal.objects.filter(account=request.user)),'all_kuzovs': AutoKuzov.objects.all(),'all_years': AutoYearProduction.objects.all(),
-			   'all_engine_type': AutoEngineType.objects.all(),'all_engine_size': AutoEngineSize.objects.all(),
-			   'all_kpp': AutoTransmission.objects.all(),'all_color': AutoColor.objects.all(),
-			   'all_helm': AutoHelm.objects.all(),'all_privod': AutoPrivod.objects.all(),
-			   'detals_filter': detals, 'donors_filter': donors, 'stocks_filters': stocks,
-			   'stockroom_count': len(Stock.objects.filter(account=request.user)), 'selected_stock': selected_stock,
-			   'selected_donor': selected_donor, 'selected_checkbox_detal': selected_detal, 'selected_checkbox_donor': selected_donor,
-			   'selected_price': query_price, 'form_donor': DonorPanel
+			   'detals_filter': detals_filter, 'donors_filter': donors_filter, 'stocks_filters': stocks_filters,
+			   'stockroom_count': len(Stock.objects.filter(account=request.user)),
+			   'form_donor': DonorForm, 'form_stock': StockForm
 			   }
 	return render(request, 'detals_list/index.html', context=context)
 
-def get_donor_page(request):
+def get_donor_data(request):
 	if request.is_ajax():
 		donor = AutoDonor.objects.get(pk=request.POST['new_pk_donor'])
 		data = {'mark': donor.mark.value, 'model': donor.model.value, 'generation': donor.generation.year,
@@ -64,7 +60,7 @@ def get_donor_page(request):
 				'probeg': donor.probeg, 'vin_number': donor.vin_number }
 		return HttpResponse(json.dumps(data), content_type="application/json")
 
-def save_new_donor_params(request):
+def save_donor_data(request):
 	if request.is_ajax():
 		if request.POST['probeg']:
 			probeg = request.POST['probeg']

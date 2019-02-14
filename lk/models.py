@@ -119,7 +119,7 @@ class Stock (models.Model):
 	city = models.CharField(max_length=50)
 	street = models.CharField(max_length=100)
 	house = models.IntegerField()
-	account = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+	account = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True, null=True)
 
 	def __str__(self):
 		return self.title

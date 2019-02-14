@@ -1,3 +1,10 @@
+//после загрузки страницы
+window.onload = function(){
+	document.querySelector('.cssload-loader').removeAttribute('style');
+	document.querySelector('.backLoad').setAttribute('style', 'display:none');
+}
+
+
 // No edit, this for POST
 function getCookie(name) {
     var cookieValue = null;
@@ -28,6 +35,7 @@ $.ajaxSetup({
 // Loader
 function show_loader(){
 	document.querySelector('.cssload-loader').setAttribute('style', 'display: block;');
+	document.querySelector('.backLoad').removeAttribute('style');
 	document.querySelector('.modal').setAttribute('style', 'display: none');
 }
 
@@ -123,37 +131,8 @@ function donorTabs(newActiveTab) {
 function change_modal_content(changeButton) {
 	var modalContent = document.querySelector('.modalcontent');
 	if (changeButton.getAttribute('id') == 'open_add_stock_panel') {
-		modalContent.querySelector('.createStockRoom').classList.add('show');
+		modalContent.querySelector('.stock-create').classList.add('show');
 	} else {
-		modalContent.querySelector('.createStockRoom').classList.remove('show');
+		modalContent.querySelector('.stock-create').classList.remove('show');
 	}
-}
-function add_StockRoom(createStockRoom_panel) {
-	// Перменные передаваемых параметров
-	var titleStockRoom = createStockRoom_panel.querySelector('#titleStockRoom').value;
-	var countryStockRoom = createStockRoom_panel.querySelector('#countryStockRoom');
-	var regionStockRoom = createStockRoom_panel.querySelector('#regionStockRoom');
-	var cityStockRoom = createStockRoom_panel.querySelector('#cityStockRoom');
-	var streetStockRoom = createStockRoom_panel.querySelector('#streetStockRoom').value;
-	var houseStockRoom = createStockRoom_panel.querySelector('#houseStockRoom').value;
-	$.ajax({
-		url: '/lk/add_stockroom/',
-		type: 'post',
-		data: {
-			'titleStockRoom': titleStockRoom,
-			'streetStockRoom': streetStockRoom,
-			'houseStockRoom': houseStockRoom
-		},
-		success: function (data) {
-			console.log('done');
-			change_modal_content(createStockRoom_panel.querySelector('#close_add_stock'));
-			document.querySelector('.selectAutoDonor').querySelector('#selectMark').removeAttribute('disabled');
-			document.querySelector('.selectAutoDonor').querySelector('#selectModel').removeAttribute('disabled');
-			document.querySelector('.selectAutoDonor').querySelector('#selectGeneration').removeAttribute('disabled');
-			document.querySelector('.selectAutoDonor').querySelector('#nextpageadd').removeAttribute('disabled');
-			document.querySelector('.selectAutoDonor').querySelector('.alert').classList.remove('alert-warning');
-			document.querySelector('.selectAutoDonor').querySelector('.alert').classList.add('alert-success');
-			document.querySelector('.selectAutoDonor').querySelector('.alert').innerHTML = 'Склад успешно создан'
-		}
-	});
 }
