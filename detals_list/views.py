@@ -9,13 +9,34 @@ from lk.forms import *
 from stocks.forms import *
 from lk.models import *
 
-def get_page(request):
-	print(request.POST)
-	query_donor = AutoDonor.objects.all()
-	query_detal = AutoDetailTest.objects.all()
-	query_stock = Stock.objects.filter(account=request.user)
-	query_price = [0, 999999]
-	if request.POST:
+
+class DetalList(View):
+	# Рендеринг шаблона
+	def render_template(self, request, query_result):
+		all_result = query_result.count()
+		context = {'all_marks': AutoMark.objects.all(), 
+				   'all_detals' : [{'detal': query_result[i], 'count': i+1 } for i in range(all_result)],
+				   'detals_filter': [], 
+				   'donors_filter': [], 
+				   'stocks_filter': [],
+				   'form_donor': DonorForm, 
+				   'form_stock': StockForm,
+				   'stockroom_count': Stock.objects.filter(account=request.user).count()}
+		return render(request, 'detals_list/index.html', context=context)
+
+	# GET Запрос	
+	def get(self, request):
+		query_result = UserDetal.objects.filter(account=request.user)[:25]
+		return self.render_template(request, query_result)
+
+	# POST Запрос
+	def post(self, request):
+		print(request.POST)
+		return self.render_template(request, self.filter_detals(request))
+
+	# Фильтрация деталей
+	def filter_detals(self, request):
+		query_price = [0, 999999]
 		if '' in request.POST.getlist('priceFilter'):
 			if request.POST.getlist('priceFilter') != ['', '']:
 				query_price = request.POST.getlist('priceFilter');
@@ -30,26 +51,15 @@ def get_page(request):
 			query_donor = [AutoDonor.objects.get(pk=elem) for elem in request.POST.getlist('donor')]
 		if request.POST.getlist('stock') != []: # Если склады отмечены, то ... 
 			query_stock = [Stock.objects.get(pk=elem) for elem in request.POST.getlist('stock')]
-	# Фильтруем список деталей | Да простит меня PEP 8
-	query_result = UserDetal.objects.filter(account=request.user, price__gte=query_price[0], price__lte=query_price[1],	detail__in=query_detal, donor_info__in=query_donor, stockroom__in=query_stock)[0:100]
-	all_detals = [{'detal': query_result[i], 'count': i+1 } for i in range(len(query_result))]
-	# Для фильтров
-	stocks_filters = Stock.objects.filter(account=request.user)
-	detals_filter = set(list([elem.detail for elem in UserDetal.objects.filter(account=request.user)]))
-	donors_filter = []
-	for elem in UserDetal.objects.order_by('donor_info__mark', 'donor_info__model').filter(account=request.user):
-		auto = elem.donor_info.mark.title, elem.donor_info.model.title, elem.donor_info.generation.year
-		if {'full_name': auto} in donors_filter:
-			continue
-		else:
-			donors_filter.append({'full_name': auto})
-	context = {'all_marks': AutoMark.objects.all(), 'all_detals' : all_detals,
-			   'detals_filter': detals_filter, 'donors_filter': donors_filter, 'stocks_filters': stocks_filters,
-			   'stockroom_count': len(Stock.objects.filter(account=request.user)),
-			   'form_donor': DonorForm, 'form_stock': StockForm
-			   }
-	return render(request, 'detals_list/index.html', context=context)
-
+		# Фильтруем список деталей
+		query_result = UserDetal.objects.filter(account=request.user, 
+												price__gte=query_price[0], 
+												price__lte=query_price[1],	
+												detail__in=query_detal, 
+												donor_info__in=query_donor, 
+												stockroom__in=query_stock)[:25]
+		return query_result
+	
 def get_donor_data(request):
 	if request.is_ajax():
 		donor = AutoDonor.objects.get(pk=request.POST['new_pk_donor'])
