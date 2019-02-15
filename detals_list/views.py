@@ -59,6 +59,12 @@ class DetalList(View):
 												donor_info__in=query_donor, 
 												stockroom__in=query_stock)[:25]
 		return query_result
+
+
+
+class Donor(View):
+	pass
+
 	
 def get_donor_data(request):
 	if request.is_ajax():
