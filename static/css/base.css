@@ -40,7 +40,7 @@ img, embed, object, video, svg {max-width: 100%;}
 
 /*********************     Разметка страницы    ********************************/
 .backLoad { 
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background: white;
@@ -620,7 +620,7 @@ html.modal-active, body.modal-active {
 
 .cssload-loader {
     display: none;
-    position: absolute;
+    position: fixed;
     left: calc(50% - 31px);
     width: 100px;
     height: 100px;

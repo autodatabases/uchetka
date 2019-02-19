@@ -44,7 +44,7 @@
 						<div class="smallFilterParam">
 							<input list="stocks-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Фильтр по VIN">
 							<datalist id="stocks-list">
-								{% for elem in stocks_filters %}
+								{% for elem in stocks_filter %}
 									<option value="{{elem.pk}}">{{elem}}</option>
 								{% endfor %}
 							</datalist>

@@ -88,7 +88,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a href="{% url 'staff:get_page' %}">
 							<div class="button-icon">
 								<i class="fas fa-users"></i>
 							</div>
@@ -103,7 +103,7 @@
 								<i class="fas fa-warehouse"></i>
 							</div>
 							<div class="button-text">
-								Склады
+								Авторазборы
 							</div>
 						</a>
 					</li>
@@ -157,24 +157,15 @@
 								<div class="selectAuto">
 									<div class="input-group-prepend">
 										<span class="input-group-text">Марка:</span>
-										<select {% if stockroom_count == 0 %} disabled {% endif %} name="selectMark" id="selectMark" class="custom-select custom-select-lg mb-3" onchange="load_models()">
-											<option selected>Не выбрано</option>
-											{% for mark in all_marks %}
-												<option value="{{mark.value}}">{{mark.title}}</option>
-											{% endfor %}
-										</select>
+										{{form_donor.mark}}
 									</div>
 									<div class="input-group-prepend">
 										<span class="input-group-text">Модель:</span>
-										<select {% if stockroom_count == 0 %} disabled {% endif %} name="selectModel" id="selectModel" class="custom-select custom-select-lg mb-3" onchange="load_generations()">
-											<option selected>Не выбрано</option>
-										</select>
+										{{form_donor.model}}
 									</div>
 									<div class="input-group-prepend">
 										<span class="input-group-text">Поколение:</span>
-										<select {% if stockroom_count == 0 %} disabled {% endif %} name="selectGeneration" id="selectGeneration" class="custom-select custom-select-lg mb-3">
-											<option selected>Не выбрано</option>
-										</select>
+										{{form_donor.generation}}
 									</div>
 								</div>
 							</div>
