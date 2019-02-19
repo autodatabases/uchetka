@@ -75,8 +75,8 @@ function change_params_donor() {
     });
 }
 
-function load_models() {
-	var selectMark = document.getElementById("selectMark");
+function load_models(selectMark) {
+	var panel = selectMark.parentElement.parentElement.parentElement;
 	$.ajax({
 		url: '/lk/add_auto/select_auto/',
 		type: 'post',
@@ -85,16 +85,17 @@ function load_models() {
 			'csrfmiddlewaretoken': csrftoken
 		},
 		success: function (data) {
-			console.log('done');
-			var selectModel = document.getElementById("selectModel");
+			console.log('Loading models is good');
+			var selectModel = panel.querySelector('#all_models');
 			for (var i = 0; i < data.models.length; i++) {
 				selectModel.options[i] = new Option(data.models[i].title, data.models[i].value)
 			}
 		}
 	});
 }
-function load_generations() {
-	var selectModel = document.getElementById("selectModel");
+
+function load_generations(selectModel) {
+	var panel = selectModel.parentElement.parentElement.parentElement;
 	$.ajax({
 		url: '/lk/add_auto/select_auto/',
 		type: 'post',
@@ -104,7 +105,7 @@ function load_generations() {
 		},
 		success: function (data) {
 			console.log('done');
-			var selectGen = document.getElementById("selectGeneration");
+			var selectGen = panel.querySelector('#all_generations');
 			for (var i = 0; i < data.generations.length; i++) {
 				selectGen.options[i] = new Option(data.generations[i].title, data.generations[i].value)
 			}

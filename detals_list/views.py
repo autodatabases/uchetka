@@ -14,8 +14,7 @@ class DetalList(View):
 	# Рендеринг шаблона
 	def render_template(self, request, query_result):
 		all_result = query_result.count()
-		context = {'all_marks': AutoMark.objects.all(), 
-				   'all_detals' : [{'detal': query_result[i], 'count': i+1 } for i in range(all_result)],
+		context = {'all_detals' : [{'detal': query_result[i], 'count': i+1 } for i in range(all_result)],
 				   'detals_filter': [], 
 				   'donors_filter': [], 
 				   'stocks_filter': [],

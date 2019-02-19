@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% load static %}
+{% block link-and-script %}
+	<link rel="stylesheet" href="{% static "css/staff.css" %}">
+{% endblock link-and-script %}
+{% block title %}Сотрудники{% endblock title %}
+{% block page_title %}Сотрудники{% endblock page_title %}
+
+{% block mainpanel %}
+	<div class="staff-block">
+		<div class="staff-group">
+			<div class="logo-staff">
+				<img src="{% static "img/staff.png" %}" alt="">
+			</div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="staff-info">
+			<div class="select-user">
+				<select name="stock" class="custom-select custom-select-sm" id="all_stock"></select>
+			</div>
+			<div class="left-info">
+				<table>
+					<tr>
+						<td>Сотрудник:</td>
+						<td>:</td>
+						<td class="param-value">Иванов Иван Иванович</td>
+					</tr>
+					<tr>
+						<td>Должность:</td>
+						<td>:</td>
+						<td class="param-value">Директор</td>
+					</tr>
+					<tr>
+						<td>Уровень прав:</td>
+						<td>:</td>
+						<td class="param-value">Директор</td>
+					</tr>
+					<tr>
+						<td>Какая-то инормация:</td>
+						<td>:</td>
+						<td class="param-value">....</td>
+					</tr>
+				</table>
+				<hr>
+				<div class="button-block">
+					<button class="btn btn-success" style="margin: 1% 10% 0 28%;">Добавить сотрудника</button>
+					<button class="btn btn-warning" style="border: 1px solid #c59609;">Редактировать</button>
+					<button class="btn btn-danger">Удалить</button>
+				</div>
+			</div>
+			<div class="right-info">
+				<div class="table-params">
+					<table>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input checked disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input checked disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input checked disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input checked disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input checked disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input checked disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input checked disabled type="checkbox"></td>
+						</tr>
+						<tr>
+							<td class="param-title">Пункт № ...</td>
+							<td><input checked disabled type="checkbox"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+	</div>			
+{% endblock mainpanel %}
