@@ -95,6 +95,7 @@
     padding: 5px 15px 5px 5px;
 }
 .staff-group-title {width: 75%;} /*** Ячейка названия группы ***/
+.staff-group-edit:hover, .staff-group-delete:hover {text-decoration: underline;} /*** Ячейка названия группы ***/
 /*_______________________________________________________*/
 
 
@@ -121,13 +122,13 @@
 }
 
 /*** Таблица информации об сотруднике ***/
-.user-info table { margin: 15% 0 0 10%; }
+.user-info table { margin: 15% 0 0 20%; }
 .user-info table td i { margin-right: 10px; }
 .user-info table td {
 	padding: 5px;
     font-family: 'Roboto Slab', serif;
     color: #757575;
-    font-size: 13pt;
+    font-size: 10pt;
 }
 .param-value { 
 	text-align: right;

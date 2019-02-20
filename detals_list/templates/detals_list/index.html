@@ -26,7 +26,7 @@
 							</datalist>
 						</div>
 						<div class="smallFilterParam">
-							<input list="donors-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Фильтр по автомобилю">
+							<input list="donors-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Марка">
 							<datalist id="donors-list">
 								<option selected value="Все автомобили">All</option>
 								{% for elem in donors_filter %}
@@ -35,18 +35,49 @@
 							</datalist>
 						</div>
 						<div class="smallFilterParam">
-							<input list="test-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Фильтр по VIN">
+							<input list="donors-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Модель">
+							<datalist id="donors-list">
+								<option selected value="Все автомобили">All</option>
+								{% for elem in donors_filter %}
+									<option value="{{elem.full_name.0}} {{elem.full_name.1}}">{{elem.full_name.2}}</option>
+								{% endfor %}
+							</datalist>
+						</div>
+						<div class="smallFilterParam">
+							<input list="donors-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Поколение">
+							<datalist id="donors-list">
+								<option selected value="Все автомобили">All</option>
+								{% for elem in donors_filter %}
+									<option value="{{elem.full_name.0}} {{elem.full_name.1}}">{{elem.full_name.2}}</option>
+								{% endfor %}
+							</datalist>
+						</div>
+						<div class="smallFilterParam">
+							<input list="test-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Оригинальный номер">
 							<datalist id="test-list">
 								<option value="Тестовая строка 1">
 								<option value="Тестовая строка 2">
 							</datalist>
 						</div>
 						<div class="smallFilterParam">
-							<input list="stocks-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Фильтр по VIN">
+							<input list="stocks-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Склад">
 							<datalist id="stocks-list">
-								{% for elem in stocks_filter %}
-									<option value="{{elem.pk}}">{{elem}}</option>
-								{% endfor %}
+								<option value="Тестовая строка 1">
+								<option value="Тестовая строка 2">
+							</datalist>
+						</div>
+						<div class="smallFilterParam">
+							<input list="stocks-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Складская ячейка">
+							<datalist id="stocks-list">
+								<option value="Тестовая строка 1">
+								<option value="Тестовая строка 2">
+							</datalist>
+						</div>
+						<div class="smallFilterParam">
+							<input list="stocks-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Диапазон цен">
+							<datalist id="stocks-list">
+								<option value="Тестовая строка 1">
+								<option value="Тестовая строка 2">
 							</datalist>
 						</div>
 					</form>

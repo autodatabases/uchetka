@@ -73,9 +73,9 @@
 
 .smallFilter form {
 	display: grid;
-	grid-template-columns: 187px 300px 138px 128px;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-column-gap: 10px;	
-	padding-left: 25px;
+	padding: 0 70px 0 25px;
 }
 
 .smallFilter input { height: 27px; font-size: 8pt; }
