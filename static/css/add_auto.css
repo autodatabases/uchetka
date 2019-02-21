@@ -1,211 +1,141 @@
 
 /************************************************/
-/***********   Добавление деталей    ************/
+/***********    Разметка страницы    ************/
 /************************************************/
 
-/*** Левая панель ***/
-
-.list-detals {
-    position: absolute;
-    left: 55px;
-    width: 245px;
-    height: 675px;
+/*** Страница ***/
+.content-add-page {     
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100%;
+    padding: 3% 1% 1% 4%;
+    grid-column-gap: 1%;
+}
+/*** Правая колонка ***/
+.right-column {
+    display: grid; 
+    grid-template-rows: 3fr 1fr;
+    grid-row-gap: 3%;
     overflow: hidden;
-    border: 1px solid rgba(138, 118, 47, 0.25);
-    border-radius: 10px;
-    box-shadow: 0 0px 30px 0px rgba(103, 103, 103, 0.42), 
-                inset 0 0 300px 180px rgba(138, 118, 47, 0.25);
+    padding: 1%;
+}
+    /*** Верхняя строка провой колонки ***/
+    .top-row {
+        display: grid; 
+        grid-template-columns: 3fr 2fr;
+        grid-column-gap: 2%; 
+        overflow: hidden;
+        padding: 1%;
+    }
+/*************************************************/
+
+
+
+/**********************************************/
+/***********    Базовые элементы   ************/
+/**********************************************/
+
+/*** Оформление блоков ***/
+
+.block-desing {
+    overflow: hidden;
+    border: 1px solid rgba(158, 158, 158, 0.45);
+    border-radius: 15px;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4), 
+                inset 0 0 300px 10px rgba(0, 0, 0, 0.1)
 }
 
-.list-detals .topBar { 
-    height: 50px;
+.header-title-block { 
+    height: 40px;
     font-size: 11pt;
-    padding: 15px 0 0 0;
-    color: #5a5a5a;
+    padding: 10px 0 0 0;
+    color: #3b5d7b;
     text-align: center;
+    box-shadow: inset 0 0 200px 0 #c9c9c996, 
+                inset 0 -3px 1px 0 rgb(204, 204, 204);
 }
-.search-block { text-align: center; padding: 15px 0 0 0; }
-.search-block i {     
-    position: absolute;
-    right: 45px;
-    margin-top: 9px;
-    font-size: 10pt;
-    color: darkgrey; 
-}
-.search-block input {
-    height: 30px;
-    width: 200px;
-    font-size: 8pt;
-    display: inline;
-    padding-right: 25px;
-}
-.search-block input:focus {
-    box-shadow: 0 0 10px 1px rgba(142, 39, 39, 0.6);
-    border-color: #ffe9ca;
+/*** Оформление карточек на панели деталей ***/
+.card-detal-group {
+    border: 1px solid #afafaf;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
 }
 
+/***************************************************/
+
+
+
+/*******************************************/
+/***********   Основные стили   ************/
+/******************************* ***********/
+
+
+/****** Левая панель *******/
+.list-detals { margin-top: 8%; margin-bottom: 4%; }
+.search-block { text-align: center; padding: 15px 0 0 0; }
+    .search-block i {     
+        position: absolute;
+        margin: 9px 0px 0 -35px;
+        font-size: 10pt;
+        color: #3b5d7b;
+    }
+    .search-block input {
+        height: 30px;
+        width: 200px;
+        font-size: 8pt;
+        display: inline;
+        padding-right: 25px;
+    }
+    .search-block input:focus {
+        box-shadow: 0 0 10px 1px rgb(95, 142, 184);
+        border-color: #ffffff;
+    }
 .list-block {     
-    margin: 0 7px 0 7px;
+    margin: 0 15px 0 15px;
     font-size: 9pt;
     max-height: 522px;
     padding: 10px 10px 10px 15px;
-    box-shadow: inset 0 0 200px 5px #fff9e8, inset 0 0 10px 2px black;
+    box-shadow: inset 0 0 200px 5px #e5e5e5, inset 0 0 10px 2px black;
     border-radius: 5px;
     overflow-y: auto;
 }
+    .list-block i { color: #6b6b6a; margin: 0 5px 0 0; }
+    .list-block a { color: #3b5d7b; }
+    .subgroup { margin-left: 15px; }
+    .subgroup.hide { display: none; }
 
-.list-block i { color: #6b6b6a; margin: 0 5px 0 0; }
-.list-block a { color: #694d2d }
 
-.subgroup { margin-left: 15px; }
-.subgroup.hide { display: none; }
 
-/*** Центральная панель ***/
 
-.addDetalsPanel {
-    margin: 55px 0 0 310px;
-    overflow: auto;
-    height: 490px;
-    width: 755px;
-    box-shadow: 0 0px 30px 0px rgba(103, 103, 103, 0.42), 
-    			inset 0 0 300px 180px rgba(138, 118, 47, 0.25);
-	border: 1px solid rgba(138, 118, 47, 0.25);   
-    border-radius: 10px;
+/*** Панель добавления деталей ***/
+.gui-panel {display: grid; grid-template-rows: 1fr 10fr;}
+    .gui-panel .nav-bar {
+        font-size: 9pt;
+        font-style: italic;
+        padding-top: 12px;
+    }
+    .gui-panel .nav-bar ul {
+        display: -webkit-inline-box;
+        float: left;
+        margin: 0 0 0 10px;
+    }
+    .gui-panel .nav-bar ul li { margin-left: 10px; }
+    .gui-panel .nav-bar ul li:hover { text-decoration: underline; cursor: pointer; }
+    .gui-panel .nav-bar ul li i { margin-left: 10px; }
+.content-add-panel {
     display: grid;
-    grid-auto-rows: max-content;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    padding: 2%;
+    overflow-y: scroll;
 }
+    .card-detal-group {height: 150px;}
+    .title-group { border-top: 1px solid #afafaf; }
+    .img-group { text-align: center; }
+    .img-group img { width: 50%; }
 
-.topBar {
-    height: 30px;
-    border-bottom: 1px solid rgba(82, 75, 4, 0.15);
-    box-shadow: inset 0 0 300px 180px rgba(0, 0, 0, 0.06);
-    padding: 3px 0 0 25px;
-}
+/**********************************************/
 
-.topBar li { display: inline; font-size: 8pt;}
-.topBar a { color: #5a5a5a; }
-.topBar i { margin: 0 5px 0 5px; font-size: 7pt;}
-
-.rowDetals {
-	display: grid;
-	grid-template-columns: 160px 160px 160px 160px;
-    grid-column-gap: 18px;
-	margin: 10px 0 10px 18px;
-}
-
-.card:hover { box-shadow: 0 0 15px 2px rgba(142, 39, 39, 0.6); cursor: pointer; }
-.card-header {
-	padding: 7px 0 7px 0;
-    margin-bottom: 0;
-    background-color: rgba(0,0,0,.03);
-    border-bottom: 1px solid rgba(0,0,0,.125);
-    text-align: center;
-    font-size: 8pt;
-}
-.card-body { height: 100px; }
-
-
-/***************************************/
-/******** Нижняя панель иформации ******/
-/***************************************/
-
-.bottomParams {
-    background: white;
-    position: fixed;
-    bottom: 10px;
-    right: 25px;
-    width: 1265px;
-    height: 170px;
-    padding: 0 0 0 65px;
-    z-index: 4;
-    border: 1px solid rgba(89, 138, 187, 0.4);
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: 330px 330px auto;
-    grid-column-gap: 60px;
-    box-shadow: 0 -3px 15px 0px rgba(103, 103, 103, 0.42), 
-                inset 0 0 200px 30px rgba(0, 164, 253, 0.25);
-}
-
-.bottomParams::before {
-    content: 'Параметры добавления';
-    position: absolute;
-    width: 220px;
-    height: 50px;
-    right: 230px;
-    top: -35px;
-    background: #ffffff;
-    color: #495057;
-    font-family: 'Roboto Slab', serif;
-    font-size: 11pt;
-    border: 1px solid rgba(89, 138, 187, 0.4);
-    border-bottom: none;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: inset 0 0 200px 30px rgba(0, 164, 253, 0.16);
-    padding: 16px 0 0 18px;
-}
-
-.bottomParams.animation { bottom: 0; }
-.bottomParams.animationpage2::before { top: -30px; }
-
-.bottomTitle {
-	position: relative;
-	z-index: 1;
-	margin: -5px 0 0 0;
-}
-
-.bottomInfo {
-    font-family: 'Roboto Mono', serif;
-    font-size: 11pt;
-    width: 300px;
-    height: 120px;
-    margin: 30px 0 0 10px;
-    padding: 25px 0 0 20px;
-    border: 1px solid #898989;
-    border-radius: 10px;
-}
-
-.bottomInfo .value { padding-left: 10px; }
-
-.bottomInfo .key { text-align: right; padding-right: 10px; }
-
-.bottomAddBackButtons {
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: 150px 150px;
-    grid-column-gap: 30px;
-}
-
-.bottomAddBackButtons button { 
-	width: 150px;
-	height: 40px;
-	font-size: 9pt;
-	box-shadow: inset 0 0 5px 2px rgba(255, 255, 255, 0.4);
-}
-
-.bottomSettingButtons {
-    width: 300px;
-    height: 120px;
-    margin: 30px 0 0 0px;
-    border: 1px solid #898989;
-    border-radius: 10px;
-    padding: 20px 0 0 15px;
-}
-
-.bottomSettingButtons::before, .bottomInfo::before {
-	content: 'Размещение деталей';
-    position: absolute;
-    background: rgba(230, 245, 255, 1);
-    width: 140px;
-    height: 30px;
-    text-align: center;
-    margin: -29px 0 0 0;
-    font-size: 9pt;	
-} 
-
-.bottomInfo::before { margin: -34px 0 0 0; }
-
-.bottomSettingButtons label { font-size: 9pt; padding: 4px 0 0 0;}
-.bottomSettingButtons select { margin: 0 0 0 10px; width: 150px; }
-/************************************************/
+.bottom-row .block-desing { height: 100%; }

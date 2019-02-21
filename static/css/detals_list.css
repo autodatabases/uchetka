@@ -73,10 +73,13 @@
 
 .smallFilter form {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-column-gap: 10px;	
 	padding: 0 70px 0 25px;
 }
+
+.apply-filter { opacity: 0.7;}
+.apply-filter:hover { opacity: 1; cursor: pointer;}
 
 .smallFilter input { height: 27px; font-size: 8pt; }
 input::-webkit-calendar-picker-indicator { opacity: 1; }

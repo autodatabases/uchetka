@@ -29,10 +29,10 @@ def select_auto(request):
 
 def get_addauto_page(request):
 	print(request.POST)
-	selectedMark = AutoMark.objects.get(value=request.POST['selectMark'])
-	selectedModel = AutoModel.objects.get(value=request.POST['selectModel'], 
+	selectedMark = AutoMark.objects.get(value=request.POST['mark'])
+	selectedModel = AutoModel.objects.get(value=request.POST['model'], 
 			   							  mark=selectedMark)
-	selectedGeneration = AutoGeneration.objects.get(value=request.POST['selectGeneration'],
+	selectedGeneration = AutoGeneration.objects.get(value=request.POST['generation'],
 											   		model=selectedModel)
 	new_donor = AutoDonor()
 	new_donor.mark = selectedMark

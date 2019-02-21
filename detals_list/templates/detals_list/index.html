@@ -17,69 +17,76 @@
 					<form action="/lk/detals_list/" method="POST">
 						{% csrf_token %}
 						<input type="hidden" name="type_filter" value="small">
+						<div class="apply-filter" style="text-align: center;" onclick="this.parentElement.submit()">
+							<img style="width: 55%;" src="{% static "img/apply.png" %}" >
+						</div>
 						<div class="smallFilterParam">
-							<input list="detals-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Фильтр по детали">
-							<datalist id="detals-list">
-								{% for elem in detals_filter %}
+							<input list="price-list" id="myBrowser" name="param_filter" class="form-control" placeholder="Диапазон цен" value="{% if selected %}{{selected.price}}{% else %}{% endif %}">
+							<datalist id="price-list">
+								<option value="Все цены">
+								<option value="Тестовая строка 2">
+								<option value="Тестовая строка 3">
+							</datalist>
+						</div>
+						<div class="smallFilterParam">
+							<input list="detal-list" id="myBrowser" name="param_filter" class="form-control" placeholder="Деталь" value="{% if selected %}{{selected.detal}}{% else %}{% endif %}">
+							<datalist id="detal-list">
+								<option value="Все детали">
+								{% for elem in filter_values.detal %}
 									<option value="{{elem.title}}"></option>
 								{% endfor %}
 							</datalist>
 						</div>
 						<div class="smallFilterParam">
-							<input list="donors-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Марка">
-							<datalist id="donors-list">
-								<option selected value="Все автомобили">All</option>
-								{% for elem in donors_filter %}
-									<option value="{{elem.full_name.0}} {{elem.full_name.1}}">{{elem.full_name.2}}</option>
+							<input list="mark-list" id="myBrowser" name="param_filter" class="form-control" placeholder="Марка" value="{% if selected %}{{selected.mark}}{% else %}{% endif %}">
+							<datalist id="mark-list">
+								<option value="Все марки">
+								{% for elem in filter_values.mark %}
+									<option value="{{elem.title}}">
 								{% endfor %}
 							</datalist>
 						</div>
 						<div class="smallFilterParam">
-							<input list="donors-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Модель">
-							<datalist id="donors-list">
-								<option selected value="Все автомобили">All</option>
-								{% for elem in donors_filter %}
-									<option value="{{elem.full_name.0}} {{elem.full_name.1}}">{{elem.full_name.2}}</option>
+							<input list="model-list" id="myBrowser" name="param_filter" class="form-control" placeholder="Модель" value="{% if selected %}{{selected.model}}{% else %}{% endif %}">
+							<datalist id="model-list">
+								<option value="Все модели">
+								<option value="Тестовая строка 1">
+								<option value="Тестовая строка 2">
+							</datalist>
+						</div>
+						<div class="smallFilterParam">
+							<input list="generation-list" id="myBrowser" name="param_filter" class="form-control" placeholder="Поколение" value="{% if selected %}{{selected.generation}}{% else %}{% endif %}">
+							<datalist id="generation-list">
+								<option value="Все поколения">
+								<option value="Тестовая строка 1">
+								<option value="Тестовая строка 2">
+							</datalist>
+						</div>
+						<div class="smallFilterParam">
+							<input list="number-list" id="myBrowser" name="param_filter" class="form-control" placeholder="Оригинальный номер" value="{% if selected %}{{selected.number}}{% else %}{% endif %}">
+							<datalist id="number-list">
+								<option value="Все номера">
+								<option value="Тестовая строка 1">
+								<option value="Тестовая строка 2">
+							</datalist>
+						</div>
+						<div class="smallFilterParam">
+							<input list="stocks-list" id="myBrowser" name="param_filter" class="form-control" placeholder="Склад" value="{% if selected %}{{selected.stock}}{% else %}{% endif %}">
+							<datalist id="stocks-list">
+								{% for elem in filter_values.stock %}
+									<option value="{{elem.title}}">
 								{% endfor %}
 							</datalist>
 						</div>
 						<div class="smallFilterParam">
-							<input list="donors-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Поколение">
-							<datalist id="donors-list">
-								<option selected value="Все автомобили">All</option>
-								{% for elem in donors_filter %}
-									<option value="{{elem.full_name.0}} {{elem.full_name.1}}">{{elem.full_name.2}}</option>
-								{% endfor %}
-							</datalist>
-						</div>
-						<div class="smallFilterParam">
-							<input list="test-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Оригинальный номер">
-							<datalist id="test-list">
+							<input list="stocks-list2" id="myBrowser" name="param_filter" class="form-control" placeholder="Складская ячейка" value="{% if selected %}{{selected.cell}}{% else %}{% endif %}">
+							<datalist id="stocks-list2">
+								<option value="Все ячейки">
 								<option value="Тестовая строка 1">
 								<option value="Тестовая строка 2">
 							</datalist>
 						</div>
-						<div class="smallFilterParam">
-							<input list="stocks-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Склад">
-							<datalist id="stocks-list">
-								<option value="Тестовая строка 1">
-								<option value="Тестовая строка 2">
-							</datalist>
-						</div>
-						<div class="smallFilterParam">
-							<input list="stocks-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Складская ячейка">
-							<datalist id="stocks-list">
-								<option value="Тестовая строка 1">
-								<option value="Тестовая строка 2">
-							</datalist>
-						</div>
-						<div class="smallFilterParam">
-							<input list="stocks-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Диапазон цен">
-							<datalist id="stocks-list">
-								<option value="Тестовая строка 1">
-								<option value="Тестовая строка 2">
-							</datalist>
-						</div>
+						
 					</form>
 				</div>
 				<hr>
