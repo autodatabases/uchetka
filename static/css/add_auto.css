@@ -25,7 +25,7 @@
         grid-template-columns: 3fr 2fr;
         grid-column-gap: 2%; 
         overflow: hidden;
-        padding: 1%;
+        padding: 1.3%;
     }
 /*************************************************/
 
@@ -47,12 +47,15 @@
 
 .header-title-block { 
     height: 40px;
-    font-size: 11pt;
-    padding: 10px 0 0 0;
-    color: #3b5d7b;
+    font-size: 9pt;
+    padding: 11px;
     text-align: center;
-    box-shadow: inset 0 0 200px 0 #c9c9c996, 
-                inset 0 -3px 1px 0 rgb(204, 204, 204);
+    color: #637e96;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: white;
+    box-shadow: inset 0px -4px 7px 0 rgb(154, 154, 154), inset 0 0 200px 0 #d1d1d1;
 }
 /*** Оформление карточек на панели деталей ***/
 .card-detal-group {
@@ -60,8 +63,15 @@
     border-radius: 5px;
     display: grid;
     grid-template-rows: 4fr 1fr;
+    height: 150px;
+    overflow: hidden;
 }
 
+.card-detal-group:hover {
+    border: 1px solid rgba(95, 142, 184, 0.6);
+    box-shadow: 0 0 10px 0 #285985;
+    cursor: pointer;
+}
 /***************************************************/
 
 
@@ -94,7 +104,7 @@
 .list-block {     
     margin: 0 15px 0 15px;
     font-size: 9pt;
-    max-height: 522px;
+    max-height: 500px;
     padding: 10px 10px 10px 15px;
     box-shadow: inset 0 0 200px 5px #e5e5e5, inset 0 0 10px 2px black;
     border-radius: 5px;
@@ -109,11 +119,17 @@
 
 
 /*** Панель добавления деталей ***/
-.gui-panel {display: grid; grid-template-rows: 1fr 10fr;}
+.gui-panel {
+    display: grid; 
+    grid-template-rows: 1fr 10fr; 
+    padding-bottom: 3%;
+}
     .gui-panel .nav-bar {
-        font-size: 9pt;
-        font-style: italic;
-        padding-top: 12px;
+        font-size: 8pt;
+        padding-top: 14px;
+        font-family: monospace;
+        font-weight: bold;
+        letter-spacing: 0px;
     }
     .gui-panel .nav-bar ul {
         display: -webkit-inline-box;
@@ -123,6 +139,7 @@
     .gui-panel .nav-bar ul li { margin-left: 10px; }
     .gui-panel .nav-bar ul li:hover { text-decoration: underline; cursor: pointer; }
     .gui-panel .nav-bar ul li i { margin-left: 10px; }
+
 .content-add-panel {
     display: grid;
     grid-gap: 10px;
@@ -131,11 +148,87 @@
     padding: 2%;
     overflow-y: scroll;
 }
-    .card-detal-group {height: 150px;}
-    .title-group { border-top: 1px solid #afafaf; }
-    .img-group { text-align: center; }
-    .img-group img { width: 50%; }
 
+    .title-group {
+        padding: 5px;
+        text-align: center;
+        font-size: 9pt;
+        color: #8a8a8a;
+        font-family: monospace;
+        border-top: 1px solid rgb(205, 205, 205);
+        box-shadow: inset 0 0 100px 0 #c5d8e9;
+    }
+    .img-group { text-align: center; box-shadow: inset 0 0 180px 0 aliceblue;}
+    .img-group img { width: 70%; margin-top: 25%; }
+
+
+/*** Панель параметров добавления ***/
+
+.bottom-row { padding: 0 1% 0 1%; }
+    .bottom-row .block-desing { height: 100%; }
+    .params-add .header-title-block {
+        position: absolute;
+        width: 18%;
+        height: 6%;
+        padding: 12px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 15px;
+        font-size: 10pt;
+        box-shadow: inset -4px -4px 7px 0 rgb(154, 154, 154), inset 0 0 200px 0 #d1d1d1;
+
+    }
+    .content-params {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        height: 100%;
+    }
+        .img-logo { text-align: center; }
+            .img-logo img {width: 30%;margin-top: 20%;}
+        
+        .setting-info { padding: 2% 1% 1% 5%;}
+            .setting-info .border-table { 
+                border-radius: 10px;
+                border: 1px solid rgb(181, 181, 181);
+                box-shadow: inset 0 0 200px 5px #e5e5e5, inset 0 0 10px 2px black;
+                border-radius: 5px;
+            }
+            .content-table {
+                display: grid;
+                grid-template-columns: 4fr 3fr;
+                grid-gap: 1%;
+                height: 130px;
+                padding: 2%;
+            }
+                .full-info {font-size: 9pt; padding: 5% 10% 5% 3%; border-right: 1px solid #b7b7b7}
+                    .full-info table { width: 100%; }
+                    .full-info table td { 
+                        padding: 3px;
+                        border-bottom: 1px solid #b7b7b7ad;
+                        color: #234e75;
+                    }
+                .setting-add {
+                    margin: 4%;
+                    border-radius: 10px;
+                    text-align: center;
+                }
+                    .setting-add .input-group-text {
+                        margin: 17px 0 0 0;
+                        border-bottom: none;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                        font-size: 8pt;
+                    }
+                    .setting-add select { 
+                        border-top-left-radius: 0; 
+                        border-top-right-radius: 0; 
+                        font-size: 8pt;
+                    }
+                    
+        .block-buttom { text-align: center; padding-top: 30px; }
+            .block-buttom button { 
+                min-width: 200px; 
+                margin-top: 10px; 
+                font-size: 10pt;
+                box-shadow: inset 0 0 7px 0 white;
+            }
 /**********************************************/
-
-.bottom-row .block-desing { height: 100%; }
