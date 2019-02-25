@@ -2,11 +2,50 @@
 {% load static %}
 {% block link-and-script %}
 	<link rel="stylesheet" href="{% static "css/staff.css" %}">
+	<script src="{% static "js/staff.js" %}"></script>
 {% endblock link-and-script %}
 {% block title %}Сотрудники{% endblock title %}
 {% block page_title %}Сотрудники{% endblock page_title %}
 
 {% block mainpanel %}
+	<div class="add-staff-user">
+		<div class="new-user-fields">
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">Фамилия</span>
+				</div>
+				<input type="text" class="form-control" placeholder="Например: Иванов" aria-label="Имя пользователя" aria-describedby="basic-addon1">
+			</div>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">Имя</span>
+				</div>
+				<input type="text" class="form-control" placeholder="Например: Иван" aria-label="Имя пользователя" aria-describedby="basic-addon1">
+			</div>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">Отчество</span>
+				</div>
+				<input type="text" class="form-control" placeholder="Например: Иванович" aria-label="Имя пользователя" aria-describedby="basic-addon1">
+			</div>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">Должность</span>
+				</div>
+				<input type="text" class="form-control" placeholder="Например: Директор" aria-label="Имя пользователя" aria-describedby="basic-addon1">
+			</div>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">Уровень прав</span>
+				</div>
+				<input type="text" class="form-control" placeholder="Например: Директор" aria-label="Имя пользователя" aria-describedby="basic-addon1">
+			</div>
+		</div>
+		<div class="row-button">
+			<button id="open" class="btn btn-danger" onclick="new_staff_user(this)">Отмена</button>
+			<button class="btn btn-success">Добавить сотрудника</button>
+		</div>
+	</div>
 	<div class="staff-block">
 		<div class="left-column">
 			<div class="staff-group block-desing ">
@@ -100,7 +139,7 @@
 				<div class="button-block">
 					<button class="btn btn-danger">Удалить</button>
 					<button class="btn btn-warning" style="border: 1px solid #c59609;">Редактировать</button>
-					<button class="btn btn-success" style="float: right;">Добавить сотрудника</button>
+					<button id="add_staff" class="btn btn-success" style="float: right;" onclick="new_staff_user(this)">Добавить сотрудника</button>
 				</div>
 			</div>
 		</div>

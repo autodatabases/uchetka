@@ -206,3 +206,46 @@
 }
 
 /*_______________________________________________________*/
+
+
+.add-staff-user {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    background: aliceblue;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border: 1px solid #c9c9c9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 darkslategrey;
+    transition: all 0.5s ease;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    grid-gap: 10px;
+    overflow: hidden;
+}
+    .add-staff-user.animation-1 { width: 30%}
+    .add-staff-user.animation-2 { height: 50%}
+
+.add-staff-user div { text-align: center;}
+
+.new-user-fields {
+    padding:35px 35px 0 35px;
+}
+
+.new-user-fields span, .new-user-fields input {
+    font-size: 8pt;
+    height: 30px;
+    min-width: 130px;
+}
+
+.add-staff-user .row-button button { 
+    height: 35px;
+    min-width: 165px;
+    font-size: 10pt;
+    box-shadow: inset 0 0 10px 0;
+}
