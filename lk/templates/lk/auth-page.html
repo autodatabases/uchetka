@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+	<meta charset="UTF-8">
+	<title>Форма авторизации</title>
+	<link rel="stylesheet" href="{% static "css/bootstrap/css/bootstrap.min.css" %}">
+	<link rel="stylesheet" href="{% static "css/auth-page.css" %}">
+</head>
+<body>
+	<div class="auth-form shadow">
+		<form method="POST" action="{% url 'auth_user_url' %}">
+			{% csrf_token %}
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="login" required>
+				
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pass" required>
+			</div>
+			<div class="form-group form-check">
+				<input type="checkbox" class="form-check-input" id="exampleCheck1">
+				<label class="form-check-label" for="exampleCheck1">Запомнить меня</label>
+			</div>
+			<button type="submit" class="btn btn-success">Войти</button>
+			<button type="button" class="btn btn-primary">Регистрация</button>
+			<div class="restore-pass">
+			    <small id="emailHelp" class="form-text text-muted">Забыли пароль и не можете войти?</small>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

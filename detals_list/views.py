@@ -1,68 +1,48 @@
 import json
-
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.generic import View
 from collections import OrderedDict
 
+from .forms import *
 from lk.forms import *
-from stocks.forms import *
 from lk.models import *
+from stocks.forms import *
 
 
 class DetalList(View):
-	# Рендеринг шаблона
-	def render_template(self, request, query_result):
-		all_result = query_result.count()
-		context = {'all_detals' : [{'detal': query_result[i], 'count': i+1 } for i in range(all_result)],
-				   'detals_filter': [], 
-				   'donors_filter': [], 
-				   'stocks_filter': [],
-				   'form_donor': DonorForm, 
-				   'form_stock': StockForm,
-				   'stockroom_count': Stock.objects.filter(account=request.user).count()}
-		return render(request, 'detals_list/index.html', context=context)
-
 	# GET Запрос	
 	def get(self, request):
-		query_result = UserDetal.objects.filter(account=request.user)[:25]
-		return self.render_template(request, query_result)
+		company = Company.objects.filter(staff_users=request.user)
+		print(company[0])
+		query_result = UserDetal.objects.filter(company=company[0])
+		print(query_result)
+		return self.render_template(request, query_result, None)
 
 	# POST Запрос
 	def post(self, request):
 		print(request.POST)
-		return self.render_template(request, self.filter_detals(request))
+		params = request.POST.getlist('param_filter')
+		selected = {'price': params[0], 'detal': params[1],	'mark': params[2], 'model': params[3], 'generation': params[4], 'number': params[5], 'stock': params[6], 'cell': params[7]}
+		return self.render_template(request, self.filter_detals(request, params), selected)
 
 	# Фильтрация деталей
-	def filter_detals(self, request):
-		query_price = [0, 999999]
-		if '' in request.POST.getlist('priceFilter'):
-			if request.POST.getlist('priceFilter') != ['', '']:
-				query_price = request.POST.getlist('priceFilter');
-			else:
-				if query_price[0] == '':
-					query_price[0] = int(query_price[0].replace('', '0'))
-				if query_price[1] == '':
-					query_price[1] = int(query_price[1].replace('', '999999'))
-		if request.POST.getlist('detal') != []: # Если детали отмечены, то ... 
-			query_detal = [AutoDetailTest.objects.get(value=elem) for elem in request.POST.getlist('detal')]
-		if request.POST.getlist('donor') != []: # Если доноры отмечены, то ... 
-			query_donor = [AutoDonor.objects.get(pk=elem) for elem in request.POST.getlist('donor')]
-		if request.POST.getlist('stock') != []: # Если склады отмечены, то ... 
-			query_stock = [Stock.objects.get(pk=elem) for elem in request.POST.getlist('stock')]
-		# Фильтруем список деталей
-		query_result = UserDetal.objects.filter(account=request.user, 
-												price__gte=query_price[0], 
-												price__lte=query_price[1],	
-												detail__in=query_detal, 
-												donor_info__in=query_donor, 
-												stockroom__in=query_stock)[:25]
+	def filter_detals(self, request, params):
+		query_result = UserDetal.objects.filter(company=Company.objects.filter(staff_users=request.user))[:25]
 		return query_result
 
+	# Рендеринг шаблона
+	def render_template(self, request, query_result, selected):
+		all_result = query_result.count()
+		context = {'all_detals' : [{'detal': query_result[i], 'count': i+1 } for i in range(all_result)],
+				   'forms': {'donor': DonorForm, 
+				   			 'add_stock': StockForm,
+				   			 'auto_select': MarkModelGen,
+				   			 'filters': {'small': SmallFilter, 'full': ''}},
+				   'selected': selected,
+				   'stockroom_count': Stock.objects.filter(company=(Company.objects.filter(staff_users=request.user)).count())}
+		return render(request, 'detals_list/index.html', context=context)
 
-
-class Donor(View):
-	pass
 
 	
 def get_donor_data(request):
@@ -102,7 +82,7 @@ def small_filter(request):
 		if request.POST['filterValue'] == 'all':
 			query_detals = UserDetal.objects.all()
 		else:
-			query_detals = UserDetal.objects.filter(detail=AutoDetailTest.objects.get(value=request.POST['filterValue']))
+			query_detals = UserDetal.objects.filter(detail=AutoDetail.objects.get(value=request.POST['filterValue']))
 		
 		arr_detal = []
 		for elem in query_detals:

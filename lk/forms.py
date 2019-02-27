@@ -5,26 +5,26 @@ class Photo(forms.Form):
 	photo = forms.ImageField()
 
 
+class MarkModelGen(forms.Form):
+	all_marks = [(elem.value, elem.title) for elem in AutoMark.objects.all()]
+	mark = forms.ChoiceField(widget=forms.Select, choices=all_marks)
+	mark.widget.attrs.update({'class': 'custom-select', 'id': 'all_marks', 'name': 'selectMark',
+							  'onchange': 'load_models(this)'})
+
+	model = forms.ChoiceField(widget=forms.Select)
+	model.widget.attrs.update({'class': 'custom-select', 'id': 'all_models', 'name': 'selectModel',
+							   'onchange': 'load_generations(this)'})
+
+	generation = forms.ChoiceField(widget=forms.Select)
+	generation.widget.attrs.update({'class': 'custom-select', 'id': 'all_generations', 'name': 'selectGeneration'})
+
+
 class DonorForm(forms.Form):
 	vin = forms.CharField(max_length=50)
 	vin.widget.attrs.update({'class': 'form-control', 'id': 'donorVin'})
 
 	probeg = forms.CharField(max_length=50)
 	probeg.widget.attrs.update({'class': 'form-control', 'id': 'donorProbeg'})
-
-	all_marks = [(elem.value, elem.title) for elem in AutoMark.objects.all()]
-	mark = forms.ChoiceField(widget=forms.Select, choices=all_marks)
-	mark.widget.attrs.update({'class': 'custom-select', 'id': 'all_marks', 'name': 'selectMark',
-							  'onchange': 'load_models(this)'})
-
-	all_models = []
-	model = forms.ChoiceField(widget=forms.Select, choices=all_models)
-	model.widget.attrs.update({'class': 'custom-select', 'id': 'all_models', 'name': 'selectModel',
-							   'onchange': 'load_generations(this)'})
-
-	all_generations = []
-	generation = forms.ChoiceField(widget=forms.Select, choices=all_generations)
-	generation.widget.attrs.update({'class': 'custom-select', 'id': 'all_generations', 'name': 'selectGeneration'})
 
 	all_years = [(elem.value, elem.title) for elem in AutoYearProduction.objects.all()]
 	year = forms.ChoiceField(widget=forms.Select, choices=all_years)

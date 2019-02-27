@@ -1,18 +1,16 @@
 import json
-from django.contrib.auth.models import User
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-
-from .models import *
 import random
 
-def get_lk_page(request):
-	all_marks= AutoMark.objects.all()
+from django.contrib.auth.models import User
+from django.shortcuts import render, redirect
+from django.contrib.auth import logout
 
-	return render(request, 'lk/index.html', context={'all_marks': all_marks, 
-													 'detals_count': len(UserDetal.objects.all()),
-													 'stockroom_count': len(Stock.objects.all()), })
-	
+from .models import *
+
+
+def logout_lk(request):
+	logout(request)
+	return redirect('/')
 def rediredct_detal_list_page(request):
 	return redirect('/lk/detals_list/')
 

@@ -17,38 +17,17 @@
 					<form action="/lk/detals_list/" method="POST">
 						{% csrf_token %}
 						<input type="hidden" name="type_filter" value="small">
-						<div class="smallFilterParam">
-							<input list="detals-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Фильтр по детали">
-							<datalist id="detals-list">
-								{% for elem in detals_filter %}
-									<option value="{{elem.title}}"></option>
-								{% endfor %}
-							</datalist>
+						<div class="apply-filter" style="text-align: center;" onclick="this.parentElement.submit()">
+							<img style="width: 55%;" src="{% static "img/apply.png" %}" >
 						</div>
-						<div class="smallFilterParam">
-							<input list="donors-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Фильтр по автомобилю">
-							<datalist id="donors-list">
-								<option selected value="Все автомобили">All</option>
-								{% for elem in donors_filter %}
-									<option value="{{elem.full_name.0}} {{elem.full_name.1}}">{{elem.full_name.2}}</option>
-								{% endfor %}
-							</datalist>
-						</div>
-						<div class="smallFilterParam">
-							<input list="test-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Фильтр по VIN">
-							<datalist id="test-list">
-								<option value="Тестовая строка 1">
-								<option value="Тестовая строка 2">
-							</datalist>
-						</div>
-						<div class="smallFilterParam">
-							<input list="stocks-list" id="myBrowser" name="myBrowser" class="form-control" placeholder="Фильтр по VIN">
-							<datalist id="stocks-list">
-								{% for elem in stocks_filter %}
-									<option value="{{elem.pk}}">{{elem}}</option>
-								{% endfor %}
-							</datalist>
-						</div>
+						<div class="smallFilterParam">{{forms.filters.small.number}}</div>
+						<div class="smallFilterParam">{{forms.filters.small.detal}}</div>
+						<div class="smallFilterParam">{{forms.filters.small.mark}}</div>
+						<div class="smallFilterParam">{{forms.filters.small.model}}</div>
+						<div class="smallFilterParam">{{forms.filters.small.generation}}</div>
+						<div class="smallFilterParam">{{forms.filters.small.number}}</div>
+						<div class="smallFilterParam">{{forms.filters.small.stock}}</div>
+						<div class="smallFilterParam">{{forms.filters.small.stock_param}}</div>
 					</form>
 				</div>
 				<hr>
@@ -65,7 +44,7 @@
 							</div>
 						</div>
 						<div class="leftFilterBlock">
-							<div class="filterGroup price priceFilter">
+							<div class="filterGroup price price-filter">
 								<div class="input-group input-group-sm ">
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="inputGroup-sizing-sm">Min</span>
@@ -80,7 +59,7 @@
 								</div>
 							</div>
 							<div class="leftCol">
-								<div class="filterGroup detalFilter left ">
+								<div class="filterGroup detal-filter left ">
 									{% for elem in detals_filter %}
 										<div class="oneFIlterValue">
 											<div class="custom-control custom-checkbox">
@@ -97,7 +76,7 @@
 							</div>
 						</div>
 						
-						<div class="filterGroup donorFilter">
+						<div class="filterGroup mark-filter">
 							{% for elem in donors_filter %}
 								<div class="oneFIlterValue">
 									<div class="custom-control custom-checkbox">
@@ -111,7 +90,7 @@
 								</div>
 							{% endfor %}
 						</div>
-						<div class="filterGroup vinFilter">
+						<div class="filterGroup model-filter">
 							<div class="oneFIlterValue">
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -119,7 +98,23 @@
 								</div>
 							</div>
 						</div>
-						<div class="filterGroup skladFilter">
+						<div class="filterGroup generation-filter">
+							<div class="oneFIlterValue">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="customCheck1">
+									<label class="custom-control-label" for="customCheck1">06V288B2</label>
+								</div>
+							</div>
+						</div>
+						<div class="filterGroup number-filter">
+							<div class="oneFIlterValue">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="customCheck1">
+									<label class="custom-control-label" for="customCheck1">06V288B2</label>
+								</div>
+							</div>
+						</div>
+						<div class="filterGroup sklad-filter">
 							{% for elem in stocks_filters %}
 								<div class="oneFIlterValue">
 									<div class="custom-control custom-checkbox">
@@ -132,6 +127,14 @@
 									</div>
 								</div>
 							{% endfor %}
+						</div>
+						<div class="filterGroup stock-param-filter">
+							<div class="oneFIlterValue">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="customCheck1">
+									<label class="custom-control-label" for="customCheck1">06V288B2</label>
+								</div>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -202,151 +205,7 @@
 				<button class="btn btn-danger">Списать</button>
 			</div>
 		</div>
-	<div class="donor in-detal-list">
-		<div class="donorContent">
-			<input name="idDonor" id="idDonor" type="hidden" value="{{new_donor.pk}}">
-			<div class="mainInfo" id="mainInfo">
-				
-				<div class="donorTabs">
-					<div class="tabInfo active" onclick="donorTabs(this)" data-content="params">
-						<span>Общая информация</span>
-					</div>
-					<div class="tabPhoto" onclick="donorTabs(this)" data-content="photo">
-						<span>Фотография</span>							
-					</div>
-				</div>
-		
-				<div class="donorFields">
-					<div class="donorParmas show">
-						<div class="vin-field">
-							<div class="input-group-prepend">
-								<div class="paramTitle">
-									<span class="nameParam">VIN или номер кузова:</span>
-								</div>
-								<div class="paramContent">
-									{{form_donor.vin}}
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="leftParam" >
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Марка:</span>
-									</div>
-									<div class="paramContent">
-										{{form_donor.mark}}
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Модель:</span>
-									</div>
-									<div class="paramContent">
-										{{form_donor.model}}
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Поколение:</span>
-									</div>
-									<div class="paramContent">
-										{{form_donor.generation}}
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Год выпуска:</span>
-									</div>
-									<div class="paramContent">
-										{{form_donor.year}}
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Тип кузова:</span>
-									</div>
-									<div class="paramContent">
-										{{form_donor.kuzov}}
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam">Пробег:</span>
-									</div>
-									<div class="paramContent">
-										{{form_donor.probeg}}
-									</div>
-								</div>
-							</div>
-							<div class="rightParam">
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Тип двигателя:</span>
-									</div>
-									<div class="paramContent">
-										{{form_donor.engine_type}}
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Объем:</span>
-									</div>
-									<div class="paramContent">
-										{{form_donor.engine_size}}
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">КПП:</span>
-									</div>
-									<div class="paramContent">
-										{{form_donor.kpp}}
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Цвет:</span>
-									</div>
-									<div class="paramContent">
-										{{form_donor.color}}
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Руль:</span>
-									</div>
-									<div class="paramContent">
-										{{form_donor.helm}}
-									</div>
-								</div>
-								<div class="oneParamBlock">
-									<div class="paramTitle">
-										<span class="nameParam" id="">Привод:</span>
-									</div>
-									<div class="paramContent">
-										{{form_donor.privod}}
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="donorPhoto">
-						<img src="{% static "img/addPhoto.png" %}" alt="">
-					</div>
-				</div>
-		
-				<div class="buttonBlock">
-					<div>
-						<button id="edit" onclick="editDonor(mainInfo)" type="button" class="btn btn-primary" disabled>Изменить</button>
-					</div>
-					<div>
-						<button id="save" onclick="saveDonor()" type="button" class="btn btn-success">Сохранить</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 </div>
 <script src="{% static "js/detals_list.js" %}"></script>
 {% endblock mainpanel %}

@@ -73,21 +73,24 @@
 
 .smallFilter form {
 	display: grid;
-	grid-template-columns: 187px 300px 138px 128px;
+	grid-template-columns: 65px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-column-gap: 10px;	
-	padding-left: 25px;
+	padding: 0 70px 0 0;
 }
 
-.smallFilter input { height: 27px; font-size: 8pt; }
-input::-webkit-calendar-picker-indicator { opacity: 1; }
-datalist { height: 100px; }
+.apply-filter { opacity: 0.7;}
+.apply-filter:hover { opacity: 1; cursor: pointer;}
+
+.smallFilter select { height: 27px; font-size: 8pt; }
+
+.fullFilter { width: 95%; }
 
 .fullFilter form {
     display: grid;
-    grid-template-columns: 50px 230px 450px 200px 200px;
-    grid-column-gap: 25px;
+    grid-template-columns: 1fr 6fr 3fr 3fr 3fr 3fr 3fr 3fr;
+    grid-column-gap: 15px;
     margin-top: -50px;
-    padding-top: 34px;
+    padding: 35px 10px 0 0;
 }
 
 .fullFilterButtonBlock {
@@ -155,22 +158,25 @@ datalist { height: 100px; }
 .filterGroup::before {
     content: '';
     position: absolute;
-    height: 20px;
+    height: 15px;
     background: white;
-    margin: -21px 0 0 0;
+    margin: -19px 0 0 0;
     padding: 0px 10px 0 10px;
-    font-size: 10pt;
+    font-size: 9pt;
     z-index: 1;
 }
 
-.filterGroup.price input, .filterGroup.price.priceFilter span { height: 25px; font-size: 8pt; } 
+.filterGroup.price input, .filterGroup.price.price-filter span { height: 25px; font-size: 8pt; } 
 .filterGroup.price {display: grid; grid-template-columns: auto auto; grid-column-gap: 5px;} 
 
-.filterGroup.detalFilter::before { content: 'Деталь [ 0 ]'; }
-.filterGroup.priceFilter::before { content: 'Диапазон цен'; }
-.filterGroup.donorFilter::before { content: 'Автомобиль донор [ 0 ]'; }
-.filterGroup.skladFilter::before { content: 'Склад [ 0 ]'; }
-.filterGroup.vinFilter::before { content: 'VIN [ 0 ]'; }
+.filterGroup.price-filter::before { content: 'Диапазон цен'; }
+.filterGroup.detal-filter::before { content: 'Деталь [ 0 ]'; }
+.filterGroup.mark-filter::before { content: 'Марка [ 0 ]'; }
+.filterGroup.model-filter::before { content: 'Модель [ 0 ]'; }
+.filterGroup.generation-filter::before { content: 'Поколение [ 0 ]'; }
+.filterGroup.number-filter::before { content: 'Номер детали [ 0 ]'; }
+.filterGroup.sklad-filter::before { content: 'Склад [ 0 ]'; }
+.filterGroup.stock-param-filter::before { content: 'Ячейка [ 0 ]'; }
 /***********************/
 /*** Таблица деталей ***/
 /***********************/

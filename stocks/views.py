@@ -10,6 +10,7 @@ def get_page(request):
 def create_stock(request):
 	bound_form = StockForm(request.POST)
 	if bound_form.is_valid():
-		bound_form.cleaned_data.update({'account': request.user, 'value': len(Stock.objects.filter(account=request.user))+1})
+		bound_form.cleaned_data.update({'company': Company.objects.filter(staff_users=request.user), 
+										'value': len(Stock.objects.filter(company=Company.objects.filter(staff_users=request.user)))+1})
 		bound_form.save()
 	return redirect('/lk/stocks/')
