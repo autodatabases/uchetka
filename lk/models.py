@@ -1,5 +1,15 @@
 from django.conf import settings
 from django.db import models
+from django.contrib.auth.models import User
+
+class Company(models.Model):
+	title = models.CharField(max_length=80)
+	country = models.CharField(max_length=50)
+	region = models.CharField(max_length=100)
+	city = models.CharField(max_length=50)
+	staff_users = models.ManyToManyField(User, blank=True)
+	def __str__(self):
+		return self.title
 
 class AutoMark(models.Model):
 	title = models.CharField(max_length=80)
@@ -25,7 +35,7 @@ class AutoGeneration(models.Model):
 	def __str__(self):
 		return self.title
 
-class AutoDetailTest(models.Model):
+class AutoDetal(models.Model):
 	title = models.CharField(max_length=80)
 	value = models.CharField(max_length=80)
 
@@ -107,7 +117,7 @@ class AutoDonor(models.Model):
 		return self.mark.title + ' ' + self.model.title + ' ' + self.generation.year
 
 class Photo(models.Model):
-	account = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+	company = models.ForeignKey('Company', on_delete=models.CASCADE)
 	photo = models.ImageField(blank=True, null=True)
 	have = models.CharField(max_length=10)
 
@@ -119,18 +129,18 @@ class Stock (models.Model):
 	city = models.CharField(max_length=50)
 	street = models.CharField(max_length=100)
 	house = models.IntegerField()
-	account = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True, null=True)
+	company = models.ForeignKey('Company', on_delete=models.CASCADE)
 
 	def __str__(self):
 		return self.title
 
 class UserDetal(models.Model):
-	detail = models.ForeignKey('AutoDetailTest', on_delete=models.PROTECT)
+	detal = models.ForeignKey('AutoDetal', on_delete=models.PROTECT)
 	donor_info = models.ForeignKey('AutoDonor', on_delete=models.CASCADE)
 	price = models.IntegerField()
 	description = models.TextField(null=True, blank=True)
 	stockroom = models.ForeignKey('Stock', on_delete=models.CASCADE)
-	account = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+	company = models.ForeignKey('Company', on_delete=models.CASCADE)
 	photo = models.ForeignKey('Photo', on_delete=models.CASCADE, default=1)
 	def __str__(self):
 		return self.detail.title

@@ -4,6 +4,7 @@
 {% block page_title %}Добавление деталей{% endblock page_title %}
 {% block link-and-script %}
 	<link rel="stylesheet" href="{% static "css/add_auto.css" %}">
+	<link rel="stylesheet" href="{% static "css/donor_panel.css" %}">
 {% endblock link-and-script %}	
 {% block mainpanel %}
 	<div class="content-add-page">
@@ -318,7 +319,60 @@
 				</div>
 				<div class="donor in-add-page block-desing">
 					<div class="header-title-block">Автомобиль-донор</div>
-					
+					<div class="donor-content">
+						<div class="donor-table border-table">
+							<div class="donor-auto-title">Audi A4 2014</div>
+							<div class="donor-auto-table">
+								<table>
+									<tr>
+										<td class="donor-param">Пробег</td>
+										<td>:</td>
+										<td class="donor-value">Не указано</td>
+									</tr>
+									<tr>
+										<td class="donor-param">Кузов</td>
+										<td>:</td>
+										<td class="donor-value">Не указано</td>
+									</tr>
+									<tr>
+										<td class="donor-param">Трансмисия</td>
+										<td>:</td>
+										<td class="donor-value">Не указано</td>
+									</tr>
+									<tr>
+										<td class="donor-param">Тип дигателя</td>
+										<td>:</td>
+										<td class="donor-value">Не указано</td>
+									</tr>
+									<tr>
+										<td class="donor-param">Объем</td>
+										<td>:</td>
+										<td class="donor-value">Не указано</td>
+									</tr>
+									<tr>
+										<td class="donor-param">Привод</td>
+										<td>:</td>
+										<td class="donor-value">Не указано</td>
+									</tr>
+									<tr>
+										<td class="donor-param">Руль</td>
+										<td>:</td>
+										<td class="donor-value">Не указано</td>
+									</tr>
+									<tr>
+										<td class="donor-param">Цвет</td>
+										<td>:</td>
+										<td class="donor-value">Не указано</td>
+									</tr>
+									
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="donor-button">
+						<button class="btn btn-info">Изменить</button>
+						<button class="btn btn-success" disabled>Сохранить</button>
+					</div>
 				</div>
 			</div>	
 			<div class="bottom-row">

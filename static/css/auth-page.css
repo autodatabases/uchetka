@@ -1,0 +1,16 @@
+.auth-form {
+    margin: 10% auto;
+    width: 30%;
+    padding: 3%;
+    border-radius: 5px;
+    border: 1px solid #dedede;
+}
+
+.auth-form button {
+	min-width: 120px;
+    height: 35px;
+    font-size: 11pt;
+}
+
+.restore-pass { text-align: center; margin-top: 25px; }
+.restore-pass:hover { text-decoration: underline; cursor: pointer; }

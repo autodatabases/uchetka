@@ -38,7 +38,11 @@
 				<div class="input-group-prepend">
 					<span class="input-group-text" id="basic-addon1">Уровень прав</span>
 				</div>
-				<input type="text" class="form-control" placeholder="Например: Директор" aria-label="Имя пользователя" aria-describedby="basic-addon1">
+				<select class="custom-select" id="inputGroupSelect01">
+					<option selected>Выбрать</option>
+					<option value="1">Директор</option>
+					<option value="2">Менеджер</option>
+				</select>
 			</div>
 		</div>
 		<div class="row-button">
@@ -57,7 +61,7 @@
 					<div class="list-table">
 						<table>
 							<tr>
-								<td class="staff-group-title">Уровень прав: "Директор"</td>
+								<td class="staff-group-title">Уровень прав: "Директор/Руководитель"</td>
 								<td class="staff-group-edit">Изменить</td>
 								<td class="staff-group-delete">Удалить</td>
 							</tr>
@@ -67,27 +71,7 @@
 								<td class="staff-group-delete">Удалить</td>
 							</tr>
 							<tr>
-								<td class="staff-group-title">Уровень прав: " ... "</td>
-								<td class="staff-group-edit">Изменить</td>
-								<td class="staff-group-delete">Удалить</td>
-							</tr>
-							<tr>
-								<td class="staff-group-title">Уровень прав: " ... "</td>
-								<td class="staff-group-edit">Изменить</td>
-								<td class="staff-group-delete">Удалить</td>
-							</tr>
-							<tr>
-								<td class="staff-group-title">Уровень прав: " ... "</td>
-								<td class="staff-group-edit">Изменить</td>
-								<td class="staff-group-delete">Удалить</td>
-							</tr>
-							<tr>
-								<td class="staff-group-title">Уровень прав: " ... "</td>
-								<td class="staff-group-edit">Изменить</td>
-								<td class="staff-group-delete">Удалить</td>
-							</tr>
-							<tr>
-								<td class="staff-group-title">Уровень прав: " ... "</td>
+								<td class="staff-group-title">Уровень прав: "Кладовщик/разборщик"</td>
 								<td class="staff-group-edit">Изменить</td>
 								<td class="staff-group-delete">Удалить</td>
 							</tr>
@@ -139,7 +123,7 @@
 				<div class="button-block">
 					<button class="btn btn-danger">Удалить</button>
 					<button class="btn btn-warning" style="border: 1px solid #c59609;">Редактировать</button>
-					<button id="add_staff" class="btn btn-success" style="float: right;" onclick="new_staff_user(this)">Добавить сотрудника</button>
+					<button id="add_staff" class="btn btn-success" style="float: right;" onclick="new_staff_user(this)">Новый сотрудник</button>
 				</div>
 			</div>
 		</div>
@@ -149,63 +133,67 @@
 					<div class="table-params">
 						<table>
 							<tr>
-								<td class="param-title">Пункт № ...</td>
+								<td class="param-title">Добавление товара</td>
 								<td><input checked disabled type="checkbox"></td>
 							</tr>
 							<tr>
-								<td class="param-title">Пункт № ...</td>
+								<td class="param-title">Перемещение товара</td>
 								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
-								<td class="param-title">Пункт № ...</td>
+								<td class="param-title">Списание товара (Без продажи)</td>
 								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
-								<td class="param-title">Пункт № ...</td>
+								<td class="param-title">Списание товара</td>
 								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
-								<td class="param-title">Пункт № ...</td>
-								<td><input disabled type="checkbox"></td>
-							</tr>
-							<tr>
-								<td class="param-title">Пункт № ...</td>
+								<td class="param-title">Создание продажи и связанных документов. </td>
 								<td><input checked disabled type="checkbox"></td>
 							</tr>
 							<tr>
-								<td class="param-title">Пункт № ...</td>
-								<td><input checked disabled type="checkbox"></td>
-							</tr>
-							<tr>
-								<td class="param-title">Пункт № ...</td>
-								<td><input checked disabled type="checkbox"></td>
-							</tr>
-							<tr>
-								<td class="param-title">Пункт № ...</td>
+								<td class="param-title">Создание накладной поступления</td>
 								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
-								<td class="param-title">Пункт № ...</td>
+								<td class="param-title">Изменение карточки товара</td>
+								<td><input disabled type="checkbox"></td>
+							</tr>
+							<tr>
+								<td class="param-title">Проведение оплат, сверки</td>
 								<td><input checked disabled type="checkbox"></td>
 							</tr>
 							<tr>
-								<td class="param-title">Пункт № ...</td>
-								<td><input disabled type="checkbox"></td>
-							</tr>
-							<tr>
-								<td class="param-title">Пункт № ...</td>
-								<td><input disabled type="checkbox"></td>
-							</tr>
-							<tr>
-								<td class="param-title">Пункт № ...</td>
+								<td class="param-title">Добавление нового авторазбора</td>
 								<td><input checked disabled type="checkbox"></td>
 							</tr>
 							<tr>
-								<td class="param-title">Пункт № ...</td>
+								<td class="param-title">Добавление сотрудников</td>
 								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
-								<td class="param-title">Пункт № ...</td>
+								<td class="param-title">Создание новго уровня прав</td>
+								<td><input checked disabled type="checkbox"></td>
+							</tr>
+							<tr>
+								<td class="param-title">Доступ к статистике/аналитике</td>
+								<td><input disabled type="checkbox"></td>
+							</tr>
+							<tr>
+								<td class="param-title">Доступ к статистике/аналитике (Полный) </td>
+								<td><input disabled type="checkbox"></td>
+							</tr>
+							<tr>
+								<td class="param-title">Выгрузка на площадки объявлений</td>
+								<td><input checked disabled type="checkbox"></td>
+							</tr>
+							<tr>
+								<td class="param-title">Редактирование на площадках объявлений</td>
+								<td><input disabled type="checkbox"></td>
+							</tr>
+							<tr>
+								<td class="param-title">Удаления с площадок объявлений</td>
 								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>

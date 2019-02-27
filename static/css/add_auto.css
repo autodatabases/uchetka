@@ -72,6 +72,12 @@
     box-shadow: 0 0 10px 0 #285985;
     cursor: pointer;
 }
+
+.border-table {
+    border: 1px solid rgb(181, 181, 181);
+    box-shadow: inset 0 0 200px 5px #e5e5e5, inset 0 0 10px 2px black;
+    border-radius: 5px;
+}
 /***************************************************/
 
 
@@ -186,12 +192,6 @@
             .img-logo img {width: 30%;margin-top: 20%;}
         
         .setting-info { padding: 2% 1% 1% 5%;}
-            .setting-info .border-table { 
-                border-radius: 10px;
-                border: 1px solid rgb(181, 181, 181);
-                box-shadow: inset 0 0 200px 5px #e5e5e5, inset 0 0 10px 2px black;
-                border-radius: 5px;
-            }
             .content-table {
                 display: grid;
                 grid-template-columns: 4fr 3fr;
@@ -226,9 +226,10 @@
                     
         .block-buttom { text-align: center; padding-top: 30px; }
             .block-buttom button { 
-                min-width: 200px; 
-                margin-top: 10px; 
-                font-size: 10pt;
+                min-width: 200px;
+                margin-top: 10px;
+                height: 35px;
+                font-size: 9pt;
                 box-shadow: inset 0 0 7px 0 white;
             }
 /**********************************************/
