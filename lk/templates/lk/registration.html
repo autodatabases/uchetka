@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+	<meta charset="UTF-8">
+	<title>Registration</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static "css/bootstrap/css/bootstrap.min.css" %}">
+	<link rel="stylesheet" href="{% static "css/registration.css" %}">
+</head>
+<body>
+	<div class="reg-form shadow shadow-lg">
+		<div class="content">
+			<div class="title-form">Регистрация</div>
+			<div class="fields-form">
+				<div class="company">
+					<div class="title"></div>
+					<div class="fields">
+						<div class="input-group flex-nowrap">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="addon-wrapping"><i class="fas fa-building"></i></span>
+							</div>
+							<input type="text" class="form-control" placeholder="Название компании" aria-label="Username" aria-describedby="addon-wrapping">
+						</div>
+						<div class="input-group flex-nowrap">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="addon-wrapping"><i class="fas fa-building"></i></span>
+							</div>
+							<input type="text" class="form-control" placeholder="Название компании" aria-label="Username" aria-describedby="addon-wrapping">
+						</div>
+						<div class="input-group flex-nowrap">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="addon-wrapping"><i class="fas fa-building"></i></span>
+							</div>
+							<input type="text" class="form-control" placeholder="Название компании" aria-label="Username" aria-describedby="addon-wrapping">
+						</div>
+						<div class="input-group flex-nowrap">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="addon-wrapping"><i class="fas fa-building"></i></span>
+							</div>
+							<input type="text" class="form-control" placeholder="Название компании" aria-label="Username" aria-describedby="addon-wrapping">
+						</div>
+						
+					</div>
+				</div>
+				<div class="director">
+					<div class="title"></div>
+					<div class="fields">
+						
+						<div class="input-group flex-nowrap">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="addon-wrapping"><i class="fas fa-user-tie"></i></span>
+							</div>
+							<input type="text" class="form-control" placeholder="Логин" aria-label="Username" aria-describedby="addon-wrapping">
+						</div>
+						<div class="input-group flex-nowrap">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="addon-wrapping"><i class="fas fa-address-card"></i></span>
+							</div>
+							<input type="text" class="form-control" placeholder="Фамилия Имя Отчество" aria-label="Username" aria-describedby="addon-wrapping">
+						</div>
+						<div class="input-group flex-nowrap">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="addon-wrapping"><i class="fas fa-envelope"></i></span>
+							</div>
+							<input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping">
+						</div>
+						<div class="input-group flex-nowrap">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="addon-wrapping"><i class="fas fa-unlock"></i></span>
+							</div>
+							<input type="text" class="form-control" placeholder="Пароль" aria-label="Username" aria-describedby="addon-wrapping">
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="button-form">
+				<button class="btn btn-info">Отменить регистрацию</button>
+				<button class="btn btn-success">Зарегистрировать команию</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

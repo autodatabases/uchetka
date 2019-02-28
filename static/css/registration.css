@@ -1,0 +1,61 @@
+html, body { height: 100%; }
+
+.reg-form {
+    margin: 8% auto;
+    height: 60%;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid #dedede;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    height: 100%;
+}
+.title-form { 
+    text-align: center;
+    padding: 12px;
+    font-size: 15pt;
+    font-family: monospace;
+    color: #1b5e7e;
+}
+
+.fields-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.company {
+    border-right: 1px solid #c7c7c7;
+    padding: 20px;
+}
+.director { padding: 20px; }
+
+
+.title { border-top: 1px solid #c7c7c7;}
+.title::before {
+    position: absolute;
+    height: 20px;
+    width: 100px;
+    margin: -13px 0 0 8em;
+    background: white;
+    text-align: center;
+    color: #656565;
+}
+
+.fields { padding: 30px 10px 10px 10px  }
+
+.director .title::before { content: 'Директор' }
+.company .title::before { content: 'Компания' }
+.input-group { margin-top: 20px; }
+.input-group input { font-size: 10pt;}
+.input-group span { min-width: 44px; text-align: center;}
+
+
+.button-form { padding: 15px; text-align: center;}
+.button-form button {
+    font-size: 8pt;
+    height: 30px;
+    box-shadow: inset 0 0 5px;
+    min-width: 165px;
+}

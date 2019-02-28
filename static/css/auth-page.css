@@ -6,7 +6,7 @@
     border: 1px solid #dedede;
 }
 
-.auth-form button {
+.auth-form button, .auth-form a {
 	min-width: 120px;
     height: 35px;
     font-size: 11pt;

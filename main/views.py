@@ -29,3 +29,13 @@ class AuthUser(View):
 			# the authentication system was unable to verify the username and password
 			print("The username and password were incorrect.")
 			return render(request, 'lk/auth-page.html')
+
+
+class RegCompany(View):
+	# GET Запрос
+	def get(self, request):
+		return render(request, 'lk/registration.html')
+	# POST Запрос
+	def post(self, request):
+		print(request.POST)
+		
