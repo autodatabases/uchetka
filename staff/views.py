@@ -31,6 +31,8 @@ class StaffPage(View):
 				data = self.delete_user(request)
 			if request.POST['type'] == 'load_info':
 				data = self.load_user_info(request)
+			if request.POST['type'] == 'add_user':
+				data = self.add_user(request)
 			return HttpResponse(json.dumps(data), content_type="application/json")
 		else:
 			self.add_user(request)
@@ -43,13 +45,14 @@ class StaffPage(View):
 				{'param': str(user.username)},
 				{'param': str(user.email)},
 				{'param': str(user.groups.all()[0].name)},
-				{'param': ''}]
+				{'param': 'Авторазбор №1'}]
 		return data
 
 	# Добавить сотрудника
 	def add_user(self, request):
 		bound_form = NewStaffUser(request.POST)
 		if bound_form.is_valid():
+			print('good')
 			user = User.objects.create_user(username=bound_form.cleaned_data['staff_login'],
 											email=bound_form.cleaned_data['staff_email'],
 											password=bound_form.cleaned_data['staff_password'],
@@ -58,6 +61,7 @@ class StaffPage(View):
 			user.groups.add(Group.objects.get(name=bound_form.cleaned_data['staff_group']))
 			company = Company.objects.filter(staff_users=request.user)
 			company[0].staff_users.add(user)
+		return
 
 	# Удалить сотрудника
 	def delete_user(self, request):

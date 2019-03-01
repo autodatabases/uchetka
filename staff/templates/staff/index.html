@@ -51,7 +51,7 @@
 			</div>
 			<div class="row-button">
 				<button typw="button" id="open" class="btn btn-danger" onclick="new_staff_user(this)">Отмена</button>
-				<button type="submit" class="btn btn-success">Добавить сотрудника</button>
+				<button type="button" class="btn btn-success" onclick="add_user(this)">Добавить сотрудника</button>
 			</div>
 		</form>
 	</div>
@@ -103,33 +103,35 @@
 						</select>
 					</div>
 					<div class="user-info">
-						<table>
-							<tr>
-								<td>Сотрудник:</td>
-								<td>:</td>
-								<td class="param-value">Сотдрудник не выбран</td>
-							</tr>
-							<tr>
-								<td>Логин:</td>
-								<td>:</td>
-								<td class="param-value">...</td>
-							</tr>
-							<tr>
-								<td>Email</td>
-								<td>:</td>
-								<td class="param-value">...</td>
-							</tr>
-							<tr>
-								<td>Уровень прав:</td>
-								<td>:</td>
-								<td class="param-value">...</td>
-							</tr>
-							<tr>
-								<td>Место работы (авторазбор)</td>
-								<td>:</td>
-								<td class="param-value">...</td>
-							</tr>
-						</table>	
+						<div class="border-table">
+							<table>
+								<tr>
+									<td>Сотрудник:</td>
+									<td>:</td>
+									<td class="param-value">Сотдрудник не выбран</td>
+								</tr>
+								<tr>
+									<td>Логин:</td>
+									<td>:</td>
+									<td class="param-value">...</td>
+								</tr>
+								<tr>
+									<td>Email</td>
+									<td>:</td>
+									<td class="param-value">...</td>
+								</tr>
+								<tr>
+									<td>Уровень прав:</td>
+									<td>:</td>
+									<td class="param-value">...</td>
+								</tr>
+								<tr>
+									<td>Место работы (авторазбор)</td>
+									<td>:</td>
+									<td class="param-value">...</td>
+								</tr>
+							</table>	
+						</div>
 					</div>
 					<div class="logo">
 						<img src="{% static "img/staff-info.png" %}" alt="">

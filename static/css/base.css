@@ -38,6 +38,57 @@ img, embed, object, video, svg {max-width: 100%;}
   border-radius: 0.25rem;
 }
 
+
+/*********************    Базовые элементы    ********************************/
+
+/*** Оформление блоков ***/
+.block-desing {
+    overflow: hidden;
+    border: 1px solid rgba(158, 158, 158, 0.45);
+    border-radius: 15px;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4), 
+                inset 0 0 300px 10px rgba(0, 0, 0, 0.1)
+}
+
+.border-table {
+    border-radius: 10px;
+    border: 1px solid rgb(181, 181, 181);
+    box-shadow: inset 0 0 200px 5px #e5e5e5, inset 0 0 10px 2px black;
+}
+.border-table td { 
+    border-bottom: 1px solid #c7c7c7; 
+    font-style: italic;
+    color: #3d6589;}
+
+.header-title-block { 
+    position: absolute;
+    height: 40px;
+    min-width: 250px;
+    font-size: 10pt;
+    padding: 11px;
+    text-align: center;
+    color: #637e96;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: white;
+    box-shadow: inset -2px -4px 7px 0 rgb(154, 154, 154), 
+                inset 0 0 200px 0 #d1d1d1;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 10px;
+}
+
+.staff-info .header-title-block { width: 350px; }
+.right-column .header-title-block { 
+    position: relative;
+    border-bottom-right-radius: 0;
+    box-shadow: inset 0px -4px 7px 0 rgb(154, 154, 154), 
+                inset 0 0 200px 0 #d1d1d1;
+}
+
+
+
+
 /*********************     Разметка страницы    ********************************/
 .backLoad { 
     position: fixed;
@@ -737,22 +788,39 @@ html.modal-active, body.modal-active {
     position: absolute;
     width: 200px;
     height: 80px;
-    background: rgba(94, 141, 184, 0.35);
     top: -55px;
     right: 25px;
-    border-radius: 10px;
+    border-radius: 8px;
     z-index: 4;
-    border: 1px solid rgb(172, 201, 228);
-    box-shadow: inset 0 0 10px 0 white;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     text-align: center;
     font-size: 9pt;
     padding-top: 34px;
-    color: #4d5b68;
     font-family: initial;
     font-weight: bold;
     text-shadow: -1px -1px rgba(255, 255, 255, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3);
 }
+
+.alert-window.info {
+    background: rgb(210, 234, 255);
+    border: 1px solid rgb(95, 142, 184);
+    box-shadow: inset 0 0 70px 0 #5f8eb8, inset 0 0 5px 0;
+    color: #4d5b68;
+}
+
+.alert-window.error {
+    background: rgb(255, 226, 226);
+    border: 1px solid rgb(202, 42, 42);
+    box-shadow: inset 0 0 70px 0 #cf0f0f, inset 0 0 5px 0;
+    color: #4d5b68;
+}
+.alert-window.good{
+    background: rgb(232, 255, 226);
+    border: 1px solid rgb(111, 190, 123);
+    box-shadow: inset 0 0 70px 0 #0fcf4a, inset 0 0 5px 0;
+    color: #4d5b68;
+}
+
 .alert-window.show {top: 55px;}
 .alert-window .close {
     position: absolute;

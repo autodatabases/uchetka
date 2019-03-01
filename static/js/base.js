@@ -152,7 +152,15 @@ function change_modal_content(changeButton) {
 
 function not_permissions() {
 	document.querySelector('.alert-message').innerHTML = 'Недостаточно прав!';
+	document.querySelector('.alert-window').classList.add('error');
 	document.querySelector('.alert-window').classList.add('show');
 }
 
 function close_alert(i) { i.parentElement.parentElement.classList.remove('show'); }
+function auto_close_alert() { 
+	setTimeout(
+		function(){
+			document.querySelector('.alert-window').classList.remove('show');
+		}, 3500
+	); 	
+}

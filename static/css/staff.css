@@ -23,55 +23,6 @@
 /*_______________________________________________________*/
 
 
-/************************/
-/*** Базовые элементы ***/
-/************************/
-
-/*** Оформление блоков ***/
-.block-desing {
-    overflow: hidden;
-	border: 1px solid rgba(158, 158, 158, 0.45);
-    border-radius: 15px;
-    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4), 
-    			inset 0 0 300px 10px rgba(0, 0, 0, 0.1)
-}
-
-.border-table {
-    border-radius: 10px;
-    border: 1px solid rgb(181, 181, 181);
-    box-shadow: inset 0 0 200px 5px #e5e5e5, inset 0 0 10px 2px black;
-}
-
-.header-title-block { 
-    position: absolute;
-    height: 40px;
-    min-width: 250px;
-    font-size: 10pt;
-    padding: 11px;
-    text-align: center;
-    color: #637e96;
-    font-family: 'Merriweather', serif;
-    font-weight: bold;
-    letter-spacing: 2px;
-    background: white;
-    box-shadow: inset -2px -4px 7px 0 rgb(154, 154, 154), 
-                inset 0 0 200px 0 #d1d1d1;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 10px;
-}
-
-.staff-info .header-title-block { width: 350px; }
-.right-column .header-title-block { 
-    position: relative;
-    border-bottom-right-radius: 0;
-    box-shadow: inset 0px -4px 7px 0 rgb(154, 154, 154), 
-                inset 0 0 200px 0 #d1d1d1;
-}
-
-/*_______________________________________________________*/
-
-
-
 /*************************/
 /*** Блок уровней прав ***/
 /*************************/
@@ -103,10 +54,7 @@
 
 .list-table tr:hover { background: rgba(139, 191, 236, 0.15); cursor: pointer; }
 
-.list-table td { 
-    border-bottom: 1px solid #c5c5c5;
-    padding: 5px 15px 5px 5px;
-}
+.list-table td { padding: 5px 15px 5px 5px;}
 .staff-group-title {width: 75%;} /*** Ячейка названия группы ***/
 .staff-group-edit:hover, .staff-group-delete:hover {text-decoration: underline;} /*** Ячейка названия группы ***/
 /*_______________________________________________________*/
@@ -135,18 +83,20 @@
 }
 
 /*** Таблица информации об сотруднике ***/
-.user-info table { margin: 15% 0 0 20%; }
+.user-info .border-table {
+    margin: 15% 0 0 16%;
+    padding: 23px 20px;
+    width: 85%;
+}
 .user-info table td i { margin-right: 10px; }
 .user-info table td {
 	padding: 5px;
     font-family: 'Roboto Slab', serif;
-    color: #757575;
     font-size: 10pt;
 }
 .param-value { 
 	text-align: right;
     text-decoration: underline;
-    font-style: italic;
     min-width: 230px;
 }
 
@@ -169,7 +119,7 @@
 }
 /*** Блок логотипа блока ***/
 .logo { text-align: center; }
-.logo img { width: 60%; margin-top: 25%; }
+.logo img { width: 45%; margin-top: 40%; }
 /*_______________________________________________________*/
 
 
@@ -190,9 +140,6 @@
     border-collapse: separate;
     border-spacing: 0px 5px;
 }
-
-.list-all-permissions table td { border-bottom: 1px solid lightgrey; }
-
 .param-title {
     width: 80%;
     padding: 0 0 0 5px;

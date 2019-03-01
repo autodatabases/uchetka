@@ -7,17 +7,17 @@
 {% block page_title %}Мои склады{% endblock page_title %}
 {% block mainpanel %}
 	<div class="stockpage-container">
-		<div class="left">
-			<div class="top-container">
-				<div class="title-block">Общая информация</div>
+		<div class="left ">
+			<div class="small-info-block block-desing">
+				<div class="header-title-block">Общая информация</div>
 				<div class="select-stock">{{form_stock.stock}}</div>
-				<div class="small-info">
+				<div class="small-info border-table ">
 					<table>
 						<tr>
 							<td>Адресс:</td>
 							<td class="middle-td">:</td>
 							<td>г.Ижевск, улица Ленина, д. 101</td>
-							<td class="show-in-map">Показать на карте <i class="fas fa-long-arrow-alt-right"></i></td>
+							
 						</tr>
 						<tr>
 							<td>Количество деталей</td>
@@ -29,19 +29,16 @@
 							<td class="middle-td">:</td>
 							<td>12 203 030 руб</td>
 						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
+						
 					</table>
+					<div class="show-in-map">Показать на карте <i class="fas fa-long-arrow-alt-right"></i></div>
 				</div>
 			</div>
-			<div class="bottom-container">
-				<div class="title-block">Полная информация</div>
+			<div class="bottom-container block-desing">
+				<div class="header-title-block">Полная информация</div>
 			</div>
 		</div>
-		<div class="right">
+		<div class="right block-desing">
 	        <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 	        <script type="text/javascript">
 	            var map;

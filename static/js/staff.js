@@ -17,6 +17,44 @@ function new_staff_user(button) {
 	}
 }
 
+
+
+function add_user(button) {
+	var form = button.parentElement.parentElement;
+	console.log(form.querySelector('#id_staff_login').value);
+	form.parentElement.setAttribute('style', 'display:none');
+	loader('on');
+	$.ajax({
+        url: '/lk/staff/',
+        type: 'post',
+        data: {
+            'csrfmiddlewaretoken': csrftoken,
+            'type': 'add_user',
+            'staff_login': form.querySelector('#id_staff_login').value,
+            'staff_fio': form.querySelector('#id_staff_fio').value,
+            'staff_email': form.querySelector('#id_staff_email').value,
+            'staff_password': form.querySelector('#id_staff_password').value,
+            'staff_group': form.querySelector('#id_staff_group').options[form.querySelector('#id_staff_group').selectedIndex].value,
+            'staff_stock': form.querySelector('#id_staff_stock').options[form.querySelector('#id_staff_stock').selectedIndex].value,
+        },
+        success: function (data) {
+        	document.querySelector('.alert-window').classList.add('good');
+        	document.querySelector('.alert-message').innerHTML = 'Сотдрудник успешно добавлен!';
+        	loader('off');
+			setTimeout (
+				function() {
+        			document.querySelector('.alert-window').classList.add('show');
+				}, 400
+			);
+            auto_close_alert();
+        }
+    });
+}
+
+
+
+
+
 function delete_user(button) {
 	loader('on');
 	var select = document.querySelector('#all_staff');
@@ -31,9 +69,11 @@ function delete_user(button) {
             },
             success: function (data) {
             	if (data.user_id == 'Not delete login user') {
-            		document.querySelector('.alert-message').innerHTML = 'Нельзя удалить директора!';
+            		document.querySelector('.alert-window').classList.add('error');
+            		document.querySelector('.alert-message').innerHTML = 'Невозможно удалить себя!';
             	} else {
                 	select.remove(select.selectedIndex);
+                	document.querySelector('.alert-window').classList.add('good');
                 	document.querySelector('.alert-message').innerHTML = 'Сотдрудник успешно удален!';
             	}
             	loader('off');
@@ -42,6 +82,7 @@ function delete_user(button) {
             			document.querySelector('.alert-window').classList.add('show');
 					}, 400
 				);
+                auto_close_alert();
             }
         });
 }
@@ -72,12 +113,7 @@ function load_user_info(select) {
             	for (var i = 0; i < all_td.length; i++) {
             		all_td[i].innerHTML = data[i].param;
             	}
-            	setTimeout (
-					function() {
-            			loader('off');
-					}, 300
-				);
-            	
+    			loader('off');
             }
         });
 	}
