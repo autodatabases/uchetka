@@ -1,8 +1,10 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
 from django.views.generic import View
 
 from lk.models import *
+from .forms import * 
 # Create your views here.
 
 class AuthUser(View):
@@ -34,8 +36,24 @@ class AuthUser(View):
 class RegCompany(View):
 	# GET Запрос
 	def get(self, request):
-		return render(request, 'lk/registration.html')
+		return render(request, 'lk/registration.html', context={'forms': {'reg': RegForm}})
 	# POST Запрос
 	def post(self, request):
 		print(request.POST)
+		bound_form = RegForm(request.POST)
+		if bound_form.is_valid():
+			print(bound_form.cleaned_data)
+			user = User.objects.create_user(username=bound_form.cleaned_data['director_login'],
+											email=bound_form.cleaned_data['director_email'],
+											password=bound_form.cleaned_data['director_password'])
+			user.save()
+			company = Company.objects.create(title=bound_form.cleaned_data['company_title'],
+											 country=bound_form.cleaned_data['company_country'],
+											 region=bound_form.cleaned_data['company_region'],
+											 city=bound_form.cleaned_data['company_city'])
+			company.save()
+			company.staff_users.add(user)
+			login(request, user)
+			print(Company.objects.all())
+		return redirect('/lk/')
 		

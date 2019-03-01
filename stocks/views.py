@@ -5,7 +5,8 @@ from .forms import *
 from lk.models import *
 
 def get_page(request):
-	return render(request, 'stocks/index.html', context={'form_stock': SelectStock})
+	return render(request, 'stocks/index.html', context={'form_stock': SelectStock,
+														 'group_user': request.user.groups.all()[0].name})
 
 def create_stock(request):
 	bound_form = StockForm(request.POST)

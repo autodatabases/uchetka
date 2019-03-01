@@ -9,47 +9,53 @@
 
 {% block mainpanel %}
 	<div class="add-staff-user">
-		<div class="new-user-fields">
-			<div class="input-group mb-3">
-				<div class="input-group-prepend">
-					<span class="input-group-text" id="basic-addon1">Фамилия</span>
+		<form action="{% url 'staff:get_page' %}" method="POST">
+			{% csrf_token %}
+			<div class="new-user-fields">
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">Логин</span>
+					</div>
+					{{forms.staff.staff_login}}
 				</div>
-				<input type="text" class="form-control" placeholder="Например: Иванов" aria-label="Имя пользователя" aria-describedby="basic-addon1">
-			</div>
-			<div class="input-group mb-3">
-				<div class="input-group-prepend">
-					<span class="input-group-text" id="basic-addon1">Имя</span>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">ФИО</span>
+					</div>
+					{{forms.staff.staff_fio}}
 				</div>
-				<input type="text" class="form-control" placeholder="Например: Иван" aria-label="Имя пользователя" aria-describedby="basic-addon1">
-			</div>
-			<div class="input-group mb-3">
-				<div class="input-group-prepend">
-					<span class="input-group-text" id="basic-addon1">Отчество</span>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">Email</span>
+					</div>
+					{{forms.staff.staff_email}}
 				</div>
-				<input type="text" class="form-control" placeholder="Например: Иванович" aria-label="Имя пользователя" aria-describedby="basic-addon1">
-			</div>
-			<div class="input-group mb-3">
-				<div class="input-group-prepend">
-					<span class="input-group-text" id="basic-addon1">Должность</span>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">Пароль</span>
+					</div>
+					{{forms.staff.staff_password}}
 				</div>
-				<input type="text" class="form-control" placeholder="Например: Директор" aria-label="Имя пользователя" aria-describedby="basic-addon1">
-			</div>
-			<div class="input-group mb-3">
-				<div class="input-group-prepend">
-					<span class="input-group-text" id="basic-addon1">Уровень прав</span>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">Уровень прав</span>
+					</div>
+					{{forms.staff.staff_group}}
 				</div>
-				<select class="custom-select" id="inputGroupSelect01">
-					<option selected>Выбрать</option>
-					<option value="1">Директор</option>
-					<option value="2">Менеджер</option>
-				</select>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">Место работы</span>
+					</div>
+					{{forms.staff.staff_stock}}
+				</div>
 			</div>
-		</div>
-		<div class="row-button">
-			<button id="open" class="btn btn-danger" onclick="new_staff_user(this)">Отмена</button>
-			<button class="btn btn-success">Добавить сотрудника</button>
-		</div>
+			<div class="row-button">
+				<button typw="button" id="open" class="btn btn-danger" onclick="new_staff_user(this)">Отмена</button>
+				<button type="submit" class="btn btn-success">Добавить сотрудника</button>
+			</div>
+		</form>
 	</div>
+
 	<div class="staff-block">
 		<div class="left-column">
 			<div class="staff-group block-desing ">
@@ -89,29 +95,39 @@
 				<div class="header-title-block">Информация об сотруднике</div>
 				<div class="row-table-or-logo">
 					<div class="select-user">
-						<select name="stock" class="custom-select custom-select-sm" id="all_stock"></select>
+						<select name="stock" class="custom-select custom-select-sm" id="all_staff" onchange="load_user_info(this)">
+							<option value="none">Выбрать сотрудника ... </option>
+						{% for elem in staff_users %}
+							<option value="{{elem.pk}}">{{elem.first_name}}</option>
+						{% endfor %}
+						</select>
 					</div>
 					<div class="user-info">
 						<table>
 							<tr>
 								<td>Сотрудник:</td>
 								<td>:</td>
-								<td class="param-value">Иванов Иван Иванович</td>
+								<td class="param-value">Сотдрудник не выбран</td>
 							</tr>
 							<tr>
-								<td>Должность:</td>
+								<td>Логин:</td>
 								<td>:</td>
-								<td class="param-value">Директор</td>
+								<td class="param-value">...</td>
+							</tr>
+							<tr>
+								<td>Email</td>
+								<td>:</td>
+								<td class="param-value">...</td>
 							</tr>
 							<tr>
 								<td>Уровень прав:</td>
 								<td>:</td>
-								<td class="param-value">Директор</td>
+								<td class="param-value">...</td>
 							</tr>
 							<tr>
 								<td>Место работы (авторазбор)</td>
 								<td>:</td>
-								<td class="param-value">....</td>
+								<td class="param-value">...</td>
 							</tr>
 						</table>	
 					</div>
@@ -121,9 +137,9 @@
 				</div>
 				<hr>
 				<div class="button-block">
-					<button class="btn btn-danger">Удалить</button>
-					<button class="btn btn-warning" style="border: 1px solid #c59609;">Редактировать</button>
-					<button id="add_staff" class="btn btn-success" style="float: right;" onclick="new_staff_user(this)">Новый сотрудник</button>
+					<button class="btn btn-danger" onclick="delete_user(this)">Удалить</button>
+					<button class="btn btn-info">Редактировать</button>
+					<button id="add_staff" class="btn btn-success" style="float: right;" onclick="{% if stock_count > 0 %}new_staff_user(this){% else %}alert('Необходимо добавить хотя-бы 1 авторазбор.'){% endif %}">Новый сотрудник</button>
 				</div>
 			</div>
 		</div>
@@ -134,7 +150,7 @@
 						<table>
 							<tr>
 								<td class="param-title">Добавление товара</td>
-								<td><input checked disabled type="checkbox"></td>
+								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
 								<td class="param-title">Перемещение товара</td>
@@ -150,7 +166,7 @@
 							</tr>
 							<tr>
 								<td class="param-title">Создание продажи и связанных документов. </td>
-								<td><input checked disabled type="checkbox"></td>
+								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
 								<td class="param-title">Создание накладной поступления</td>
@@ -162,11 +178,11 @@
 							</tr>
 							<tr>
 								<td class="param-title">Проведение оплат, сверки</td>
-								<td><input checked disabled type="checkbox"></td>
+								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
 								<td class="param-title">Добавление нового авторазбора</td>
-								<td><input checked disabled type="checkbox"></td>
+								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
 								<td class="param-title">Добавление сотрудников</td>
@@ -174,7 +190,7 @@
 							</tr>
 							<tr>
 								<td class="param-title">Создание новго уровня прав</td>
-								<td><input checked disabled type="checkbox"></td>
+								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
 								<td class="param-title">Доступ к статистике/аналитике</td>
@@ -186,10 +202,6 @@
 							</tr>
 							<tr>
 								<td class="param-title">Выгрузка на площадки объявлений</td>
-								<td><input checked disabled type="checkbox"></td>
-							</tr>
-							<tr>
-								<td class="param-title">Редактирование на площадках объявлений</td>
 								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
@@ -198,35 +210,35 @@
 							</tr>
 							<tr>
 								<td class="param-title">Пункт № ...</td>
-								<td><input checked disabled type="checkbox"></td>
+								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
 								<td class="param-title">Пункт № ...</td>
-								<td><input checked disabled type="checkbox"></td>
+								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
 								<td class="param-title">Пункт № ...</td>
-								<td><input checked disabled type="checkbox"></td>
+								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
 								<td class="param-title">Пункт № ...</td>
-								<td><input checked disabled type="checkbox"></td>
+								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
 								<td class="param-title">Пункт № ...</td>
-								<td><input checked disabled type="checkbox"></td>
+								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
 								<td class="param-title">Пункт № ...</td>
-								<td><input checked disabled type="checkbox"></td>
+								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
 								<td class="param-title">Пункт № ...</td>
-								<td><input checked disabled type="checkbox"></td>
+								<td><input disabled type="checkbox"></td>
 							</tr>
 							<tr>
 								<td class="param-title">Пункт № ...</td>
-								<td><input checked disabled type="checkbox"></td>
+								<td><input disabled type="checkbox"></td>
 							</tr>
 
 						</table>

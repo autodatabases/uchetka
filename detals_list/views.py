@@ -40,7 +40,8 @@ class DetalList(View):
 				   			 'auto_select': MarkModelGen,
 				   			 'filters': {'small': SmallFilter, 'full': ''}},
 				   'selected': selected,
-				   'stockroom_count': Stock.objects.filter(company=(Company.objects.filter(staff_users=request.user)).count())}
+				   'stockroom_count': Stock.objects.filter(company=(Company.objects.filter(staff_users=request.user)).count()),
+				   'group_user': request.user.groups.all()[0].name}
 		return render(request, 'detals_list/index.html', context=context)
 
 

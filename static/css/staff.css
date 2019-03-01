@@ -99,7 +99,6 @@
     font-style: italic;
     color: #8a8a8a;
     height: 100%;
-    overflow-y: scroll;
 }
 
 .list-table tr:hover { background: rgba(139, 191, 236, 0.15); cursor: pointer; }
@@ -148,6 +147,7 @@
 	text-align: right;
     text-decoration: underline;
     font-style: italic;
+    min-width: 230px;
 }
 
 .button-block {
@@ -250,3 +250,4 @@
     font-size: 8pt;
     box-shadow: inset 0 0 5px 0;
 }
+

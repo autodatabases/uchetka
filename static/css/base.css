@@ -731,3 +731,31 @@ html.modal-active, body.modal-active {
 }
 }
 /*************************************/
+
+/*** Окно уведомлений ***/
+.alert-window {
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    background: rgba(94, 141, 184, 0.35);
+    top: -55px;
+    right: 25px;
+    border-radius: 10px;
+    z-index: 4;
+    border: 1px solid rgb(172, 201, 228);
+    box-shadow: inset 0 0 10px 0 white;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    text-align: center;
+    font-size: 9pt;
+    padding-top: 34px;
+    color: #4d5b68;
+    font-family: initial;
+    font-weight: bold;
+    text-shadow: -1px -1px rgba(255, 255, 255, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.alert-window.show {top: 55px;}
+.alert-window .close {
+    position: absolute;
+    margin: -27px 0 0 9px;
+    font-size: 8pt;
+}

@@ -2,15 +2,6 @@ from django.conf import settings
 from django.db import models
 from django.contrib.auth.models import User
 
-class Company(models.Model):
-	title = models.CharField(max_length=80)
-	country = models.CharField(max_length=50)
-	region = models.CharField(max_length=100)
-	city = models.CharField(max_length=50)
-	staff_users = models.ManyToManyField(User, blank=True)
-	def __str__(self):
-		return self.title
-
 class AutoMark(models.Model):
 	title = models.CharField(max_length=80)
 	value = models.CharField(max_length=80)
@@ -121,15 +112,21 @@ class Photo(models.Model):
 	photo = models.ImageField(blank=True, null=True)
 	have = models.CharField(max_length=10)
 
-class Stock (models.Model):
+class Stock(models.Model):
+	class Meta:
+		permissions = (
+			("view_company_stock", "Просмотр складов компании"),
+			("add_company_stock", "Добавлние складов компании"),
+			("edit_company_stock", "Изменение складов компании"),
+			("remove_company_stock", "Удаление складов компании"),
+			)
+
 	title = models.CharField(max_length=50)
-	value = models.CharField(max_length=50)
 	country = models.CharField(max_length=50)
 	region = models.CharField(max_length=100)
 	city = models.CharField(max_length=50)
 	street = models.CharField(max_length=100)
 	house = models.IntegerField()
-	company = models.ForeignKey('Company', on_delete=models.CASCADE)
 
 	def __str__(self):
 		return self.title
@@ -145,6 +142,17 @@ class UserDetal(models.Model):
 	def __str__(self):
 		return self.detail.title
 
+
+class Company(models.Model):
+	title = models.CharField(max_length=80)
+	country = models.CharField(max_length=50)
+	region = models.CharField(max_length=100)
+	city = models.CharField(max_length=50)
+	staff_users = models.ManyToManyField(User, blank=True)
+	stocks = models.ManyToManyField(Stock, blank=True)
+	
+	def __str__(self):
+		return self.title
 
 
 

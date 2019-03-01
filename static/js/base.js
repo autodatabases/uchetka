@@ -1,7 +1,18 @@
 //после загрузки страницы
 window.onload = function(){
-	document.querySelector('.cssload-loader').removeAttribute('style');
-	document.querySelector('.backLoad').setAttribute('style', 'display:none');
+	loader('off');
+}
+
+// прелоадер
+function loader(param) {
+	if (param == 'on') {
+		document.querySelector('.backLoad').removeAttribute('style');
+		document.querySelector('.cssload-loader').setAttribute('style', 'display: block;');
+	} 
+	if (param == 'off') {
+		document.querySelector('.backLoad').setAttribute('style', 'display: none');
+		document.querySelector('.cssload-loader').removeAttribute('style');
+	}
 }
 
 
@@ -32,6 +43,7 @@ $.ajaxSetup({
     }
 });
 // end
+
 // Loader
 function show_loader(){
 	document.querySelector('.cssload-loader').setAttribute('style', 'display: block;');
@@ -137,3 +149,10 @@ function change_modal_content(changeButton) {
 		modalContent.querySelector('.stock-create').classList.remove('show');
 	}
 }
+
+function not_permissions() {
+	document.querySelector('.alert-message').innerHTML = 'Недостаточно прав!';
+	document.querySelector('.alert-window').classList.add('show');
+}
+
+function close_alert(i) { i.parentElement.parentElement.classList.remove('show'); }
