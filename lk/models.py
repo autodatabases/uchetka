@@ -21,7 +21,7 @@ class AutoGeneration(models.Model):
 	title = models.CharField(max_length=80)
 	value = models.CharField(max_length=80)
 	year = models.CharField(max_length=80)
-	model = models.ForeignKey('AutoModel', on_delete=models.CASCADE)
+	model = models.ForeignKey('AutoModel', on_delete=models.CASCADE, blank=True, null=True)
 
 	def __str__(self):
 		return self.title
@@ -93,16 +93,16 @@ class AutoDonor(models.Model):
 	mark = models.ForeignKey('AutoMark', on_delete=models.PROTECT)
 	model = models.ForeignKey('AutoModel', on_delete=models.PROTECT)
 	generation = models.ForeignKey('AutoGeneration', on_delete=models.PROTECT)
-	kuzov = models.ForeignKey('AutoKuzov', on_delete=models.PROTECT)
-	year = models.ForeignKey('AutoYearProduction', on_delete=models.PROTECT)
-	engine_type = models.ForeignKey('AutoEngineType', on_delete=models.PROTECT)
-	engine_size = models.ForeignKey('AutoEngineSize', on_delete=models.PROTECT)
-	transmission = models.ForeignKey('AutoTransmission', on_delete=models.PROTECT)
-	color = models.ForeignKey('AutoColor', on_delete=models.PROTECT)
-	helm = models.ForeignKey('AutoHelm', on_delete=models.PROTECT)
-	privod = models.ForeignKey('AutoPrivod', on_delete=models.PROTECT)
-	probeg = models.IntegerField()
-	vin_number = models.CharField(max_length=50)
+	kuzov = models.ForeignKey('AutoKuzov', on_delete=models.PROTECT, blank=True, null=True)
+	year = models.ForeignKey('AutoYearProduction', on_delete=models.PROTECT, blank=True, null=True)
+	engine_type = models.ForeignKey('AutoEngineType', on_delete=models.PROTECT, blank=True, null=True)
+	engine_size = models.ForeignKey('AutoEngineSize', on_delete=models.PROTECT, blank=True, null=True)
+	transmission = models.ForeignKey('AutoTransmission', on_delete=models.PROTECT, blank=True, null=True)
+	color = models.ForeignKey('AutoColor', on_delete=models.PROTECT, blank=True, null=True)
+	helm = models.ForeignKey('AutoHelm', on_delete=models.PROTECT, blank=True, null=True)
+	privod = models.ForeignKey('AutoPrivod', on_delete=models.PROTECT, blank=True, null=True)
+	probeg = models.IntegerField(blank=True, null=True)
+	vin_number = models.CharField(max_length=50, blank=True, null=True)
 
 	def __str__(self):
 		return self.mark.title + ' ' + self.model.title + ' ' + self.generation.year
@@ -138,9 +138,9 @@ class UserDetal(models.Model):
 	description = models.TextField(null=True, blank=True)
 	stockroom = models.ForeignKey('Stock', on_delete=models.CASCADE)
 	company = models.ForeignKey('Company', on_delete=models.CASCADE)
-	photo = models.ForeignKey('Photo', on_delete=models.CASCADE, default=1)
+	photo = models.ForeignKey('Photo', on_delete=models.CASCADE, default=1, blank=True, null=True)
 	def __str__(self):
-		return self.detail.title
+		return self.detal.title
 
 
 class Company(models.Model):

@@ -157,10 +157,16 @@ function not_permissions() {
 }
 
 function close_alert(i) { i.parentElement.parentElement.classList.remove('show'); }
-function auto_close_alert() { 
+function auto_close_alert() {
+	setTimeout(
+		function(){
+			document.querySelector('.alert-window').classList.add('transparent');
+		}, 3500
+	);  
 	setTimeout(
 		function(){
 			document.querySelector('.alert-window').classList.remove('show');
-		}, 3500
-	); 	
+		}, 5500
+	);
+	document.querySelector('.alert-window').classList.remove('transparent');	
 }

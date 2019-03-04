@@ -35,7 +35,6 @@ class StaffPage(View):
 				data = self.add_user(request)
 			return HttpResponse(json.dumps(data), content_type="application/json")
 		else:
-			self.add_user(request)
 			return redirect('/lk/staff/')
 	
 	# Загрузить информацию о сотруднике		
@@ -61,7 +60,7 @@ class StaffPage(View):
 			user.groups.add(Group.objects.get(name=bound_form.cleaned_data['staff_group']))
 			company = Company.objects.filter(staff_users=request.user)
 			company[0].staff_users.add(user)
-		return
+		return {'newuser_id': str(user.pk), 'newuser_name': user.first_name}
 
 	# Удалить сотрудника
 	def delete_user(self, request):

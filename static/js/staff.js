@@ -20,8 +20,13 @@ function new_staff_user(button) {
 
 
 function add_user(button) {
+    function add_option_staff(data) {
+        var select = document.querySelector('#all_staff').options;
+        select[select.length] = new Option(data.newuser_name, data.newuser_id, true)
+    }
+
 	var form = button.parentElement.parentElement;
-	console.log(form.querySelector('#id_staff_login').value);
+
 	form.parentElement.setAttribute('style', 'display:none');
 	loader('on');
 	$.ajax({
@@ -38,9 +43,11 @@ function add_user(button) {
             'staff_stock': form.querySelector('#id_staff_stock').options[form.querySelector('#id_staff_stock').selectedIndex].value,
         },
         success: function (data) {
+            console.log(data);
         	document.querySelector('.alert-window').classList.add('good');
         	document.querySelector('.alert-message').innerHTML = 'Сотдрудник успешно добавлен!';
         	loader('off');
+            add_option_staff(data);
 			setTimeout (
 				function() {
         			document.querySelector('.alert-window').classList.add('show');

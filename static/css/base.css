@@ -51,14 +51,15 @@ img, embed, object, video, svg {max-width: 100%;}
 }
 
 .border-table {
-    border-radius: 10px;
+    border-radius: 4px;
     border: 1px solid rgb(181, 181, 181);
     box-shadow: inset 0 0 200px 5px #e5e5e5, inset 0 0 10px 2px black;
 }
 .border-table td { 
     border-bottom: 1px solid #c7c7c7; 
     font-style: italic;
-    color: #3d6589;}
+    color: #3d6589;
+  }
 
 .header-title-block { 
     position: absolute;
@@ -826,4 +827,8 @@ html.modal-active, body.modal-active {
     position: absolute;
     margin: -27px 0 0 9px;
     font-size: 8pt;
+}
+.alert-window.transparent{
+    transition: all 2s ease;
+    opacity: 0;
 }

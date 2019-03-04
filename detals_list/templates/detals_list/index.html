@@ -9,6 +9,21 @@
 {% block mainpanel %}
 <link rel="stylesheet" href="{% static "css/detals_list.css" %}">
 <link rel="stylesheet" href="{% static "css/donor_panel.css" %}">
+<div class="pag-panel">
+	<ul>
+		<li class="prev-page"><a href="?page=1"><i class="fas fa-angle-double-left"></i></a></li>
+		<li class="prev-page"><a href="?page={{active_page|add:-1}}"><i class="fas fa-chevron-left"></i></a></li>
+		{% for num in page.page_range %}
+			{% if  num == active_page %}
+				<li class="active"><a href="?page={{num}}">{{num}}</a></li>
+			{% elif num > active_page|add:-2 and num < active_page|add:2 %}
+				<li class="not-active"><a href="?page={{num}}">{{num}}</a></li>
+			{% endif %}
+		{% endfor %}
+		<li class="next-page"><a href="?page={{active_page|add:1}}"><i class="fas fa-chevron-right"></i></a></li>
+		<li class="prev-page"><a href="?page=22"><i class="fas fa-angle-double-right"></i></a></li>
+	</ul>	
+</div>
 <div class="mainpanel detals_list">
 	<div class="list">
 		<div class="filterBack">

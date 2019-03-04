@@ -1,4 +1,6 @@
 import json
+
+from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.generic import View
@@ -13,28 +15,36 @@ from stocks.forms import *
 class DetalList(View):
 	# GET Запрос	
 	def get(self, request):
-		company = Company.objects.filter(staff_users=request.user)
-		print(company[0])
-		query_result = UserDetal.objects.filter(company=company[0])
-		print(query_result)
-		return self.render_template(request, query_result, None)
+		num_page = request.GET.get('page', 1)
+		if num_page == '0': 
+			num_page = 1
+		return self.render_template(request, self.filter_detals(request, None), None, num_page)
 
 	# POST Запрос
 	def post(self, request):
 		print(request.POST)
 		params = request.POST.getlist('param_filter')
+		query_result = self.filter_detals(request, params)
 		selected = {'price': params[0], 'detal': params[1],	'mark': params[2], 'model': params[3], 'generation': params[4], 'number': params[5], 'stock': params[6], 'cell': params[7]}
-		return self.render_template(request, self.filter_detals(request, params), selected)
+		return self.render_template(request, query_result, selected)
 
 	# Фильтрация деталей
 	def filter_detals(self, request, params):
-		query_result = UserDetal.objects.filter(company=Company.objects.filter(staff_users=request.user))[:25]
+		company = Company.objects.filter(staff_users=request.user)
+		if params == None: # Отфильтровать детали по компании
+			query_result = Paginator(UserDetal.objects.filter(company=company[0]), 25)
+		else: # Отфильтровать детали компании по параметрам
+			query_result = Paginator(UserDetal.objects.filter(company=company[0]), 25)
 		return query_result
 
 	# Рендеринг шаблона
-	def render_template(self, request, query_result, selected):
-		all_result = query_result.count()
-		context = {'all_detals' : [{'detal': query_result[i], 'count': i+1 } for i in range(all_result)],
+	def render_template(self, request, result, selected, num_page=1):
+		query_result = result.page(num_page).object_list
+		all_detals = query_result.count()
+		print(dir(result))
+		context = {'all_detals' : [{'detal': query_result[i], 'count': i+1 } for i in range(all_detals)],
+				   'page': result,
+				   'active_page': int(num_page),
 				   'forms': {'donor': DonorForm, 
 				   			 'add_stock': StockForm,
 				   			 'auto_select': MarkModelGen,
@@ -43,6 +53,8 @@ class DetalList(View):
 				   'stockroom_count': Stock.objects.filter(company=(Company.objects.filter(staff_users=request.user)).count()),
 				   'group_user': request.user.groups.all()[0].name}
 		return render(request, 'detals_list/index.html', context=context)
+
+
 
 
 	
@@ -83,11 +95,11 @@ def small_filter(request):
 		if request.POST['filterValue'] == 'all':
 			query_detals = UserDetal.objects.all()
 		else:
-			query_detals = UserDetal.objects.filter(detail=AutoDetail.objects.get(value=request.POST['filterValue']))
+			query_detals = UserDetal.objects.filter(detal=AutoDetal.objects.get(value=request.POST['filterValue']))
 		
 		arr_detal = []
 		for elem in query_detals:
-			arr_detal.append({'detal': {'title': elem.detail.title, 'value': elem.detail.value},
+			arr_detal.append({'detal': {'title': elem.detal.title, 'value': elem.detal.value},
 							  'stockroom': {'title': elem.stockroom.title, 'value': '1'},
 							  'donor_info': {'id_donor': elem.donor_info.pk,
 							  				 'mark': elem.donor_info.mark.title, 
