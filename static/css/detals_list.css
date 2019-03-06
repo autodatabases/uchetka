@@ -81,7 +81,7 @@
 .apply-filter { opacity: 0.7;}
 .apply-filter:hover { opacity: 1; cursor: pointer;}
 
-.smallFilter select { height: 27px; font-size: 8pt; }
+.smallFilter select, .smallFilter input { height: 27px; font-size: 8pt; }
 
 .fullFilter { width: 95%; }
 
@@ -310,15 +310,16 @@ td.detalNumber, td.detalCheckBox {padding: 0.35rem;}
     padding: 14px;
     position: fixed;
     top: 25%;
-    right: 50px;
+    right: 5%;
     width: 20%;
     height: 70px;
     text-align: center;
     text-shadow: 2px 5px 10px;
     font-family: 'Abril Fatface', cursive;
-    opacity: 0;
     transition: all 0.5s ease;
+    opacity: 0.5;
 }
+.pag-panel:hover { opacity: 1; }
 
 .pag-panel ul {	display: -webkit-inline-box;}
 .pag-panel ul li {

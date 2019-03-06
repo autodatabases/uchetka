@@ -89,6 +89,24 @@ function change_params_donor() {
 
 function load_models(selectMark) {
 	var panel = selectMark.parentElement.parentElement.parentElement;
+	var selectModel = panel.querySelector('#all_models');
+	var length_options = selectModel.options.length;
+	function clear_options(len) {
+		console.log(len);
+		for (i = 0; i < selectModel.options.length; i++) {
+			console.log(selectModel.options[i]);
+			selectModel.options[i].remove();
+		};
+	}
+
+	function add_new_options(data) {
+		selectModel.options[0] = new Option(('noselect', 'Все модели'));
+		selectModel.value = 'noselect';
+		for (var i = 0; i < data.models.length; i++) {
+			selectModel.options[i+1] = new Option(data.models[i].title, data.models[i].value);
+		};
+	}
+
 	$.ajax({
 		url: '/lk/add_auto/select_auto/',
 		type: 'post',
@@ -97,11 +115,11 @@ function load_models(selectMark) {
 			'csrfmiddlewaretoken': csrftoken
 		},
 		success: function (data) {
-			console.log('Loading models is good');
-			var selectModel = panel.querySelector('#all_models');
-			for (var i = 0; i < data.models.length; i++) {
-				selectModel.options[i] = new Option(data.models[i].title, data.models[i].value)
-			}
+			clear_options(length_options);
+			setTimeout(function(){
+				add_new_options(data);
+			}, 1500);
+			
 		}
 	});
 }
@@ -118,8 +136,9 @@ function load_generations(selectModel) {
 		success: function (data) {
 			console.log('done');
 			var selectGen = panel.querySelector('#all_generations');
+			selectGen.options[0] = new Option(('noselect', 'Все поколения'))
 			for (var i = 0; i < data.generations.length; i++) {
-				selectGen.options[i] = new Option(data.generations[i].title, data.generations[i].value)
+				selectGen.options[i+1] = new Option(data.generations[i].title, data.generations[i].value)
 			}
 		}
 	});

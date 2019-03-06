@@ -1,3 +1,11 @@
+window.onscroll = function() {
+
+}
+
+$(document.querySelector('.smallFilter').querySelectorAll('select')).change(function(){
+    console.log(this.value);
+});
+
 
 // Боковая панель
 function move_panel(elem_td) {

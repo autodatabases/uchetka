@@ -18,30 +18,42 @@ class DetalList(View):
 		num_page = request.GET.get('page', 1)
 		if num_page == '0': 
 			num_page = 1
-		return self.render_template(request, self.filter_detals(request, None), None, num_page)
+		company = Company.objects.filter(staff_users=request.user)
+		detals_company = UserDetal.objects.filter(company=company[0])
+		query_result = Paginator(detals_company, 25)
+		return self.render_template(request, query_result, num_page)
 
 	# POST Запрос
 	def post(self, request):
 		print(request.POST)
-		params = request.POST.getlist('param_filter')
-		query_result = self.filter_detals(request, params)
-		selected = {'price': params[0], 'detal': params[1],	'mark': params[2], 'model': params[3], 'generation': params[4], 'number': params[5], 'stock': params[6], 'cell': params[7]}
-		return self.render_template(request, query_result, selected)
+		query_result = self.filter_detals(request)
+		return self.render_template(request, query_result)
 
 	# Фильтрация деталей
-	def filter_detals(self, request, params):
+	def filter_detals(self, request):
 		company = Company.objects.filter(staff_users=request.user)
-		if params == None: # Отфильтровать детали по компании
-			query_result = Paginator(UserDetal.objects.filter(company=company[0]), 25)
-		else: # Отфильтровать детали компании по параметрам
-			query_result = Paginator(UserDetal.objects.filter(company=company[0]), 25)
-		return query_result
+		detals_company = UserDetal.objects.filter(company=company[0])
+		if request.POST['detal'] != 'noselect':
+			detals_company = detals_company.filter(detal__value=request.POST['detal'])
+		if request.POST['mark'] != 'noselect':
+			donor =AutoDonor.objects.filter(mark__value=request.POST['mark'])
+			detals_company = detals_company.filter(donor_info__in=donor)
+		# if request.POST['model'] != 'noselect':
+		# 	detals_company = detals_company.filter(donor_info__model=AutoModel.objects.get(value=request.POST['model']))		
+		# if request.POST['generation'] != 'noselect':
+		# 	detals_company = detals_company.filter(donor_info__generation=AutoGeneration.objects.get(value=request.POST['generation']))		
+		# if request.POST['number'] != 'noselect':
+		# 	pass
+		# if request.POST['stock'] != 'noselect':	
+		# 	detals_company = detals_company.filter(stockroom=Stock.objects.get(pk=request.POST['stock']))	
+		# if request.POST['stock_param'] != 'noselect':
+		# 	pass	
+		return Paginator(detals_company, 25)
 
 	# Рендеринг шаблона
-	def render_template(self, request, result, selected, num_page=1):
+	def render_template(self, request, result, num_page=1):
 		query_result = result.page(num_page).object_list
 		all_detals = query_result.count()
-		print(dir(result))
 		context = {'all_detals' : [{'detal': query_result[i], 'count': i+1 } for i in range(all_detals)],
 				   'page': result,
 				   'active_page': int(num_page),
@@ -49,7 +61,7 @@ class DetalList(View):
 				   			 'add_stock': StockForm,
 				   			 'auto_select': MarkModelGen,
 				   			 'filters': {'small': SmallFilter, 'full': ''}},
-				   'selected': selected,
+				   'selected': '',
 				   'stockroom_count': Stock.objects.filter(company=(Company.objects.filter(staff_users=request.user)).count()),
 				   'group_user': request.user.groups.all()[0].name}
 		return render(request, 'detals_list/index.html', context=context)
