@@ -19,7 +19,6 @@
 	<div class="alert-message">
 		
 	</div>
-	
 </div>
 <div class='cssload-loader'>
   <div class='cssload-inner cssload-one'></div>
@@ -85,6 +84,32 @@
 						</ul>
 					</li>
 					<li>
+						<a id="group-menu" href="#">
+							<div class="button-icon">
+								<i class="fas fa-cloud-upload-alt"></i>
+							</div>
+							<div class="button-text">Выгрузка</div>
+						</a>
+						<ul class="submenu">
+							<li class="sublink button" id="one">
+								<a href="#">
+									<div class="button-icon">
+										<i class="fas fa-laptop"></i>
+									</div>
+									<div class="button-text">На площадки</div>
+								</a>
+							</li>
+							<li class="sublink">
+								<a href="#">
+									<div class="button-icon">
+										<i class="fas fa-file-upload"></i>
+									</div>
+									<div class="button-text">Экспорт в файл</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
 						<a href="">
 							<div class="button-icon">
 								<i class="fas fa-chart-bar"></i>
@@ -119,6 +144,7 @@
 						</a>
 					</li>
 					<li>
+					<li>
 						<a href="">
 							<div class="button-icon">
 								<i class="fas fa-cog"></i>
@@ -141,12 +167,11 @@
 				</ul>
 		</div>
 		<div class="content">
-		<div class="backLoad" style="display: none;"></div>
+			<div class="backLoad" style="display: none;"></div>
 			{% block mainpanel %}
 				
 			{% endblock mainpanel %}
 		</div>
-
 	</div>
 	<div id="modal-container">
 		<div class="modal-background">

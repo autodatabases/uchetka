@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-	Список деталей
+Список деталей
 {% endblock title %}
 {% block page_title %}
-	Список деталей			
+Список деталей			
 {% endblock page_title %}
 {% block mainpanel %}
 <link rel="stylesheet" href="{% static "css/detals_list.css" %}">
@@ -14,213 +14,67 @@
 		<li class="prev-page"><a href="?page=1"><i class="fas fa-angle-double-left"></i></a></li>
 		<li class="prev-page"><a href="?page={{active_page|add:-1}}"><i class="fas fa-chevron-left"></i></a></li>
 		{% for num in page.page_range %}
-			{% if  num == active_page %}
-				<li class="active"><a href="?page={{num}}">{{num}}</a></li>
-			{% elif num > active_page|add:-2 and num < active_page|add:2 %}
-				<li class="not-active"><a href="?page={{num}}">{{num}}</a></li>
-			{% endif %}
+		{% if  num == active_page %}
+		<li class="not-active active"><a href="?page={{num}}">{{num}}</a></li>
+		{% elif num > active_page|add:-2 and num < active_page|add:2 %}
+		<li class="not-active"><a href="?page={{num}}">{{num}}</a></li>
+		{% endif %}
 		{% endfor %}
 		<li class="next-page"><a href="?page={{active_page|add:1}}"><i class="fas fa-chevron-right"></i></a></li>
 		<li class="prev-page"><a href="?page=22"><i class="fas fa-angle-double-right"></i></a></li>
 	</ul>	
 </div>
 <div class="mainpanel detals_list">
-	<div class="list">
-		<div class="filterBack">
-			<div class="filtePanel">
-				<div class="smallFilter">
-					<form action="/lk/detals_list/" method="POST">
-						{% csrf_token %}
-						<input type="hidden" name="type_filter" value="small">
-						<div class="apply-filter" style="text-align: center;" onclick="this.parentElement.submit()">
-							<img style="width: 55%;" src="{% static "img/apply.png" %}" >
-						</div>
-						<div class="smallFilterParam">{{forms.filters.small.number}}</div>
-						<div class="smallFilterParam">{{forms.filters.small.detal}}</div>
-						<div class="smallFilterParam">{{forms.filters.small.mark}}</div>
-						<div class="smallFilterParam">{{forms.filters.small.model}}</div>
-						<div class="smallFilterParam">{{forms.filters.small.generation}}</div>
-						<div class="smallFilterParam">{{forms.filters.small.number}}</div>
-						<div class="smallFilterParam">{{forms.filters.small.stock}}</div>
-						<div class="smallFilterParam">{{forms.filters.small.stock_param}}</div>
-					</form>
-				</div>
-				<hr>
-				<div class="fullFilter">
-					<form action="/lk/detals_list/" method="POST">
-						{% csrf_token %}
-						<input type="hidden" name="type_filter" value="full">
-						<div class="fullFilterButtonBlock">
-							<div class="resetFilterButton">
-								<input type="image" src="{% static "img/reset.png" %}">
-							</div>
-							<div class="applyFilterButton" >
-								<input type="image" src="{% static "img/apply.png" %}">
-							</div>
-						</div>
-						<div class="leftFilterBlock">
-							<div class="filterGroup price price-filter">
-								<div class="input-group input-group-sm ">
-									<div class="input-group-prepend">
-										<span class="input-group-text" id="inputGroup-sizing-sm">Min</span>
-									</div>
-									<input type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="0₽" name="priceFilter" step="50" {% if selected_price.0 != 0 %}value="{{selected_price.0}}"{% endif %}>
-								</div>
-								<div class="input-group input-group-sm">
-									<input type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="999 999₽" name="priceFilter" step="50" {% if selected_price.1 != 999999 %}value="{{selected_price.1}}"{% endif %}>
-									<div class="input-group-prepend">
-										<span class="input-group-text" id="inputGroup-sizing-sm">Max</span>
-									</div>
-								</div>
-							</div>
-							<div class="leftCol">
-								<div class="filterGroup detal-filter left ">
-									{% for elem in detals_filter %}
-										<div class="oneFIlterValue">
-											<div class="custom-control custom-checkbox">
-												{% if elem.value in selected_checkbox_detal %}
-													<input type="checkbox" class="custom-control-input" id="{{elem.pk}}_detal" onclick="add_name(this)" value="{{elem.value}}" checked name="detal">
-												{% else %}
-													<input type="checkbox" class="custom-control-input" id="{{elem.pk}}_detal" onclick="add_name(this)" value="{{elem.value}}">
-												{% endif %}
-												<label class="custom-control-label" for="{{elem.pk}}_detal">{{elem.title}}</label>
-											</div>
-										</div>
-									{% endfor %}
-								</div>
-							</div>
-						</div>
-						
-						<div class="filterGroup mark-filter">
-							{% for elem in donors_filter %}
-								<div class="oneFIlterValue">
-									<div class="custom-control custom-checkbox">
-										{% if elem.pk in selected_checkbox_donor %}
-											<input type="checkbox" class="custom-control-input" id="{{elem.pk}}_donor" onclick="add_name(this)" value="{{elem.pk}}" checked name="donor">
-										{% else %}
-											<input type="checkbox" class="custom-control-input" id="{{elem.pk}}_donor" onclick="add_name(this)" value="{{elem.pk}}">
-										{% endif %}
-											<label class="custom-control-label" for="{{elem.pk}}_donor">{{elem}}</label>
-									</div>
-								</div>
-							{% endfor %}
-						</div>
-						<div class="filterGroup model-filter">
-							<div class="oneFIlterValue">
-								<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input" id="customCheck1">
-									<label class="custom-control-label" for="customCheck1">06V288B2</label>
-								</div>
-							</div>
-						</div>
-						<div class="filterGroup generation-filter">
-							<div class="oneFIlterValue">
-								<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input" id="customCheck1">
-									<label class="custom-control-label" for="customCheck1">06V288B2</label>
-								</div>
-							</div>
-						</div>
-						<div class="filterGroup number-filter">
-							<div class="oneFIlterValue">
-								<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input" id="customCheck1">
-									<label class="custom-control-label" for="customCheck1">06V288B2</label>
-								</div>
-							</div>
-						</div>
-						<div class="filterGroup sklad-filter">
-							{% for elem in stocks_filters %}
-								<div class="oneFIlterValue">
-									<div class="custom-control custom-checkbox">
-										{% if elem.pk in selected_stock %}
-											<input type="checkbox" class="custom-control-input" onclick="add_name(this)" id="{{elem.pk}}_stock" checked name="stock" value="{{elem.pk}}">
-										{% else %}
-											<input type="checkbox" class="custom-control-input" onclick="add_name(this)" id="{{elem.pk}}_stock" value="{{elem.pk}}">
-										{% endif %}
-											<label class="custom-control-label" for="{{elem.pk}}_stock">{{elem.title}}</label>
-									</div>
-								</div>
-							{% endfor %}
-						</div>
-						<div class="filterGroup stock-param-filter">
-							<div class="oneFIlterValue">
-								<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input" id="customCheck1">
-									<label class="custom-control-label" for="customCheck1">06V288B2</label>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-			
+	<div class="filter-panel border-table hiden	">
+		<div class="small">
+			<div class="param">{{forms.filters.small.price_min}}</div>
+			<div class="param">{{forms.filters.small.price_max}}</div>
+			<div class="param">{{forms.filters.small.detal}}</div>
+			<div class="param">{{forms.filters.small.mark}}</div>
+			<div class="param">{{forms.filters.small.model}}</div>
+			<div class="param">{{forms.filters.small.generation}}</div>
+			<div class="param">{{forms.filters.small.number}}</div>
+			<div class="param">{{forms.filters.small.stock}}</div>
+			<div class="param">{{forms.filters.small.stock_param}}</div>
 		</div>
-		<div class="showFilterButton" onclick="show_filter(this)">
-				<label>Фильтры</label><i class="fas fa-angle-double-down fa-lg"></i>
+		<div class="full">
+				
+		</div>
+	</div>	
+	<div class="list border-table">
+		<div class="detals-table">
+			<div class="head-table">
+				<table>
+					<tr >
+						<th class="count-num">№</th>
+						<th class="detal-title"><i class="fas fa-sort"></i>Деталь</th>
+						<th class="detal-donor"><i class="fas fa-sort"></i>Автомобиль-донор</th>
+						<th class="detal-number"><i class="fas fa-sort"></i>Номер детали</th>
+						<th class="detal-desc">Описание</th>
+						<th class="detal-stock"><i class="fas fa-sort"></i>Расположение</th>
+						<th class="detal-stock-param"><i class="fas fa-sort"></i>Ячейка</th>
+						<th class="detal-photo">Фото</th>
+						<th class="detal-price"><i class="fas fa-sort"></i>Цена</th>
+					</tr>
+				</table>
 			</div>
-		<table class="tableDetals ">
-			<thead class="thead-dark">
-				<tr>
-					<th class="detalCheckBox">
-						<input id="select_all" class="selectAll" type="checkbox" onchange="select_all()">
-					</th>
-					
-					<th class="detalNumber">№</th>
-					<th class="detalTitle">Деталь</th>
-					<th class="detalDonor">Автомобиль-донор</th>
-					<th class="detalPrice">Цена</th>
-					<th class="detalVIN">VIN</th>
-					<th class="detalSklad">Склад</th>
-					<th class="detalPhotoMin">Фотография</th>
-					<th class="detalOther">Описание</th>
-				</tr>
-			</thead>
-			<tbody>
+			<div class="body-table">
 				{% for detal in all_detals %}
-					{% if detal.count < 100 %}
-						<tr data-content="{{detal.detal.pk}}">
-							<td class="detalCheckBox">
-								<input id="checkbox" type="checkbox" onchange="selected(this)">
-							</td>
-							<td class="detalNumber">{{detal.count}}</td>
-							<td class="detalTitle">{{detal.detal}}</td>
-							<td class="detalDonor" onclick="move_panel(this)">
-								<a href="#" id="{{detal.detal.donor_info.pk}}">{{detal.detal.donor_info}}</a>
-							</td>
-							<td class="detalPrice" ondblclick="edit_price(this)"><span>{{detal.detal.price}}</span> ₽</td>
-							<td class="detalVIN">06V288B2</td>
-							<td class="detalSklad">{{detal.detal.stockroom}}</td>
-							<td class="detalPhotoImg">
-								<a href="#img1">
-									<img src="{% static "img/image_mini.png" %}" alt="" onclick="view_detal_photo(this)">
-								</a>
-								<a href="#close" class="fulImg" id="img1" onclick="closePhoto(this)">
-								</a>
-							</td>
-							<td class="detalOther">{{detal.detal.description}}</td>
-						</tr>
-					{% endif %}
+					<div class="row-detal" data-content="{{detal.detal.pk}}">
+						<div class="count-num">{{detal.count}}</div>
+						<div class="detal-title">{{detal.detal}}</div>
+						<div class="detal-donor">{{detal.detal.donor_info}}</div>
+						<div class="detal-number">06V288B2</div>
+						<div class="detal-desc">{{detal.detal.description}}</div>
+						<div class="detal-stock">{{detal.detal.stockroom}}</div>
+						<div class="detal-stock-param">1</div>
+						<div class="detal-photo">1</div>
+						<div class="detal-price">{{detal.detal.price}}</div>
+					</div>
 				{% endfor %}
-			</tbody>
-		</table>
-		<div class="controlPanel">
-			<div class="titleSelect">
-				<label>Выбранно деталей:</label><span>0</span>
-				<br>
-				<label>На общую сумму:</label><span>0</span> руб.
-			</div>
-			<div class="transfer">
-				<button class="btn btn-info">Переместить</button>
-			</div>
-			<div class="remove">
-				<button class="btn btn-success">Что-то сделать</button>
-			</div>
-			<div class="remove">
-				<button class="btn btn-danger">Списать</button>
 			</div>
 		</div>
-	
+	</div>
 </div>
 <script src="{% static "js/detals_list.js" %}"></script>
 {% endblock mainpanel %}

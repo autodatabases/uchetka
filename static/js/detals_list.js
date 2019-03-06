@@ -1,6 +1,32 @@
 window.onscroll = function() {
-
+    // var tr = document.querySelector('.tableDetals ').querySelector('tbody').querySelectorAll('tr');
+    // var first_tr_top = tr[0].getBoundingClientRect().top;
+    // var last_tr_pos_bottom = tr[tr.length-1].getBoundingClientRect().bottom;
+    // var pag_panel = document.querySelector('.pag-panel');
+    // var active_page = parseInt(pag_panel.querySelector('.active').querySelector('a').innerHTML);
+    // var html = document.querySelector('html')
+    // console.log(last_tr_pos_bottom, html_height);
+    
+    // if (html_height == last_tr_pos_bottom-1) {
+    //     console.log(active_page);
+    //     $.ajax({
+    //         url: '/lk/detals_list/',
+    //         type: 'get',
+    //         data: {
+    //             'page': active_page+1
+    //         },
+    //         success: function (data) {
+    //             console.log()
+    //             var active_page_button = pag_panel.querySelector('.active');
+    //             active_page_button.classList.remove('active');
+    //             active_page_button.nextSibling.nextElementSibling.classList.add('active');
+    //         }
+    //     });
+    // } else {
+    //     console.log();
+    // }
 }
+
 
 $(document.querySelector('.smallFilter').querySelectorAll('select')).change(function(){
     console.log(this.value);

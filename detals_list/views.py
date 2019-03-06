@@ -21,7 +21,20 @@ class DetalList(View):
 		company = Company.objects.filter(staff_users=request.user)
 		detals_company = UserDetal.objects.filter(company=company[0])
 		query_result = Paginator(detals_company, 25)
-		return self.render_template(request, query_result, num_page)
+		if request.is_ajax():
+			print(num_page)
+			data =  {'new_detals': [{'title': elem.detal.title,
+									 'donor': {'mark': elem.donor_info.mark.title,
+									 		   'model': elem.donor_info.model.title,
+									 		   'generation': elem.donor_info.generation.title},
+									 'price': elem.price,
+									 'description': elem.description,
+									 'stockroom': elem.stockroom.title,
+									  } for elem in query_result.page(num_page).object_list ] }
+			print(data)
+			return HttpResponse(json.dumps(data), content_type="application/json")
+		else:
+			return self.render_template(request, query_result, num_page)
 
 	# POST Запрос
 	def post(self, request):
