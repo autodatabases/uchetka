@@ -1,4 +1,5 @@
 import json
+import requests
 
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
@@ -22,16 +23,7 @@ class DetalList(View):
 		detals_company = UserDetal.objects.filter(company=company[0])
 		query_result = Paginator(detals_company, 25)
 		if request.is_ajax():
-			print(num_page)
-			data =  {'new_detals': [{'title': elem.detal.title,
-									 'donor': {'mark': elem.donor_info.mark.title,
-									 		   'model': elem.donor_info.model.title,
-									 		   'generation': elem.donor_info.generation.title},
-									 'price': elem.price,
-									 'description': elem.description,
-									 'stockroom': elem.stockroom.title,
-									  } for elem in query_result.page(num_page).object_list ] }
-			print(data)
+			data =  self.load_ajax_page(num_page)
 			return HttpResponse(json.dumps(data), content_type="application/json")
 		else:
 			return self.render_template(request, query_result, num_page)
@@ -39,8 +31,13 @@ class DetalList(View):
 	# POST Запрос
 	def post(self, request):
 		print(request.POST)
-		query_result = self.filter_detals(request)
-		return self.render_template(request, query_result)
+		if request.is_ajax():
+			if request.POST['type'] == 'load_cats':
+				data = self.load_cats(request)
+			return HttpResponse(json.dumps(data), content_type="application/json")
+		else:
+			query_result = self.filter_detals(request)
+			return self.render_template(request, query_result)
 
 	# Фильтрация деталей
 	def filter_detals(self, request):
@@ -62,6 +59,28 @@ class DetalList(View):
 		# if request.POST['stock_param'] != 'noselect':
 		# 	pass	
 		return Paginator(detals_company, 25)
+
+	# Подгрузка страниц 
+	def load_ajax_page(self, num_page):
+		data = {'new_detals': [{'title': elem.detal.title,
+							    'donor': {'mark': elem.donor_info.mark.title,
+							 		      'model': elem.donor_info.model.title,
+							 		      'generation': elem.donor_info.generation.title},
+							    'price': elem.price,
+							    'description': elem.description,
+							    'stockroom': elem.stockroom.title,
+		} for elem in query_result.page(num_page).object_list ] }
+		return data
+
+	# Подгрузка каталогов
+	def load_cats(self, request):
+		data = {'key':'283R8Q8ckCYq9cyQSgYiXDpYFguSf7ox', 'group': 'passenger'}
+		if request.POST['cat'] == 'getModels':
+			data.update({'act': 'getModels', 'make': request.POST['mark']})
+		if request.POST['cat'] == 'getCars':
+			data.update({'act': 'getCars', 'make': request.POST['mark'], 'model': request.POST['model']})
+		r = requests.post('https://partsapi.ru/api.php', data=data)
+		return json.loads(r.content)
 
 	# Рендеринг шаблона
 	def render_template(self, request, result, num_page=1):

@@ -18,10 +18,10 @@ class SmallFilter(forms.Form):
 	for elem in AutoMark.objects.all():
 		all_marks.append((elem.value, elem.title))
 	mark = forms.ChoiceField(widget=forms.Select, choices=all_marks)
-	mark.widget.attrs.update({'class': 'custom-select', 'id': 'all_marks', 'onchange': 'load_models(this)'})
+	mark.widget.attrs.update({'class': 'custom-select', 'id': 'all_marks'})
 
 	model = forms.ChoiceField(widget=forms.Select, choices=[('noselect', 'Все модели')])
-	model.widget.attrs.update({'class': 'custom-select', 'id': 'all_models', 'onchange': 'load_generations(this)'})
+	model.widget.attrs.update({'class': 'custom-select', 'id': 'all_models'})
 
 	generation = forms.ChoiceField(widget=forms.Select, choices=[('noselect', 'Все поколения')])
 	generation.widget.attrs.update({'class': 'custom-select', 'id': 'all_generations'})

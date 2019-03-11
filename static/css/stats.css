@@ -1,0 +1,31 @@
+.stats-content {
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    grid-gap: 25px;
+    margin: 60px 5px 0 65px;
+    height: 100%;
+    padding: 15px;
+}
+
+.ct-perfect-fourth { height: 90%; }
+.graphic { padding: 10px 10px 9px 0; text-align: center;}
+
+.info-line {width: 80px; position: relative; margin-right: 170px; display: inline-block;}
+.info-line::before {    
+    position: absolute;
+    margin: -8px 0px 0 50px;
+    font-size: 8pt;
+    font-style: italic;
+    font-family: monospace;
+    letter-spacing: 2px;
+    width: 140px;
+    text-align: left;
+}
+.info-line.blue {border: 2px solid #293dff;}
+.info-line.blue::before {content: 'Синяя линия'}
+.info-line.red {border: 2px solid #d70206;}
+.info-line.red::before {content: 'Красная линия'}
+
+.tables {
+    height: 85%;
+}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Список деталей
+{% endblock title %}
+{% block page_title %}
+Список деталей			
+{% endblock page_title %}
+{% block link-and-script %}
+	<link rel="stylesheet" href="{% static "css/stats.css" %}">
+	<link rel="stylesheet" href="{% static "css/chartist/chartist.min.css" %}">
+	<script src="{% static "js/chartist/chartist.min.js" %}"></script>
+{% endblock link-and-script %}	
+{% block mainpanel %}
+	<div class="stats-content">
+		<div class="graphic block-desing">
+			<div class="ct-chart ct-perfect-fourth"></div>
+			<div class="info-line red"></div>
+			<div class="info-line blue"></div>
+			<script>
+			new Chartist.Line('.ct-chart', {
+			  labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+			  series: [
+			    [3, 3, 4, 4, 4, 5, 5, 6, 6, 7, 6, 7, 8, 8, 9],
+			    [1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 3, 3, 4, 4, 5],
+			  ]
+			}, {
+			  high: 10,
+			  low: 0,
+			  fullWidth: true,
+			  fullHeight: true,
+			  axisY: {
+			    onlyInteger: true,
+			    offset: 20
+			  }
+			});
+			</script>
+		</div>
+		<div class="tables block-desing"></div>
+	</div>
+{% endblock mainpanel %}

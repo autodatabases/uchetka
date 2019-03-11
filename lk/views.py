@@ -27,13 +27,14 @@ def add_random_detal(request):
 		print('Добавленно деталей '+str(i))
 	return redirect('/lk/detals_list/')
 
-def add_detals(required):
-	for i in range(20):
-		detal = AutoDetal.objects.create(
-			title='Тестовая деталь '+str(i+1),
-			value=str(i+1),
+def add_marks(required):
+	with open('lk/marks.json', 'r', encoding='utf-8') as file:
+		marks = json.loads(file.read())
+	for mark in marks:
+		AutoMark.objects.create(
+			title=mark['name'],
+			value=mark['id']
 		)
-		print(detal)
 	return redirect('/lk/detals_list/')
 
 

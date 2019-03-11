@@ -84,33 +84,15 @@
 						</ul>
 					</li>
 					<li>
-						<a id="group-menu" href="#">
+						<a id="upload-ads" href="#">
 							<div class="button-icon">
 								<i class="fas fa-cloud-upload-alt"></i>
 							</div>
 							<div class="button-text">Выгрузка</div>
 						</a>
-						<ul class="submenu">
-							<li class="sublink button" id="one">
-								<a href="#">
-									<div class="button-icon">
-										<i class="fas fa-laptop"></i>
-									</div>
-									<div class="button-text">На площадки</div>
-								</a>
-							</li>
-							<li class="sublink">
-								<a href="#">
-									<div class="button-icon">
-										<i class="fas fa-file-upload"></i>
-									</div>
-									<div class="button-text">Экспорт в файл</div>
-								</a>
-							</li>
-						</ul>
 					</li>
 					<li>
-						<a href="">
+						<a href="{% url 'stats:get_stats_url' %}">
 							<div class="button-icon">
 								<i class="fas fa-chart-bar"></i>
 							</div>

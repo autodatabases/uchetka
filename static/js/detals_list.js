@@ -28,10 +28,6 @@ window.onscroll = function() {
 }
 
 
-$(document.querySelector('.smallFilter').querySelectorAll('select')).change(function(){
-    console.log(this.value);
-});
-
 
 // Боковая панель
 function move_panel(elem_td) {
@@ -91,12 +87,31 @@ function move_panel(elem_td) {
 
     }
 }
-// Закрыть боковую панель
-function close_panel() {
-    var right_panel = document.querySelector('.right-panel');
-    right_panel.classList.remove("show");
-    document.getElementsByTagName('tbody')[0].querySelector('.selectedDetal').classList.remove("selectedDetal");
-}
+// Открыть панель выгрузки
+$("#upload-ads").click(function() {
+    $(".export-panel").addClass('show');
+});
+
+// Закрыть панель выгрузки
+$("#close-panel").click(function() {
+    $('.one-panel-setting').removeClass('show');
+    $(".export-panel").removeClass('show');
+});
+
+//Открыть панель ввода логина и пароля для площадки
+$(".logo").click(function() {
+    $('.one-panel-setting').removeClass('show');
+    $($(this).parent()[0]).addClass('show');
+});
+
+// Закрыть панель ввода логина и пароля для площадки
+$(".hide-button").click(function() {
+    $block_site = $(this).parent()[0];
+    console.log($block_site.classList[1]);
+    $($block_site).removeClass('show');
+});
+
+
 // Выделение одной детали
 function selected(checkbox) {
     var all_checkbox = document.getElementsByTagName('tbody');
@@ -139,58 +154,6 @@ function select_all(){
         }
         controlPanel.getElementsByTagName('span')[1].innerHTML = 0;
     }
-}
-// Кнопка изменить на боковой панели
-function editDonor(block) {
-    var all_select = block.getElementsByTagName('select');
-    for (var i_param = 0; i_param < all_select.length; i_param++) {
-        all_select[i_param].removeAttribute('disabled');
-    };
-    block.querySelector('#donorProbeg').removeAttribute('disabled');
-    block.querySelector('#donorVin').removeAttribute('disabled');
-    block.querySelector('#save').removeAttribute('disabled');
-    block.querySelector('#edit').setAttribute('disabled', '');
-}
-// Кнопка сохранить на боковой панели
-function saveDonor(block) {
-    var all_select = block.getElementsByTagName('select');
-    var probeg = block.querySelector('#donorProbeg');
-    var vin = block.querySelector('#donorVin');
-    var idDonor = block.parentElement.querySelector('#idDonor').value;
-
-    $.ajax({
-        url: '/lk/detals_list/save_donor/',
-        type: 'post',
-        data: {
-            'csrfmiddlewaretoken': csrftoken,
-            'mark' : all_select[0].options[all_select[0].selectedIndex].value,
-            'model' : all_select[1].options[all_select[1].selectedIndex].value,
-            'generation' : all_select[2].options[all_select[2].selectedIndex].value,
-            'year' : all_select[3].options[all_select[3].selectedIndex].value,
-            'kuzov' : all_select[4].options[all_select[4].selectedIndex].value,
-            'engine_type' : all_select[5].options[all_select[5].selectedIndex].value,
-            'engine_size' : all_select[6].options[all_select[6].selectedIndex].value,
-            'transmission' : all_select[7].options[all_select[7].selectedIndex].value,
-            'color' : all_select[8].options[all_select[8].selectedIndex].value,
-            'helm' : all_select[9].options[all_select[9].selectedIndex].value,
-            'privod' : all_select[10].options[all_select[10].selectedIndex].value,
-            'vin' : vin.value,
-            'probeg' : probeg.value,
-            'idDonor' : idDonor
-        },
-        success: function (data) {
-            console.log(data)
-        }
-    });
-
-    for (var i_param = 0; i_param < all_select.length; i_param++) {
-        all_select[i_param].setAttribute('disabled', '');
-        console.log(all_select[i_param].options[all_select[i_param].selectedIndex].value);
-    };
-    probeg.setAttribute('disabled', '');
-    vin.setAttribute('disabled', '');
-    block.querySelector('#save').setAttribute('disabled', '');
-    block.querySelector('#edit').removeAttribute('disabled');
 }
 // Изменение цены двойным кликом
 function edit_price(td) {

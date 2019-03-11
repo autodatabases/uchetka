@@ -132,13 +132,14 @@ class Stock(models.Model):
 		return self.title
 
 class UserDetal(models.Model):
-	detal = models.ForeignKey('AutoDetal', on_delete=models.PROTECT)
-	donor_info = models.ForeignKey('AutoDonor', on_delete=models.CASCADE)
+	company = models.ForeignKey('Company', on_delete=models.CASCADE)
+	title = models.CharField(max_length=120)
 	price = models.IntegerField()
 	description = models.TextField(null=True, blank=True)
 	stockroom = models.ForeignKey('Stock', on_delete=models.CASCADE)
-	company = models.ForeignKey('Company', on_delete=models.CASCADE)
-	photo = models.ForeignKey('Photo', on_delete=models.CASCADE, default=1, blank=True, null=True)
+	photo = models.ForeignKey('Photo', on_delete=models.CASCADE, default=1)
+	donor_info = models.ForeignKey('AutoDonor', on_delete=models.CASCADE)
+	
 	def __str__(self):
 		return self.detal.title
 

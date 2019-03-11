@@ -1,3 +1,5 @@
+
+
 //после загрузки страницы
 window.onload = function(){
 	loader('off');
@@ -87,42 +89,69 @@ function change_params_donor() {
     });
 }
 
-function load_models(selectMark) {
-	var panel = selectMark.parentElement.parentElement.parentElement;
-	var selectModel = panel.querySelector('#all_models');
-	var length_options = selectModel.options.length;
-	function clear_options(len) {
-		console.log(len);
-		for (i = 0; i < selectModel.options.length; i++) {
-			console.log(selectModel.options[i]);
-			selectModel.options[i].remove();
-		};
-	}
-
-	function add_new_options(data) {
-		selectModel.options[0] = new Option(('noselect', 'Все модели'));
-		selectModel.value = 'noselect';
-		for (var i = 0; i < data.models.length; i++) {
-			selectModel.options[i+1] = new Option(data.models[i].title, data.models[i].value);
-		};
-	}
-
-	$.ajax({
-		url: '/lk/add_auto/select_auto/',
-		type: 'post',
-		data: {
-			'selectedMark': selectMark.options[selectMark.selectedIndex].value,
-			'csrfmiddlewaretoken': csrftoken
-		},
-		success: function (data) {
-			clear_options(length_options);
-			setTimeout(function(){
-				add_new_options(data);
-			}, 1500);
-			
-		}
-	});
+function clear_options() {
+	var selectModel = document.querySelector('#all_models');
+	for (i = 0; i < selectModel.options.length; i++) {
+		console.log(selectModel.options[i]);
+		selectModel.options[i].remove();
+	};
 }
+
+function add_new_options(data) {
+	var selectModel = document.querySelector('#all_models');
+	for (var i = 0; i < data.length; i++) {
+		selectModel.options[i] = new Option(data[i].name, data[i].id);
+	};
+}
+
+$(function() {
+	$("#all_marks").change(function() {
+		var selectMark = document.querySelector('#all_marks');
+		$.ajax({
+			url:'/lk/detals_list/', 
+			type:'POST', 
+			data: {
+				'type': 'load_cats',
+				'cat': 'getModels',
+				'mark':  selectMark.options[selectMark.selectedIndex].value,
+				'csrfmiddlewaretoken': csrftoken
+			}, 
+			success: function(res) {
+				console.log(res);
+				add_new_options(res);
+			}
+		});
+	});
+	$("#all_models").change(function() {
+		var selectMark = document.querySelector('#all_marks');
+		var selectModel = document.querySelector('#all_models');
+		var selectGen = document.querySelector('#all_generations');
+		$.ajax({
+			url:'/lk/detals_list/', 
+			type:'POST', 
+			data: {
+				'type': 'load_cats',
+				'cat': 'getCars',
+				'mark':  selectMark.options[selectMark.selectedIndex].value,
+				'model':  selectModel.options[selectModel.selectedIndex].value,
+				'csrfmiddlewaretoken': csrftoken
+			}, 
+			success: function(data) {
+				console.log(data);
+				var k = 0
+				for (var i = 0; i < data.length; i++) {
+					if (data[i].attributegroup == 'General') {
+						selectGen.options[k] = new Option(data[i].name + ' ' + data[i].displayvalue, data[i].id);
+						k++
+					} else {
+						continue
+					}
+				};
+			}
+		});
+	});
+});
+
 
 function load_generations(selectModel) {
 	var panel = selectModel.parentElement.parentElement.parentElement;
