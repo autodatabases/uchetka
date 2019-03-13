@@ -9,8 +9,8 @@
 {% block mainpanel %}
 <link rel="stylesheet" href="{% static "css/detals_list.css" %}">
 <link rel="stylesheet" href="{% static "css/donor_panel.css" %}">
-<div class="pag-panel">
-	<ul>
+<div class="pag-panel" id="pag-panel">
+	<ul class="pag-ul">
 		<li class="prev-page"><a href="?page=1"><i class="fas fa-angle-double-left"></i></a></li>
 		<li class="prev-page"><a href="?page={{active_page|add:-1}}"><i class="fas fa-chevron-left"></i></a></li>
 		{% for num in page.page_range %}
@@ -24,7 +24,7 @@
 		<li class="prev-page"><a href="?page=22"><i class="fas fa-angle-double-right"></i></a></li>
 	</ul>	
 </div>
-<div class="export-panel show">
+<div class="export-panel">
 	<div class="close-panel" id="close-panel"><i class="fas fa-times"></i></div>
 	<div class="setting-panels">
 		<div class="one-panel-setting">
@@ -37,7 +37,7 @@
 			<div class="hide-button"><i class="fas fa-chevron-circle-right"></i></div>
 		</div>
 		<div class="one-panel-setting">
-			<div class="logo"><img src="{% static "img/logo-sites/auto.ru.png" %}" alt=""></div>
+			<div class="logo"><img src="{% static "img/logo-sites/drom.png" %}" alt=""></div>
 			<div class="input-fields">
 				<input type="text" class="form-control" placeholder="Логин">
 				<input type="text" class="form-control" placeholder="Пароль">
@@ -46,7 +46,7 @@
 			<div class="hide-button"><i class="fas fa-chevron-circle-right"></i></div>
 		</div>
 		<div class="one-panel-setting">
-			<div class="logo"><img src="{% static "img/logo-sites/drom.png" %}" alt=""></div>
+			<div class="logo"><img src="{% static "img/logo-sites/auto.ru.png" %}" alt=""></div>
 			<div class="input-fields">
 				<input type="text" class="form-control" placeholder="Логин">
 				<input type="text" class="form-control" placeholder="Пароль">
@@ -83,15 +83,14 @@
 		</div>
 	</div>
 	<div class="content-block">
-		
 		<div class="border-block sites">
-			<div class="one-site">
-				<input type="checkbox">
+			<div class="one-site disabled">
+				<input disabled type="checkbox">
 				<div class="logo-site"><img src="{% static "img/logo-sites/avito.jpg" %}" alt=""></div>
 				<div class="title-site">Avito</div>
 			</div>
-			<div class="one-site disabled">
-				<input disabled type="checkbox">
+			<div class="one-site">
+				<input type="checkbox">
 				<div class="logo-site"><img src="{% static "img/logo-sites/drom.png" %}" alt=""></div>
 				<div class="title-site">Drom</div>
 			</div>
@@ -100,8 +99,8 @@
 				<div class="logo-site"><img src="{% static "img/logo-sites/auto.ico" %}" alt=""></div>
 				<div class="title-site">Auto.ru</div>
 			</div>
-			<div class="one-site">
-				<input type="checkbox">
+			<div class="one-site disabled">
+				<input disabled type="checkbox">
 				<div class="logo-site"><img src="{% static "img/logo-sites/Farpost.png" %}" alt=""></div>
 				<div class="title-site">FarPost</div>
 			</div>
@@ -117,28 +116,41 @@
 			</div>
 		</div>
 		<div class="border-block list-ads">
-			
+			<div class="border-table">
+				<table class="upload-ads-table">
+					{% for detal in all_detals %}
+					<tr class="upload-tr">
+						<td class="delete"><div class="delete-button"><i class="fas fa-trash-alt"></i></div></td>
+						<td>{{detal.detal}}</td>
+						<td>{{detal.detal.donor_info}}</td>
+						<td>{{detal.detal.price}}₽</td>
+					</tr>
+					{% endfor %}
+				</table>
+			</div>
 		</div>
 		<div class="button-upload-panel">
+			<button disabled class="btn btn-primary">Добавить выбранные детали ( 0 )</button>
 			<button disabled class="btn btn-success">Сохранить</button>
 			<button class="btn btn-info">Очистить список</button>
 		</div>
+		<div class="full-info-panel">
+			<div class="close-panel hide-button"><i class="fas fa-minus"></i></div>
+		</div>
 	</div>
-	
-
 </div>
 <div class="mainpanel detals_list">
 	<div class="filter-panel border-table hiden	">
 		<div class="small">
-			<div class="param">{{forms.filters.small.price_min}}</div>
-			<div class="param">{{forms.filters.small.price_max}}</div>
+			<div class="param">{{forms.filters.small.number}}</div>
 			<div class="param">{{forms.filters.small.detal}}</div>
 			<div class="param">{{forms.filters.small.mark}}</div>
 			<div class="param">{{forms.filters.small.model}}</div>
 			<div class="param">{{forms.filters.small.generation}}</div>
-			<div class="param">{{forms.filters.small.number}}</div>
 			<div class="param">{{forms.filters.small.stock}}</div>
 			<div class="param">{{forms.filters.small.stock_param}}</div>
+			<div class="param">{{forms.filters.small.price_min}}</div>
+			<div class="param">{{forms.filters.small.price_max}}</div>
 		</div>
 		<div class="full">
 				
@@ -149,10 +161,11 @@
 			<div class="head-table">
 				<table>
 					<tr >
+						<th class="checkbox"><input id="check-box-detal" type="checkbox" name='all_select'></th>
 						<th class="count-num">№</th>
+						<th class="detal-number"><i class="fas fa-sort"></i>Номер детали</th>
 						<th class="detal-title"><i class="fas fa-sort"></i>Деталь</th>
 						<th class="detal-donor"><i class="fas fa-sort"></i>Автомобиль-донор</th>
-						<th class="detal-number"><i class="fas fa-sort"></i>Номер детали</th>
 						<th class="detal-desc">Описание</th>
 						<th class="detal-stock"><i class="fas fa-sort"></i>Расположение</th>
 						<th class="detal-stock-param"><i class="fas fa-sort"></i>Ячейка</th>
@@ -162,19 +175,44 @@
 				</table>
 			</div>
 			<div class="body-table">
+				<table>
 				{% for detal in all_detals %}
-					<div class="row-detal" data-content="{{detal.detal.pk}}">
-						<div class="count-num">{{detal.count}}</div>
-						<div class="detal-title">{{detal.detal}}</div>
-						<div class="detal-donor">{{detal.detal.donor_info}}</div>
-						<div class="detal-number">06V288B2</div>
-						<div class="detal-desc">{{detal.detal.description}}</div>
-						<div class="detal-stock">{{detal.detal.stockroom}}</div>
-						<div class="detal-stock-param">1</div>
-						<div class="detal-photo">1</div>
-						<div class="detal-price">{{detal.detal.price}}</div>
-					</div>
+					<tr >
+						<td class="checkbox"><input id="check-box-detal" type="checkbox"></td>
+						<td class="count-num">{{detal.count}}</td>
+						<td class="detal-number">645GH2TD2</td>
+						<td class="detal-title">{{detal.detal}}</td>
+						<td class="detal-donor">{{detal.detal.donor_info}}</td>
+						<td class="detal-desc"></td>
+						<td class="detal-stock">{{detal.detal.stockroom}}</td>
+						<td class="detal-stock-param">Ячейка</td>
+						<td class="detal-photo">Фото</td>
+						<td class="detal-price">{{detal.detal.price}}₽</td>
+					</tr>
 				{% endfor %}
+				</table>
+			</div>
+		</div>
+		<div class="control-panel">
+			<div class="select-info">
+				<table>
+					<tr>
+						<td>Выбрано деталей</td>
+						<td>:</td>
+						<td class="total-select-count">12</td>
+					</tr>
+					<tr>
+						<td>На общую сумму</td>
+						<td>:</td>
+						<td><span class="total-select-price">0</span> ₽</td>
+					</tr>
+				</table>
+			</div>
+			<div class="button-block">
+				<button id="upload-button" class="btn btn-primary">Выгрузка ... </button>
+				<button class="btn btn-info">Перемещение</button>
+				<button class="btn btn-success">Продажа</button>
+				<button class="btn btn-danger">Списание</button>
 			</div>
 		</div>
 	</div>

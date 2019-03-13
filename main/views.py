@@ -11,7 +11,10 @@ class AuthUser(View):
 	# GET Запрос
 	def get(self, request):
 		if request.user.is_authenticated:
-			return redirect('/lk/')
+			if request.user.username == 'admin':
+				return redirect('/admin/')
+			else:
+				return redirect('/lk/')
 		else:
 			return render(request, 'lk/auth-page.html')
 	# POST Запрос

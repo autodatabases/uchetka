@@ -48,16 +48,16 @@ class DetalList(View):
 		if request.POST['mark'] != 'noselect':
 			donor =AutoDonor.objects.filter(mark__value=request.POST['mark'])
 			detals_company = detals_company.filter(donor_info__in=donor)
-		# if request.POST['model'] != 'noselect':
-		# 	detals_company = detals_company.filter(donor_info__model=AutoModel.objects.get(value=request.POST['model']))		
-		# if request.POST['generation'] != 'noselect':
-		# 	detals_company = detals_company.filter(donor_info__generation=AutoGeneration.objects.get(value=request.POST['generation']))		
-		# if request.POST['number'] != 'noselect':
-		# 	pass
-		# if request.POST['stock'] != 'noselect':	
-		# 	detals_company = detals_company.filter(stockroom=Stock.objects.get(pk=request.POST['stock']))	
-		# if request.POST['stock_param'] != 'noselect':
-		# 	pass	
+		if request.POST['model'] != 'noselect':
+			detals_company = detals_company.filter(donor_info__model=AutoModel.objects.get(value=request.POST['model']))		
+		if request.POST['generation'] != 'noselect':
+			detals_company = detals_company.filter(donor_info__generation=AutoGeneration.objects.get(value=request.POST['generation']))		
+		if request.POST['number'] != 'noselect':
+			pass
+		if request.POST['stock'] != 'noselect':	
+			detals_company = detals_company.filter(stockroom=Stock.objects.get(pk=request.POST['stock']))	
+		if request.POST['stock_param'] != 'noselect':
+			pass	
 		return Paginator(detals_company, 25)
 
 	# Подгрузка страниц 
@@ -86,7 +86,7 @@ class DetalList(View):
 	def render_template(self, request, result, num_page=1):
 		query_result = result.page(num_page).object_list
 		all_detals = query_result.count()
-		context = {'all_detals' : [{'detal': query_result[i], 'count': i+1 } for i in range(all_detals)],
+		context = {'all_detals' : [{'detal': query_result[i], 'count': i+1+((int(num_page)-1)*25) } for i in range(all_detals)],
 				   'page': result,
 				   'active_page': int(num_page),
 				   'forms': {'donor': DonorForm, 
@@ -98,40 +98,6 @@ class DetalList(View):
 				   'group_user': request.user.groups.all()[0].name}
 		return render(request, 'detals_list/index.html', context=context)
 
-
-
-
-	
-def get_donor_data(request):
-	if request.is_ajax():
-		donor = AutoDonor.objects.get(pk=request.POST['new_pk_donor'])
-		data = {'mark': donor.mark.value, 'model': donor.model.value, 'generation': donor.generation.year,
-				'kuzov': donor.kuzov.value, 'year': donor.year.value, 'engine_type': donor.engine_type.value,
-				'engine_size': donor.engine_size.value, 'transmission': donor.transmission.value,
-				'color': donor.color.value, 'helm': donor.helm.value, 'privod': donor.privod.value,
-				'probeg': donor.probeg, 'vin_number': donor.vin_number }
-		return HttpResponse(json.dumps(data), content_type="application/json")
-
-def save_donor_data(request):
-	if request.is_ajax():
-		if request.POST['probeg']:
-			probeg = request.POST['probeg']
-		else:
-			probeg = 0;
-		donor_obj = AutoDonor.objects.get(pk=request.POST['idDonor'])
-		donor_obj.kuzov = AutoKuzov.objects.get(value=request.POST['kuzov'])
-		donor_obj.year = AutoYearProduction.objects.get(value=request.POST['year'])
-		donor_obj.engine_type = AutoEngineType.objects.get(value=request.POST['engine_type'])
-		donor_obj.engine_size = AutoEngineSize.objects.get(value=request.POST['engine_size'])
-		donor_obj.transmission = AutoTransmission.objects.get(value=request.POST['transmission'])
-		donor_obj.color = AutoColor.objects.get(value=request.POST['color'])
-		donor_obj.helm = AutoHelm.objects.get(value=request.POST['helm'])
-		donor_obj.privod = AutoPrivod.objects.get(value=request.POST['privod'])
-		donor_obj.probeg = probeg
-		donor_obj.vin_number = request.POST['vin']
-		donor_obj.save()
-		data = {'Good': 'good'}
-		return HttpResponse(json.dumps(data), content_type="application/json")
 
 def small_filter(request):
 	if request.is_ajax():

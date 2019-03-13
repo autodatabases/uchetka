@@ -26,6 +26,18 @@
 .info-line.red {border: 2px solid #d70206;}
 .info-line.red::before {content: 'Красная линия'}
 
+
+
+
+
+/*** Табличная статистика ***/
 .tables {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
     height: 85%;
+}
+
+.left-stats {
+	height: 100%;
 }

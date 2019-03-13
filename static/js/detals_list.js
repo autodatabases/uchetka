@@ -87,6 +87,10 @@ function move_panel(elem_td) {
 
     }
 }
+
+// Отправка формы при изменении малого фильтра
+
+
 // Открыть панель выгрузки
 $("#upload-ads").click(function() {
     $(".export-panel").addClass('show');
@@ -95,6 +99,7 @@ $("#upload-ads").click(function() {
 // Закрыть панель выгрузки
 $("#close-panel").click(function() {
     $('.one-panel-setting').removeClass('show');
+    $('.full-info-panel').removeClass('show');
     $(".export-panel").removeClass('show');
 });
 
@@ -111,6 +116,53 @@ $(".hide-button").click(function() {
     $($block_site).removeClass('show');
 });
 
+// Открыть панель доп информации
+$(".upload-ads-table  > tbody > tr").click(function() {
+    $('.full-info-panel').addClass('show');
+    $(this).addClass('active');
+});
+
+// Закрыть панель доп информации
+$(".hide-button").click(function() {
+    $('.full-info-panel').removeClass('show');
+    $('.upload-ads-table  > tbody > tr').removeClass('active');
+});
+
+
+
+// Выделение детали
+$("input#check-box-detal").change(function() {
+    if ($(this).attr('name') == 'all_select') {
+        console.log($(this))
+        if ($(this)[0].checked == true) {
+            $("input#check-box-detal").prop('checked', true);
+        } else {
+            $("input#check-box-detal").prop('checked', false);
+        }
+    };
+    if ($("input:checkbox:checked").length > 0) {
+        $(".control-panel").addClass('show');
+        var total_checked_price = 0;
+        for (var i = 0; i <= $("input:checkbox:checked").length-1; i++) {
+            if ($("input:checkbox:checked")[i].getAttribute('name') == 'all_select') {
+                continue;
+            };
+            total_checked_price = total_checked_price + parseInt(($("input:checkbox:checked"))[i].parentElement.parentElement.querySelector('.detal-price').innerHTML.replace("₽", ""));
+            $("span.total-select-price")[0].innerHTML = total_checked_price;
+            $(".total-select-count")[0].innerHTML = $("input:checkbox:checked").length;
+        };
+        if ($(this)[0].name == 'all_select') {
+            $(".total-select-count")[0].innerHTML = $("input:checkbox:checked").length-1;
+        };
+    } else {
+        $(".control-panel").removeClass('show');
+    }
+});
+
+// Нажатие на кнопку Выгрузка ... на панели управления
+$("#upload-button").click(function() {
+    $(".export-panel").addClass('show');
+});
 
 // Выделение одной детали
 function selected(checkbox) {
@@ -199,14 +251,4 @@ function add_name(input){
     } else {
         input.removeAttribute('name')
     }
-}
-// Отправка формы при изменении малого фильтра
-function submit_small_filter(select) {
-    var all_select = select.parentElement.parentElement.getElementsByTagName('select')
-    for (var i = 0; i < all_select.length; i++) {
-        if (all_select[i].options[all_select[i].selectedIndex].value != 'all') {
-            all_select[i].setAttribute('name', all_select[i].getAttribute('id'))
-        }
-    }
-    select.parentElement.parentElement.submit();
 }

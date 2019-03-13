@@ -8,6 +8,9 @@
     height: 89%;
     padding: 15px 10px;
     width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
 }
 
 .detals-table {
@@ -45,33 +48,35 @@
 /***********************/
 /*** Таблица деталей ***/
 /***********************/
-table { width: 100%; }
+.detals-table table { width: 100%; }
+.detals-table td, .detals-table th {padding-left: 10px; height: 50px; border-right: 1px solid #2b2b2b;}
+.checkbox { width: 4%; text-align: center; padding-left: 0px;}
+.count-num { width: 4%; text-align: center; padding-left: 0px;}
+.detal-title { width: 12%; }
+.detal-donor { width: 20%; }
+.detal-number { width: 10%; }
+.detal-desc { width: auto; }
+.detal-stock { width: 10%; }
+.detal-stock-param { width: 6%; }
+.detal-photo { width: 4%; }
+.detal-price { width: 100px; border: none; }
 
 
 /*** Шапка ***/
 .head-table {
-    width: 94%;
+    width: 100%;
     height: auto;
-    position: fixed;
     color: white;
     background: black;
     font-size: 9pt;
     box-shadow: inset 0 0 10px 1px white, 0px 3px 10px 0px #3e5a73;
     border-radius: 5px;
-    margin: -3.7% 0 0 0;
 }
-.head-table th {padding-left: 10px; height: 50px; border-right: 1px solid #2b2b2b;}
+.head-table table { width: 99%; }
 .head-table th:hover { text-decoration: underline; cursor: pointer; }
 .head-table th i { margin-right: 5px;}
-.head-table th.count-num { width: 40px; text-align: center; padding-left: 0px;}
-.head-table th.detal-title { width: 130px; }
-.head-table th.detal-donor { width: 200px; }
-.head-table th.detal-number { width: 100px; }
-.head-table th.detal-desc { width: 200px; }
-.head-table th.detal-stock { width: 100px; }
-.head-table th.detal-stock-param { width: 60px; }
-.head-table th.detal-photo { width: 40px; }
-.head-table th.detal-price { width: 100px; border: none; }
+.head-table .checkbox { padding-top: 8px;}
+
 
 /*** Тело ***/
 
@@ -80,20 +85,11 @@ table { width: 100%; }
     display: grid;
     grid-auto-rows: 40px;
     height: 88%;
-    margin-top: 4%;
-}
-.row-detal {
-    display: grid;
-    width: 100%;
-    height: 40px;
-    grid-template-columns: 62px 201px 310px 155px 310px 155px 92px 63px 135px;
+    margin-top: 1%;
 }
 
-.row-detal div { 
-    padding: 13px 0 0 10px;
-    border-bottom: 1px solid #d6d6d6;
-}
-.row-detal div.count-num { text-align: center; padding-left: 0;}
+.body-table td { border-right: none; height: 30px;}
+.body-table tr:hover {background: #dceff4; cursor: pointer;}
 
 
 
@@ -101,55 +97,55 @@ table { width: 100%; }
 /*************************/
 /*** Панель упарвления ***/
 /*************************/
-.controlPanel {
-	position: fixed;
-	bottom: 0px;
-	left: 0;
-	width: 100%;
-	height: 80px;
-	background: rgba(0, 0, 0, 0.85);
-	display: none;
-	grid-template-columns: 350px 100px 100px 100px;
-	grid-column-gap: 20px;
+.control-panel {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.48);
+    width: 100%;
+    height: 14%;
+    bottom: 0;
+    margin: 0 0 25px -15px;
+    z-index: 5;
+    padding: 15px 80px;
+    box-shadow: inset 0 0 10px 0 white;
+    border-top: 1px solid #9c9c9c;
+}
+.control-panel.show {display: inline-flex;}
+
+.control-panel table { border-collapse: separate; border-spacing: 0px 10px; margin-top: -2px;}
+.control-panel td {
+    color: white;
+    font-family: monospace;
+    font-size: 8pt;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-bottom: 1px solid;
+    text-shadow: 0px 0px 35px #000000f7;
 }
 
-.titleSelect {color: #FFE8C0;
-    text-shadow: 0px 0px 6px rgba(255,255,255,0.7)x;
-	background-clip: text;
-	font-family: 'Merriweather', serif;
-	margin: 0 0 0 105px;
-	padding: 15px 8px 8px 20px;
-	height: 50px;
-	width: 240px;
-	border-radius: 6px;
+.select-info {
+    padding: 0px;
+    height: 72px;
+    width: fit-content;
+    padding: 7px 30px;
+    box-shadow: inset 0 0 10px 1px;
+    background: inherit;
+    border-radius: 2px;
 }
 
-.controlPanel label {
-	font-size: 9pt;
+.button-block {
+    display: inline-block;
+    padding-top: 17px;
 }
 
-.controlPanel span {
-	font-family: 'Roboto Slab', serif; 
-	font-size: 10pt; 
-	margin: 0 0 0 10px;
-}
-.controlPanel button {
-	margin-top: 25px;
-	margin-left: 50px;
-	height: 30px;
-	font-size: 8pt;
-	box-shadow: 0 0 4px 1px #6A6A6A;
-}
 
-.showPanel {
-	display: grid;
-}
-
+/*****************/
 /*** Пагинация ***/
-
+/*****************/
 .pag-panel {
     position: fixed;
-    top: 29.2%;
+    top: 28%;
     right: 50%;
     width: 20%;
     height: 35px;
@@ -160,6 +156,7 @@ table { width: 100%; }
     opacity: 1;
     margin: 0 -160px 0 0;
     background: rgba(255, 255, 255, 0.55);
+    z-index: 2;
 }
 
 
@@ -186,7 +183,10 @@ li.not-active:hover, li.first:hover, li.last:hover, li.next-page:hover, li.prev-
     cursor: pointer;
 }
 
+
+/***********************/
 /*** Панель выгрузки ***/
+/***********************/
 .export-panel {
     position: fixed;
     width: 50%;
@@ -194,7 +194,7 @@ li.not-active:hover, li.first:hover, li.last:hover, li.next-page:hover, li.prev-
     background: white;
     right: -55%;
     top: 100px;
-    z-index: 1;
+    z-index: 2;
     border-radius: 10px;
     box-shadow: 0 0 25px 0px;
     transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -245,6 +245,37 @@ li.not-active:hover, li.first:hover, li.last:hover, li.next-page:hover, li.prev-
 .one-site img {height: 20px; width: 20px;}
 .one-site input {cursor: inherit;}
 
+
+
+.list-ads .border-table { height: 100%; padding: 10px; overflow-y: scroll;}
+.list-ads table {width: 100%;}
+.list-ads tr.active {background: #dceff4;}
+.list-ads tr:hover {background: #dceff4; cursor: pointer;}
+.list-ads tr:hover .delete-button {display: block;}
+.list-ads td { font-size: 8pt; padding: 3px;}
+.list-ads td.delete { width: 20px; color: #d24d4d;}
+.delete-button {display: none;}
+
+.full-info-panel {
+    height: 80%;
+    width: 43%;
+    background: white;
+    position: relative;
+    position: fixed;
+    top: 800px;
+    left: 4%;
+    margin: 0 0 0 15px;
+    z-index: 2;
+    box-shadow: 0 0 25px 0px;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.full-info-panel.show { top: 100px; }
+.full-info-panel .close-panel { float: right; margin: 5px 12px 0 0; }
+
+
+
 .setting-panels { 
 	position: absolute; 
 	margin: 125px 0 10px -50px;
@@ -278,5 +309,5 @@ li.not-active:hover, li.first:hover, li.last:hover, li.next-page:hover, li.prev-
 .one-panel-setting .hide-button:hover { opacity: 1}
 
 .button-upload-panel {padding: 10px 0; text-align: center;}
-.button-upload-panel button { height: 30px; font-size: 8pt; min-width: 125px; box-shadow: inset 0 0 5px;}
+.button-upload-panel button { height: 30px; font-size: 8pt; min-width: 125px; box-shadow: inset 0 0 5px; float: left; margin-left: 10px;}
 

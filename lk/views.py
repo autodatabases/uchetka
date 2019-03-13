@@ -1,5 +1,6 @@
 import json
 import random
+import requests
 
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
@@ -12,14 +13,17 @@ def logout_lk(request):
 	logout(request)
 	return redirect('/')
 def rediredct_detal_list_page(request):
-	return redirect('/lk/detals_list/')
+	if request.user.username == 'admin':
+		return redirect('/admin/')
+	else:
+		return redirect('/lk/detals_list/')
 
 
 def add_random_detal(request):
 	for i in range(50000):
 		UserDetal.objects.create(
-			detal=AutoDetal.objects.get(pk=random.randint(1, 20)),
-			donor_info=AutoDonor.objects.get(pk=random.randint(1, 25)),
+			title=AutoDetal.objects.all()[random.randint(0, 19)].title,
+			donor_info=AutoDonor.objects.all()[random.randint(0, 14)],
 			price=random.randint(1000, 20000),
 			stockroom=Stock.objects.get(title='Авторазбор №1'),
 			company=Company.objects.get(title='Разбор-маркет')
@@ -37,4 +41,23 @@ def add_marks(required):
 		)
 	return redirect('/lk/detals_list/')
 
+def add_random_donor(request):
+	def get_data(param_load):
+		data = {'key':'283R8Q8ckCYq9cyQSgYiXDpYFguSf7ox', 'group': 'passenger'}
+		data.update(param_load)
+		r = requests.post('https://partsapi.ru/api.php', data=data)
+		return r.content
 
+	for i in range(15):
+		mark = AutoMark.objects.all()[random.randint(1,100)]
+		all_model = json.loads(get_data({'act': 'getModels', 'make': mark.value}))
+		model = all_model[random.randint(0, len(all_model)-1)]
+		# all_gen = json.loads(get_data({'act': 'getCars', 'make': mark.value, 'model': model['id']}))
+		# gen = all_gen[0]
+		print(mark.title + ' ' + model['name'])
+		AutoDonor.objects.create(
+			mark=mark,
+			model=model['name'],
+			generation='1'
+		)
+	return redirect('/lk/detals_list/')

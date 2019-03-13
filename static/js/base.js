@@ -17,7 +17,6 @@ function loader(param) {
 	}
 }
 
-
 // No edit, this for POST
 function getCookie(name) {
     var cookieValue = null;

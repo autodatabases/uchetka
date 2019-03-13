@@ -91,8 +91,8 @@ class AutoPrivod(models.Model):
 
 class AutoDonor(models.Model):
 	mark = models.ForeignKey('AutoMark', on_delete=models.PROTECT)
-	model = models.ForeignKey('AutoModel', on_delete=models.PROTECT)
-	generation = models.ForeignKey('AutoGeneration', on_delete=models.PROTECT)
+	model = models.CharField(max_length=80)
+	generation = models.CharField(max_length=80)
 	kuzov = models.ForeignKey('AutoKuzov', on_delete=models.PROTECT, blank=True, null=True)
 	year = models.ForeignKey('AutoYearProduction', on_delete=models.PROTECT, blank=True, null=True)
 	engine_type = models.ForeignKey('AutoEngineType', on_delete=models.PROTECT, blank=True, null=True)
@@ -105,7 +105,7 @@ class AutoDonor(models.Model):
 	vin_number = models.CharField(max_length=50, blank=True, null=True)
 
 	def __str__(self):
-		return self.mark.title + ' ' + self.model.title + ' ' + self.generation.year
+		return self.mark.title + ' ' + self.model + ' ' + self.generation
 
 class Photo(models.Model):
 	company = models.ForeignKey('Company', on_delete=models.CASCADE)
@@ -141,7 +141,7 @@ class UserDetal(models.Model):
 	donor_info = models.ForeignKey('AutoDonor', on_delete=models.CASCADE)
 	
 	def __str__(self):
-		return self.detal.title
+		return self.title
 
 
 class Company(models.Model):
